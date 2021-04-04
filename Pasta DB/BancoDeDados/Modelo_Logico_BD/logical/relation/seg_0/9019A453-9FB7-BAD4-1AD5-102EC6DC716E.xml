@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="DEVEv2" directorySegmentName="seg_0" id="9019A453-9FB7-BAD4-1AD5-102EC6DC716E">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-01 22:56:26 UTC</createdTime>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<engineerTo>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+</engineerTo>
+<sourcePk>6E355985-21FC-9935-83F5-92B47D44BF12</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>487592CD-A8DB-F24A-1CE4-E0F7DBF70D58</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>FEC4AB62-A719-69B6-74A0-71A9371B2AC2</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="04BE21A1-C979-154A-40A2-2B99BEA28F7C" name="T_POA_CATEGORIA">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-04 18:19:40 UTC</createdTime>
+<generatorID>487592CD-A8DB-F24A-1CE4-E0F7DBF70D58</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_categoria" id="19D46830-905B-C3BF-589D-161C509BCFD5">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-04 18:19:40 UTC</createdTime>
+<generatorID>23E6DEF6-3D08-B225-E7C3-AA0582FC39B5</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_sobremesa" id="676FCF66-21DA-04DE-EE97-5742BD94424D">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-04 18:19:40 UTC</createdTime>
+<generatorID>37811636-5A03-6E95-2253-86A418339637</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_prato" id="66267485-F88B-B3CB-4ECB-52E3AD49836B">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-04 18:19:40 UTC</createdTime>
+<generatorID>F31D5AFE-C236-6D9D-EC7D-F22A21A34A22</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_bebida" id="CBC9BA62-0B3D-FC5B-DD35-325E76A794D2">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-04 18:19:40 UTC</createdTime>
+<generatorID>12EF8185-4A4B-3880-3F7C-F2D4ED7C521E</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_lanche" id="12112DBB-91EA-50B9-44A4-B1428D2AAC5A">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-04 18:19:40 UTC</createdTime>
+<generatorID>7D83C37A-AA56-0680-E4E6-0CAD80EEB05C</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_aperitivo" id="96473158-A5A7-E037-DCDC-9984BAF60670">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-04 18:19:40 UTC</createdTime>
+<generatorID>41DE8310-6C50-9190-40A3-ED5D956F6876</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BCBFF1A8-B427-C5B9-856E-953D24229FB4" name="PK_POA_CATEGORIA">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-04 18:19:40 UTC</createdTime>
+<generatorID>6E355985-21FC-9935-83F5-92B47D44BF12</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="19D46830-905B-C3BF-589D-161C509BCFD5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

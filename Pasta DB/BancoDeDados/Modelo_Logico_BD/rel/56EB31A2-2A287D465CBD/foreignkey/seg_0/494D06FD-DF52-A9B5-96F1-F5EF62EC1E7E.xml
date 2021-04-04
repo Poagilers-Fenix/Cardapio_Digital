@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="494D06FD-DF52-A9B5-96F1-F5EF62EC1E7E" containerWithKeyObject="C0A9BA52-34BB-6134-3048-568963A5BA76" localFKIndex="07D10BAC-9B17-D6FE-B075-FAB0911B1E57" name="FK_POA_PEDIDO_ITEM_CARDAPIO_CATEGORIA">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-04 18:19:40 UTC</createdTime>
+<generatorID>9019A453-9FB7-BAD4-1AD5-102EC6DC716E</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<referredTableLongName>T_POA_CATEGORIA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>04BE21A1-C979-154A-40A2-2B99BEA28F7C</referredTableID>
+<keyObject>BCBFF1A8-B427-C5B9-856E-953D24229FB4</keyObject>
+<referredKeyID>BCBFF1A8-B427-C5B9-856E-953D24229FB4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_categoria</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
