@@ -41,7 +41,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="cd_pedido" id="08B88809-AAEE-9A18-012B-C37C992EFB9F">
 <createdBy>Kaue Augusto</createdBy>
@@ -56,22 +56,21 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cd_categoria" id="C01C6858-019F-ABF5-B590-0FB2458F8E8A">
+<Attribute name="ds_categoria" id="EC258F46-4425-4CB8-FA8F-865FCFBFBDCB">
 <createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-04-01 22:56:26 UTC</createdTime>
-<generatorID>9019A453-9FB7-BAD4-1AD5-102EC6DC716E</generatorID>
+<createdTime>2021-04-05 14:22:17 UTC</createdTime>
 <ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
-<referedAttribute>23E6DEF6-3D08-B225-E7C3-AA0582FC39B5</referedAttribute>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>2</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
