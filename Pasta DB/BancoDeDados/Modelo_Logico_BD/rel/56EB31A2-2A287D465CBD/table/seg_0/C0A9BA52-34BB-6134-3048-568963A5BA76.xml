@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C0A9BA52-34BB-6134-3048-568963A5BA76" name="T_POA_PEDIDO_ITEM_CARDAPIO">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C0A9BA52-34BB-6134-3048-568963A5BA76" name="T_CPP_PEDIDO_ITEM_CARDAPIO">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-04 18:19:40 UTC</createdTime>
 <generatorID>FEC4AB62-A719-69B6-74A0-71A9371B2AC2</generatorID>
@@ -52,25 +52,22 @@
 <colAssociation fkAssociation="193B631C-4EB2-DE41-DC1F-6D02E717CD4D" referredColumn="5DA8BFEC-820B-58E6-8CB1-DB8369385DFD"/>
 </associations>
 </Column>
-<Column name="cd_categoria" id="4A4D68A0-B8AD-6F99-A027-34C2BDCFB70D">
+<Column name="ds_categoria" id="6C434378-F228-DFCD-A56A-5C5204991F23">
 <createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-04-04 18:19:40 UTC</createdTime>
-<generatorID>C01C6858-019F-ABF5-B590-0FB2458F8E8A</generatorID>
+<createdTime>2021-04-05 14:34:48 UTC</createdTime>
+<generatorID>EC258F46-4425-4CB8-FA8F-865FCFBFBDCB</generatorID>
 <ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>2</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="494D06FD-DF52-A9B5-96F1-F5EF62EC1E7E" referredColumn="19D46830-905B-C3BF-589D-161C509BCFD5"/>
-</associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="59E73DEB-EE20-6E00-DE8D-F40E77F2BCD3" name="PK_POA_PEDIDO_ITEM_CARDAPIO">
+<ind_PK_UK id="59E73DEB-EE20-6E00-DE8D-F40E77F2BCD3" name="PK_CPP_PEDIDO_ITEM_CARDAPIO">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-04 18:19:40 UTC</createdTime>
 <generatorID>DB601929-BF37-1D8C-3628-D3954E42BBEB</generatorID>
@@ -82,18 +79,7 @@
 <colUsage columnID="DC4A3BC1-1D8B-C7FE-E2B0-523735EE01F7"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="07D10BAC-9B17-D6FE-B075-FAB0911B1E57" name="FK_POA_PEDIDO_ITEM_CARDAPIO_CATEGORIA">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-04-04 18:19:40 UTC</createdTime>
-<generatorID>9019A453-9FB7-BAD4-1AD5-102EC6DC716E</generatorID>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="4A4D68A0-B8AD-6F99-A027-34C2BDCFB70D"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="281BA3F7-D9AC-89C4-DE73-592651A6EB3F" name="FK_POA_PEDIDO_ITEM_CARDAPIO_ITEM_CARDAPIO">
+<ind_PK_UK id="281BA3F7-D9AC-89C4-DE73-592651A6EB3F" name="FK_CPP_PED_ITEM_CARD_ITEM_CARD">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-04 18:19:40 UTC</createdTime>
 <generatorID>BD8288F6-2A53-4A5D-664C-1B2113BD87F8</generatorID>
@@ -104,7 +90,7 @@
 <colUsage columnID="ECC65E6D-B995-4EDC-F619-3B236056D1FB"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="EB385FC1-652C-22A6-89E3-82D537A1BA6C" name="FK_POA_PEDIDO_ITEM_CARDAPIO_PEDIDO">
+<ind_PK_UK id="EB385FC1-652C-22A6-89E3-82D537A1BA6C" name="FK_CPP_PEDIDO_ITEM_CARD_PEDIDO">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-04 18:19:40 UTC</createdTime>
 <generatorID>61788B4A-AD31-7A2A-9E98-DD674EC8076A</generatorID>

@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FEC4AB62-A719-69B6-74A0-71A9371B2AC2" name="T_POA_PEDIDO_ITEM_CARDAPIO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FEC4AB62-A719-69B6-74A0-71A9371B2AC2" name="T_CPP_PEDIDO_ITEM_CARDAPIO">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 01:00:39 UTC</createdTime>
 <ownerDesignName>Modelo_Logico_BD</ownerDesignName>
@@ -41,7 +41,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="cd_pedido" id="08B88809-AAEE-9A18-012B-C37C992EFB9F">
 <createdBy>Kaue Augusto</createdBy>
@@ -56,7 +56,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ds_categoria" id="EC258F46-4425-4CB8-FA8F-865FCFBFBDCB">
 <createdBy>Kaue Augusto</createdBy>
@@ -78,8 +78,9 @@
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 01:02:07 UTC</createdTime>
 <ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

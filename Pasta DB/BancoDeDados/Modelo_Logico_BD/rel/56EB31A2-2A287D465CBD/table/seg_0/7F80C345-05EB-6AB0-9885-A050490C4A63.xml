@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7F80C345-05EB-6AB0-9885-A050490C4A63" name="T_POA_ESTABELECIMENTO">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7F80C345-05EB-6AB0-9885-A050490C4A63" name="T_CPP_ESTABELECIMENTO">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-04 18:19:40 UTC</createdTime>
 <generatorID>222A1092-3FA8-AE77-E34A-7DC4917365E6</generatorID>
@@ -46,7 +46,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="38806D3F-9098-E7F0-1396-C727D1BE3905" name="PK_POA_ESTABELECIMENTO">
+<ind_PK_UK id="38806D3F-9098-E7F0-1396-C727D1BE3905" name="PK_CPP_ESTABELECIMENTO">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-04 18:19:40 UTC</createdTime>
 <generatorID>36E37C9F-B585-6F35-AFC8-CAB2054F464A</generatorID>

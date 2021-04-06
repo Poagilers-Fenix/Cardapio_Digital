@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CFAB2AD8-F451-6431-D61F-792C92FCF478" name="T_POA_PEDIDO">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CFAB2AD8-F451-6431-D61F-792C92FCF478" name="T_CPP_PEDIDO">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-04 18:19:40 UTC</createdTime>
 <generatorID>45E34B9D-B61D-ADF7-7862-FABBBBB54EC6</generatorID>
@@ -86,7 +86,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="4651180A-2DC6-DF1E-8DF4-D125CE796891" name="PK_POA_PEDIDO">
+<ind_PK_UK id="4651180A-2DC6-DF1E-8DF4-D125CE796891" name="PK_CPP_PEDIDO">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-04 18:19:40 UTC</createdTime>
 <generatorID>D090D80F-27CF-DB23-1184-DCEABBD1E5EB</generatorID>
@@ -98,7 +98,7 @@
 <colUsage columnID="5DA8BFEC-820B-58E6-8CB1-DB8369385DFD"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="2E049935-1B9E-6241-683B-D41ADF33B0DA" name="FK_POA_PEDIDO_CLIENTE">
+<ind_PK_UK id="2E049935-1B9E-6241-683B-D41ADF33B0DA" name="FK_CPP_PEDIDO_CLIENTE">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-04 18:19:40 UTC</createdTime>
 <generatorID>F648A6A7-771F-A93C-6735-BCA0CE22D0EC</generatorID>

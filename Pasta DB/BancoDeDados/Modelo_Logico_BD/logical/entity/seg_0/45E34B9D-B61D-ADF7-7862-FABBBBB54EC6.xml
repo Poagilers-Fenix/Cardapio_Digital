@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="45E34B9D-B61D-ADF7-7862-FABBBBB54EC6" name="T_POA_PEDIDO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="45E34B9D-B61D-ADF7-7862-FABBBBB54EC6" name="T_CPP_PEDIDO">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:31:51 UTC</createdTime>
 <ownerDesignName>Modelo_Logico_BD</ownerDesignName>
@@ -41,7 +41,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>5</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="nr_valor_total" id="D0D18C0E-7742-558A-0C33-CA8426FAD510">
 <createdBy>Kaue Augusto</createdBy>
@@ -101,8 +101,9 @@
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:32:33 UTC</createdTime>
 <ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
