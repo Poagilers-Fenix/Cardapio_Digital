@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CFAB2AD8-F451-6431-D61F-792C92FCF478" name="T_CPP_PEDIDO">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-04 18:19:40 UTC</createdTime>
+<generatorID>45E34B9D-B61D-ADF7-7862-FABBBBB54EC6</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_pedido" id="5DA8BFEC-820B-58E6-8CB1-DB8369385DFD">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-04 18:19:40 UTC</createdTime>
+<generatorID>50277B14-CE6B-013B-D5C6-427507719EFE</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cd_cliente" id="479C7375-FEC7-E195-1A9B-67EC5C195BE6">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-04 18:19:40 UTC</createdTime>
+<generatorID>E32DB346-CFD8-5559-D6C2-3F017A3A28C3</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B451797F-E136-1954-A03F-5F682412DDFA" referredColumn="714AF164-650C-4CB1-C214-0354EB11D6F0"/>
+</associations>
+</Column>
+<Column name="vl_total_pedido" id="FF624122-650D-8B07-9D28-BA3C25344028">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-04 18:19:40 UTC</createdTime>
+<generatorID>D0D18C0E-7742-558A-0C33-CA8426FAD510</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="st_pedido" id="CCB446C9-E286-00DB-6CD4-7E43D0E7F0F4">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-04 18:19:40 UTC</createdTime>
+<generatorID>F7C4474B-1207-94A9-6AAF-C3F171C8E73D</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_pedido" id="34B70BA5-86AB-39B6-A722-2577D60E1DC7">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-04 18:19:40 UTC</createdTime>
+<generatorID>7129AED1-C1F5-E439-E251-3D260BF551F6</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hr_pedido" id="2B3DD97F-6603-21CF-4DD2-ED0F21E99A05">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-04 18:19:40 UTC</createdTime>
+<generatorID>1CF08AA1-4EE6-EBA7-1433-AE59B751CA18</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4651180A-2DC6-DF1E-8DF4-D125CE796891" name="PK_CPP_PEDIDO">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-04 18:19:40 UTC</createdTime>
+<generatorID>D090D80F-27CF-DB23-1184-DCEABBD1E5EB</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5DA8BFEC-820B-58E6-8CB1-DB8369385DFD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2E049935-1B9E-6241-683B-D41ADF33B0DA" name="FK_CPP_PEDIDO_CLIENTE">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-04 18:19:40 UTC</createdTime>
+<generatorID>F648A6A7-771F-A93C-6735-BCA0CE22D0EC</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="479C7375-FEC7-E195-1A9B-67EC5C195BE6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
