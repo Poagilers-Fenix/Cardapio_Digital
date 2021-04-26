@@ -109,6 +109,19 @@
 <dataTypeSize>300</dataTypeSize>
 <ownDataTypeParameters>300,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ds_categoria" id="CEBB497D-097B-9C74-0BFC-6E5D9451CB0C">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-26 19:52:35 UTC</createdTime>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<engineerTo>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="vl_calorico" id="B2FD440A-C35F-A42C-9E0C-AA6DF3ED9096">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:55:42 UTC</createdTime>
