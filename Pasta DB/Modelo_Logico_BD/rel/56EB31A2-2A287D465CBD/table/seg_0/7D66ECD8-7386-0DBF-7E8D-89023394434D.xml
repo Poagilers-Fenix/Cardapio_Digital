@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7D66ECD8-7386-0DBF-7E8D-89023394434D" name="T_CPP_GERENTE">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<generatorID>D236184C-3722-3B28-963E-576E79687BEC</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_gerente" id="0664343F-605B-EB64-9DC2-9436ADFBED90">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<generatorID>630B64F9-B65B-55F4-7293-0EEDE63530DF</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cd_estabelecimento" id="96EEC7DD-E4B8-C83D-8693-C82B609403A3">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<generatorID>DE32E042-4293-47E4-C1DA-A0087A9DF0E7</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8725EB00-5CFC-3A41-311D-F63235DC7795" referredColumn="C9252B85-80AA-E416-9BEE-0B45144B96E2"/>
+</associations>
+</Column>
+<Column name="nm_gerente" id="E17C575A-266A-BDAA-C8E6-1474F61AF764">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<generatorID>794AB0EB-43FB-B161-3B95-51D9A49CE7D1</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_email" id="2E59EB4F-3633-AB90-4AF4-26DF55A5893F">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<generatorID>DE15F275-5D5F-A877-2E1D-FD7E370928EE</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>65</dataTypeSize>
+<ownDataTypeParameters>65,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vl_salario" id="A18DAB72-0B6B-9309-7E1F-5877B9C414C0">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<generatorID>C1343D8F-3616-0455-BA5E-D350E3B042FC</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_endereco" id="93ECF0B6-D39B-A9FF-5911-973AA5880B04">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<generatorID>20C02C89-DE58-E1F8-6BD9-1976484C5B97</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="23011E8E-E411-0868-0AEC-91F2782FC892" name="PK_CPP_GERENTE">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<generatorID>D4462E01-186C-8F03-036F-443E35AC0BD4</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0664343F-605B-EB64-9DC2-9436ADFBED90"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="41E7740E-AC1C-D30D-A204-7FA287671DA1" name="T_CPP_GERENTE__IDX">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>3E141AE0-95F4-AC7C-4D06-A5186A36D9B0</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="96EEC7DD-E4B8-C83D-8693-C82B609403A3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EF8159E1-20E0-0EB8-372D-F40CFACBEA3C" name="FK_CPP_GERENTE_ESTAB">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<generatorID>3E141AE0-95F4-AC7C-4D06-A5186A36D9B0</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="96EEC7DD-E4B8-C83D-8693-C82B609403A3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

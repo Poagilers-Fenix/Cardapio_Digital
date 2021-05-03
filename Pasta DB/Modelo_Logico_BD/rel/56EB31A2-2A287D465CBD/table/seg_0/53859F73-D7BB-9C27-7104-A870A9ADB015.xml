@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="53859F73-D7BB-9C27-7104-A870A9ADB015" name="T_CPP_ESTABELECIMENTO">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<generatorID>222A1092-3FA8-AE77-E34A-7DC4917365E6</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_estabelecimento" id="C9252B85-80AA-E416-9BEE-0B45144B96E2">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<generatorID>E63CE62B-8092-6EA3-D6FC-89399C9CCEE3</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_estabelecimento" id="9986E55B-DD64-FB28-7146-E1F3F480CF93">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<generatorID>D2347B5F-506A-0862-6C00-5B4200F8AC9A</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_cnpj" id="347D2C6A-5ADF-E63D-A86E-CB5D6DC52492">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<generatorID>F9E5A2DE-6B59-8AA5-B633-CB47F9F0C24D</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0C9AB369-0565-A07C-C8DF-2CB2BC69803B" name="PK_CPP_ESTABELECIMENTO">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<generatorID>36E37C9F-B585-6F35-AFC8-CAB2054F464A</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C9252B85-80AA-E416-9BEE-0B45144B96E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
