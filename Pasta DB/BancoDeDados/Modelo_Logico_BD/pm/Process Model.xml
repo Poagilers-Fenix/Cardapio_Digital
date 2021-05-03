@@ -1,7 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="38BCED89-FEF6-2EF3-D0A6-B4F56EF00685">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-03-31 00:15:06 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
-</ProcessModel>
