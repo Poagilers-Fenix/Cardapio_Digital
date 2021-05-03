@@ -28,6 +28,21 @@
 <dataTypePrecision>3</dataTypePrecision>
 <ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="cd_gerente " id="FEF9BDB0-719B-5F48-4013-5640CC2EB924">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-03 18:39:44 UTC</createdTime>
+<generatorID>3E141AE0-95F4-AC7C-4D06-A5186A36D9B0</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<engineerTo>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+</engineerTo>
+<referedAttribute>630B64F9-B65B-55F4-7293-0EEDE63530DF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="nm_estabelecimento" id="D2347B5F-506A-0862-6C00-5B4200F8AC9A">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:19:28 UTC</createdTime>

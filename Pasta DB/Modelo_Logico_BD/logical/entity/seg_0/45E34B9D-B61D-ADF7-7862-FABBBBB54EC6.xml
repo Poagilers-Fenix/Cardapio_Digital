@@ -43,6 +43,21 @@
 <dataTypePrecision>5</dataTypePrecision>
 <ownDataTypeParameters>,5,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="cd_estabelecimento" id="5E092636-483C-F751-B4C6-7B7BD00FADF7">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-03 18:38:45 UTC</createdTime>
+<generatorID>E08DEC3A-AF77-A8F3-DC64-6B98BFEADE2E</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<engineerTo>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+</engineerTo>
+<referedAttribute>E63CE62B-8092-6EA3-D6FC-89399C9CCEE3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="vl_total_pedido" id="D0D18C0E-7742-558A-0C33-CA8426FAD510">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:34:15 UTC</createdTime>
