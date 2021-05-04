@@ -42,6 +42,20 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ds_cpf" id="E454F5B5-A085-B0CD-C859-E207ECC3D1AD">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 01:41:21 UTC</createdTime>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<engineerTo>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="nr_celular" id="C79302EB-8A72-4FB3-2265-10B69B95E44D">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:25:35 UTC</createdTime>
