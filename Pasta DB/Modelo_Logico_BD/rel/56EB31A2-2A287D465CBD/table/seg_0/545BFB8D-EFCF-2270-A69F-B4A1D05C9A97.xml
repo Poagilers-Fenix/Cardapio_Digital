@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="545BFB8D-EFCF-2270-A69F-B4A1D05C9A97" name="T_CPP_ESTABELECIMENTO">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<generatorID>222A1092-3FA8-AE77-E34A-7DC4917365E6</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_estabelecimento" id="23C97033-00F4-A11E-D4E8-3CA1C5A8E0CA">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<generatorID>E63CE62B-8092-6EA3-D6FC-89399C9CCEE3</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cd_gerente" id="33A177A8-E817-747F-CBDA-206329579009">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<generatorID>FEF9BDB0-719B-5F48-4013-5640CC2EB924</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="34352E64-332E-21B3-CBFE-AC62407BB730" referredColumn="71A9C7BE-FF5A-29E6-095C-3DF5B8A3BF2C"/>
+</associations>
+</Column>
+<Column name="nm_estabelecimento" id="F0E532BE-9771-B4D0-ECDC-D3D2C76EE633">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<generatorID>D2347B5F-506A-0862-6C00-5B4200F8AC9A</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_cnpj" id="EF713CBB-8A06-32B7-8279-0625939CD704">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<generatorID>F9E5A2DE-6B59-8AA5-B633-CB47F9F0C24D</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DBFEA426-7BC0-23B3-AC4C-7E8372FEEDB9" name="PK_CPP_ESTABELECIMENTO">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<generatorID>36E37C9F-B585-6F35-AFC8-CAB2054F464A</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="23C97033-00F4-A11E-D4E8-3CA1C5A8E0CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="346EDD65-01DC-750B-E41E-F6B55CE57D39" name="T_CPP_ESTABELECIMENTO__IDX">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>3E141AE0-95F4-AC7C-4D06-A5186A36D9B0</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="33A177A8-E817-747F-CBDA-206329579009"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DCBC40C2-F0DE-60EE-424C-C92D2A0A626B" name="FK_CPP_ESTAB_GERENTE">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<generatorID>3E141AE0-95F4-AC7C-4D06-A5186A36D9B0</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33A177A8-E817-747F-CBDA-206329579009"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

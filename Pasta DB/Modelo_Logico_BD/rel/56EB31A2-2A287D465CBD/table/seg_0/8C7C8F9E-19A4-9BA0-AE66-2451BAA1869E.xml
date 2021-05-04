@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DC14E6E2-5658-27BC-BE46-C28A2922F75D" name="T_CPP_ITEM_CARDAPIO">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8C7C8F9E-19A4-9BA0-AE66-2451BAA1869E" name="T_CPP_ITEM_CARDAPIO">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>5B593924-5B52-81CA-E4A7-7E7574395A63</generatorID>
 <ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="cd_item_cardapio" id="7ED5975F-2D46-4747-247E-5AC6B3F8F7C9">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<Column name="cd_item_cardapio" id="B7F69B49-42EC-2FFC-AAE2-1F6C54081F0D">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>67F48E18-CEFE-3C70-5133-24C83582F6A5</generatorID>
 <ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -20,9 +20,9 @@
 <ownDataTypeParameters>,4,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="cd_estabelecimento" id="878EEBD1-DB92-F30C-43B4-DB9E91052E65">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<Column name="cd_estabelecimento" id="55EE917C-A163-4E08-9B24-950445370DF0">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>BA24C4E2-4FB8-2D8D-EADA-D1FE81232F0B</generatorID>
 <ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -33,12 +33,12 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="A4CFC73C-A0E1-0D7F-4A95-0EB188B596D9" referredColumn="C9252B85-80AA-E416-9BEE-0B45144B96E2"/>
+<colAssociation fkAssociation="C307FC68-5071-DC7C-C9F7-452337083487" referredColumn="23C97033-00F4-A11E-D4E8-3CA1C5A8E0CA"/>
 </associations>
 </Column>
-<Column name="nr_destaque" id="AED756A7-081F-C009-B244-8606876F6DFB">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<Column name="nr_destaque" id="4C889600-61DA-EDC6-1E07-F35105C8AAA7">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>23A31AB5-7203-D95C-5475-BDD3375273B9</generatorID>
 <ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -48,9 +48,9 @@
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nm_item_pedido" id="4265572F-692D-6810-272B-371EBB6F339B">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<Column name="nm_item_pedido" id="B614153E-0A28-81C9-40D2-8D6E655A0283">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>AEC5F903-E9D4-3E63-1D12-AD9DA0E17099</generatorID>
 <ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -60,9 +60,9 @@
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ds_item_cardapio" id="956B1791-ADB2-F91D-F778-9A7A6A56A2E3">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<Column name="ds_item_cardapio" id="768F23AE-C733-04A7-A163-EFA2F5AF9D3A">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>65D0911C-EADA-A9C2-9C77-5E4835F1D8FB</generatorID>
 <ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -72,9 +72,9 @@
 <ownDataTypeParameters>300,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="vl_item_cardapio" id="CCF125F2-026A-36D4-96A6-693BAB2D2260">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<Column name="vl_item_cardapio" id="27B5A25F-C6CE-8C84-AA76-0992F73D7B6E">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>3094B65A-33F0-A575-93DD-461A9846F756</generatorID>
 <ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -85,9 +85,9 @@
 <ownDataTypeParameters>,5,2</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ds_ingrendientes" id="2889CA72-4981-38DC-78B7-970BC9A50747">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<Column name="ds_ingrendientes" id="C29CE66E-770B-40B6-C65E-803838481FA4">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>486A745A-4BA4-CC78-AC2D-78B7D26ED98B</generatorID>
 <ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -97,9 +97,9 @@
 <ownDataTypeParameters>300,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ds_categoria" id="A705622A-65AC-091E-3810-6F8DC2D73C86">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<Column name="ds_categoria" id="5CD4A6E0-E2F4-D97F-9949-2BB3F004C032">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>CEBB497D-097B-9C74-0BFC-6E5D9451CB0C</generatorID>
 <ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -109,9 +109,9 @@
 <ownDataTypeParameters>15,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="vl_calorico" id="7C067578-79B5-8FCA-8396-33DDE94401BB">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<Column name="vl_calorico" id="36C3BDDE-DBD0-5833-6B0E-C583A3DDE8CA">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>B2FD440A-C35F-A42C-9E0C-AA6DF3ED9096</generatorID>
 <ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -125,27 +125,27 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="9CB58390-BC81-AD54-6319-CCD4656AA35A" name="PK_CPP_ITEM_CARDAPIO">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<ind_PK_UK id="0B835CB3-56F9-1EAD-D3A3-3AE33242A0E3" name="PK_CPP_ITEM_CARDAPIO">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>6F20340C-0453-AE94-6BAD-0D21F38497BC</generatorID>
 <ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="7ED5975F-2D46-4747-247E-5AC6B3F8F7C9"/>
+<colUsage columnID="B7F69B49-42EC-2FFC-AAE2-1F6C54081F0D"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="6A72D4DC-7043-173E-4D71-2C56931AA6D7" name="FK_CPP_ITEM_CARDAPIO_ESTABELECIMENTO">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-04-26 20:26:40 UTC</createdTime>
+<ind_PK_UK id="18BA98E9-79F0-ECD0-A691-8B45B745028E" name="FK_CPP_ITEM_CARD_ESTAB">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>30D64C8D-B8F3-5663-3D8E-8174CBE06584</generatorID>
 <ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="878EEBD1-DB92-F30C-43B4-DB9E91052E65"/>
+<colUsage columnID="55EE917C-A163-4E08-9B24-950445370DF0"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

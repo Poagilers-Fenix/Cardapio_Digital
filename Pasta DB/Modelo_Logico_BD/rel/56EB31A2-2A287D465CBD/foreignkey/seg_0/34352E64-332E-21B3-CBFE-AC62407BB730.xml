@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="34352E64-332E-21B3-CBFE-AC62407BB730" containerWithKeyObject="545BFB8D-EFCF-2270-A69F-B4A1D05C9A97" localFKIndex="DCBC40C2-F0DE-60EE-424C-C92D2A0A626B" name="FK_CPP_ESTAB_GERENTE">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<generatorID>3E141AE0-95F4-AC7C-4D06-A5186A36D9B0</generatorID>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<referredTableLongName>T_CPP_GERENTE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>7FD6B1AD-45D5-7051-4061-839907837B96</referredTableID>
+<keyObject>A07F144E-1BC4-E3A9-2EB3-9BF43E411381</keyObject>
+<referredKeyID>A07F144E-1BC4-E3A9-2EB3-9BF43E411381</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_gerente</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
