@@ -33,18 +33,6 @@
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ds_cpf" id="CA4F2A6C-30A8-2F58-F5B0-987F321C6DD8">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 01:41:06 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>11</dataTypeSize>
-<ownDataTypeParameters>11,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="nr_celular" id="1F89BE85-7F1E-2CE0-F886-46A4CDC66F43">
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>
