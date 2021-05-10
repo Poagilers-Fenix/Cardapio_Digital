@@ -56,7 +56,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="nr_experiencia" id="425ECCCF-E59C-76A2-96EE-CD0B26B509E7">
 <createdBy>Kaue Augusto</createdBy>
@@ -69,7 +69,8 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>1</dataTypePrecision>
-<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<dataTypeScale>1</dataTypeScale>
+<ownDataTypeParameters>,1,1</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ds_avaliacao" id="80377F7C-6306-0196-4466-11AD78F48D2A">
 <createdBy>Kaue Augusto</createdBy>
