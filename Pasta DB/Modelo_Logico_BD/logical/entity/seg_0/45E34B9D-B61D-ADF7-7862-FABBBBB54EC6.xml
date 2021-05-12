@@ -56,7 +56,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="vl_total_pedido" id="D0D18C0E-7742-558A-0C33-CA8426FAD510">
 <createdBy>Kaue Augusto</createdBy>
@@ -84,19 +84,6 @@
 <logicalDatatype>LOGDT006</logicalDatatype>
 <dataTypeSize>1</dataTypeSize>
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="ds_pedido" id="7129AED1-C1F5-E439-E251-3D260BF551F6">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-03-31 00:41:59 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
-<engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>200</dataTypeSize>
-<ownDataTypeParameters>200,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="hr_pedido" id="1CF08AA1-4EE6-EBA7-1433-AE59B751CA18">
 <createdBy>Kaue Augusto</createdBy>

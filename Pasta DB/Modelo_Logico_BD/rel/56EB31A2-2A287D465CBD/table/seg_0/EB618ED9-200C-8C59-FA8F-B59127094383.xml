@@ -77,18 +77,6 @@
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ds_pedido" id="292E5B9B-5C5D-58FC-B376-D382BE5484CB">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
-<generatorID>7129AED1-C1F5-E439-E251-3D260BF551F6</generatorID>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>200</dataTypeSize>
-<ownDataTypeParameters>200,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="hr_pedido" id="E363F493-FE98-0319-529B-407F2A98CF70">
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>

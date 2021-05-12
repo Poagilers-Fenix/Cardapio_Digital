@@ -48,7 +48,7 @@
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nm_item_pedido" id="B614153E-0A28-81C9-40D2-8D6E655A0283">
+<Column name="nm_item_cardapio" id="B614153E-0A28-81C9-40D2-8D6E655A0283">
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>AEC5F903-E9D4-3E63-1D12-AD9DA0E17099</generatorID>
