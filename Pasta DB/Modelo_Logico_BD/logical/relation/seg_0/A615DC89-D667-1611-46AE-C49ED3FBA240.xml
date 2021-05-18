@@ -2,7 +2,7 @@
 <Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="TEMv1" directorySegmentName="seg_0" id="A615DC89-D667-1611-46AE-C49ED3FBA240">
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-03 18:37:27 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>

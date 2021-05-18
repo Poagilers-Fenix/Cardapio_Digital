@@ -2,7 +2,7 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="723EDDCF-CAE9-21B9-CD75-F69882F062BE" name="T_CPP_AVALIACAO">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-05 14:36:09 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -18,7 +18,7 @@
 <Attribute name="cd_avaliacao" id="F0A86F6E-97AF-0A47-CBC7-4F948638405F">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-05 14:36:24 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -32,7 +32,7 @@
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-05 14:52:50 UTC</createdTime>
 <generatorID>FFA014F8-93B3-56A0-ABF5-DBFE41467CEF</generatorID>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -47,7 +47,7 @@
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-03 18:37:27 UTC</createdTime>
 <generatorID>A615DC89-D667-1611-46AE-C49ED3FBA240</generatorID>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -61,7 +61,7 @@
 <Attribute name="nr_experiencia" id="425ECCCF-E59C-76A2-96EE-CD0B26B509E7">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-05 14:44:40 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -69,13 +69,12 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>1</dataTypePrecision>
-<dataTypeScale>1</dataTypeScale>
-<ownDataTypeParameters>,1,1</ownDataTypeParameters>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ds_avaliacao" id="80377F7C-6306-0196-4466-11AD78F48D2A">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-05 14:36:52 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -88,14 +87,15 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="9D0DE855-546E-2483-F0E8-79E87628C423" name="T_POA_AVALIACAO PK">
+<identifier id="9D0DE855-546E-2483-F0E8-79E87628C423" name="T_CPP_AVALIACAO PK">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-05 14:36:35 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
 <pk>true</pk>
+<newElementsIDs>F0A86F6E-97AF-0A47-CBC7-4F948638405F</newElementsIDs>
 <usedAttributes>
 <attributeRef>F0A86F6E-97AF-0A47-CBC7-4F948638405F</attributeRef>
 </usedAttributes>

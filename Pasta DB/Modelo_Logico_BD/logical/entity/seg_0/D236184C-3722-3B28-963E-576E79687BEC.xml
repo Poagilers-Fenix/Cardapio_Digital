@@ -2,7 +2,7 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D236184C-3722-3B28-963E-576E79687BEC" name="T_CPP_GERENTE">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-26 19:54:01 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -18,25 +18,10 @@
 <Attribute name="cd_gerente " id="630B64F9-B65B-55F4-7293-0EEDE63530DF">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-26 19:55:13 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,3,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="cd_estabelecimento" id="DE32E042-4293-47E4-C1DA-A0087A9DF0E7">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-04-26 20:03:50 UTC</createdTime>
-<generatorID>3E141AE0-95F4-AC7C-4D06-A5186A36D9B0</generatorID>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
-<engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
-</engineerTo>
-<referedAttribute>E63CE62B-8092-6EA3-D6FC-89399C9CCEE3</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -46,7 +31,7 @@
 <Attribute name="nm_gerente" id="794AB0EB-43FB-B161-3B95-51D9A49CE7D1">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-26 19:56:41 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -59,7 +44,7 @@
 <Attribute name="ds_email" id="DE15F275-5D5F-A877-2E1D-FD7E370928EE">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-26 19:59:32 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -72,21 +57,21 @@
 <Attribute name="vl_salario" id="C1343D8F-3616-0455-BA5E-D350E3B042FC">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-26 20:01:20 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>5</dataTypePrecision>
+<dataTypePrecision>7</dataTypePrecision>
 <dataTypeScale>2</dataTypeScale>
-<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ds_endereco" id="20C02C89-DE58-E1F8-6BD9-1976484C5B97">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-26 20:02:35 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -101,10 +86,9 @@
 <identifier id="D4462E01-186C-8F03-036F-443E35AC0BD4" name="T_CPP_GERENTE PK">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-26 19:55:36 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
+<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
 <engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="false"/>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
