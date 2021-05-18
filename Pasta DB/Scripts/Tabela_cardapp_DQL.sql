@@ -131,7 +131,7 @@ group by nm_estabelecimento;
 
 
 
---codigo lari
+--codigo lari kaue consetando as ever
 select pic.cd_pedido,
        ic.nm_item_cardapio,
        p.hr_pedido,
@@ -144,8 +144,8 @@ from t_cpp_pedido_item_cardapio pic
     inner join t_cpp_pedido p
         on pic.cd_pedido = p.cd_pedido
     inner join t_cpp_estabelecimento e
-        on p.cd_pedido = e.cd_estabelecimento
-where pic.cd_pedido = 4;
+        on p.cd_estabelecimento = e.cd_estabelecimento
+where pic.cd_pedido = 3;
 
 
  -- select dos campos da tabela cliente
@@ -179,25 +179,18 @@ where cd_pedido = 2;
  
 --pega os itens de determinado pedido
 -- não tem quantidade pra saber quantos itens tem, por exemplo, pra saber se o cara pediu 2 hambúrguers iguais.
-select count(ic.nm_item_cardapio) as  totalItens,
+select count(ic.nm_item_cardapio) as  TotalItens,
        p.vl_total_pedido,
        p.cd_pedido
-from t_cpp_pedido p inner join t_cpp_item_cardapio ic
-on p.cd_pedido = ic.cd_item_cardapio
-where p.cd_pedido = 2;
+from t_cpp_pedido p
+inner join t_cpp_pedido_item_cardapio pic
+on p.cd_pedido = pic.cd_pedido
+inner join t_cpp_item_cardapio ic
+on ic.cd_item_cardapio = pic.cd_item_cardapio
+where p.cd_pedido = 2
+group by  p.vl_total_pedido, p.cd_pedido;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+select * from t_cpp_pedido;
+select * from t_cpp_item_cardapio;
 
 
