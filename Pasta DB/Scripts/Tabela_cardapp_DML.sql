@@ -1,30 +1,29 @@
 
 alter session set nls_date_format='YYYY-MM-DD HH24:MI:SS';
-SELECT SYSDATE FROM DUAL;
 
--- CRIAÇÃO DA TABELA ESTABELECIMENTO
-INSERT INTO t_cpp_estabelecimento VALUES(1, NULL, 'Milk Shakespeare', '12345678000108');
-INSERT INTO t_cpp_estabelecimento VALUES(2, NULL, 'Churros Store', '11145555000109');
-INSERT INTO t_cpp_estabelecimento VALUES(3, NULL, 'Restaurante dos Primos', '22245678000105');
+/*
+
+DELETE FROM t_cpp_avaliacao;
+DELETE FROM t_cpp_pedido_item_cardapio;
+DELETE FROM t_cpp_item_cardapio;
+DELETE FROM t_cpp_pedido;
+DELETE FROM t_cpp_cliente;
+DELETE FROM t_cpp_estabelecimento;
+DELETE FROM t_cpp_gerente;
+
+*/
+
+
  
 -- CRIAÇÃO DA TABELA GERENTE
-insert into t_cpp_gerente values (1, 1, 'Jorge','pessoa.eric@gmail.com', 1900.00, 'Rua do grito agudo, 202');
-insert into t_cpp_gerente values (2, 2, 'Débora','Debora@gmail.com', 2200.00, 'Rua do grito grave, 103');
-insert into t_cpp_gerente values (3, 3, 'João','Joaoo@gmail.com', 1500.00, 'Rua do abacate, 30');
- 
+insert into t_cpp_gerente values (1,'Jorge','pessoa.eric@gmail.com', 1900.00, 'Rua do grito agudo, 202');
+insert into t_cpp_gerente values (2,'Débora','Debora@gmail.com', 2200.00, 'Rua do grito grave, 103');
+insert into t_cpp_gerente values (3,'João','Joaoo@gmail.com', 1500.00, 'Rua do abacate, 30');
 
---ADICIONAR GERENTE NO ESTABELECIMENTO
-UPDATE t_cpp_estabelecimento 
-    SET cd_gerente = 1
-    WHERE cd_estabelecimento = 1;
-
-UPDATE t_cpp_estabelecimento 
-    SET cd_gerente = 2
-    WHERE cd_estabelecimento = 2;
-
-UPDATE t_cpp_estabelecimento 
-    SET cd_gerente = 3
-    WHERE cd_estabelecimento = 3;
+-- CRIAÇÃO DA TABELA ESTABELECIMENTO
+INSERT INTO t_cpp_estabelecimento VALUES(1, 1, 'Milk Shakespeare', '12345678000108');
+INSERT INTO t_cpp_estabelecimento VALUES(2, 2, 'Churros Store', '11145555000109');
+INSERT INTO t_cpp_estabelecimento VALUES(3, 3, 'Restaurante dos Primos', '22245678000105');
  
 
 -- CRIAÇÃO DA TABELA ITEM_CARDAPIO
