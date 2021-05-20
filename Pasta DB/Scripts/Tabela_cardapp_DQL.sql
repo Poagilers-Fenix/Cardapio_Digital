@@ -193,4 +193,63 @@ group by  p.vl_total_pedido, p.cd_pedido;
 select * from t_cpp_pedido;
 select * from t_cpp_item_cardapio;
 
+--Kaue vapo 
+--Total de avaliacao de cada estabelecimento
+select e.nm_estabelecimento, count(a.nr_experiencia) as "Total de Experiências"
+from t_cpp_avaliacao a
+inner join t_cpp_estabelecimento e
+on e.cd_estabelecimento = a.cd_estabelecimento
+inner join t_cpp_cliente c
+on c.cd_cliente = a.cd_cliente
+group by e.nm_estabelecimento, a.nr_experiencia;
+
+--Total de avaliação de cada estabelecimento com cada pessoa que availiou, ordenado pelo nome dos estabelecimentos
+select e.cd_estabelecimento, e.nm_estabelecimento, count(a.nr_experiencia) as "Total de Experiências", c.nm_cliente
+from t_cpp_avaliacao a
+inner join t_cpp_estabelecimento e
+on e.cd_estabelecimento = a.cd_estabelecimento
+inner join t_cpp_cliente c
+on c.cd_cliente = a.cd_cliente
+group by e.cd_estabelecimento, e.nm_estabelecimento, a.nr_experiencia, c.nm_cliente
+order by e.nm_estabelecimento;
+
+
+
+
+--Query que envolve todas as tabelas, buscando por um determinado estabelecimento,
+--ordenando pelo hr_pedido do mais novo ao mais vemlho
+SELECT   E.cd_estabelecimento
+        ,E.nm_estabelecimento
+        ,G.nm_gerente
+        ,A.nr_experiencia
+        ,C.nm_cliente
+        ,P.hr_pedido
+        ,P.st_pedido
+        ,IC.nm_item_cardapio
+        ,IC.ds_item_cardapio
+        ,IC.vl_item_cardapio
+        ,IC.ds_categoria
+FROM T_CPP_ESTABELECIMENTO E
+INNER JOIN T_CPP_GERENTE G
+ON G.cd_gerente = E.cd_gerente
+INNER JOIN T_CPP_AVALIACAO A
+ON E.cd_estabelecimento = A.cd_estabelecimento
+INNER JOIN T_CPP_CLIENTE C
+ON C.cd_cliente = A.cd_cliente
+INNER JOIN T_CPP_PEDIDO P
+ON C.cd_cliente = P.cd_cliente
+INNER JOIN T_CPP_PEDIDO_ITEM_CARDAPIO PIC
+ON P.cd_pedido = PIC.cd_pedido
+INNER JOIN T_CPP_ITEM_CARDAPIO IC
+ON IC.cd_item_cardapio = PIC.cd_item_cardapio
+WHERE E.cd_estabelecimento = 2
+ORDER BY P.hr_pedido desc;
+
+
+
+
+
+
+
+
 
