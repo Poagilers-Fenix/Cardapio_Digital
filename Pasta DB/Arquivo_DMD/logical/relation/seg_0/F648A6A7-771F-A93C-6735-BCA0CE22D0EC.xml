@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="DEVEv1" directorySegmentName="seg_0" id="F648A6A7-771F-A93C-6735-BCA0CE22D0EC">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-03-31 01:03:58 UTC</createdTime>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<engineerTo>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+</engineerTo>
+<sourcePk>D809D8C2-EDD6-C249-AE1E-4FE3EB63962E</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>FD44A08E-D315-2015-8B00-2678A51EC7AC</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>45E34B9D-B61D-ADF7-7862-FABBBBB54EC6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

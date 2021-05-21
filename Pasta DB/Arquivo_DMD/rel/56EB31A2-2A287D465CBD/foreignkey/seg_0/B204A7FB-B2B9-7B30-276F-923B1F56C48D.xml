@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B204A7FB-B2B9-7B30-276F-923B1F56C48D" containerWithKeyObject="A28EC1EC-740C-EE8B-6EA4-4637772F9A97" localFKIndex="C3B285E4-53F4-04BC-8245-B2800B803CE2" name="T_CPP_ESTABELECIMENTO_FKv2">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<generatorID>A615DC89-D667-1611-46AE-C49ED3FBA240</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<referredTableLongName>T_CPP_ESTABELECIMENTO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>545BFB8D-EFCF-2270-A69F-B4A1D05C9A97</referredTableID>
+<keyObject>DBFEA426-7BC0-23B3-AC4C-7E8372FEEDB9</keyObject>
+<referredKeyID>DBFEA426-7BC0-23B3-AC4C-7E8372FEEDB9</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_estabelecimento</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

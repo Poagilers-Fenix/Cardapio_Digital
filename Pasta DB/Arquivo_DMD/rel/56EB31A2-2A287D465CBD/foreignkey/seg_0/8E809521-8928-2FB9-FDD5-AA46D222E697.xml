@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8E809521-8928-2FB9-FDD5-AA46D222E697" containerWithKeyObject="633821EF-8B1A-E676-CE1C-1545B2C2611A" localFKIndex="3CCC518F-D177-612D-454E-AFFBC39DB1B3" name="T_CPP_ITEM_CARDAPIO_FK">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<generatorID>BB7F17D7-4AE7-1F8B-A9E4-80C5D642E116</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<referredTableLongName>T_CPP_ITEM_CARDAPIO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8C7C8F9E-19A4-9BA0-AE66-2451BAA1869E</referredTableID>
+<keyObject>0B835CB3-56F9-1EAD-D3A3-3AE33242A0E3</keyObject>
+<referredKeyID>0B835CB3-56F9-1EAD-D3A3-3AE33242A0E3</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_item_cardapio</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

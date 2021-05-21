@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="TEMv1" directorySegmentName="seg_0" id="A615DC89-D667-1611-46AE-C49ED3FBA240">
+<createdBy>gih_m</createdBy>
+<createdTime>2021-05-03 18:37:27 UTC</createdTime>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="false"/>
+</engineerTo>
+<sourcePk>36E37C9F-B585-6F35-AFC8-CAB2054F464A</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>222A1092-3FA8-AE77-E34A-7DC4917365E6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>723EDDCF-CAE9-21B9-CD75-F69882F062BE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
