@@ -27,18 +27,18 @@ INSERT INTO t_cpp_estabelecimento VALUES(3, 3, 'Restaurante dos Primos', '222456
  
 
 -- CRIAÇÃO DA TABELA ITEM_CARDAPIO
-INSERT INTO t_cpp_item_cardapio VALUES(1, 1, 't', 'Sorvete de Chocolate', '100g de sorvete sabor chocolate', 5.00, 'Leite, chocolate em pó e açúcar', 'SOBREMESA', 700.00);
-INSERT INTO t_cpp_item_cardapio VALUES(2, 1, 'f', 'Milk Shake de Menta com Chocolate', '150ml de sorvete sabor menta e chocolate', 7.00, 'Leite, menta e chocolate em pó e açúcar', 'SOBREMESA', 750.00);
-INSERT INTO t_cpp_item_cardapio VALUES(3, 2, 't', 'Churros de Chocolate', '1 unidade de churros sabor chocolate', 7.00, 'Leite, chocolate, farinha de trigo, água e açúcar', 'SOBREMESA', 850);
-INSERT INTO t_cpp_item_cardapio VALUES(4, 2, 'f', 'Churros de Doce de Leite', '1 unidade de churros sabor doce de leite', 7.00, 'Leite, doce de leite, farinha de trigo, água e açúcar', 'SOBREMESA', 800.00);
-INSERT INTO t_cpp_item_cardapio VALUES(5, 3, 't', 'Arroz', '100g de arroz do tipo 1', 3.00, 'Arroz Tipo 1', 'PRATO', 200.00);
-INSERT INTO t_cpp_item_cardapio VALUES(6, 3, 'f', 'Feijão', '100g de feijão carioca', 4.00, 'Feijão Carioca', 'PRATO', 300.00);
-insert into t_cpp_item_cardapio values(7, 1, 't', 'Milkshake unicórnio','Com MeMs', 8.00, 'Leite, chocolate, caramelo, chantilly e MeM','SOBREMESA', 500.00);
-insert into t_cpp_item_cardapio values(8, 1, 'f', 'Milkshake ovomaltine','O preferido da casa', 12.00, 'Leite, chocolate', 'SOBREMESA', 300.00);
-insert into t_cpp_item_cardapio values(9, 2, 't', 'Cerveja pilsen','A melhor cerveja do MUNDO', 10.00, 'Lúpulo, cevada','BEBIDA', 43.00);
-insert into t_cpp_item_cardapio values(10, 2, 'f', 'Amendoim sem casca','Um bom aperitivo, talvez o melhor de todos', 2.00, 'Amendoim','APERITIVO', 30.00 );
-insert into t_cpp_item_cardapio values(11, 3, 'f', 'Vinho tinto espanhol','Quer ostentar? então toma, ano de 1930', 10000.00, 'Vinho tinto espanhol','BEBIDA', 0.00);
-insert into t_cpp_item_cardapio values(12, 3, 't', 'Virada à paulista','Venha comer esse clássico!', 15.00, 'Arroz, feijão, Bife, ovo frito, couve refogada e tomate.','PRATO', 400.00);
+INSERT INTO t_cpp_item_cardapio VALUES(1, 1, 't', 'Sorvete de Chocolate', '100g de sorvete sabor chocolate', 5.00, 'Leite, chocolate em pó e açúcar', 'SOBREMESA', 700,1);
+INSERT INTO t_cpp_item_cardapio VALUES(2, 1, 'f', 'Milk Shake de Menta com Chocolate', '150ml de sorvete sabor menta e chocolate', 7.00, 'Leite, menta e chocolate em pó e açúcar', 'SOBREMESA', 750,1);
+INSERT INTO t_cpp_item_cardapio VALUES(3, 2, 't', 'Churros de Chocolate', '1 unidade de churros sabor chocolate', 7.00, 'Leite, chocolate, farinha de trigo, água e açúcar', 'SOBREMESA', 850, 1);
+INSERT INTO t_cpp_item_cardapio VALUES(4, 2, 'f', 'Churros de Doce de Leite', '1 unidade de churros sabor doce de leite', 7.00, 'Leite, doce de leite, farinha de trigo, água e açúcar', 'SOBREMESA', 800, 1);
+INSERT INTO t_cpp_item_cardapio VALUES(5, 3, 't', 'Arroz', '100g de arroz do tipo 1', 3.00, 'Arroz Tipo 1', 'PRATO', 200, 1);
+INSERT INTO t_cpp_item_cardapio VALUES(6, 3, 'f', 'Feijão', '100g de feijão carioca', 4.00, 'Feijão Carioca', 'PRATO', 300, 1);
+insert into t_cpp_item_cardapio values(7, 1, 't', 'Milkshake unicórnio','Com MeMs', 8.00, 'Leite, chocolate, caramelo, chantilly e MeM','SOBREMESA', 500, 1);
+insert into t_cpp_item_cardapio values(8, 1, 'f', 'Milkshake ovomaltine','O preferido da casa', 12.00, 'Leite, chocolate', 'SOBREMESA', 300, 1);
+insert into t_cpp_item_cardapio values(9, 2, 't', 'Cerveja pilsen','A melhor cerveja do MUNDO', 10.00, 'Lúpulo, cevada','BEBIDA', 43, 1);
+insert into t_cpp_item_cardapio values(10, 2, 'f', 'Amendoim sem casca','Um bom aperitivo, talvez o melhor de todos', 2.00, 'Amendoim','APERITIVO', 30,  1 );
+insert into t_cpp_item_cardapio values(11, 3, 'f', 'Vinho tinto espanhol','Quer ostentar? então toma, ano de 1930', 10000.00, 'Vinho tinto espanhol','BEBIDA', 0, 1);
+insert into t_cpp_item_cardapio values(12, 3, 't', 'Virada à paulista','Venha comer esse clássico!', 15.00, 'Arroz, feijão, Bife, ovo frito, couve refogada e tomate.','PRATO', 400, 1);
  
 -- CRIAÇÃO DA TABELA CLIENTE
 insert into t_cpp_cliente values(1, 'Lari', '11960205342', '123');
@@ -50,8 +50,8 @@ insert into t_cpp_cliente values(6, 'Dan', '11846265749', '12345678');
  
 -- CRIAÇÃO DA TABELA PEDIDO
 INSERT INTO t_cpp_pedido VALUES (1, 1, 1,  5.00, 'PAGO', TO_DATE('10-DEZ-2021 17:30:30','DD-MON-YYYY HH24:MI:SS'));
-INSERT INTO t_cpp_pedido VALUES (2, 2, 2,  17.00, 'EM_PREPARO', TO_DATE('07-MAI-2021 15:10:30','DD-MON-YYYY HH24:MI:SS'));
-INSERT INTO t_cpp_pedido VALUES (3, 3, 3,  15.00, 'EM_PREPARO', TO_DATE('28-JUL-2021 12:23:14','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO t_cpp_pedido VALUES (2, 2, 2,  17.00, 'EM PREPARO', TO_DATE('07-MAI-2021 15:10:30','DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO t_cpp_pedido VALUES (3, 3, 3,  15.00, 'EM PREPARO', TO_DATE('28-JUL-2021 12:23:14','DD-MON-YYYY HH24:MI:SS'));
 insert into t_cpp_pedido values(4, 4, 2, 12.00,'PAGO', TO_DATE('20-JUN-2021 16:14:43','DD-MON-YYYY HH24:MI:SS'));
 insert into t_cpp_pedido values(5, 5, 1, 8.00,'RECEBIDO', TO_DATE('10-MAR-2021 18:34:55','DD-MON-YYYY HH24:MI:SS'));
 insert into t_cpp_pedido values(6, 6, 3, 10015.00,'ENTREGUE', TO_DATE('05-JAN-2021 13:10:12','DD-MON-YYYY HH24:MI:SS'));

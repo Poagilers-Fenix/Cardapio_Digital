@@ -61,9 +61,18 @@ CREATE TABLE t_cpp_item_cardapio (
     vl_item_cardapio    NUMBER(7, 2) NOT NULL,
     ds_ingrendientes    VARCHAR2(300) NOT NULL,
     ds_categoria        VARCHAR2(15) NOT NULL,
-    vl_calorico         NUMBER(4)
+    vl_calorico         NUMBER(4),
+    qt_item_cardapio    NUMBER(3) NOT NULL
 );
 
+ALTER TABLE t_cpp_item_cardapio ADD constraint t_cpp_item_cardapio_ck CHECK ( ds_categoria IN (
+    'PRATO',
+    'BEBIDA',
+    'APERITIVO',
+    'SOBREMESA',
+    'LANCHE'
+))
+;
 ALTER TABLE t_cpp_item_cardapio ADD CONSTRAINT t_cpp_item_cardapio_pk PRIMARY KEY ( cd_item_cardapio );
 
 CREATE TABLE t_cpp_pedido (
@@ -75,6 +84,12 @@ CREATE TABLE t_cpp_pedido (
     hr_pedido           DATE NOT NULL
 );
 
+ALTER TABLE t_cpp_pedido ADD constraint t_cpp_pedido_ck_1 CHECK ( st_pedido IN (
+    'RECEBIDO',
+    'EM PREPARO',
+    'ENTREGUE',
+    'PAGO' ))
+;
 ALTER TABLE t_cpp_pedido ADD CONSTRAINT t_cpp_pedido_pk PRIMARY KEY ( cd_pedido );
 
 CREATE TABLE t_cpp_pedido_item_cardapio (
@@ -82,24 +97,24 @@ CREATE TABLE t_cpp_pedido_item_cardapio (
     cd_pedido         NUMBER(4) NOT NULL
 );
 
-ALTER TABLE t_cpp_avaliacao
+ALTER TABLE t_cpp_pedido
     ADD CONSTRAINT t_cpp_cliente_fk FOREIGN KEY ( cd_cliente )
         REFERENCES t_cpp_cliente ( cd_cliente );
 
-ALTER TABLE t_cpp_pedido
+ALTER TABLE t_cpp_avaliacao
     ADD CONSTRAINT t_cpp_cliente_fkv2 FOREIGN KEY ( cd_cliente )
         REFERENCES t_cpp_cliente ( cd_cliente );
-
-ALTER TABLE t_cpp_avaliacao
-    ADD CONSTRAINT t_cpp_estab_fk FOREIGN KEY ( cd_estabelecimento )
-        REFERENCES t_cpp_estabelecimento ( cd_estabelecimento );
 
 ALTER TABLE t_cpp_item_cardapio
     ADD CONSTRAINT t_cpp_estabelecimento_fk FOREIGN KEY ( cd_estabelecimento )
         REFERENCES t_cpp_estabelecimento ( cd_estabelecimento );
 
-ALTER TABLE t_cpp_pedido
+ALTER TABLE t_cpp_avaliacao
     ADD CONSTRAINT t_cpp_estabelecimento_fkv2 FOREIGN KEY ( cd_estabelecimento )
+        REFERENCES t_cpp_estabelecimento ( cd_estabelecimento );
+
+ALTER TABLE t_cpp_pedido
+    ADD CONSTRAINT t_cpp_estabelecimento_fkv3 FOREIGN KEY ( cd_estabelecimento )
         REFERENCES t_cpp_estabelecimento ( cd_estabelecimento );
 
 ALTER TABLE t_cpp_estabelecimento
@@ -113,5 +128,6 @@ ALTER TABLE t_cpp_pedido_item_cardapio
 ALTER TABLE t_cpp_pedido_item_cardapio
     ADD CONSTRAINT t_cpp_pedido_fk FOREIGN KEY ( cd_pedido )
         REFERENCES t_cpp_pedido ( cd_pedido );
+
 
 COMMIT;
