@@ -3,7 +3,7 @@
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>723EDDCF-CAE9-21B9-CD75-F69882F062BE</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
@@ -12,7 +12,7 @@
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>F0A86F6E-97AF-0A47-CBC7-4F948638405F</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -24,7 +24,7 @@
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>595666D6-3112-62E7-2F5B-A567B5F776B1</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -40,7 +40,7 @@
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>A74E8694-917E-0155-1E50-3AF1574126BC</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -56,7 +56,7 @@
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>425ECCCF-E59C-76A2-96EE-CD0B26B509E7</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -68,7 +68,7 @@
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>80377F7C-6306-0196-4466-11AD78F48D2A</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -83,7 +83,7 @@
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>9D0DE855-546E-2483-F0E8-79E87628C423</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
@@ -91,22 +91,22 @@
 <colUsage columnID="12BF4096-385E-78C1-ACA0-29892082C4A3"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="6C1B40FE-51E3-9B25-D81A-C13E2998F2CB" name="T_CPP_CLIENTE_FK">
+<ind_PK_UK id="6C1B40FE-51E3-9B25-D81A-C13E2998F2CB" name="T_CPP_CLIENTE_FKv2">
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>FFA014F8-93B3-56A0-ABF5-DBFE41467CEF</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="C349A460-4C7D-199F-8481-303BB156E24F"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="C3B285E4-53F4-04BC-8245-B2800B803CE2" name="T_CPP_ESTAB_FK">
+<ind_PK_UK id="C3B285E4-53F4-04BC-8245-B2800B803CE2" name="T_CPP_ESTABELECIMENTO_FKv2">
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>A615DC89-D667-1611-46AE-C49ED3FBA240</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>

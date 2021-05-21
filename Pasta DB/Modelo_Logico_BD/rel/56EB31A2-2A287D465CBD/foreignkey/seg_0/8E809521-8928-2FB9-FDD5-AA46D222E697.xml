@@ -3,7 +3,7 @@
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>BB7F17D7-4AE7-1F8B-A9E4-80C5D642E116</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <referredTableLongName>T_CPP_ITEM_CARDAPIO</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>
 <referredTableID>8C7C8F9E-19A4-9BA0-AE66-2451BAA1869E</referredTableID>

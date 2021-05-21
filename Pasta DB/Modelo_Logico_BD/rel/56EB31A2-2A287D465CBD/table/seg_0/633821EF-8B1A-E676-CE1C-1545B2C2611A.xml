@@ -3,7 +3,7 @@
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>900ECC2C-588D-C67C-3553-A0C8B49BE5B9</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
@@ -12,7 +12,7 @@
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>E31E69B4-2705-5AF3-1078-A0180AE65823</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -28,7 +28,7 @@
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>E1FB0F19-BA30-AA35-ED5A-98F235CE9888</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -40,25 +40,13 @@
 <colAssociation fkAssociation="5ABBE29E-E16D-549B-B671-43490A839B00" referredColumn="756B7903-D711-3EFD-3ADF-AC17235652F7"/>
 </associations>
 </Column>
-<Column name="qt_item_cardapio" id="A1F8CAF2-FE50-BC9E-8D65-2B8848C78895">
-<createdBy>CLIENTE</createdBy>
-<createdTime>2021-05-18 02:43:24 UTC</createdTime>
-<generatorID>41B8D9B6-4DEB-8239-D278-8B21284ABA87</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>2</dataTypePrecision>
-<ownDataTypeParameters>,2,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="3CCC518F-D177-612D-454E-AFFBC39DB1B3" name="T_CPP_ITEM_CARDAPIO_FK">
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>BB7F17D7-4AE7-1F8B-A9E4-80C5D642E116</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
@@ -69,7 +57,7 @@
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>F3F50BBE-CE35-2146-2068-30FFA5A21DFD</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>

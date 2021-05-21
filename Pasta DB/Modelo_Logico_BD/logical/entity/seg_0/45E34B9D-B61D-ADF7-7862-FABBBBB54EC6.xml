@@ -2,7 +2,7 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="45E34B9D-B61D-ADF7-7862-FABBBBB54EC6" name="T_CPP_PEDIDO">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:31:51 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -18,7 +18,7 @@
 <Attribute name="cd_pedido" id="50277B14-CE6B-013B-D5C6-427507719EFE">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:32:00 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -32,7 +32,7 @@
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 01:03:58 UTC</createdTime>
 <generatorID>F648A6A7-771F-A93C-6735-BCA0CE22D0EC</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -47,7 +47,7 @@
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-03 18:38:45 UTC</createdTime>
 <generatorID>E08DEC3A-AF77-A8F3-DC64-6B98BFEADE2E</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -61,7 +61,7 @@
 <Attribute name="vl_total_pedido" id="D0D18C0E-7742-558A-0C33-CA8426FAD510">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:34:15 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -75,7 +75,7 @@
 <Attribute name="st_pedido" id="F7C4474B-1207-94A9-6AAF-C3F171C8E73D">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:40:03 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -85,23 +85,10 @@
 <dataTypeSize>15 CHAR</dataTypeSize>
 <ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ds_pedido" id="7129AED1-C1F5-E439-E251-3D260BF551F6">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-03-31 00:41:59 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
-<engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>200</dataTypeSize>
-<ownDataTypeParameters>200,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="hr_pedido" id="1CF08AA1-4EE6-EBA7-1433-AE59B751CA18">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:44:56 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -115,9 +102,10 @@
 <identifier id="D090D80F-27CF-DB23-1184-DCEABBD1E5EB" name="T_CPP_PEDIDO PK">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:32:33 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <newElementsIDs>50277B14-CE6B-013B-D5C6-427507719EFE</newElementsIDs>

@@ -2,7 +2,7 @@
 <Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="900ECC2C-588D-C67C-3553-A0C8B49BE5B9" name="T_CPP_PEDIDO_ITEM_CARDAPIO">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-26 20:25:10 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -19,7 +19,7 @@
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-26 20:25:38 UTC</createdTime>
 <generatorID>BB7F17D7-4AE7-1F8B-A9E4-80C5D642E116</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -34,7 +34,7 @@
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-26 20:26:14 UTC</createdTime>
 <generatorID>F3F50BBE-CE35-2146-2068-30FFA5A21DFD</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
@@ -43,20 +43,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="qt_item_cardapio" id="41B8D9B6-4DEB-8239-D278-8B21284ABA87">
-<createdBy>CLIENTE</createdBy>
-<createdTime>2021-05-18 02:13:22 UTC</createdTime>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
-<engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>2</dataTypePrecision>
-<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 </Entity>

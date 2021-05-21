@@ -1,9 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="23B132A0-16F9-253B-B3C2-79D127836884" containerWithKeyObject="EB618ED9-200C-8C59-FA8F-B59127094383" localFKIndex="82640924-2713-88AF-B918-9A412D289799" name="T_CPP_CLIENTE_FKv2">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="23B132A0-16F9-253B-B3C2-79D127836884" containerWithKeyObject="EB618ED9-200C-8C59-FA8F-B59127094383" localFKIndex="82640924-2713-88AF-B918-9A412D289799" name="T_CPP_CLIENTE_FK">
 <createdBy>gih_m</createdBy>
 <createdTime>2021-05-04 00:19:56 UTC</createdTime>
 <generatorID>F648A6A7-771F-A93C-6735-BCA0CE22D0EC</generatorID>
-<ownerDesignName>Modelo_Logico_BD2</ownerDesignName>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
 <referredTableLongName>T_CPP_CLIENTE</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>
 <referredTableID>AF8AD7F9-0229-0975-FDCD-2B59BF08DF2A</referredTableID>
