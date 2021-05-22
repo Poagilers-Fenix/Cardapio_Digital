@@ -71,7 +71,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="D809D8C2-EDD6-C249-AE1E-4FE3EB63962E" name="T_CPP_CLIENTE PK">
+<identifier id="D809D8C2-EDD6-C249-AE1E-4FE3EB63962E" name="PK_CPP_CLIENTE">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:24:51 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>

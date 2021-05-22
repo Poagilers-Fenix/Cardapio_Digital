@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EB618ED9-200C-8C59-FA8F-B59127094383" name="T_CPP_PEDIDO">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FA6A654D-9C7C-AD78-B099-E86F811DFE2E" name="T_CPP_PEDIDO">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>45E34B9D-B61D-ADF7-7862-FABBBBB54EC6</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="cd_pedido" id="756B7903-D711-3EFD-3ADF-AC17235652F7">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<Column name="cd_pedido" id="7CF43346-0D53-D37D-1FB0-D2AE72A089B9">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>50277B14-CE6B-013B-D5C6-427507719EFE</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -20,9 +20,9 @@
 <ownDataTypeParameters>,4,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="cd_cliente" id="92B633D8-71D2-DB4D-BEF9-D17878F61620">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<Column name="cd_cliente" id="3D8E9D08-C29F-D03E-2D16-1E64FBBE412A">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>E32DB346-CFD8-5559-D6C2-3F017A3A28C3</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -33,13 +33,13 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="23B132A0-16F9-253B-B3C2-79D127836884" referredColumn="1ED30174-FA7D-A5A5-46AD-07F909C5616E"/>
+<colAssociation fkAssociation="6D27FEC9-275B-A867-956E-0F30AF388315" referredColumn="E300F9BF-0C2D-CAD9-854C-2FF3867F3889"/>
 </associations>
 </Column>
-<Column name="cd_estabelecimento" id="EA265917-2CD9-37B6-A411-4E7E2A632C54">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
-<generatorID>5E092636-483C-F751-B4C6-7B7BD00FADF7</generatorID>
+<Column name="cd_estabelecimento" id="D9932BC9-1460-AB0E-DE3A-6DDE76348771">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>DB199AF1-FD10-B498-4B49-638CF7078872</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -49,12 +49,12 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="2C0C2825-EAFA-559B-5FFC-CE9E8D941210" referredColumn="23C97033-00F4-A11E-D4E8-3CA1C5A8E0CA"/>
+<colAssociation fkAssociation="86E67F18-9ABA-F101-22A7-119AB96F191A" referredColumn="A089AD24-0FF2-DCAF-1D7D-EE06761F581B"/>
 </associations>
 </Column>
-<Column name="vl_total_pedido" id="95F097E4-819A-85BE-6BC8-9A8018D513F6">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<Column name="vl_total_pedido" id="AE86F3BD-D2E2-486C-3DB1-6F3B21F2B010">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>D0D18C0E-7742-558A-0C33-CA8426FAD510</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -65,21 +65,21 @@
 <ownDataTypeParameters>,8,2</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="st_pedido" id="9E0B9BA5-FFC9-9B22-9456-62A340FF93DD">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<Column name="st_pedido" id="9E04A5E2-0D64-5FF0-BAE7-56C2D83B50E3">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>F7C4474B-1207-94A9-6AAF-C3F171C8E73D</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15 CHAR</dataTypeSize>
-<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="hr_pedido" id="E363F493-FE98-0319-529B-407F2A98CF70">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<Column name="hr_pedido" id="CF38D4F4-2F4B-D191-906F-833A4020D745">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>1CF08AA1-4EE6-EBA7-1433-AE59B751CA18</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -90,47 +90,47 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="D10E0D40-26EE-3D97-44C5-CD20EB9ECA07" name="T_CPP_PEDIDO_PK">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<ind_PK_UK id="F124C179-59D0-D55C-753A-DCBC209D02F4" name="PK_CPP_PEDIDO">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>D090D80F-27CF-DB23-1184-DCEABBD1E5EB</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="756B7903-D711-3EFD-3ADF-AC17235652F7"/>
+<colUsage columnID="7CF43346-0D53-D37D-1FB0-D2AE72A089B9"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="82640924-2713-88AF-B918-9A412D289799" name="T_CPP_CLIENTE_FK">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<ind_PK_UK id="9E4DC82F-D67B-F303-29D1-95235F6697CB" name="FK_CPP_PEDIDO_CLIENTE">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>F648A6A7-771F-A93C-6735-BCA0CE22D0EC</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="92B633D8-71D2-DB4D-BEF9-D17878F61620"/>
+<colUsage columnID="3D8E9D08-C29F-D03E-2D16-1E64FBBE412A"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="FC38C940-F73B-BA79-E405-0E4178F5254A" name="T_CPP_ESTABELECIMENTO_FKv3">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
-<generatorID>E08DEC3A-AF77-A8F3-DC64-6B98BFEADE2E</generatorID>
+<ind_PK_UK id="5A2F2476-551E-656B-2AE3-D2273FC32FA2" name="FK_CPP_PEDIDO_ESTAB">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>D733E8C9-8966-F6A0-4CC2-02AAD7C9DEFC</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="EA265917-2CD9-37B6-A411-4E7E2A632C54"/>
+<colUsage columnID="D9932BC9-1460-AB0E-DE3A-6DDE76348771"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
 <tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
-<tableCheckConstraint name="T_CPP_PEDIDO_CK_1" directorySegmentName="seg_0" id="39053B93-ECC5-953A-ABEF-BEABE7896F6C">
-<createdBy>CLIENTE</createdBy>
-<createdTime>2021-05-21 00:14:24 UTC</createdTime>
+<tableCheckConstraint name="CK_CPP_PEDIDO" directorySegmentName="seg_0" id="CD7D435D-C57A-BD39-4CDA-24B2FACA198D">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 19:11:23 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
-<rule><![CDATA[st_pedido IN ('RECEBIDO', 'EM PREPARO', 'ENTREGUE', 'PAGO');
+<rule><![CDATA[st_pedido IN ('RECEBIDO', 'EM PREPARO', 'ENTREGUE', 'PAGO')
 
 ]]></rule>
 </tableCheckConstraint>

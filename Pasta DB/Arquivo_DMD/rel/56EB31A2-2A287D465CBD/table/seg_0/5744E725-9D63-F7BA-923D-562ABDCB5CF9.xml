@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="633821EF-8B1A-E676-CE1C-1545B2C2611A" name="T_CPP_PEDIDO_ITEM_CARDAPIO">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5744E725-9D63-F7BA-923D-562ABDCB5CF9" name="T_CPP_PEDIDO_ITEM_CARDAPIO">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>900ECC2C-588D-C67C-3553-A0C8B49BE5B9</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="cd_item_cardapio" id="4BE9D81A-32EC-0F97-AFE8-D2DAE09093D9">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<Column name="cd_item_cardapio" id="49F11A63-E049-ED60-4935-D8C210D654CD">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>E31E69B4-2705-5AF3-1078-A0180AE65823</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -21,12 +21,12 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="8E809521-8928-2FB9-FDD5-AA46D222E697" referredColumn="B7F69B49-42EC-2FFC-AAE2-1F6C54081F0D"/>
+<colAssociation fkAssociation="318E586F-937D-9F73-3B48-049850000015" referredColumn="89FBC0C3-F378-DD1F-1860-70A4122BC76C"/>
 </associations>
 </Column>
-<Column name="cd_pedido" id="254B83CA-CFB9-328B-C9FF-1A9E2D009CA3">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<Column name="cd_pedido" id="E7907373-CC1F-7E3E-4BC8-0AF9054B6648">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>E1FB0F19-BA30-AA35-ED5A-98F235CE9888</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -37,31 +37,31 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="5ABBE29E-E16D-549B-B671-43490A839B00" referredColumn="756B7903-D711-3EFD-3ADF-AC17235652F7"/>
+<colAssociation fkAssociation="60413FC1-9CDE-0D4C-FE95-F1720D2CCC7F" referredColumn="7CF43346-0D53-D37D-1FB0-D2AE72A089B9"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="3CCC518F-D177-612D-454E-AFFBC39DB1B3" name="T_CPP_ITEM_CARDAPIO_FK">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<ind_PK_UK id="3640AE05-2329-1CFC-F859-CCE775D173C2" name="FK_CPP_ITEM_CARDAPIO">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>BB7F17D7-4AE7-1F8B-A9E4-80C5D642E116</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="4BE9D81A-32EC-0F97-AFE8-D2DAE09093D9"/>
+<colUsage columnID="49F11A63-E049-ED60-4935-D8C210D654CD"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="BD5020A6-5D66-18A6-BF7C-12DE5762DEE1" name="T_CPP_PEDIDO_FK">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<ind_PK_UK id="24312414-6E7D-4B1F-6A35-BCAF79BEC79B" name="FK_CPP_PEDIDO_ITEM_CARDAPIO">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>F3F50BBE-CE35-2146-2068-30FFA5A21DFD</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="254B83CA-CFB9-328B-C9FF-1A9E2D009CA3"/>
+<colUsage columnID="E7907373-CC1F-7E3E-4BC8-0AF9054B6648"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

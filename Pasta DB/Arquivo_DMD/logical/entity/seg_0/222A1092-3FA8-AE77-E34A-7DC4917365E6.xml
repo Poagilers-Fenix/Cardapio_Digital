@@ -41,7 +41,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="nm_estabelecimento" id="D2347B5F-506A-0862-6C00-5B4200F8AC9A">
 <createdBy>Kaue Augusto</createdBy>
@@ -71,7 +71,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="36E37C9F-B585-6F35-AFC8-CAB2054F464A" name="T_CPP_ESTABELECIMENTO PK">
+<identifier id="36E37C9F-B585-6F35-AFC8-CAB2054F464A" name="PK_CPP_ESTABELECIMENTO">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:18:05 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>

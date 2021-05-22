@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="01B3DDF9-02EA-0A2E-7334-518D01CA56BA" containerWithKeyObject="7B799682-C4F9-5D81-11EA-E8F8DF83BF3B" localFKIndex="00E6AF65-7DE6-6A67-E134-703CD257CFE0" name="FK_CPP_AVALIACAO_ESTAB">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>002E4E83-2CBA-4604-0C64-83C1B0CAD4A5</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<referredTableLongName>T_CPP_ESTABELECIMENTO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>48A0D197-ED92-63BA-E94A-E44A43255C0A</referredTableID>
+<keyObject>1D81E188-578D-8A0F-E058-D9D49191EFD3</keyObject>
+<referredKeyID>1D81E188-578D-8A0F-E058-D9D49191EFD3</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cd_estabelecimento</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

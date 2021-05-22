@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AF8AD7F9-0229-0975-FDCD-2B59BF08DF2A" name="T_CPP_CLIENTE">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0572228B-2F38-9D07-963B-440D58236ECF" name="T_CPP_CLIENTE">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>FD44A08E-D315-2015-8B00-2678A51EC7AC</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="cd_cliente" id="1ED30174-FA7D-A5A5-46AD-07F909C5616E">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<Column name="cd_cliente" id="E300F9BF-0C2D-CAD9-854C-2FF3867F3889">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <commentInRDBMS><![CDATA[até dez mil]]></commentInRDBMS>
 <generatorID>FDC6F1CC-A6A4-4F00-F569-FC0E192E564A</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
@@ -21,9 +21,9 @@
 <ownDataTypeParameters>,5,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nm_cliente" id="DABD17EF-1A3F-B778-95EF-4F2C3534B881">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<Column name="nm_cliente" id="E3F842A5-D6BC-CE67-335F-77F310F4B18F">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>C370E3D4-42C5-62C1-9B3F-EDF4A22A7128</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -33,9 +33,9 @@
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nr_celular" id="1F89BE85-7F1E-2CE0-F886-46A4CDC66F43">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<Column name="nr_celular" id="0235F057-270C-2FA8-B06E-5D894D858E5C">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <commentInRDBMS><![CDATA[(11)922332233]]></commentInRDBMS>
 <generatorID>C79302EB-8A72-4FB3-2265-10B69B95E44D</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
@@ -46,9 +46,9 @@
 <ownDataTypeParameters>11,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ds_senha" id="8BCC7057-9D2E-B711-18DE-08EB15BF3E6F">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<Column name="ds_senha" id="918D3E04-758D-8576-DE77-DEA00EE43C90">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>C1253EB6-26A5-AF04-7DA6-1769F1AD4F84</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -60,16 +60,16 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="788E2B36-9989-EB41-0181-5AF95DFF46E2" name="T_CPP_CLIENTE_PK">
-<createdBy>gih_m</createdBy>
-<createdTime>2021-05-04 00:19:56 UTC</createdTime>
+<ind_PK_UK id="B525B2E4-AC32-DE10-0F31-D4B66E229BC8" name="PK_CPP_CLIENTE">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>D809D8C2-EDD6-C249-AE1E-4FE3EB63962E</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="1ED30174-FA7D-A5A5-46AD-07F909C5616E"/>
+<colUsage columnID="E300F9BF-0C2D-CAD9-854C-2FF3867F3889"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
