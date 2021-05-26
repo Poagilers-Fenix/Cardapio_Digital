@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B7C3973A-2A11-7569-102A-454958C21FE7" name="T_CPP_GERENTE">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>D236184C-3722-3B28-963E-576E79687BEC</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_gerente" id="FA9CA5FE-F794-53D9-978C-696094DF471E">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>630B64F9-B65B-55F4-7293-0EEDE63530DF</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_gerente" id="4A67B524-8C71-C231-57A7-ACA0A84ED49D">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>794AB0EB-43FB-B161-3B95-51D9A49CE7D1</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_email" id="CB8A21D3-04F5-ECB2-D4FF-2A5F670C9E19">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>DE15F275-5D5F-A877-2E1D-FD7E370928EE</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>65</dataTypeSize>
+<ownDataTypeParameters>65,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vl_salario" id="EA7FFF10-171D-E52E-9EF9-F90A1AD3ED6C">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>C1343D8F-3616-0455-BA5E-D350E3B042FC</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_endereco" id="B71C8D12-5460-0FD2-277F-63FEA4798401">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>20C02C89-DE58-E1F8-6BD9-1976484C5B97</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8E1F94AC-7335-4756-0642-D48BE3600395" name="PK_CPP_GERENTE">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>D4462E01-186C-8F03-036F-443E35AC0BD4</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FA9CA5FE-F794-53D9-978C-696094DF471E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7B799682-C4F9-5D81-11EA-E8F8DF83BF3B" name="T_CPP_AVALIACAO">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>723EDDCF-CAE9-21B9-CD75-F69882F062BE</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_avaliacao" id="6472B780-5836-DA63-3AF5-D96ABC1C5838">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>F0A86F6E-97AF-0A47-CBC7-4F948638405F</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cd_cliente" id="D110FE4A-D293-CA9D-57F9-2A98F0B76524">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>595666D6-3112-62E7-2F5B-A567B5F776B1</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FD0EEE2F-9E67-0B32-1034-24601EFE80C7" referredColumn="E300F9BF-0C2D-CAD9-854C-2FF3867F3889"/>
+</associations>
+</Column>
+<Column name="cd_estabelecimento" id="9538294E-F33C-EE65-19B8-9343825A8A86">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>581F24E4-2822-F4B9-1C10-CAABF3D26D86</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="01B3DDF9-02EA-0A2E-7334-518D01CA56BA" referredColumn="A089AD24-0FF2-DCAF-1D7D-EE06761F581B"/>
+</associations>
+</Column>
+<Column name="nr_experiencia" id="6544F328-7554-EBD7-535C-C15B3E5605D2">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>425ECCCF-E59C-76A2-96EE-CD0B26B509E7</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_avaliacao" id="C5B1F046-4FC9-9D29-2DA7-6F76490A7124">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>80377F7C-6306-0196-4466-11AD78F48D2A</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="33EAD4BE-69B9-2F21-2714-70C629F40725" name="PK_CPP_AVALIACAO">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>9D0DE855-546E-2483-F0E8-79E87628C423</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6472B780-5836-DA63-3AF5-D96ABC1C5838"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="60037B0F-78D8-5C78-5938-C44E98B11A9B" name="FK_CPP_AVALIACAO_CLIENTE">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>FFA014F8-93B3-56A0-ABF5-DBFE41467CEF</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D110FE4A-D293-CA9D-57F9-2A98F0B76524"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="00E6AF65-7DE6-6A67-E134-703CD257CFE0" name="FK_CPP_AVALIACAO_ESTAB">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>002E4E83-2CBA-4604-0C64-83C1B0CAD4A5</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9538294E-F33C-EE65-19B8-9343825A8A86"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

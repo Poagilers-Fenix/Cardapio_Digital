@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Arquivo_DMD" id="9AD3EF5B-B7CE-9563-BD1E-C94D989CCEB4" version="3.5">
+<createdBy>Kaue Augusto</createdBy>
+<createdTime>2021-03-31 00:15:06 UTC</createdTime>
+<ownerDesignName>Modelo_Logico_BD</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>9AD3EF5B-B7CE-9563-BD1E-C94D989CCEB4</designId>
+</OSDM_Design>

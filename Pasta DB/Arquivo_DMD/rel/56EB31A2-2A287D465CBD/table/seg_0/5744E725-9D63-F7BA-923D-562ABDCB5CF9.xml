@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5744E725-9D63-F7BA-923D-562ABDCB5CF9" name="T_CPP_PEDIDO_ITEM_CARDAPIO">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>900ECC2C-588D-C67C-3553-A0C8B49BE5B9</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_item_cardapio" id="49F11A63-E049-ED60-4935-D8C210D654CD">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>E31E69B4-2705-5AF3-1078-A0180AE65823</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="318E586F-937D-9F73-3B48-049850000015" referredColumn="89FBC0C3-F378-DD1F-1860-70A4122BC76C"/>
+</associations>
+</Column>
+<Column name="cd_pedido" id="E7907373-CC1F-7E3E-4BC8-0AF9054B6648">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>E1FB0F19-BA30-AA35-ED5A-98F235CE9888</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="60413FC1-9CDE-0D4C-FE95-F1720D2CCC7F" referredColumn="7CF43346-0D53-D37D-1FB0-D2AE72A089B9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3640AE05-2329-1CFC-F859-CCE775D173C2" name="FK_CPP_ITEM_CARDAPIO">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>BB7F17D7-4AE7-1F8B-A9E4-80C5D642E116</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="49F11A63-E049-ED60-4935-D8C210D654CD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="24312414-6E7D-4B1F-6A35-BCAF79BEC79B" name="FK_CPP_PEDIDO_ITEM_CARDAPIO">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:22:16 UTC</createdTime>
+<generatorID>F3F50BBE-CE35-2146-2068-30FFA5A21DFD</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E7907373-CC1F-7E3E-4BC8-0AF9054B6648"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

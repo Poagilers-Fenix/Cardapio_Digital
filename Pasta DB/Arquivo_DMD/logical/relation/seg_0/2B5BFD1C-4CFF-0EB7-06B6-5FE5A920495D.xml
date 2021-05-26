@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="DEVE" directorySegmentName="seg_0" id="2B5BFD1C-4CFF-0EB7-06B6-5FE5A920495D">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-21 15:17:47 UTC</createdTime>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<engineerTo>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+</engineerTo>
+<sourcePk>36E37C9F-B585-6F35-AFC8-CAB2054F464A</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>222A1092-3FA8-AE77-E34A-7DC4917365E6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5B593924-5B52-81CA-E4A7-7E7574395A63</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
