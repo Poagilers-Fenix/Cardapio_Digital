@@ -41,6 +41,21 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cd_categoria" id="70A6F4C7-467C-276A-8777-7E400C5488D5">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-26 19:42:48 UTC</createdTime>
+<generatorID>2BEF95EB-7B3D-3470-05CE-10703C292FB3</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<engineerTo>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+</engineerTo>
+<referedAttribute>42951C61-9161-DF68-5731-D32A71367C4E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="nr_destaque" id="23A31AB5-7203-D95C-5475-BDD3375273B9">
@@ -108,19 +123,6 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>300</dataTypeSize>
 <ownDataTypeParameters>300,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="ds_categoria" id="CEBB497D-097B-9C74-0BFC-6E5D9451CB0C">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-04-26 19:52:35 UTC</createdTime>
-<ownerDesignName>Arquivo_DMD</ownerDesignName>
-<engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>15,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="vl_calorico" id="B2FD440A-C35F-A42C-9E0C-AA6DF3ED9096">
 <createdBy>Kaue Augusto</createdBy>
