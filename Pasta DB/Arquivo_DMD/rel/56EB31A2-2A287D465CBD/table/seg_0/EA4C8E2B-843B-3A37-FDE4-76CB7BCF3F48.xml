@@ -36,7 +36,23 @@
 <colAssociation fkAssociation="5ACC8958-5B33-C89D-DECB-94D8131A57DC" referredColumn="A089AD24-0FF2-DCAF-1D7D-EE06761F581B"/>
 </associations>
 </Column>
-<Column name="nr_destaque" id="890D04F4-93AD-F7F6-0295-7D29497F8EED">
+<Column name="cd_categoria" id="3C27D914-5D6B-7CA8-B497-DE927A6F7C45">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 18:18:55 UTC</createdTime>
+<generatorID>70A6F4C7-467C-276A-8777-7E400C5488D5</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="44EBD3E6-DE39-E51A-A07D-5806A198779E" referredColumn="FE90D7F0-1420-1357-C80F-5ACACCBDAE0C"/>
+</associations>
+</Column>
+<Column name="st_destaque" id="890D04F4-93AD-F7F6-0295-7D29497F8EED">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>23A31AB5-7203-D95C-5475-BDD3375273B9</generatorID>
@@ -85,7 +101,7 @@
 <ownDataTypeParameters>,7,2</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ds_ingrendientes" id="BCBDEB11-4796-B564-1EC2-562BA62B58A2">
+<Column name="ds_ingredientes" id="BCBDEB11-4796-B564-1EC2-562BA62B58A2">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>486A745A-4BA4-CC78-AC2D-78B7D26ED98B</generatorID>
@@ -95,18 +111,6 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>300</dataTypeSize>
 <ownDataTypeParameters>300,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="ds_categoria" id="88DD0D57-5251-157C-079A-C30D76210C42">
-<createdBy>lari</createdBy>
-<createdTime>2021-05-21 15:22:16 UTC</createdTime>
-<generatorID>CEBB497D-097B-9C74-0BFC-6E5D9451CB0C</generatorID>
-<ownerDesignName>Arquivo_DMD</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>15,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="vl_calorico" id="23DB6666-2AF6-6A10-966F-93645BDA53F4">
@@ -122,21 +126,21 @@
 <ownDataTypeParameters>,4,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="qt_item_cardapio" id="74199614-607B-C5F7-C489-4DCDCD6458D5">
-<createdBy>lari</createdBy>
-<createdTime>2021-05-21 15:22:16 UTC</createdTime>
-<generatorID>1A91A4C3-8050-1779-A4BD-1491D70D01E3</generatorID>
+<Column name="fl_foto_ic" id="F4411AF6-BE45-882D-114C-477D9E815D29">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 18:48:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[IC = item cardapio]]></commentInRDBMS>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="02DC057B-B1A0-5F5B-321A-0C56B4C86F82" name="PK_CPP_ITEM_CARDAPIO">
+<ind_PK_UK id="02DC057B-B1A0-5F5B-321A-0C56B4C86F82" name="T_CPP_ITEM_CARDAPIO_PK">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>6F20340C-0453-AE94-6BAD-0D21F38497BC</generatorID>
@@ -148,7 +152,7 @@
 <colUsage columnID="89FBC0C3-F378-DD1F-1860-70A4122BC76C"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="9B2A8FD3-ADD4-3E19-954B-8676EAD6133A" name="FK_CPP_ITEM_CARDAPIO_ESTAB">
+<ind_PK_UK id="9B2A8FD3-ADD4-3E19-954B-8676EAD6133A" name="FK_CPP_ESTAB_IC">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>2B5BFD1C-4CFF-0EB7-06B6-5FE5A920495D</generatorID>
@@ -157,6 +161,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="D9CEA051-E998-B620-41F5-FC17D721DE26"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DFA894D5-3F7C-9306-EEBA-707612A6CEA4" name="FK_CPP_CATEGORIA_IC">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 18:18:55 UTC</createdTime>
+<generatorID>2BEF95EB-7B3D-3470-05CE-10703C292FB3</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3C27D914-5D6B-7CA8-B497-DE927A6F7C45"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

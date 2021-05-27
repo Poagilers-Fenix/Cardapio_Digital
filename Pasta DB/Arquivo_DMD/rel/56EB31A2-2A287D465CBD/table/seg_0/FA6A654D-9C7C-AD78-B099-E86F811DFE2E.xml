@@ -90,7 +90,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="F124C179-59D0-D55C-753A-DCBC209D02F4" name="PK_CPP_PEDIDO">
+<ind_PK_UK id="F124C179-59D0-D55C-753A-DCBC209D02F4" name="T_CPP_PEDIDO_PK">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>D090D80F-27CF-DB23-1184-DCEABBD1E5EB</generatorID>
@@ -113,7 +113,7 @@
 <colUsage columnID="3D8E9D08-C29F-D03E-2D16-1E64FBBE412A"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="5A2F2476-551E-656B-2AE3-D2273FC32FA2" name="FK_CPP_PEDIDO_ESTAB">
+<ind_PK_UK id="5A2F2476-551E-656B-2AE3-D2273FC32FA2" name="FK_CPP_PEDIDO_ESTABELECIMENTO">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>D733E8C9-8966-F6A0-4CC2-02AAD7C9DEFC</generatorID>

@@ -56,9 +56,9 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>2</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nr_destaque" id="23A31AB5-7203-D95C-5475-BDD3375273B9">
+<Attribute name="st_destaque" id="23A31AB5-7203-D95C-5475-BDD3375273B9">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:53:59 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
@@ -111,7 +111,7 @@
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,7,2</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ds_ingrendientes" id="486A745A-4BA4-CC78-AC2D-78B7D26ED98B">
+<Attribute name="ds_ingredientes" id="486A745A-4BA4-CC78-AC2D-78B7D26ED98B">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:58:45 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
@@ -138,15 +138,27 @@
 <dataTypePrecision>4</dataTypePrecision>
 <ownDataTypeParameters>,4,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="fl_foto_ic" id="867DC9B3-E101-E6BA-051B-55947C7B6FA4">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 18:49:40 UTC</createdTime>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<engineerTo>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="6F20340C-0453-AE94-6BAD-0D21F38497BC" name="PK_CPP_ITEM_CARDAPIO">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:53:25 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="false"/>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <newElementsIDs>67F48E18-CEFE-3C70-5133-24C83582F6A5</newElementsIDs>
