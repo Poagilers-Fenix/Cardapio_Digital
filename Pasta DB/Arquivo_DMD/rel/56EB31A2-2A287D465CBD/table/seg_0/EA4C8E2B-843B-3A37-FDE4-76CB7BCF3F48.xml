@@ -138,18 +138,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="fl_foto_ic2" id="1CD61349-6DA9-1A46-EAFE-5358D8464EB3">
-<createdBy>CLIENTE</createdBy>
-<createdTime>2021-05-27 20:49:35 UTC</createdTime>
-<generatorID>867DC9B3-E101-E6BA-051B-55947C7B6FA4</generatorID>
-<ownerDesignName>Arquivo_DMD</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT029</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="02DC057B-B1A0-5F5B-321A-0C56B4C86F82" name="T_CPP_ITEM_CARDAPIO_PK">

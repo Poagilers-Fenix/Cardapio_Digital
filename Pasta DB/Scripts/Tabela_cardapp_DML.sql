@@ -1,7 +1,7 @@
 alter session set nls_date_format='YYYY-MM-DD HH24:MI:SS';
 
 /*
-DELETE FROM t_cpp_categoria
+DELETE FROM t_cpp_categoria;
 DELETE FROM t_cpp_avaliacao;
 DELETE FROM t_cpp_pedido_item_cardapio;
 DELETE FROM t_cpp_item_cardapio;
@@ -11,19 +11,29 @@ DELETE FROM t_cpp_estabelecimento;
 DELETE FROM t_cpp_gerente;
 */
 
+desc t_cpp_item_cardapio;
+
+--POPULACAO DA TABELA CATEGORIA DO ESTABELECIMENTO 1
+insert into t_cpp_categoria values (cdcategoria.nextval, 'Sobremesa', 1);
+insert into t_cpp_categoria values (cdcategoria.nextval, 'Bebida', 1);
+
+--POPULACAO DA TABELA CATEGORIA DO ESTABELECIMENTO 2
+insert into t_cpp_categoria values (cdcategoria.nextval, 'Sobremesa', 2);
+insert into t_cpp_categoria values (cdcategoria.nextval, 'Aperitivo', 2);
+insert into t_cpp_categoria values (cdcategoria.nextval, 'Bebida', 2);
+
+--POPULACAO DA TABELA CATEGORIA DO ESTABELECIMENTO 3
+insert into t_cpp_categoria values (cdcategoria.nextval, 'Prato', 3);
+insert into t_cpp_categoria values (cdcategoria.nextval, 'Lanche', 3);
+insert into t_cpp_categoria values (cdcategoria.nextval, 'Bebida', 3);
 
 
---CRIACAO DA TABELA CATEGORIA
-insert into t_cpp_categoria values (cdcategoria.nextval, 'Sobremesa');
-insert into t_cpp_categoria values (cdcategoria.nextval, 'Prato Principal');
-insert into t_cpp_categoria values (cdcategoria.nextval, 'Aperitivo');
-insert into t_cpp_categoria values (cdcategoria.nextval, 'Bebida');
 
 
 -- CRIACAO DA TABELA GERENTE
-insert into t_cpp_gerente values (1,'Jorge','pessoa.eric@gmail.com', 1900.00, 'Rua do grito agudo, 202');
-insert into t_cpp_gerente values (2,'DÃ©bora','Debora@gmail.com', 2200.00, 'Rua do grito grave, 103');
-insert into t_cpp_gerente values (3,'JoÃ£o','Joaoo@gmail.com', 1500.00, 'Rua do abacate, 30');
+insert into t_cpp_gerente values (cdgerente.nextval,'Jorge','pessoa.eric@gmail.com', 1900.00, 'Rua do grito agudo, 202', 'Bananinha123');
+insert into t_cpp_gerente values (cdgerente.nextval,'Débora','Debora@gmail.com', 2200.00, 'Rua do grito grave, 103', 'GoiabadaAt77');
+insert into t_cpp_gerente values (cdgerente.nextval,'João','Joao@gmail.com', 1500.00, 'Rua do abacate, 30', 'Mocoto99');
 
 UPDATE t_cpp_gerente
 SET ds_email = 'jorge@gmail.com'
@@ -42,25 +52,25 @@ SET nm_gerente = 'JoÃ£o Lima'
 WHERE cd_gerente = 3;
 
 -- CRIAÃ‡ÃƒO DA TABELA ESTABELECIMENTO
-INSERT INTO t_cpp_estabelecimento VALUES(1, 1, 'Milk Shakespeare', '12345678000108');
-INSERT INTO t_cpp_estabelecimento VALUES(2, 2, 'Churros Store', '11145555000109');
-INSERT INTO t_cpp_estabelecimento VALUES(3, 3, 'Restaurante dos Primos', '22245678000105');
+INSERT INTO t_cpp_estabelecimento VALUES(cdestabelecimento.nextval, 1, '12345678000108', 'Milk Shakespeare LTDA', 'Milk Shakespeare', 'Rua djuvidas, 197', '11986759980');
+INSERT INTO t_cpp_estabelecimento VALUES(cdestabelecimento.nextval, 2, '11145555000109','Churros Store SA', 'Churros Store', 'Rua taí, 22', '33978964456' );
+INSERT INTO t_cpp_estabelecimento VALUES(cdestabelecimento.nextval, 3, '22245678000105', 'Primos e Cia', 'Restaurante dos Primos', 'Rua Melissa, 39', '21987558563');
  
 
 -- CRIAÃ‡ÃƒO DA TABELA ITEM_CARDAPIO
-INSERT INTO t_cpp_item_cardapio VALUES(1, 1, '1', 'Sorvete de Chocolate', '100g de sorvete sabor chocolate', 5.00, 'Leite, chocolate em pÃ³ e aÃ§Ãºcar', 'SOBREMESA', 700,1);
-INSERT INTO t_cpp_item_cardapio VALUES(2, 1, '0', 'Milk Shake de Menta com Chocolate', '150ml de sorvete sabor menta e chocolate', 7.00, 'Leite, menta e chocolate em pÃ³ e aÃ§Ãºcar', 'SOBREMESA', 750,1);
-INSERT INTO t_cpp_item_cardapio VALUES(3, 2, '1', 'Churros de Chocolate', '1 unidade de churros sabor chocolate', 7.00, 'Leite, chocolate, farinha de trigo, Ã¡gua e aÃ§Ãºcar', 'SOBREMESA', 850, 1);
-INSERT INTO t_cpp_item_cardapio VALUES(4, 2, '0', 'Churros de Doce de Leite', '1 unidade de churros sabor doce de leite', 7.00, 'Leite, doce de leite, farinha de trigo, Ã¡gua e aÃ§Ãºcar', 'SOBREMESA', 800, 1);
-INSERT INTO t_cpp_item_cardapio VALUES(5, 3, '1', 'Arroz', '100g de arroz do tipo 1', 3.00, 'Arroz Tipo 1', 'PRATO', 200, 1);
-INSERT INTO t_cpp_item_cardapio VALUES(6, 3, '0', 'FeijÃ£o', '100g de feijÃ£o carioca', 4.00, 'FeijÃ£o Carioca', 'PRATO', 300, 1);
-insert into t_cpp_item_cardapio values(7, 1, '1', 'Milkshake unicÃ³rnio','Com MeMs', 8.00, 'Leite, chocolate, caramelo, chantilly e MeM','SOBREMESA', 500, 1);
-insert into t_cpp_item_cardapio values(8, 1, '0', 'Milkshake ovomaltine','O preferido da casa', 12.00, 'Leite, chocolate', 'SOBREMESA', 300, 1);
-insert into t_cpp_item_cardapio values(9, 2, '1', 'Cerveja pilsen','A melhor cerveja do MUNDO', 10.00, 'LÃºpulo, cevada','BEBIDA', 43, 1);
-insert into t_cpp_item_cardapio values(10, 2, '0', 'Amendoim sem casca','Um bom aperitivo, talvez o melhor de todos', 2.00, 'Amendoim','APERITIVO', 30,  1 );
-insert into t_cpp_item_cardapio values(11, 3, '0', 'Vinho tinto espanhol','Quer ostentar? entÃ£o toma, ano de 1930', 10000.00, 'Vinho tinto espanhol','BEBIDA', 0, 1);
-insert into t_cpp_item_cardapio values(12, 3, '1', 'Virada Ã  paulista','Venha comer esse clÃ¡ssico!', 15.00, 'Arroz, feijÃ£o, Bife, ovo frito, couve refogada e tomate.','PRATO', 400, 1);
-insert into t_cpp_item_cardapio values(13, 3, '1', 'Lanche Cheddar Duplo','200g de hambÃºrguer artesanal e 100g de cheddar,', 20.00, 'HambÃºrguer, alface, cheddar, tomate.','LANCHE', 500, 1);
+INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 1, 1, '1', 'Sorvete de Chocolate', '100g de sorvete sabor chocolate', 5.00, 'Leite, chocolate em pó e açúcar', 700, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
+INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 1, 1, '0', 'Milk Shake de Menta com Chocolate', '150ml de sorvete sabor menta e chocolate', 7.00, 'Leite, menta e chocolate em pó e açúcar', 750, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
+INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 2, 3, '1', 'Churros de Chocolate', '1 unidade de churros sabor chocolate', 7.00, 'Leite, chocolate, farinha de trigo, água e açúcar', 850, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
+INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 2, 3, '0', 'Churros de Doce de Leite', '1 unidade de churros sabor doce de leite', 7.00, 'Leite, doce de leite, farinha de trigo, água e açúcar', 800, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
+INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 3, 6, '1', 'Arroz', '100g de arroz do tipo 1', 3.00, 'Arroz Tipo 1', 200, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
+INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 3, 6, '0', 'Feijão', '100g de feijão carioca', 4.00, 'Feijão Carioca', 300, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 1, 1,'1', 'Milkshake unicórnio','Com MeMs', 8.00, 'Leite, chocolate, caramelo, chantilly e MeM', 500, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 1, 1, '0', 'Milkshake ovomaltine','O preferido da casa', 12.00, 'Leite, chocolate', 300, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 2, 5, '1', 'Cerveja pilsen','A melhor cerveja do MUNDO', 10.00, 'Lúpulo, cevada', 43, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 2, 4, '0', 'Amendoim sem casca','Um bom aperitivo, talvez o melhor de todos', 2.00, 'Amendoim', 30, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 3, 8, '0', 'Vinho tinto espanhol','Quer ostentar? então toma, ano de 1930', 10000.00, 'Vinho tinto espanhol', 0, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 3, 6, '1', 'Virada à paulista','Venha comer esse clássico!', 15.00, 'Arroz, feijão, Bife, ovo frito, couve refogada e tomate.', 400, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 3, 7, '1', 'Lanche Cheddar Duplo','200g de hambúrguer artesanal e 100g de cheddar,', 20.00, 'Hambúrguer, alface, cheddar, tomate.', 500, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
 
  
 -- CRIAÃ‡ÃƒO DA TABELA CLIENTE
@@ -91,14 +101,6 @@ UPDATE t_cpp_cliente
 SET ds_senha = 'henri45'
 WHERE cd_cliente = 6;
  
--- CRIAÃ‡ÃƒO DA TABELA PEDIDO
-INSERT INTO t_cpp_pedido VALUES (1, 1, 1,  5.00, 'PAGO', TO_DATE('10-DEZ-2021 17:30:30','DD-MON-YYYY HH24:MI:SS'));
-INSERT INTO t_cpp_pedido VALUES (2, 2, 2,  17.00, 'EM PREPARO', TO_DATE('07-MAI-2021 15:10:30','DD-MON-YYYY HH24:MI:SS'));
-INSERT INTO t_cpp_pedido VALUES (3, 3, 3,  15.00, 'EM PREPARO', TO_DATE('28-JUL-2021 12:23:14','DD-MON-YYYY HH24:MI:SS'));
-insert into t_cpp_pedido values(4, 4, 2, 12.00,'PAGO', TO_DATE('20-JUN-2021 16:14:43','DD-MON-YYYY HH24:MI:SS'));
-insert into t_cpp_pedido values(5, 5, 1, 8.00,'RECEBIDO', TO_DATE('10-MAR-2021 18:34:55','DD-MON-YYYY HH24:MI:SS'));
-insert into t_cpp_pedido values(6, 6, 3, 10015.00,'ENTREGUE', TO_DATE('05-JAN-2021 13:10:12','DD-MON-YYYY HH24:MI:SS'));
- 
 -- CRIAÃ‡ÃƒO DA TABELA AVALIAÃ‡ÃƒO
 INSERT INTO t_cpp_avaliacao values(1, 1, 1, 5, 'Melhor sorvete da regiÃ£o muito saboroso.');
 INSERT INTO t_cpp_avaliacao values(2, 2, 3, 5, 'A comida Ã© saborosa e ainda chegou quentinha.');
@@ -107,24 +109,12 @@ INSERT INTO t_cpp_avaliacao values(4, 4, 1, 4, 'Sorvete todo derretido.');
 INSERT INTO t_cpp_avaliacao values(5, 5, 3, 5, 'Comida muito gostosa.');
 INSERT INTO t_cpp_avaliacao values(6, 6, 2, 2, 'Churros queimado e com pouco recheio.');
  
--- CRIAÃ‡ÃƒO DA TABELA PEDIDO_ITEM_CARDAPIO
-INSERT INTO t_cpp_pedido_item_cardapio VALUES(1, 1);
-INSERT INTO t_cpp_pedido_item_cardapio VALUES(4, 2);
-INSERT INTO t_cpp_pedido_item_cardapio VALUES(9, 2);
-INSERT INTO t_cpp_pedido_item_cardapio VALUES(12, 3);
-INSERT INTO t_cpp_pedido_item_cardapio VALUES(9, 4);
-INSERT INTO t_cpp_pedido_item_cardapio VALUES(10, 4);
-INSERT INTO t_cpp_pedido_item_cardapio VALUES(7, 5);
-INSERT INTO t_cpp_pedido_item_cardapio VALUES(11, 6);
-INSERT INTO t_cpp_pedido_item_cardapio VALUES(12, 6);
  
 COMMIT;
  
-
+SELECT * FROM t_cpp_categoria;
 SELECT * FROM t_cpp_avaliacao; 
 SELECT * FROM t_cpp_cliente; 
 SELECT * FROM t_cpp_estabelecimento;
 SELECT * FROM t_cpp_gerente;
 SELECT * FROM t_cpp_item_cardapio; 
-SELECT * FROM t_cpp_pedido;
-SELECT * FROM t_cpp_pedido_item_cardapio; 

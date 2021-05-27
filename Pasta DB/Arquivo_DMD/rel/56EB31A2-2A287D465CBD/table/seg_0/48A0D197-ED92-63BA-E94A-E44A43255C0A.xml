@@ -36,18 +36,6 @@
 <colAssociation fkAssociation="6053D1B6-08E7-F4E3-CA4B-5502498DE5F0" referredColumn="FA9CA5FE-F794-53D9-978C-696094DF471E"/>
 </associations>
 </Column>
-<Column name="nm_estabelecimento" id="92F4AFCC-554A-4F20-4011-E41F69141C00">
-<createdBy>lari</createdBy>
-<createdTime>2021-05-21 15:22:16 UTC</createdTime>
-<generatorID>D2347B5F-506A-0862-6C00-5B4200F8AC9A</generatorID>
-<ownerDesignName>Arquivo_DMD</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="ds_cnpj" id="60F599B8-F6CE-AFEB-704D-7C4167F0EA05">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>

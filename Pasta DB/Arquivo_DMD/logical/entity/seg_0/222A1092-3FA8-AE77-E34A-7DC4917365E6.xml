@@ -43,19 +43,6 @@
 <dataTypePrecision>3</dataTypePrecision>
 <ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nm_estabelecimento" id="D2347B5F-506A-0862-6C00-5B4200F8AC9A">
-<createdBy>Kaue Augusto</createdBy>
-<createdTime>2021-03-31 00:19:28 UTC</createdTime>
-<ownerDesignName>Arquivo_DMD</ownerDesignName>
-<engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="ds_cnpj" id="F9E5A2DE-6B59-8AA5-B633-CB47F9F0C24D">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:22:52 UTC</createdTime>
@@ -140,8 +127,9 @@
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:18:05 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <newElementsIDs>E63CE62B-8092-6EA3-D6FC-89399C9CCEE3</newElementsIDs>

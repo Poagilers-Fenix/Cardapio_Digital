@@ -63,6 +63,16 @@
 <colUsage columnID="FE90D7F0-1420-1357-C80F-5ACACCBDAE0C"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="F806E22F-74A4-25C7-C8D7-23BF33303D69" name="T_CPP_CATEGORIA_UN">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 22:08:16 UTC</createdTime>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A486C27B-E2E6-4EC6-25E2-0429099F9117"/>
+</indexColumnUsage>
+</ind_PK_UK>
 <ind_PK_UK id="A891A6E7-5E0C-9642-38EB-A14ACB5BF746" name="FK_CPP_CATEGORIA_ESTAB">
 <createdBy>CLIENTE</createdBy>
 <createdTime>2021-05-27 20:49:35 UTC</createdTime>
