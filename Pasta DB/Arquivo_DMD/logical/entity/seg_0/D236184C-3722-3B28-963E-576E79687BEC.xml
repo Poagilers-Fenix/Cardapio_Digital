@@ -81,6 +81,19 @@
 <dataTypeSize>150</dataTypeSize>
 <ownDataTypeParameters>150,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="nm_senha" id="ACCD7288-9344-55A1-1DDF-36BCB547031D">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 02:47:22 UTC</createdTime>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<engineerTo>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="D4462E01-186C-8F03-036F-443E35AC0BD4" name="PK_CPP_GERENTE">

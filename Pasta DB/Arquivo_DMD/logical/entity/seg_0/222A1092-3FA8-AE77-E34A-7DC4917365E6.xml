@@ -28,6 +28,21 @@
 <dataTypePrecision>3</dataTypePrecision>
 <ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="cd_gerente " id="D0DCDB08-37FD-8F81-C337-78D9E951DE81">
+<createdBy>lari</createdBy>
+<createdTime>2021-05-22 03:24:26 UTC</createdTime>
+<generatorID>15FC3572-12CE-F65A-58AC-669F9F3A34D3</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<engineerTo>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+</engineerTo>
+<referedAttribute>630B64F9-B65B-55F4-7293-0EEDE63530DF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="nm_estabelecimento" id="D2347B5F-506A-0862-6C00-5B4200F8AC9A">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:19:28 UTC</createdTime>
@@ -54,20 +69,70 @@
 <dataTypeSize>14</dataTypeSize>
 <ownDataTypeParameters>14,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cd_gerente " id="D0DCDB08-37FD-8F81-C337-78D9E951DE81">
-<createdBy>lari</createdBy>
-<createdTime>2021-05-22 03:24:26 UTC</createdTime>
-<generatorID>15FC3572-12CE-F65A-58AC-669F9F3A34D3</generatorID>
+<Attribute name="nm_razao_social" id="7074522B-03FE-E106-AD06-75E6994D4270">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 02:48:04 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
-<referedAttribute>630B64F9-B65B-55F4-7293-0EEDE63530DF</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_nome_fantasia" id="3CEFDA9D-1A73-3EB3-3BE8-815F1FABD3D7">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 02:48:07 UTC</createdTime>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<engineerTo>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_endereco" id="E9C81939-E7E3-EC22-6343-62A7913D62BC">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 02:50:13 UTC</createdTime>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<engineerTo>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_telefone" id="0513226A-A98B-D5E4-A3A3-9B0692B8CA7C">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 02:52:10 UTC</createdTime>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<engineerTo>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>11 CHAR</dataTypeSize>
+<ownDataTypeParameters>11 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_email" id="6C9C50F6-9B41-A70B-BE3F-2B20F6AADFA5">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 02:54:38 UTC</createdTime>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<engineerTo>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

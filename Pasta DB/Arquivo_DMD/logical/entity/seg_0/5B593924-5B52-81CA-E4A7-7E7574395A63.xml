@@ -138,19 +138,6 @@
 <dataTypePrecision>4</dataTypePrecision>
 <ownDataTypeParameters>,4,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="qt_item_cardapio" id="1A91A4C3-8050-1779-A4BD-1491D70D01E3">
-<createdBy>CLIENTE</createdBy>
-<createdTime>2021-05-20 23:34:55 UTC</createdTime>
-<ownerDesignName>Arquivo_DMD</ownerDesignName>
-<engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,3,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="6F20340C-0453-AE94-6BAD-0D21F38497BC" name="PK_CPP_ITEM_CARDAPIO">
