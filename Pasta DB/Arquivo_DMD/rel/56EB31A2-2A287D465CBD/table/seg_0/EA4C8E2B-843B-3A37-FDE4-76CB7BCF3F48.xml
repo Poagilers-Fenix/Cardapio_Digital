@@ -175,12 +175,4 @@
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
-<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
-<tableCheckConstraint name="CK_CPP_ITEM_CARDAPIO" directorySegmentName="seg_0" id="64C066E4-2A70-04F8-49A1-B6CF9B95A3C7">
-<createdBy>lari</createdBy>
-<createdTime>2021-05-21 19:15:01 UTC</createdTime>
-<ownerDesignName>Arquivo_DMD</ownerDesignName>
-<rule><![CDATA[ds_categoria IN ('SOBREMESA', 'PRATO', 'BEBIDA', 'LANCHE', 'APERITIVO')]]></rule>
-</tableCheckConstraint>
-</tableCheckConstraints>
 </Table>

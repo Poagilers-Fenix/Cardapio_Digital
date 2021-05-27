@@ -1,4 +1,5 @@
 /*
+DROP TABLE t_cpp_categoria CASCADE  CONSTRAINTS;
 DROP TABLE t_cpp_avaliacao CASCADE CONSTRAINTS;
 DROP TABLE t_cpp_cliente CASCADE CONSTRAINTS;
 DROP TABLE t_cpp_estabelecimento CASCADE CONSTRAINTS;
@@ -7,14 +8,6 @@ DROP TABLE t_cpp_item_cardapio CASCADE CONSTRAINTS;
 DROP TABLE t_cpp_pedido CASCADE CONSTRAINTS;
 DROP TABLE t_cpp_pedido_item_cardapio CASCADE CONSTRAINTS; 
 */
-
-CREATE TABLE categoria (
-    cd_categoria  NUMBER(2) NOT NULL,
-    nm_categoria  VARCHAR2(30 CHAR) NOT NULL
-);
-
-ALTER TABLE categoria ADD CONSTRAINT categoria_pk PRIMARY KEY ( cd_categoria );
-
 CREATE TABLE t_cpp_avaliacao (
     cd_avaliacao        NUMBER(4) NOT NULL,
     cd_cliente          NUMBER(5) NOT NULL,
@@ -24,6 +17,13 @@ CREATE TABLE t_cpp_avaliacao (
 );
 
 ALTER TABLE t_cpp_avaliacao ADD CONSTRAINT t_cpp_avaliacao_pk PRIMARY KEY ( cd_avaliacao );
+
+CREATE TABLE t_cpp_categoria (
+    cd_categoria  NUMBER(2) NOT NULL,
+    nm_categoria  VARCHAR2(30 CHAR) NOT NULL
+);
+
+ALTER TABLE t_cpp_categoria ADD CONSTRAINT categoria_pk PRIMARY KEY ( cd_categoria );
 
 CREATE TABLE t_cpp_cliente (
     cd_cliente  NUMBER(5) NOT NULL,
@@ -127,7 +127,7 @@ ALTER TABLE t_cpp_avaliacao
 
 ALTER TABLE t_cpp_item_cardapio
     ADD CONSTRAINT fk_cpp_categoria_ic FOREIGN KEY ( cd_categoria )
-        REFERENCES categoria ( cd_categoria );
+        REFERENCES t_cpp_categoria ( cd_categoria );
 
 ALTER TABLE t_cpp_estabelecimento
     ADD CONSTRAINT fk_cpp_estab_gerente FOREIGN KEY ( cd_gerente )
