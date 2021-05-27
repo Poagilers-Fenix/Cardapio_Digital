@@ -16,8 +16,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="cd_cliente" id="3D8E9D08-C29F-D03E-2D16-1E64FBBE412A">
@@ -29,7 +29,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>5</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -45,7 +45,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -113,7 +113,7 @@
 <colUsage columnID="3D8E9D08-C29F-D03E-2D16-1E64FBBE412A"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="5A2F2476-551E-656B-2AE3-D2273FC32FA2" name="FK_CPP_PEDIDO_ESTABELECIMENTO">
+<ind_PK_UK id="5A2F2476-551E-656B-2AE3-D2273FC32FA2" name="FK_CPP_PEDIDO_ESTAB">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>D733E8C9-8966-F6A0-4CC2-02AAD7C9DEFC</generatorID>

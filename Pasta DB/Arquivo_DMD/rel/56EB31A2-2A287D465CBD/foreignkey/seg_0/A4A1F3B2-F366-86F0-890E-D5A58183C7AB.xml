@@ -1,9 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="5ACC8958-5B33-C89D-DECB-94D8131A57DC" containerWithKeyObject="EA4C8E2B-843B-3A37-FDE4-76CB7BCF3F48" localFKIndex="9B2A8FD3-ADD4-3E19-954B-8676EAD6133A" name="FK_CPP_IC_ESTAB">
-<createdBy>lari</createdBy>
-<createdTime>2021-05-21 15:22:16 UTC</createdTime>
-<comment><![CDATA[ic = item cardapio]]></comment>
-<generatorID>2B5BFD1C-4CFF-0EB7-06B6-5FE5A920495D</generatorID>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A4A1F3B2-F366-86F0-890E-D5A58183C7AB" containerWithKeyObject="06C5908F-9A7D-E2E7-87D5-A55A8293EC3D" localFKIndex="A891A6E7-5E0C-9642-38EB-A14ACB5BF746" name="FK_CPP_CATEGORIA_ESTAB">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 20:49:35 UTC</createdTime>
+<generatorID>8CE653F2-B47D-BF7D-4DAC-575DFBC1840D</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <referredTableLongName>T_CPP_ESTABELECIMENTO</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>

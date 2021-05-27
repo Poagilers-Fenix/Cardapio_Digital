@@ -11,14 +11,14 @@
 <Column name="cd_cliente" id="E300F9BF-0C2D-CAD9-854C-2FF3867F3889">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
-<commentInRDBMS><![CDATA[até dez mil]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[até 99 milhões ]]></commentInRDBMS>
 <generatorID>FDC6F1CC-A6A4-4F00-F569-FC0E192E564A</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>5</dataTypePrecision>
-<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="nm_cliente" id="E3F842A5-D6BC-CE67-335F-77F310F4B18F">

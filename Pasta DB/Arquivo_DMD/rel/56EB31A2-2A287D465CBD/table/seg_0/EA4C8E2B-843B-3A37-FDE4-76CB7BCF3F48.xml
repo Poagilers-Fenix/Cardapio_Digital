@@ -16,8 +16,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="cd_estabelecimento" id="D9CEA051-E998-B620-41F5-FC17D721DE26">
@@ -29,7 +29,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -45,7 +45,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>2</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -138,6 +138,18 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="fl_foto_ic2" id="1CD61349-6DA9-1A46-EAFE-5358D8464EB3">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 20:49:35 UTC</createdTime>
+<generatorID>867DC9B3-E101-E6BA-051B-55947C7B6FA4</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="02DC057B-B1A0-5F5B-321A-0C56B4C86F82" name="T_CPP_ITEM_CARDAPIO_PK">
@@ -152,7 +164,7 @@
 <colUsage columnID="89FBC0C3-F378-DD1F-1860-70A4122BC76C"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="9B2A8FD3-ADD4-3E19-954B-8676EAD6133A" name="FK_CPP_ESTAB_IC">
+<ind_PK_UK id="9B2A8FD3-ADD4-3E19-954B-8676EAD6133A" name="FK_CPP_IC_ESTAB">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>2B5BFD1C-4CFF-0EB7-06B6-5FE5A920495D</generatorID>
@@ -163,7 +175,7 @@
 <colUsage columnID="D9CEA051-E998-B620-41F5-FC17D721DE26"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="DFA894D5-3F7C-9306-EEBA-707612A6CEA4" name="FK_CPP_CATEGORIA_IC">
+<ind_PK_UK id="DFA894D5-3F7C-9306-EEBA-707612A6CEA4" name="FK_CPP_IC_CATEGORIA">
 <createdBy>CLIENTE</createdBy>
 <createdTime>2021-05-27 18:18:55 UTC</createdTime>
 <generatorID>2BEF95EB-7B3D-3470-05CE-10703C292FB3</generatorID>

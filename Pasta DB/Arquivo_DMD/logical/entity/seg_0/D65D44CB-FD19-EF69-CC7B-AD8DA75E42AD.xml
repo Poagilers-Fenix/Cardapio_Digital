@@ -25,8 +25,23 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cd_estabelecimento" id="B8E9BC06-4E6D-705F-16AD-B9E4871B87EE">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 20:39:39 UTC</createdTime>
+<generatorID>8CE653F2-B47D-BF7D-4DAC-575DFBC1840D</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<engineerTo>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+</engineerTo>
+<referedAttribute>E63CE62B-8092-6EA3-D6FC-89399C9CCEE3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="nm_categoria" id="DB0CAB30-02B6-3648-78C5-885EEE98F066">
 <createdBy>CLIENTE</createdBy>
@@ -47,8 +62,9 @@
 <createdBy>CLIENTE</createdBy>
 <createdTime>2021-05-26 19:33:55 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

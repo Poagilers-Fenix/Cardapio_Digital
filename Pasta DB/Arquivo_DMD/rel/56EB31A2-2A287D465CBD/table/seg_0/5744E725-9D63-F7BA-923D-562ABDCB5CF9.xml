@@ -16,8 +16,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -33,7 +33,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -54,7 +54,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="3640AE05-2329-1CFC-F859-CCE775D173C2" name="FK_CPP_IC_PIC">
+<ind_PK_UK id="3640AE05-2329-1CFC-F859-CCE775D173C2" name="FK_CPP_PIC_IC">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>BB7F17D7-4AE7-1F8B-A9E4-80C5D642E116</generatorID>
@@ -65,7 +65,7 @@
 <colUsage columnID="49F11A63-E049-ED60-4935-D8C210D654CD"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="24312414-6E7D-4B1F-6A35-BCAF79BEC79B" name="FK_CPP_PEDIDO_PIC">
+<ind_PK_UK id="24312414-6E7D-4B1F-6A35-BCAF79BEC79B" name="FK_CPP_PIC_PEDIDO">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>F3F50BBE-CE35-2146-2068-30FFA5A21DFD</generatorID>
