@@ -1,6 +1,7 @@
 alter session set nls_date_format='YYYY-MM-DD HH24:MI:SS';
 
 /*
+DELETE FROM t_cpp_categoria
 DELETE FROM t_cpp_avaliacao;
 DELETE FROM t_cpp_pedido_item_cardapio;
 DELETE FROM t_cpp_item_cardapio;
@@ -11,8 +12,15 @@ DELETE FROM t_cpp_gerente;
 */
 
 
- 
--- CRIAÇÃO DA TABELA GERENTE
+
+--CRIACAO DA TABELA CATEGORIA
+insert into t_cpp_categoria values (cdcategoria.nextval, 'Sobremesa');
+insert into t_cpp_categoria values (cdcategoria.nextval, 'Prato Principal');
+insert into t_cpp_categoria values (cdcategoria.nextval, 'Aperitivo');
+insert into t_cpp_categoria values (cdcategoria.nextval, 'Bebida');
+
+
+-- CRIACAO DA TABELA GERENTE
 insert into t_cpp_gerente values (1,'Jorge','pessoa.eric@gmail.com', 1900.00, 'Rua do grito agudo, 202');
 insert into t_cpp_gerente values (2,'Débora','Debora@gmail.com', 2200.00, 'Rua do grito grave, 103');
 insert into t_cpp_gerente values (3,'João','Joaoo@gmail.com', 1500.00, 'Rua do abacate, 30');

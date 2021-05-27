@@ -1,4 +1,13 @@
 /*
+
+DROP SEQUENCE cdcategoria
+DROP SEQUENCE cdcliente
+DROP SEQUENCE cdestabelecimento
+DROP SEQUENCE cdavaliacao
+DROP SEQUENCE cdgerente
+DROP SEQUENCE cditemcardapio
+
+
 DROP TABLE t_cpp_categoria CASCADE  CONSTRAINTS;
 DROP TABLE t_cpp_avaliacao CASCADE CONSTRAINTS;
 DROP TABLE t_cpp_cliente CASCADE CONSTRAINTS;
@@ -8,6 +17,44 @@ DROP TABLE t_cpp_item_cardapio CASCADE CONSTRAINTS;
 DROP TABLE t_cpp_pedido CASCADE CONSTRAINTS;
 DROP TABLE t_cpp_pedido_item_cardapio CASCADE CONSTRAINTS; 
 */
+
+CREATE SEQUENCE cdcategoria
+INCREMENT BY 1
+START WITH 1
+MAXVALUE 99
+NOCYCLE;
+
+CREATE SEQUENCE cdcliente
+INCREMENT BY 1
+START WITH 1
+MAXVALUE 99
+NOCYCLE;
+
+CREATE SEQUENCE cdestabelecimento
+INCREMENT BY 1
+START WITH 1
+MAXVALUE 99
+NOCYCLE;
+
+CREATE SEQUENCE cdavaliacao
+INCREMENT BY 1
+START WITH 1
+MAXVALUE 99
+NOCYCLE;
+
+CREATE SEQUENCE cdgerente
+INCREMENT BY 1
+START WITH 1
+MAXVALUE 99
+NOCYCLE;
+
+CREATE SEQUENCE cditemcardapio
+INCREMENT BY 1
+START WITH 1
+MAXVALUE 99
+NOCYCLE;
+
+
 CREATE TABLE t_cpp_avaliacao (
     cd_avaliacao        NUMBER(4) NOT NULL,
     cd_cliente          NUMBER(5) NOT NULL,
@@ -80,15 +127,6 @@ CREATE TABLE t_cpp_item_cardapio (
 
 COMMENT ON COLUMN t_cpp_item_cardapio.fl_foto_ic IS
     'IC = item cardapio';
-
-ALTER TABLE t_cpp_item_cardapio
-    ADD CONSTRAINT ck_cpp_item_cardapio CHECK ( ds_categoria IN (
-        'SOBREMESA',
-        'PRATO',
-        'BEBIDA',
-        'LANCHE',
-        'APERITIVO'
-    ) );
 
 ALTER TABLE t_cpp_item_cardapio ADD CONSTRAINT t_cpp_item_cardapio_pk PRIMARY KEY ( cd_item_cardapio );
 
