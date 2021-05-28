@@ -20,6 +20,7 @@ DROP TABLE t_cpp_pedido_item_cardapio CASCADE CONSTRAINTS;
 
 --Talvez colocar CEP, andar do prédio, algumas informações a mais, no futuro
 
+
 CREATE SEQUENCE cdcategoria
 INCREMENT BY 1
 START WITH 1
@@ -94,7 +95,7 @@ CREATE TABLE t_cpp_estabelecimento (
     cd_gerente          NUMBER(3) NOT NULL,
     ds_cnpj             CHAR(14) NOT NULL,
     nm_razao_social     VARCHAR2(50 CHAR) NOT NULL,
-    nm_nome_fantasia    VARCHAR2(50 CHAR) NOT NULL,
+    nm_fantasia         VARCHAR2(50 CHAR) NOT NULL,
     nm_endereco         VARCHAR2(100 CHAR) NOT NULL,
     nr_telefone         CHAR(11 CHAR) NOT NULL,
     ds_email            VARCHAR2(40) NOT NULL
@@ -106,9 +107,9 @@ CREATE TABLE t_cpp_gerente (
     cd_gerente   NUMBER(5) NOT NULL,
     nm_gerente   VARCHAR2(50) NOT NULL,
     ds_email     VARCHAR2(65) NOT NULL,
-    vl_salario   NUMBER(7, 2) NOT NULL,
-    ds_endereco  VARCHAR2(150) NOT NULL,
-    nm_senha     VARCHAR2(25 CHAR) NOT NULL
+    vl_salario   NUMBER(7, 2) NULL,
+    ds_endereco  VARCHAR2(150) NULL,
+    ds_senha     VARCHAR2(25 CHAR) NOT NULL
 );
 
 ALTER TABLE t_cpp_gerente ADD CONSTRAINT t_cpp_gerente_pk PRIMARY KEY ( cd_gerente );

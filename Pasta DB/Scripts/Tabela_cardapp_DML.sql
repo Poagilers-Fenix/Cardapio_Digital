@@ -31,7 +31,7 @@ SET nm_gerente = 'DÈbora Le„o'
 WHERE cd_gerente = 2;
 
 UPDATE t_cpp_gerente
-SET nm_gerente = 'Jo√£o Lima'
+SET nm_gerente = 'Jo„o Lima'
 WHERE cd_gerente = 3;
 
 
@@ -100,9 +100,9 @@ UPDATE t_cpp_cliente
 SET ds_senha = 'henri45'
 WHERE cd_cliente = 6;
  
--- CRIA√á√ÉO DA TABELA AVALIA√á√ÉO
-INSERT INTO t_cpp_avaliacao values(1, 1, 1, 5, 'Melhor sorvete da regi√£o muito saboroso.');
-INSERT INTO t_cpp_avaliacao values(2, 2, 3, 5, 'A comida √© saborosa e ainda chegou quentinha.');
+-- CRIA«√O DA TABELA AVALIA«√O
+INSERT INTO t_cpp_avaliacao values(1, 1, 1, 5, 'Melhor sorvete da regi„o muito saboroso.');
+INSERT INTO t_cpp_avaliacao values(2, 2, 3, 5, 'A comida estava saborosa e ainda chegou quentinha.');
 INSERT INTO t_cpp_avaliacao values(3, 3, 2, 3, 'Churros estava queimado');
 INSERT INTO t_cpp_avaliacao values(4, 4, 1, 4, 'Sorvete todo derretido.');
 INSERT INTO t_cpp_avaliacao values(5, 5, 3, 5, 'Comida muito gostosa.');
