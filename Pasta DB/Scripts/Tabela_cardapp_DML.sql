@@ -11,24 +11,7 @@ DELETE FROM t_cpp_estabelecimento;
 DELETE FROM t_cpp_gerente;
 */
 
-desc t_cpp_item_cardapio;
-
---POPULACAO DA TABELA CATEGORIA DO ESTABELECIMENTO 1
-insert into t_cpp_categoria values (cdcategoria.nextval, 'Sobremesa', 1);
-insert into t_cpp_categoria values (cdcategoria.nextval, 'Bebida', 1);
-
---POPULACAO DA TABELA CATEGORIA DO ESTABELECIMENTO 2
-insert into t_cpp_categoria values (cdcategoria.nextval, 'Sobremesa', 2);
-insert into t_cpp_categoria values (cdcategoria.nextval, 'Aperitivo', 2);
-insert into t_cpp_categoria values (cdcategoria.nextval, 'Bebida', 2);
-
---POPULACAO DA TABELA CATEGORIA DO ESTABELECIMENTO 3
-insert into t_cpp_categoria values (cdcategoria.nextval, 'Prato', 3);
-insert into t_cpp_categoria values (cdcategoria.nextval, 'Lanche', 3);
-insert into t_cpp_categoria values (cdcategoria.nextval, 'Bebida', 3);
-
-
-
+desc t_cpp_estabelecimento;
 
 -- CRIACAO DA TABELA GERENTE
 insert into t_cpp_gerente values (cdgerente.nextval,'Jorge','pessoa.eric@gmail.com', 1900.00, 'Rua do grito agudo, 202', 'Bananinha123');
@@ -51,10 +34,26 @@ UPDATE t_cpp_gerente
 SET nm_gerente = 'João Lima'
 WHERE cd_gerente = 3;
 
+
 -- CRIAÇÃO DA TABELA ESTABELECIMENTO
-INSERT INTO t_cpp_estabelecimento VALUES(cdestabelecimento.nextval, 1, '12345678000108', 'Milk Shakespeare LTDA', 'Milk Shakespeare', 'Rua djuvidas, 197', '11986759980');
-INSERT INTO t_cpp_estabelecimento VALUES(cdestabelecimento.nextval, 2, '11145555000109','Churros Store SA', 'Churros Store', 'Rua ta�, 22', '33978964456' );
-INSERT INTO t_cpp_estabelecimento VALUES(cdestabelecimento.nextval, 3, '22245678000105', 'Primos e Cia', 'Restaurante dos Primos', 'Rua Melissa, 39', '21987558563');
+INSERT INTO t_cpp_estabelecimento VALUES(cdestabelecimento.nextval, 1, '12345678000108', 'Milk Shakespeare LTDA', 'Milk Shakespeare', 'Rua djuvidas, 197', '11986759980', 'milk@gmail.com');
+INSERT INTO t_cpp_estabelecimento VALUES(cdestabelecimento.nextval, 2, '11145555000109','Churros Store SA', 'Churros Store', 'Rua ta�, 22', '33978964456', 'churros@gmail.com' );
+INSERT INTO t_cpp_estabelecimento VALUES(cdestabelecimento.nextval, 3, '22245678000105', 'Primos e Cia', 'Restaurante dos Primos', 'Rua Melissa, 39', '21987558563', 'primos@gmail.com');
+
+
+--POPULACAO DA TABELA CATEGORIA DO ESTABELECIMENTO 1
+insert into t_cpp_categoria values (cdcategoria.nextval, 1, 'Sobremesa');
+insert into t_cpp_categoria values (cdcategoria.nextval, 1, 'Bebida');
+
+--POPULACAO DA TABELA CATEGORIA DO ESTABELECIMENTO 2
+insert into t_cpp_categoria values (cdcategoria.nextval, 2, 'Sobremesa');
+insert into t_cpp_categoria values (cdcategoria.nextval, 2, 'Aperitivo');
+insert into t_cpp_categoria values (cdcategoria.nextval, 2, 'Bebida');
+
+--POPULACAO DA TABELA CATEGORIA DO ESTABELECIMENTO 3
+insert into t_cpp_categoria values (cdcategoria.nextval, 3, 'Prato');
+insert into t_cpp_categoria values (cdcategoria.nextval, 3, 'Lanche');
+insert into t_cpp_categoria values (cdcategoria.nextval, 3, 'Bebida');
  
 
 -- CRIAÇÃO DA TABELA ITEM_CARDAPIO

@@ -74,8 +74,6 @@ CREATE TABLE t_cpp_categoria (
 
 ALTER TABLE t_cpp_categoria ADD CONSTRAINT t_cpp_categoria_pk PRIMARY KEY ( cd_categoria );
 
-ALTER TABLE t_cpp_categoria ADD CONSTRAINT t_cpp_categoria_un UNIQUE ( nm_categoria );
-
 CREATE TABLE t_cpp_cliente (
     cd_cliente  NUMBER(8) NOT NULL,
     nm_cliente  VARCHAR2(50) NOT NULL,
