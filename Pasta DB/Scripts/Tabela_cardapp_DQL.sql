@@ -1,7 +1,7 @@
 set serveroutput on;
 
 --Selects com where
--- RelatÃ³rio simples que traz uma ocorrÃªncia especifica de cada tabela do banco.
+-- Relatório simples que traz uma ocorrência especifica de cada tabela do banco.
 select * 
 from t_cpp_avaliacao
 where cd_avaliacao = 1;
@@ -32,7 +32,7 @@ where cd_pedido = 2;
 
 
 --selects sem where
---  RelatÃ³rio simples que traz todas as ocorrÃªncia da tabela.
+--  Relatório simples que traz todas as ocorrências da tabela.
 select * 
 from t_cpp_avaliacao;
 
@@ -55,27 +55,27 @@ select *
 from t_cpp_pedido_item_cardapio;
 
 
--- RelatÃ³rio simples com selects que trazem alguma ocorrÃªncia especifÃ­ca da aplicaÃ§Ã£o de acordo com algum parÃ¢metro.
+-- Relatório simples com selects que trazem alguma ocorrências específicas da aplicação de acordo com algum parâmetro.
 
  -- select dos campos da tabela cliente
 select nr_celular, ds_senha
 from t_cpp_cliente;
  
---selecionar um cel especÃ­fico
+--selecionar um cel específico
 select nr_celular, ds_senha
 from t_cpp_cliente
 where nr_celular = 11960205342 and ds_senha = 'asdfpoiu89';
 
--- selecionar o item de cardÃ¡pio por nome e descriÃ§Ã£o 
+-- selecionar o item de cardápio por nome e descrição 
 select nm_item_cardapio, ds_item_cardapio 
 from t_cpp_item_cardapio
 where nm_item_cardapio = 'Arroz';
 
 -- selecionar as colunas de estabelecimento
-select cd_estabelecimento, nm_estabelecimento 
+select cd_estabelecimento, nm_fantasia 
 from t_cpp_estabelecimento; 
  
--- selecionar um item cardÃ¡pio de acordo com o cÃ³digo dele e se ele estÃ¡ true ou false
+-- selecionar um item cardápio de acordo com o código dele e se ele estão true ou false
 select nr_destaque,
        cd_estabelecimento     
 from t_cpp_item_cardapio
@@ -85,7 +85,7 @@ where cd_estabelecimento = 2 and nr_destaque = '1';
 select st_pedido
 from t_cpp_pedido;
  
- --selecionar colunas especÃ­ficas de um pedido especÃ­fico
+ --selecionar colunas específicas de um pedido específico
 select cd_pedido,
        st_pedido
 from t_cpp_pedido
@@ -93,38 +93,38 @@ where cd_pedido = 2;
 
 
 
--- RelatÃ³rio simples com INNER JOIN envolvendo duas ou mais tabelas.
+-- Relatório simples com INNER JOIN envolvendo duas ou mais tabelas.
 
---Queries mais especÃ­ficas
+--Queries mais específicas
 
---Selecionar todos os itens do cardÃ¡pio de dado estabelecimento
-select e.cd_estabelecimento, e.nm_estabelecimento, ic.cd_item_cardapio, ic.ds_item_cardapio
+--Selecionar todos os itens do cardápio de dado estabelecimento
+select e.cd_estabelecimento, e.nm_fantasia, ic.cd_item_cardapio, ic.ds_item_cardapio
 from t_cpp_estabelecimento e  inner join t_cpp_item_cardapio ic
 on e.cd_estabelecimento = ic.cd_estabelecimento
 where e.cd_estabelecimento = 3;
 
---Selecionar pratos a partir da categoria dos itens do cardÃ¡pio
-select e.cd_estabelecimento, e.nm_estabelecimento, ic.cd_item_cardapio, ic.ds_item_cardapio
+--Selecionar pratos a partir da categoria dos itens do cardápio
+select e.cd_estabelecimento, e.nm_fantasia, ic.cd_item_cardapio, ic.ds_item_cardapio
 from t_cpp_estabelecimento e  inner join t_cpp_item_cardapio ic
 on e.cd_estabelecimento = ic.cd_estabelecimento
 where e.cd_estabelecimento = 1 and ic.ds_categoria = 'SOBREMESA';
 
-select e.cd_estabelecimento, e.nm_estabelecimento, ic.cd_item_cardapio, ic.ds_item_cardapio
+select e.cd_estabelecimento, e.nm_fantasia, ic.cd_item_cardapio, ic.ds_item_cardapio
 from t_cpp_estabelecimento e  inner join t_cpp_item_cardapio ic
 on e.cd_estabelecimento = ic.cd_estabelecimento
 where e.cd_estabelecimento = 3 and ic.ds_categoria = 'PRATO';
 
-select e.cd_estabelecimento, e.nm_estabelecimento, ic.cd_item_cardapio, ic.ds_item_cardapio
+select e.cd_estabelecimento, e.nm_fantasia, ic.cd_item_cardapio, ic.ds_item_cardapio
 from t_cpp_estabelecimento e  inner join t_cpp_item_cardapio ic
 on e.cd_estabelecimento = ic.cd_estabelecimento
 where e.cd_estabelecimento = 3 and ic.ds_categoria = 'BEBIDA';
 
-select e.cd_estabelecimento, e.nm_estabelecimento, ic.cd_item_cardapio, ic.ds_item_cardapio
+select e.cd_estabelecimento, e.nm_fantasia, ic.cd_item_cardapio, ic.ds_item_cardapio
 from t_cpp_estabelecimento e  inner join t_cpp_item_cardapio ic
 on e.cd_estabelecimento = ic.cd_estabelecimento
 where e.cd_estabelecimento = 2 and ic.ds_categoria = 'APERITIVO';
 
-select e.cd_estabelecimento, e.nm_estabelecimento, ic.cd_item_cardapio, ic.ds_item_cardapio
+select e.cd_estabelecimento, e.nm_fantasia, ic.cd_item_cardapio, ic.ds_item_cardapio
 from t_cpp_estabelecimento e  inner join t_cpp_item_cardapio ic
 on e.cd_estabelecimento = ic.cd_estabelecimento
 where e.cd_estabelecimento = 3 and ic.ds_categoria = 'LANCHE';
@@ -144,7 +144,7 @@ select pic.cd_pedido,
        p.hr_pedido,
        ic.ds_item_cardapio,
        ic.vl_item_cardapio,
-       e.nm_estabelecimento
+       e.nm_fantasia
 from t_cpp_pedido_item_cardapio pic
     inner join t_cpp_item_cardapio ic
         on pic.cd_item_cardapio = ic.cd_item_cardapio
@@ -155,9 +155,9 @@ from t_cpp_pedido_item_cardapio pic
 where pic.cd_pedido = 3;
 
 --Query que envolve todas as tabelas, buscando por um determinado estabelecimento,
---ordenando pelo hr_pedido do mais novo ao mais vemlho
+--ordenando pelo hr_pedido do mais novo ao mais velho
 SELECT   E.cd_estabelecimento
-        ,E.nm_estabelecimento
+        ,E.nm_fantasia
         ,G.nm_gerente
         ,A.nr_experiencia
         ,C.nm_cliente
@@ -184,14 +184,14 @@ WHERE E.cd_estabelecimento = 2
 ORDER BY P.hr_pedido desc;
 
 
--- RelatÃ³rio simples com GROUP BY envolvendo duas ou mais tabelas.
+-- Relatório simples com GROUP BY envolvendo duas ou mais tabelas.
 
---Calcular a mÃ©dia de avaliaÃ§Ãµes de algum estabelecimento
-select e.nm_estabelecimento, avg(a.nr_experiencia) as Nota
+--Calcular a média de avaliações de algum estabelecimento
+select e.nm_fantasia, avg(a.nr_experiencia) as Nota
 from t_cpp_estabelecimento e inner join t_cpp_avaliacao a
 on e.cd_estabelecimento = a.cd_estabelecimento
 where e.cd_estabelecimento = 3
-group by nm_estabelecimento;
+group by nm_fantasia;
 
 
 --pega os itens de determinado pedido
@@ -208,21 +208,66 @@ group by  p.vl_total_pedido, p.cd_pedido;
 
 
 --Total de avaliacao de cada estabelecimento
-select e.nm_estabelecimento, count(a.nr_experiencia) as "Total de ExperiÃªncias"
+select e.nm_fantasia, count(a.nr_experiencia) as "Total de Experiências"
 from t_cpp_avaliacao a
 inner join t_cpp_estabelecimento e
 on e.cd_estabelecimento = a.cd_estabelecimento
 inner join t_cpp_cliente c
 on c.cd_cliente = a.cd_cliente
-group by e.nm_estabelecimento, a.nr_experiencia;
+group by e.nm_fantasia, a.nr_experiencia;
 
 
---Total de avaliaÃ§Ã£o de cada estabelecimento com cada pessoa que availiou, ordenado pelo nome dos estabelecimentos
-select e.cd_estabelecimento, e.nm_estabelecimento, count(a.nr_experiencia) as "Total de ExperiÃªncias", c.nm_cliente
+--Total de avaliação de cada estabelecimento com cada pessoa que avaliou, ordenado pelo nome dos estabelecimentos
+select e.cd_estabelecimento, e.nm_fantasia, count(a.nr_experiencia) as "Total de Experiências", c.nm_cliente
 from t_cpp_avaliacao a
 inner join t_cpp_estabelecimento e
 on e.cd_estabelecimento = a.cd_estabelecimento
 inner join t_cpp_cliente c
 on c.cd_cliente = a.cd_cliente
-group by e.cd_estabelecimento, e.nm_estabelecimento, a.nr_experiencia, c.nm_cliente
-order by e.nm_estabelecimento;
+group by e.cd_estabelecimento, e.nm_fantasia, a.nr_experiencia, c.nm_cliente
+order by e.nm_fantasia;
+
+
+
+--Ver o total de categorias que cada restaurante tem registrado
+SELECT e.cd_estabelecimento, e.nm_fantasia, count(cat.cd_categoria) as "Total de categorias do estabelecimento"
+FROM t_cpp_estabelecimento e
+inner join t_cpp_categoria cat
+on e.cd_estabelecimento = cat.cd_estabelecimento
+GROUP BY e.cd_estabelecimento, e.nm_fantasia;
+
+
+--Ver o nome de todas as categorias registradas por um restaurante específico
+SELECT e.cd_estabelecimento, e.nm_fantasia, cat.nm_categoria 
+FROM t_cpp_estabelecimento e
+inner join t_cpp_categoria cat
+on e.cd_estabelecimento = cat.cd_estabelecimento
+where e.cd_estabelecimento = 1;
+
+
+--Ver todos os restaurantes que contém algum tipo específico de categoria
+SELECT e.cd_estabelecimento, e.nm_fantasia, cat.nm_categoria 
+FROM t_cpp_estabelecimento e
+inner join t_cpp_categoria cat
+on e.cd_estabelecimento = cat.cd_estabelecimento
+where cat.nm_categoria = 'Sobremesa';
+
+
+
+--Ver todos os itens do cardápio de algum restaurante, que são de determinada categoria.
+SELECT ic.cd_item_cardapio, cat.nm_categoria, ic.nm_item_cardapio, e.nm_fantasia, e.cd_estabelecimento
+FROM t_cpp_item_cardapio ic
+INNER JOIN t_cpp_estabelecimento e
+on ic.cd_estabelecimento = e.cd_estabelecimento
+INNER JOIN t_cpp_categoria cat
+on ic.cd_categoria = cat.cd_categoria
+where cat.nm_categoria = 'Sobremesa' and e.nm_fantasia = 'Milk Shakespeare';
+
+
+
+
+
+
+
+
+
