@@ -242,7 +242,7 @@ SELECT e.cd_estabelecimento, e.nm_fantasia, cat.nm_categoria
 FROM t_cpp_estabelecimento e
 inner join t_cpp_categoria cat
 on e.cd_estabelecimento = cat.cd_estabelecimento
-where e.cd_estabelecimento = 1;
+where e.cd_estabelecimento = 2;
 
 
 --Ver todos os restaurantes que contém algum tipo específico de categoria
@@ -261,7 +261,23 @@ INNER JOIN t_cpp_estabelecimento e
 on ic.cd_estabelecimento = e.cd_estabelecimento
 INNER JOIN t_cpp_categoria cat
 on ic.cd_categoria = cat.cd_categoria
-where cat.nm_categoria = 'Sobremesa' and e.nm_fantasia = 'Milk Shakespeare';
+where cat.nm_categoria = 'Sobremesa' and e.nm_fantasia = 'Churros Store';
+
+--Pegando nome fantasia do estabelecimento e o nome e e-mail do gerente pelo código do estabelecimento
+SELECT E.nm_fantasia, G.nm_gerente, G.ds_email
+FROM T_CPP_ESTABELECIMENTO E
+INNER JOIN T_CPP_GERENTE G
+ON G.cd_gerente = E.cd_gerente
+WHERE E.cd_estabelecimento = 1;
+ 
+--Pegar nome do estabelecimento da razao social e o fantasia pelo codigo do estabelecimento
+SELECT   E.cd_estabelecimento
+        ,E.nm_fantasia
+        ,E.nm_razao_social
+FROM T_CPP_ESTABELECIMENTO E
+WHERE E.cd_estabelecimento = 2;
+ 
+
 
 
 
