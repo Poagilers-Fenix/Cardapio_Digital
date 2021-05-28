@@ -27,7 +27,7 @@ SET nm_gerente = 'Jorge Mendes'
 WHERE cd_gerente = 1;
 
 UPDATE t_cpp_gerente
-SET nm_gerente = 'DÃ©bora LeÃ£o'
+SET nm_gerente = 'Débora Leão'
 WHERE cd_gerente = 2;
 
 UPDATE t_cpp_gerente
@@ -57,19 +57,19 @@ insert into t_cpp_categoria values (cdcategoria.nextval, 3, 'Bebida');
  
 
 -- CRIAÃ‡ÃƒO DA TABELA ITEM_CARDAPIO
-INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 1, 1, '1', 'Sorvete de Chocolate', '100g de sorvete sabor chocolate', 5.00, 'Leite, chocolate em pó e açúcar', 700, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
-INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 1, 1, '0', 'Milk Shake de Menta com Chocolate', '150ml de sorvete sabor menta e chocolate', 7.00, 'Leite, menta e chocolate em pó e açúcar', 750, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
-INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 2, 3, '1', 'Churros de Chocolate', '1 unidade de churros sabor chocolate', 7.00, 'Leite, chocolate, farinha de trigo, água e açúcar', 850, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
-INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 2, 3, '0', 'Churros de Doce de Leite', '1 unidade de churros sabor doce de leite', 7.00, 'Leite, doce de leite, farinha de trigo, água e açúcar', 800, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
-INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 3, 6, '1', 'Arroz', '100g de arroz do tipo 1', 3.00, 'Arroz Tipo 1', 200, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
-INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 3, 6, '0', 'Feijão', '100g de feijão carioca', 4.00, 'Feijão Carioca', 300, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
-insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 1, 1,'1', 'Milkshake unicórnio','Com MeMs', 8.00, 'Leite, chocolate, caramelo, chantilly e MeM', 500, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
-insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 1, 1, '0', 'Milkshake ovomaltine','O preferido da casa', 12.00, 'Leite, chocolate', 300, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
-insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 2, 5, '1', 'Cerveja pilsen','A melhor cerveja do MUNDO', 10.00, 'Lúpulo, cevada', 43, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
-insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 2, 4, '0', 'Amendoim sem casca','Um bom aperitivo, talvez o melhor de todos', 2.00, 'Amendoim', 30, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
-insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 3, 8, '0', 'Vinho tinto espanhol','Quer ostentar? então toma, ano de 1930', 10000.00, 'Vinho tinto espanhol', 0, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
-insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 3, 6, '1', 'Virada à paulista','Venha comer esse clássico!', 15.00, 'Arroz, feijão, Bife, ovo frito, couve refogada e tomate.', 400, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
-insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 3, 7, '1', 'Lanche Cheddar Duplo','200g de hambúrguer artesanal e 100g de cheddar,', 20.00, 'Hambúrguer, alface, cheddar, tomate.', 500, 'C:\Users\CLIENTE\Desktop\Aleatório\urso.jpg');
+INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 1, 1, '1', 'Sorvete de Chocolate', '100g de sorvete sabor chocolate', 5.00, 'Leite, chocolate em pó e açúcar', 700, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
+INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 1, 1, '0', 'Milk Shake de Menta com Chocolate', '150ml de sorvete sabor menta e chocolate', 7.00, 'Leite, menta e chocolate em pó e açúcar', 750, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
+INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 2, 3, '1', 'Churros de Chocolate', '1 unidade de churros sabor chocolate', 7.00, 'Leite, chocolate, farinha de trigo, água e açúcar', 850, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
+INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 2, 3, '0', 'Churros de Doce de Leite', '1 unidade de churros sabor doce de leite', 7.00, 'Leite, doce de leite, farinha de trigo, água e açúcar', 800, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
+INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 3, 6, '1', 'Arroz', '100g de arroz do tipo 1', 3.00, 'Arroz Tipo 1', 200, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
+INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 3, 6, '0', 'Feijão', '100g de feijão carioca', 4.00, 'Feijão Carioca', 300, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 1, 1,'1', 'Milkshake unicórnio','Com MeMs', 8.00, 'Leite, chocolate, caramelo, chantilly e MeM', 500, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 1, 1, '0', 'Milkshake ovomaltine','O preferido da casa', 12.00, 'Leite, chocolate', 300, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 2, 5, '1', 'Cerveja pilsen','A melhor cerveja do MUNDO', 10.00, 'Lúpulo, cevada', 43, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 2, 4, '0', 'Amendoim sem casca','Um bom aperitivo, talvez o melhor de todos', 2.00, 'Amendoim', 30, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 3, 8, '0', 'Vinho tinto espanhol','Quer ostentar? então toma, ano de 1930', 10000.00, 'Vinho tinto espanhol', 0, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 3, 6, '1', 'Virada à paulista','Venha comer esse clássico!', 15.00, 'Arroz, feijão, Bife, ovo frito, couve refogada e tomate.', 400, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 3, 7, '1', 'Lanche Cheddar Duplo','200g de hambúrguer artesanal e 100g de cheddar,', 20.00, 'Hambúrguer, alface, cheddar, tomate.', 500, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
 
  
 -- CRIAÃ‡ÃƒO DA TABELA CLIENTE
