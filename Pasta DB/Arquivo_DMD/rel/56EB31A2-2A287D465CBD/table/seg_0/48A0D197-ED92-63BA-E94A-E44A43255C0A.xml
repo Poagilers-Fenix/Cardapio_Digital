@@ -60,7 +60,7 @@
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nm_nome_fantasia" id="C66082E5-4AD0-C5CD-725C-286774662C58">
+<Column name="nm_fantasia" id="C66082E5-4AD0-C5CD-725C-286774662C58">
 <createdBy>CLIENTE</createdBy>
 <createdTime>2021-05-27 18:18:55 UTC</createdTime>
 <generatorID>3CEFDA9D-1A73-3EB3-3BE8-815F1FABD3D7</generatorID>

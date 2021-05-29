@@ -49,6 +49,7 @@
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>C1343D8F-3616-0455-BA5E-D350E3B042FC</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -62,6 +63,7 @@
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>20C02C89-DE58-E1F8-6BD9-1976484C5B97</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>

@@ -69,7 +69,7 @@
 <dataTypeSize>50 CHAR</dataTypeSize>
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nm_nome_fantasia" id="3CEFDA9D-1A73-3EB3-3BE8-815F1FABD3D7">
+<Attribute name="nm_fantasia" id="3CEFDA9D-1A73-3EB3-3BE8-815F1FABD3D7">
 <createdBy>CLIENTE</createdBy>
 <createdTime>2021-05-27 02:48:07 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
