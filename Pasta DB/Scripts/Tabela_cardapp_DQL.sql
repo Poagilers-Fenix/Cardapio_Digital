@@ -1,6 +1,7 @@
 set serveroutput on;
 
 --As tabelas T_CPP_PEDIDO e T_CPP_PEDIDO_ITEM_CARDAPIO (associativa) não serão utilizadas no momento, mas deixamos elas como parte do script DQL para podermos usar os selects no futuro.
+--Os selects que tem as tabelas pedido e pedido
 
 
 --Selects com where
@@ -156,19 +157,16 @@ from t_cpp_pedido_item_cardapio pic
         on p.cd_estabelecimento = e.cd_estabelecimento
 where pic.cd_pedido = 3;
 
---Query que envolve todas as tabelas, buscando por um determinado estabelecimento,
---ordenando pelo hr_pedido do mais novo ao mais velho
-SELECT   E.cd_estabelecimento
-        ,E.nm_fantasia
-        ,G.nm_gerente
-        ,A.nr_experiencia
-        ,C.nm_cliente
-        ,P.hr_pedido
-        ,P.st_pedido
-        ,IC.nm_item_cardapio
-        ,IC.ds_item_cardapio
-        ,IC.vl_item_cardapio
-        ,IC.ds_categoria
+--Query que envolve todas as tabelas, buscando as informações do estabelecimento, o gerente, e todas as avaliações que os clientes fizeram dos pratos que quiseram avaliar.
+SELECT E.cd_estabelecimento
+,E.nm_fantasia
+,G.nm_gerente
+,A.nr_experiencia
+,C.nm_cliente
+,IC.nm_item_cardapio
+,IC.ds_item_cardapio
+,IC.vl_item_cardapio
+,CAT.nm_categoria
 FROM T_CPP_ESTABELECIMENTO E
 INNER JOIN T_CPP_GERENTE G
 ON G.cd_gerente = E.cd_gerente
@@ -176,14 +174,12 @@ INNER JOIN T_CPP_AVALIACAO A
 ON E.cd_estabelecimento = A.cd_estabelecimento
 INNER JOIN T_CPP_CLIENTE C
 ON C.cd_cliente = A.cd_cliente
-INNER JOIN T_CPP_PEDIDO P
-ON C.cd_cliente = P.cd_cliente
-INNER JOIN T_CPP_PEDIDO_ITEM_CARDAPIO PIC
-ON P.cd_pedido = PIC.cd_pedido
 INNER JOIN T_CPP_ITEM_CARDAPIO IC
-ON IC.cd_item_cardapio = PIC.cd_item_cardapio
-WHERE E.cd_estabelecimento = 2
-ORDER BY P.hr_pedido desc;
+ON IC.cd_estabelecimento = E.cd_estabelecimento
+INNER JOIN T_CPP_CATEGORIA CAT
+on E.cd_estabelecimento = CAT.cd_estabelecimento
+WHERE E.cd_estabelecimento = 1
+order by IC.nm_item_cardapio;
 
 
 -- Relatório simples com GROUP BY envolvendo duas ou mais tabelas.

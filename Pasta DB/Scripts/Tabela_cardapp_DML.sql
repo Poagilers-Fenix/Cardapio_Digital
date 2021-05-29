@@ -11,9 +11,8 @@ DELETE FROM t_cpp_estabelecimento;
 DELETE FROM t_cpp_gerente;
 */
 
-desc t_cpp_estabelecimento;
 
--- CRIACAO DA TABELA GERENTE
+-- POPULACAO DA TABELA GERENTE
 insert into t_cpp_gerente values (cdgerente.nextval,'Jorge','pessoa.eric@gmail.com', 1900.00, 'Rua do grito agudo, 202', 'Bananinha123');
 insert into t_cpp_gerente values (cdgerente.nextval,'Débora','Debora@gmail.com', 2200.00, 'Rua do grito grave, 103', 'GoiabadaAt77');
 insert into t_cpp_gerente values (cdgerente.nextval,'João','Joao@gmail.com', 1500.00, 'Rua do abacate, 30', 'Mocoto99');
@@ -35,7 +34,7 @@ SET nm_gerente = 'João Lima'
 WHERE cd_gerente = 3;
 
 
--- CRIAÃ‡ÃƒO DA TABELA ESTABELECIMENTO
+-- POPULAÇÃO DA TABELA ESTABELECIMENTO
 INSERT INTO t_cpp_estabelecimento VALUES(cdestabelecimento.nextval, 1, '12345678000108', 'Milk Shakespeare LTDA', 'Milk Shakespeare', 'Rua djuvidas, 197', '11986759980', 'milk@gmail.com');
 INSERT INTO t_cpp_estabelecimento VALUES(cdestabelecimento.nextval, 2, '11145555000109','Churros Store SA', 'Churros Store', 'Rua taí, 22', '33978964456', 'churros@gmail.com' );
 INSERT INTO t_cpp_estabelecimento VALUES(cdestabelecimento.nextval, 3, '22245678000105', 'Primos e Cia', 'Restaurante dos Primos', 'Rua Melissa, 39', '21987558563', 'primos@gmail.com');
@@ -56,7 +55,7 @@ insert into t_cpp_categoria values (cdcategoria.nextval, 3, 'Lanche');
 insert into t_cpp_categoria values (cdcategoria.nextval, 3, 'Bebida');
  
 
--- CRIAÃ‡ÃƒO DA TABELA ITEM_CARDAPIO
+-- POPULAÇÃO DA TABELA ITEM_CARDAPIO
 INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 1, 1, '1', 'Sorvete de Chocolate', '100g de sorvete sabor chocolate', 5.00, 'Leite, chocolate em pó e açúcar', 700, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
 INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 1, 1, '0', 'Milk Shake de Menta com Chocolate', '150ml de sorvete sabor menta e chocolate', 7.00, 'Leite, menta e chocolate em pó e açúcar', 750, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
 INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 2, 3, '1', 'Churros de Chocolate', '1 unidade de churros sabor chocolate', 7.00, 'Leite, chocolate, farinha de trigo, água e açúcar', 850, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
@@ -72,7 +71,7 @@ insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 3, 6, '1', 'Virad
 insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 3, 7, '1', 'Lanche Cheddar Duplo','200g de hambúrguer artesanal e 100g de cheddar,', 20.00, 'Hambúrguer, alface, cheddar, tomate.', 500, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
 
  
--- CRIAÃ‡ÃƒO DA TABELA CLIENTE
+-- POPULAÇÃO DA TABELA CLIENTE
 insert into t_cpp_cliente values(1, 'Lari', '11960205342', '123');
 insert into t_cpp_cliente values(2, 'Eric', '11293847581', '1234');
 insert into t_cpp_cliente values(3, 'Kaue', '11384713947', '12345');
@@ -100,7 +99,7 @@ UPDATE t_cpp_cliente
 SET ds_senha = 'henri45'
 WHERE cd_cliente = 6;
  
--- CRIAÇÃO DA TABELA AVALIAÇÃO
+-- POPULACAO DA TABELA AVALIAÇÃO
 INSERT INTO t_cpp_avaliacao values(1, 1, 1, 5, 'Melhor sorvete da região muito saboroso.');
 INSERT INTO t_cpp_avaliacao values(2, 2, 3, 5, 'A comida estava saborosa e ainda chegou quentinha.');
 INSERT INTO t_cpp_avaliacao values(3, 3, 2, 3, 'Churros estava queimado');
