@@ -96,7 +96,7 @@ CREATE TABLE t_cpp_estabelecimento (
     ds_cnpj             CHAR(14) NOT NULL,
     nm_razao_social     VARCHAR2(50 CHAR) NOT NULL,
     nm_fantasia         VARCHAR2(50 CHAR) NOT NULL,
-    nm_endereco         VARCHAR2(100 CHAR) NOT NULL,
+    ds_endereco         VARCHAR2(100 CHAR) NOT NULL,
     nr_telefone         CHAR(11 CHAR) NOT NULL,
     ds_email            VARCHAR2(40) NOT NULL
 );
@@ -107,8 +107,8 @@ CREATE TABLE t_cpp_gerente (
     cd_gerente   NUMBER(5) NOT NULL,
     nm_gerente   VARCHAR2(50) NOT NULL,
     ds_email     VARCHAR2(65) NOT NULL,
-    vl_salario   NUMBER(7, 2) NULL,
-    ds_endereco  VARCHAR2(150) NULL,
+    vl_salario   NUMBER(7, 2),
+    ds_endereco  VARCHAR2(150),
     ds_senha     VARCHAR2(25 CHAR) NOT NULL
 );
 
