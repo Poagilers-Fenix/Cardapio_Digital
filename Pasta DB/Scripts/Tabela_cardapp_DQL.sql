@@ -1,5 +1,8 @@
 set serveroutput on;
 
+--As tabelas T_CPP_PEDIDO e T_CPP_PEDIDO_ITEM_CARDAPIO (associativa) não serão utilizadas no momento, mas deixamos elas como parte do script DQL para podermos usar os selects no futuro.
+
+
 --Selects com where
 -- Relatório simples que traz uma ocorrência especifica de cada tabela do banco.
 select * 
@@ -29,6 +32,10 @@ where cd_pedido = 1;
 select *
 from t_cpp_pedido_item_cardapio
 where cd_pedido = 2;
+
+select *
+from t_cpp_categoria
+where cd_categoria = 2;
 
 
 --selects sem where

@@ -72,7 +72,7 @@
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nm_endereco" id="4B476ADF-99ED-6AA3-7B11-BC625BF5025B">
+<Column name="ds_endereco" id="4B476ADF-99ED-6AA3-7B11-BC625BF5025B">
 <createdBy>CLIENTE</createdBy>
 <createdTime>2021-05-27 18:18:55 UTC</createdTime>
 <generatorID>E9C81939-E7E3-EC22-6343-62A7913D62BC</generatorID>

@@ -82,7 +82,7 @@
 <dataTypeSize>50 CHAR</dataTypeSize>
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nm_endereco" id="E9C81939-E7E3-EC22-6343-62A7913D62BC">
+<Attribute name="ds_endereco" id="E9C81939-E7E3-EC22-6343-62A7913D62BC">
 <createdBy>CLIENTE</createdBy>
 <createdTime>2021-05-27 02:50:13 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
