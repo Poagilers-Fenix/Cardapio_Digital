@@ -61,6 +61,9 @@ from t_cpp_pedido;
 select *
 from t_cpp_pedido_item_cardapio;
 
+select *
+from t_cpp_categoria;
+
 
 -- Relatório simples com selects que trazem alguma ocorrências específicas da aplicação de acordo com algum parâmetro.
 
@@ -83,10 +86,10 @@ select cd_estabelecimento, nm_fantasia
 from t_cpp_estabelecimento; 
  
 -- selecionar um item cardápio de acordo com o código dele e se ele estão true ou false
-select nr_destaque,
+select st_destaque,
        cd_estabelecimento     
 from t_cpp_item_cardapio
-where cd_estabelecimento = 2 and nr_destaque = '1';
+where cd_estabelecimento = 2 and st_destaque = '1';
  
 -- selecionar o status do pedido da tabela pedido
 select st_pedido
@@ -110,31 +113,23 @@ from t_cpp_estabelecimento e  inner join t_cpp_item_cardapio ic
 on e.cd_estabelecimento = ic.cd_estabelecimento
 where e.cd_estabelecimento = 3;
 
+
 --Selecionar pratos a partir da categoria dos itens do cardápio
-select e.cd_estabelecimento, e.nm_fantasia, ic.cd_item_cardapio, ic.ds_item_cardapio
+select e.cd_estabelecimento, e.nm_fantasia, ic.nm_item_cardapio, cat.nm_categoria
 from t_cpp_estabelecimento e  inner join t_cpp_item_cardapio ic
 on e.cd_estabelecimento = ic.cd_estabelecimento
-where e.cd_estabelecimento = 1 and ic.ds_categoria = 'SOBREMESA';
+inner join t_cpp_categoria cat
+on e.cd_estabelecimento = cat.cd_estabelecimento
+where e.cd_estabelecimento = 1 and cat.nm_categoria = 'Sobremesa';
 
-select e.cd_estabelecimento, e.nm_fantasia, ic.cd_item_cardapio, ic.ds_item_cardapio
+select e.cd_estabelecimento, e.nm_fantasia, ic.nm_item_cardapio, cat.nm_categoria
 from t_cpp_estabelecimento e  inner join t_cpp_item_cardapio ic
 on e.cd_estabelecimento = ic.cd_estabelecimento
-where e.cd_estabelecimento = 3 and ic.ds_categoria = 'PRATO';
+inner join t_cpp_categoria cat
+on e.cd_estabelecimento = cat.cd_estabelecimento
+where e.cd_estabelecimento = 3 and cat.nm_categoria = 'Prato';
 
-select e.cd_estabelecimento, e.nm_fantasia, ic.cd_item_cardapio, ic.ds_item_cardapio
-from t_cpp_estabelecimento e  inner join t_cpp_item_cardapio ic
-on e.cd_estabelecimento = ic.cd_estabelecimento
-where e.cd_estabelecimento = 3 and ic.ds_categoria = 'BEBIDA';
 
-select e.cd_estabelecimento, e.nm_fantasia, ic.cd_item_cardapio, ic.ds_item_cardapio
-from t_cpp_estabelecimento e  inner join t_cpp_item_cardapio ic
-on e.cd_estabelecimento = ic.cd_estabelecimento
-where e.cd_estabelecimento = 2 and ic.ds_categoria = 'APERITIVO';
-
-select e.cd_estabelecimento, e.nm_fantasia, ic.cd_item_cardapio, ic.ds_item_cardapio
-from t_cpp_estabelecimento e  inner join t_cpp_item_cardapio ic
-on e.cd_estabelecimento = ic.cd_estabelecimento
-where e.cd_estabelecimento = 3 and ic.ds_categoria = 'LANCHE';
 
 --selecionar todos os itens de algum pedido
 

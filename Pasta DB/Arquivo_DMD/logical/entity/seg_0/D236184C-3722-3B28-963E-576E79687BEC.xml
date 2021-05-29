@@ -83,7 +83,7 @@
 <dataTypeSize>150</dataTypeSize>
 <ownDataTypeParameters>150,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nm_senha" id="ACCD7288-9344-55A1-1DDF-36BCB547031D">
+<Attribute name="ds_senha" id="ACCD7288-9344-55A1-1DDF-36BCB547031D">
 <createdBy>CLIENTE</createdBy>
 <createdTime>2021-05-27 02:47:22 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>

@@ -71,7 +71,7 @@
 <ownDataTypeParameters>150,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nm_senha" id="60AD8920-ED22-49AB-9261-3BBE4C8622A5">
+<Column name="ds_senha" id="60AD8920-ED22-49AB-9261-3BBE4C8622A5">
 <createdBy>CLIENTE</createdBy>
 <createdTime>2021-05-27 18:18:55 UTC</createdTime>
 <generatorID>ACCD7288-9344-55A1-1DDF-36BCB547031D</generatorID>
