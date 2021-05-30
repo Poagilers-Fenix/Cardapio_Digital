@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="06C5908F-9A7D-E2E7-87D5-A55A8293EC3D" name="T_CPP_CATEGORIA">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 18:18:55 UTC</createdTime>
+<generatorID>D65D44CB-FD19-EF69-CC7B-AD8DA75E42AD</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<ordsAlias>categoria</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cd_categoria" id="FE90D7F0-1420-1357-C80F-5ACACCBDAE0C">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 18:18:55 UTC</createdTime>
+<generatorID>42951C61-9161-DF68-5731-D32A71367C4E</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cd_estabelecimento" id="75D9B0F6-6913-738A-350E-F8EE5C969E83">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 20:49:35 UTC</createdTime>
+<generatorID>B8E9BC06-4E6D-705F-16AD-B9E4871B87EE</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A4A1F3B2-F366-86F0-890E-D5A58183C7AB" referredColumn="A089AD24-0FF2-DCAF-1D7D-EE06761F581B"/>
+</associations>
+</Column>
+<Column name="nm_categoria" id="A486C27B-E2E6-4EC6-25E2-0429099F9117">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 18:18:55 UTC</createdTime>
+<generatorID>DB0CAB30-02B6-3648-78C5-885EEE98F066</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8F2376A7-61F0-10AC-6D50-F0DD95A22FF3" name="T_CPP_CATEGORIA_PK">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 18:18:55 UTC</createdTime>
+<generatorID>C2FEC103-50FE-8338-34A4-B1FA37A5D24C</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FE90D7F0-1420-1357-C80F-5ACACCBDAE0C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A891A6E7-5E0C-9642-38EB-A14ACB5BF746" name="FK_CPP_CATEGORIA_ESTAB">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 20:49:35 UTC</createdTime>
+<generatorID>8CE653F2-B47D-BF7D-4DAC-575DFBC1840D</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="75D9B0F6-6913-738A-350E-F8EE5C969E83"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

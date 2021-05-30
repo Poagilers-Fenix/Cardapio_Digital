@@ -16,8 +16,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="nm_gerente" id="4A67B524-8C71-C231-57A7-ACA0A84ED49D">
@@ -49,6 +49,7 @@
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>C1343D8F-3616-0455-BA5E-D350E3B042FC</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -62,6 +63,7 @@
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>20C02C89-DE58-E1F8-6BD9-1976484C5B97</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -69,9 +71,21 @@
 <ownDataTypeParameters>150,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="ds_senha" id="60AD8920-ED22-49AB-9261-3BBE4C8622A5">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 18:18:55 UTC</createdTime>
+<generatorID>ACCD7288-9344-55A1-1DDF-36BCB547031D</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="8E1F94AC-7335-4756-0642-D48BE3600395" name="PK_CPP_GERENTE">
+<ind_PK_UK id="8E1F94AC-7335-4756-0642-D48BE3600395" name="T_CPP_GERENTE_PK">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>D4462E01-186C-8F03-036F-443E35AC0BD4</generatorID>

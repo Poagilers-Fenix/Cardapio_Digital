@@ -16,8 +16,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -33,16 +33,28 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="60413FC1-9CDE-0D4C-FE95-F1720D2CCC7F" referredColumn="7CF43346-0D53-D37D-1FB0-D2AE72A089B9"/>
 </associations>
 </Column>
+<Column name="qt_item_cardapio" id="221303C8-EB53-8DBA-E81F-2DC2871D7F2B">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-05-27 18:18:55 UTC</createdTime>
+<generatorID>51655768-91DE-ED08-B752-15507E26BC2F</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="3640AE05-2329-1CFC-F859-CCE775D173C2" name="FK_CPP_ITEM_CARDAPIO">
+<ind_PK_UK id="3640AE05-2329-1CFC-F859-CCE775D173C2" name="FK_CPP_PIC_IC">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>BB7F17D7-4AE7-1F8B-A9E4-80C5D642E116</generatorID>
@@ -53,7 +65,7 @@
 <colUsage columnID="49F11A63-E049-ED60-4935-D8C210D654CD"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="24312414-6E7D-4B1F-6A35-BCAF79BEC79B" name="FK_CPP_PEDIDO_ITEM_CARDAPIO">
+<ind_PK_UK id="24312414-6E7D-4B1F-6A35-BCAF79BEC79B" name="FK_CPP_PIC_PEDIDO">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>F3F50BBE-CE35-2146-2068-30FFA5A21DFD</generatorID>

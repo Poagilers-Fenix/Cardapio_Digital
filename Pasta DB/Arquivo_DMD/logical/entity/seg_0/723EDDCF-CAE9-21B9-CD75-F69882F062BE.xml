@@ -25,8 +25,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="cd_cliente" id="595666D6-3112-62E7-2F5B-A567B5F776B1">
 <createdBy>Kaue Augusto</createdBy>
@@ -56,7 +56,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="nr_experiencia" id="425ECCCF-E59C-76A2-96EE-CD0B26B509E7">
 <createdBy>Kaue Augusto</createdBy>
@@ -91,9 +91,8 @@
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-05 14:36:35 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="false"/>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <newElementsIDs>F0A86F6E-97AF-0A47-CBC7-4F948638405F</newElementsIDs>

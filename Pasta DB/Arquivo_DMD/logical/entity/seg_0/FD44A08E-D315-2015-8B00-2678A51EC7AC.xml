@@ -18,7 +18,7 @@
 <Attribute name="cd_cliente" id="FDC6F1CC-A6A4-4F00-F569-FC0E192E564A">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:24:41 UTC</createdTime>
-<commentInRDBMS><![CDATA[até dez mil]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[até 99 milhões ]]></commentInRDBMS>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
@@ -26,8 +26,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>5</dataTypePrecision>
-<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="nm_cliente" id="C370E3D4-42C5-62C1-9B3F-EDF4A22A7128">
 <createdBy>Kaue Augusto</createdBy>
@@ -75,9 +75,8 @@
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:24:51 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="false"/>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <newElementsIDs>FDC6F1CC-A6A4-4F00-F569-FC0E192E564A</newElementsIDs>

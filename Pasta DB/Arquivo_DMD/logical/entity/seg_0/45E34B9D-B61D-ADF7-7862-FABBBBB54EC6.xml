@@ -25,8 +25,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="cd_cliente" id="E32DB346-CFD8-5559-D6C2-3F017A3A28C3">
 <createdBy>Kaue Augusto</createdBy>
@@ -56,7 +56,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="vl_total_pedido" id="D0D18C0E-7742-558A-0C33-CA8426FAD510">
 <createdBy>Kaue Augusto</createdBy>
@@ -103,9 +103,8 @@
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:32:33 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="false"/>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <newElementsIDs>50277B14-CE6B-013B-D5C6-427507719EFE</newElementsIDs>
