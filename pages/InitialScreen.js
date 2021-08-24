@@ -8,10 +8,12 @@ export default function TelaInicial({ navigation }) {
       <View style={{alignItems: 'center'}}>
         <Text style={styles.titulo}>Bem-vindo(a) ao Cardapp!</Text>
       </View>
-      <Image
-        source={require("../assets/garcom.png")}
-        style={styles.imagem}
-      />
+      <View style={styles.imgView}>
+        <Image
+          source={require("../assets/garcom.png")}
+          style={styles.imagem}
+        />
+      </View>
       <View>
         <Botao 
           titulo="Login com o Google" 
@@ -35,6 +37,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+  imgView: {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+  },
   titulo: {
     fontSize: 38,
     flexWrap: 'wrap',
@@ -44,9 +51,10 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   imagem: {
-    width: '100%',
-    height: 400,
+    width: '60%',
+    height: 250,
     marginTop: 30,
     marginBottom: 40,
+
   },
 });

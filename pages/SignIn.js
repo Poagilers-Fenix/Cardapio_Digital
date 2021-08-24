@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
 import Botao from '../components/Button';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import InputWithIcon from '../components/input/InputWithIcon'
 
 export default function TelaLogin({ navigation }) {
   return(
@@ -11,21 +11,9 @@ export default function TelaLogin({ navigation }) {
       <Text style={styles.titulo}>Login</Text>
       <Text style={styles.subtitulo}>Bem-vindo(a) de volta!</Text>
 
-      <View style={styles.inputContainer}>
-        <Text style={styles.label}>Celular</Text>
-        <View style={styles.input}>
-        <MaterialCommunityIcons name="cellphone-android" size={22} color="#666" />
-          <TextInput style={{paddingLeft: 5, flex: 1, height: 50}} keyboardType="numeric" />
-        </View>
-      </View>
+      <InputWithIcon title="Celular" icon="cellphone-android" type="numeric"/>
 
-      <View style={styles.inputContainer}>
-        <Text style={styles.label}>Senha</Text>
-        <View style={styles.input}>
-          <MaterialCommunityIcons name="lock-outline" size={22} color="#666" />
-          <TextInput style={{paddingLeft: 5, flex: 1, height: 50}} />
-        </View>
-      </View>
+      <InputWithIcon title="Senha" icon="lock-outline"/>
 
       <View style={{ width: 250, marginTop: 30 }}>
         <Botao 
