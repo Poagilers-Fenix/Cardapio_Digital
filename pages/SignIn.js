@@ -4,20 +4,20 @@ import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity } from 'reac
 import Botao from '../components/Button';
 import InputWithIcon from '../components/input/InputWithIcon'
 
-export default function TelaLogin({ navigation }) {
+export default function SignIn({ navigation }) {
   return(
     <View style={styles.container}>
       <Image style={styles.imagem} source={require("../assets/perfil-cinza.png")} />
       <Text style={styles.titulo}>Login</Text>
       <Text style={styles.subtitulo}>Bem-vindo(a) de volta!</Text>
 
-      <InputWithIcon title="Celular" icon="cellphone-android" type="numeric"/>
+      <InputWithIcon title="Telefone" icon="cellphone-android" type="numeric"/>
 
       <InputWithIcon title="Senha" icon="lock-outline"/>
 
       <View style={{ width: 250, marginTop: 30 }}>
         <Botao 
-          titulo="Entrar" acao={"QRCode"} 
+          titulo="Entrar" acao={"QRCodeReader"} 
           navigation={navigation}
         />
         <TouchableOpacity style={{alignItems: 'center'}}>

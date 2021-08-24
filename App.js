@@ -6,7 +6,8 @@ import { StatusBar } from 'react-native';
 import TelaInicial from './pages/InitialScreen';
 import TelaLogin from './pages/SignIn';
 import TelaCadastro from './pages/SignUp';
-import QRCode from './components/QRCode';
+import QRCodeReader from './pages/QRCodeReader';
+import MyRequests from './pages/MyRequests';
 
 const Stack = createNativeStackNavigator();
 
@@ -30,8 +31,12 @@ return (
           component={TelaCadastro}
         />
         <Stack.Screen 
-          name="QRCode"
-          component={QRCode}
+          name="QRCodeReader"
+          component={QRCodeReader}
+        />
+        <Stack.Screen 
+          name="MyRequests"
+          component={MyRequests}
         />
       </Stack.Navigator>
       <StatusBar barStyle="dark-content" backgroundColor="#fff"  />

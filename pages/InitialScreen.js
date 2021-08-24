@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Image} from 'react-native';
 import Botao from '../components/Button';
 
-export default function TelaInicial({ navigation }) {
+export default function InitialSreen({ navigation }) {
   return(
     <View style={styles.container}>
       <View style={{alignItems: 'center'}}>
@@ -51,8 +51,8 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   imagem: {
-    width: '60%',
-    height: 250,
+    width: '80%',
+    height: 350,
     marginTop: 30,
     marginBottom: 40,
 
