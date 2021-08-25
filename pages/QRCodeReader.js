@@ -15,7 +15,7 @@ export default function TelaCadastro({ navigation }) {
 
       <View style={{ width: 250, marginTop: 30 }}>
         <Botao 
-          titulo="Ver Cardápios" acao={"QRCode"} 
+          titulo="Ver Cardápios" acao={"Menu"} 
           navigation={navigation}
         />
         <Botao 

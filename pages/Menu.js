@@ -1,45 +1,41 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity, FlatList, SafeAreaView } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const DATA = [
     {
         id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
         restaurante: 'Madero',
-        pedido: ['Super Burger', 'Suco de laranja natural'],
-        preco: 'R$ 42,80'
+        icon: 'food'
     },
     {
         id: 'bd7acbea-c1b1-46c2-aed5-3ad53a8ba',
-        restaurante: 'Madero',
-        pedido: ['Super Burger', 'Suco de laranja natural'],
-        preco: 'R$ 122,20'
+        restaurante: 'Mc Donalds',
+        icon: 'food',
     },
     {
         id: 'bd7acbea-c1b1-42-aed5-3ad53abb28ba',
-        restaurante: 'Madero',
-        pedido: ['Super Burger', 'Suco de laranja natural'],
-        preco: 'R$ 65,0'
+        restaurante: 'burger king',
+        icon: 'food',
     },
   ];
 export default function TelaCadastro({ navigation }) {
     const renderItem = ({ item }) => (
         <View style={styles.cardList}>
             <Text style={styles.cardText}>{item.restaurante}</Text>
-            <Text style={styles.cardText}>{item.pedido[0]}</Text>
-            <Text style={styles.cardText}>{item.preco}</Text>
+            <MaterialCommunityIcons name={item.icon} size={22} color="#666" />
         </View>
       );
   return(
     <View style={styles.container}>
-      <Text style={styles.titulo}>Meus Pedidos</Text>
-      <Text style={styles.subtitulo}>Veja aqui todos os pedidos que você já fez usando o Cardapp.</Text>
-    <SafeAreaView style={styles.container}>
-        <FlatList
-            data={DATA}
-            renderItem={renderItem}
-            keyExtractor={item => item.id}
-        />
-    </SafeAreaView>
+      <Text style={styles.titulo}>Cardápio</Text>
+        <SafeAreaView style={styles.container}>
+            <FlatList
+                data={DATA}
+                renderItem={renderItem}
+                keyExtractor={item => item.id}
+            />
+        </SafeAreaView>
     </View>
   )
 }
@@ -95,7 +91,10 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
-        height: 80,
+        justifyContent: 'space-between',
+        paddingRight: 20,
+        width: 350,
+        height: 50,
 
         backgroundColor: '#DFE6ED',
         marginVertical: 10,
