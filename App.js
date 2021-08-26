@@ -10,6 +10,7 @@ import QRCodeReader from './pages/QRCodeReader';
 import MyRequests from './pages/MyRequests';
 import Menu from './pages/Menu';
 import Illumination from './pages/Illumination';
+import Restaurants from './pages/Restaurants';
 
 const Stack = createNativeStackNavigator();
 
@@ -41,13 +42,18 @@ return (
           component={MyRequests}
         />
         <Stack.Screen 
+          name="Restaurants"
+          component={Restaurants}
+        />
+        <Stack.Screen 
           name="Menu"
           component={Menu}
         />
-               <Stack.Screen 
+        <Stack.Screen 
           name="Illumination"
           component={Illumination}
         />
+
       </Stack.Navigator>
       <StatusBar barStyle="dark-content" backgroundColor="#fff"  />
     </NavigationContainer>
