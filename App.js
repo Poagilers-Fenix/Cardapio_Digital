@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'react-native';
@@ -11,6 +11,7 @@ import MyRequests from './pages/MyRequests';
 import Menu from './pages/Menu';
 import Illumination from './pages/Illumination';
 import Restaurants from './pages/Restaurants';
+import Categories from './pages/MenuCategory/Categories';
 
 const Stack = createNativeStackNavigator();
 
@@ -52,6 +53,10 @@ return (
         <Stack.Screen 
           name="Illumination"
           component={Illumination}
+        />
+        <Stack.Screen 
+          name="Categories"
+          component={Categories}
         />
 
       </Stack.Navigator>

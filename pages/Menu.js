@@ -1,25 +1,66 @@
 import React from "react";
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  TextInput,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import Categories from "../pages/MenuCategory/Categories";
 
-import { Tab } from "react-native-elements";
+const Tab = createBottomTabNavigator();
 
-export default function TelaCadastro({ navigation }) {
+export default function Menu({ route }) {
+  const { items } = route.params;
   return (
-    <View style={styles.container}>
-      <Text style={styles.titulo}>Madeiro</Text>
-      <Tab>
-        <Tab.Item title="Destaque" />
-        <Tab.Item title="Pratos" />
-        <Tab.Item title="Bebidas" />
-      </Tab>
-    </View>
+    <NavigationContainer independent={true}>
+      <Tab.Navigator 
+        screenOptions={({ route }) => ({
+            tabBarIcon: ({ focused, color, size }) => {
+              let iconName;
+  
+              if (route.name === 'Destaque') {
+                iconName = focused
+                  ? 'star'
+                  : 'star-outline';
+              } else if (route.name === 'Pratos') {
+                iconName = 'restaurant';
+              } else if (route.name === 'Bebidas') {
+                iconName = 'beer';
+              } else if (route.name === 'Sobremesas') {
+                iconName = 'wine';
+              }
+  
+              // You can return any component that you like here!
+              return <Ionicons name={iconName} size={size} color={color} />;
+            },
+            tabBarActiveTintColor: 'tomato',
+            tabBarInactiveTintColor: 'gray',
+          })}
+      >
+        <Tab.Screen
+          name="Destaque"
+          component={Categories}
+          initialParams={{ items }}
+          options={{ title: "Destaque" }}
+        ></Tab.Screen>
+        <Tab.Screen
+          name="Pratos"
+          component={Categories}
+          initialParams={{ items }}
+          options={{ title: "Pratos" }}
+        ></Tab.Screen>
+        <Tab.Screen
+          name="Bebidas"
+          component={Categories}
+          initialParams={{ items }}
+          options={{ title: "Bebidas" }}
+        ></Tab.Screen>
+        <Tab.Screen
+          name="Sobremesas"
+          component={Categories}
+          initialParams={{ items }}
+          options={{ title: "Sobremesas" }}
+        ></Tab.Screen>
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
 
@@ -30,10 +71,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   titulo: {
-    textAlign:'center',
+    textAlign: "center",
     fontSize: 38,
-    color: '#880000',
-    fontWeight: 'bold',
+    color: "#880000",
+    fontWeight: "bold",
     marginVertical: 20,
   },
 });
