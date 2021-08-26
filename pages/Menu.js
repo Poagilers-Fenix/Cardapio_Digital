@@ -6,24 +6,34 @@ const DATA = [
     {
         id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
         restaurante: 'Madero',
-        icon: 'food'
+        icon: 'hamburger'
     },
     {
         id: 'bd7acbea-c1b1-46c2-aed5-3ad53a8ba',
         restaurante: 'Mc Donalds',
-        icon: 'food',
+        icon: 'food-drumstick-outline',
     },
     {
-        id: 'bd7acbea-c1b1-42-aed5-3ad53abb28ba',
+        id: 'bd7acbea-c1b1-42-aed5-3ad53b28ba',
         restaurante: 'burger king',
         icon: 'food',
     },
+    {
+        id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb2a',
+        restaurante: 'Outback',
+        icon: 'food-variant'
+    },
+    {
+        id: 'bd7acbea-c1b1-46c2-aed53ad53a8ba',
+        restaurante: 'Johnny rockets',
+        icon: 'noodles',
+  }, 
   ];
 export default function TelaCadastro({ navigation }) {
     const renderItem = ({ item }) => (
         <View style={styles.cardList}>
             <Text style={styles.cardText}>{item.restaurante}</Text>
-            <MaterialCommunityIcons name={item.icon} size={22} color="#666" />
+            <MaterialCommunityIcons name={item.icon} size={22} color="#B71C1C" />
         </View>
       );
   return(
@@ -96,7 +106,8 @@ const styles = StyleSheet.create({
         width: 350,
         height: 50,
 
-        backgroundColor: '#DFE6ED',
+        borderColor: '#DFE6ED',
+        borderWidth: 2,
         marginVertical: 10,
         borderRadius: 7
 
