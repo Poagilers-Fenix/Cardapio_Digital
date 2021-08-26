@@ -9,6 +9,7 @@ import TelaCadastro from './pages/SignUp';
 import QRCodeReader from './pages/QRCodeReader';
 import MyRequests from './pages/MyRequests';
 import Menu from './pages/Menu';
+import Illumination from './pages/Illumination';
 
 const Stack = createNativeStackNavigator();
 
@@ -42,6 +43,10 @@ return (
         <Stack.Screen 
           name="Menu"
           component={Menu}
+        />
+               <Stack.Screen 
+          name="Illumination"
+          component={Illumination}
         />
       </Stack.Navigator>
       <StatusBar barStyle="dark-content" backgroundColor="#fff"  />

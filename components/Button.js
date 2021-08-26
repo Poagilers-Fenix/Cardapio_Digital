@@ -1,7 +1,9 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet, View } from 'react-native';
 
+
 export default function Botao({ navigation, titulo, outlined, acao }) {
+
   return(
     <View>
       <TouchableOpacity 

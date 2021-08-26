@@ -27,6 +27,10 @@ export default function InitialSreen({ navigation }) {
           outlined={true} titulo="Realizar cadastro" 
           acao={"TelaCadastro"} navigation={navigation}
         />
+         <Botao 
+          outlined={true} titulo="Illumination" 
+          acao={"Illumination"} navigation={navigation}
+        />
       </View>
     </View>
   );
