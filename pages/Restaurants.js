@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity, FlatList, SafeAreaView } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import Modal from '../components/Modal';
 import { getAllMenu } from '../API/serviceMock';
 
 export default function Restaurants({ navigation }) {
@@ -20,6 +21,9 @@ export default function Restaurants({ navigation }) {
                 keyExtractor={item => item.id}
             />
         </SafeAreaView>
+        <View style={styles.modal}>
+          <Modal />
+      </View>
     </View>
   )
 }
@@ -95,5 +99,9 @@ const styles = StyleSheet.create({
       },
       select: {
         backgroundColor: 'red'
+      },
+      modal:{
+        width: '100%',
+        justifyContent: 'flex-end'
       }
 });
