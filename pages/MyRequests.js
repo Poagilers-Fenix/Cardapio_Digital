@@ -21,7 +21,7 @@ const DATA = [
         preco: 'R$ 65,0'
     },
   ];
-export default function TelaCadastro({ navigation }) {
+export default function TelaCadastro() {
     const renderItem = ({ item }) => (
         <View style={styles.cardList}>
             <Text style={styles.cardText}>{item.restaurante}</Text>

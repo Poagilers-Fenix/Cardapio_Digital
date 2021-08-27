@@ -6,7 +6,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Categories from "../pages/MenuCategory/Categories";
 
 const Tab = createBottomTabNavigator();
-
 export default function Menu({ route }) {
   const { items } = route.params;
   return (
@@ -39,25 +38,25 @@ export default function Menu({ route }) {
           name="Destaque"
           component={Categories}
           initialParams={{ items }}
-          options={{ title: "Destaque" }}
+          options={{ title: "Destaque" }, {headerShown: false}}
         ></Tab.Screen>
         <Tab.Screen
           name="Pratos"
           component={Categories}
           initialParams={{ items }}
-          options={{ title: "Pratos" }}
+          options={{ title: "Pratos" }, {headerShown: false}}
         ></Tab.Screen>
         <Tab.Screen
           name="Bebidas"
           component={Categories}
           initialParams={{ items }}
-          options={{ title: "Bebidas" }}
+          options={{ title: "Bebidas" }, {headerShown: false}}
         ></Tab.Screen>
         <Tab.Screen
           name="Sobremesas"
           component={Categories}
           initialParams={{ items }}
-          options={{ title: "Sobremesas" }}
+          options={{ title: "Sobremesas" }, {headerShown: false}}
         ></Tab.Screen>
       </Tab.Navigator>
     </NavigationContainer>
