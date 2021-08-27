@@ -14,7 +14,7 @@ export default function InitialSreen({ navigation }) {
           style={styles.imagem}
         />
       </View>
-      <View>
+      <View style={{ width: '75%', alignSelf: 'center'}}>
         <Botao 
           titulo="Login com o Google" 
           acao={"TelaLogin"} navigation={navigation}
