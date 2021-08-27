@@ -8,7 +8,7 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
-import { getAllFood } from "../../API/FoodServiceMock";
+const getAllFood = require('../../API/getAllFood.json');
 
 export default function Categories({ route }) {
   const { items } = route.params;
@@ -32,7 +32,7 @@ export default function Categories({ route }) {
       <View style={styles.container}>
         <Text style={styles.titulo}>{items.restaurante}</Text>
       </View>
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView style={styles.container, {marginBottom: 140}}>
         <FlatList
           data={getAllFood}
           renderItem={renderItem}

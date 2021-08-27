@@ -2,16 +2,15 @@ import React from "react";
 import {
   View,
   Text,
-  Image,
   StyleSheet,
-  TextInput,
   TouchableOpacity,
   FlatList,
   SafeAreaView,
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Modal from "../components/Modal";
-import { getAllMenu } from "../API/serviceMock";
+
+const getAllMenu = require('../API/getAllMenu.json');
 
 export default function Restaurants({ navigation }) {
   const renderItem = ({ item }) => (
