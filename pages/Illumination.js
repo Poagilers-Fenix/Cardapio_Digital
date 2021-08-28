@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, StyleSheet, Image, StatusBar} from 'react-native';
+import { View, Text, StyleSheet, StatusBar} from 'react-native';
 import Botao from '../components/Button';
 import {Picker} from '@react-native-picker/picker';
 

@@ -58,7 +58,6 @@ return (
           name="Categories"
           component={Categories}
         />
-
       </Stack.Navigator>
       <StatusBar barStyle="dark-content" backgroundColor="#fff"  />
     </NavigationContainer>

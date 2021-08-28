@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, TextInput, SafeAreaView } from 'react-native';
 import { Camera } from 'expo-camera'
 
-export default function Camer2a() {
+export default function ViewCamera() {
     const [type, setType] = useState(Camera.Constants.Type.back);
     const [hasPermission, setHasPermission] = useState(null);
 

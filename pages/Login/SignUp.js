@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 import Botao from '../../components/Button';
 import InputWithIcon from '../../components/input/InputWithIcon'
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     color: '#800', 
     borderBottomColor: '#800a', 
     borderBottomWidth: 1, 
-    width: 250,
+    width: 200,
     textAlign: 'center',
     fontSize: 18
   }
