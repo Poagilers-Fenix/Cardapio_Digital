@@ -2,13 +2,13 @@ import React from 'react';
 import { Text, StyleSheet, View, TextInput } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-export default function Botao({ title, icon, type}) {
+export default function InputWithIcon({ title, icon, type, value}) {
     return(
     <View style={styles.inputContainer}>
         <Text style={styles.label}>{title}</Text>
         <View style={styles.input}>
         <MaterialCommunityIcons name={icon} size={22} color="#666" />
-          <TextInput style={{paddingLeft: 5, flex: 1, height: 50}} keyboardType={type} />
+          <TextInput style={{paddingLeft: 5, flex: 1, height: 50}} keyboardType={type} onChangeText={value}/>
         </View>
       </View>
     )

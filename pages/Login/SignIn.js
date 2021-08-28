@@ -1,21 +1,19 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
-import Botao from '../components/Button';
-import InputWithIcon from '../components/input/InputWithIcon'
+import Botao from '../../components/Button';
+import InputWithIcon from '../../components/input/InputWithIcon'
 
-export default function SignUp({ navigation }) {
+export default function SignIn({ navigation }) {
   return(
     <View style={styles.container}>
-      <Image style={styles.imagem} source={require("../assets/perfil-cinza.png")} />
-      <Text style={styles.titulo}>Cadastro</Text>
-
-      <InputWithIcon title="Nome" icon="account"/>
+      <Image style={styles.imagem} source={require("../../assets/perfil-cinza.png")} />
+      <Text style={styles.titulo}>Login</Text>
+      <Text style={styles.subtitulo}>Bem-vindo(a) de volta!</Text>
 
       <InputWithIcon title="Telefone" icon="cellphone-android" type="numeric"/>
 
       <InputWithIcon title="Senha" icon="lock-outline"/>
-      <InputWithIcon title="Confirmar senha" icon="lock-outline"/>
 
       <View style={{ width: 250, marginTop: 30 }}>
         <Botao 
@@ -23,7 +21,7 @@ export default function SignUp({ navigation }) {
           navigation={navigation}
         />
         <TouchableOpacity style={{alignItems: 'center'}}>
-          <Text style={styles.link}>Políticas de Privacidade</Text>
+          <Text style={styles.link}>Esqueceu a senha?</Text>
         </TouchableOpacity>
       </View>
 
@@ -48,6 +46,11 @@ const styles = StyleSheet.create({
     color: '#480000',
     marginBottom: 10,
   },
+  subtitulo: {
+    fontSize: 22,
+    color: '#333',
+    marginBottom: 30,
+  },
   label: {
     color: '#666',
     fontWeight: 'bold',
@@ -69,8 +72,8 @@ const styles = StyleSheet.create({
     color: '#800', 
     borderBottomColor: '#800a', 
     borderBottomWidth: 1, 
-    width: 250,
+    width: 158,
     textAlign: 'center',
     fontSize: 18
   }
-});
+})

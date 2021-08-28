@@ -17,17 +17,17 @@ export default function InitialSreen({ navigation }) {
       <View style={{ width: '75%', alignSelf: 'center'}}>
         <Botao 
           titulo="Login com o Google" 
-          acao={"TelaLogin"} navigation={navigation}
+          acao={"SignIn"} navigation={navigation}
         />
         <Botao 
           outlined={true} titulo="Já tenho cadastro" 
-          acao={"TelaLogin"} navigation={navigation}
+          acao={"SignIn"} navigation={navigation}
         />
         <Botao 
           outlined={true} titulo="Realizar cadastro" 
-          acao={"TelaCadastro"} navigation={navigation}
+          acao={"SignUp"} navigation={navigation}
         />
-         <Botao 
+        <Botao 
           outlined={true} titulo="Illumination" 
           acao={"Illumination"} navigation={navigation}
         />

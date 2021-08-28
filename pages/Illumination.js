@@ -26,8 +26,8 @@ export default function Illumination({navigation}) {
             </Picker>
           </View>
         <Text style={styles.normalText}>As luzes ficam mais fortes e em tons claros para experienciar uma refeição visualizando cada detalhe.</Text>
-        <Botao titulo="Selecionar" acao={"TelaInicial"} navigation={navigation}/>
-        <Botao titulo="Desligar" acao={"TelaInicial"} navigation={navigation} outlined={true}/>
+        <Botao titulo="Selecionar" acao={"InitialScreen"} navigation={navigation}/>
+        <Botao titulo="Desligar" acao={"InitialScreen"} navigation={navigation} outlined={true}/>
         <StatusBar style="auto" />
     </View>
   );

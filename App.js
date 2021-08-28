@@ -3,9 +3,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'react-native';
 
-import TelaInicial from './pages/InitialScreen';
-import TelaLogin from './pages/SignIn';
-import TelaCadastro from './pages/SignUp';
+import InitialScreen from './pages/InitialScreen';
+import SignIn from './pages/Login/SignIn';
+import SignUp from './pages/Login/SignUp';
 import QRCodeReader from './pages/QRCodeReader';
 import MyRequests from './pages/MyRequests';
 import Menu from './pages/Menu';
@@ -23,16 +23,16 @@ return (
           headerShown: false,
         }}>
         <Stack.Screen 
-          name="TelaInicial"
-          component={TelaInicial}          
+          name="InitialScreen"
+          component={InitialScreen}          
         />
         <Stack.Screen 
-          name="TelaLogin"
-          component={TelaLogin}          
+          name="SignIn"
+          component={SignIn}          
         />
         <Stack.Screen 
-          name="TelaCadastro"
-          component={TelaCadastro}
+          name="SignUp"
+          component={SignUp}
         />
         <Stack.Screen 
           name="QRCodeReader"
