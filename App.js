@@ -8,10 +8,10 @@ import SignIn from './pages/Login/SignIn';
 import SignUp from './pages/Login/SignUp';
 import QRCodeReader from './pages/QRCodeReader';
 import MyRequests from './pages/MyRequests';
-import Menu from './pages/Menu';
+import Menu from './pages/Establishment/Menu';
 import Illumination from './pages/Illumination';
-import Restaurants from './pages/Restaurants';
-import Categories from './pages/MenuCategory/Categories';
+import Restaurants from './pages/Establishment/Restaurants';
+import Categories from './pages/Establishment/MenuCategory/Categories';
 
 const Stack = createNativeStackNavigator();
 

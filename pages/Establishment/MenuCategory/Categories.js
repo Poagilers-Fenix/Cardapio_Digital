@@ -8,7 +8,7 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
-const getAllFood = require('../../API/getAllFood.json');
+const getAllFood = require('../../../API/getAllFood.json');
 
 export default function Categories({ route }) {
   const { items } = route.params;

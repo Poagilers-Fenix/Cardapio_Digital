@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Categories from "../pages/MenuCategory/Categories";
+import Categories from "./MenuCategory/Categories";
 
 const Tab = createBottomTabNavigator();
 export default function Menu({ route }) {

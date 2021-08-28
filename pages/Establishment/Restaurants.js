@@ -8,9 +8,9 @@ import {
   SafeAreaView,
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import Modal from "../components/Modal";
+import Modal from "../../components/Modal";
 
-const getAllMenu = require('../API/getAllMenu.json');
+const getAllMenu = require('../../API/getAllMenu.json');
 
 export default function Restaurants({ navigation }) {
   const renderItem = ({ item }) => (
