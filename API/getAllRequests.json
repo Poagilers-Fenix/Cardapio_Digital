@@ -1,0 +1,20 @@
+[
+    {
+      "id": "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
+      "restaurante": "Madero",
+      "pedido": ["Super Burger", "Suco de laranja natural"],
+      "preco": "R$ 42,80"
+    },
+    {
+      "id": "bd7acbea-c1b1-46c2-aed5-3ad53a8ba",
+      "restaurante": "Mc Donalds",
+      "pedido": ["Super Burger", "Suco de laranja natural"],
+      "preco": "R$ 122,20"
+    },
+    {
+      "id": "bd7acbea-c1b1-42-aed5-3ad53abb28ba",
+      "restaurante": "Burger King",
+      "pedido": ["Super Burger", "Suco de laranja natural"],
+      "preco": "R$ 65,0"
+    }
+]

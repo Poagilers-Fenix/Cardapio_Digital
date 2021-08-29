@@ -1,115 +1,176 @@
-import React from 'react';
-import { View, Text, StyleSheet, FlatList, SafeAreaView } from 'react-native';
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  SafeAreaView,
+  TouchableOpacity,
+} from "react-native";
+import { Picker } from "@react-native-picker/picker";
+const getAllRequests = require("../API/getAllRequests.json");
+import Modal from "../components/Modal";
 
-const DATA = [
-    {
-        id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-        restaurante: 'Madero',
-        pedido: ['Super Burger', 'Suco de laranja natural'],
-        preco: 'R$ 42,80'
-    },
-    {
-        id: 'bd7acbea-c1b1-46c2-aed5-3ad53a8ba',
-        restaurante: 'Madero',
-        pedido: ['Super Burger', 'Suco de laranja natural'],
-        preco: 'R$ 122,20'
-    },
-    {
-        id: 'bd7acbea-c1b1-42-aed5-3ad53abb28ba',
-        restaurante: 'Madero',
-        pedido: ['Super Burger', 'Suco de laranja natural'],
-        preco: 'R$ 65,0'
-    },
-  ];
 export default function TelaCadastro() {
-    const renderItem = ({ item }) => (
-        <View style={styles.cardList}>
-            <Text style={styles.cardText}>{item.restaurante}</Text>
-            <Text style={styles.cardText}>{item.pedido[0]}</Text>
-            <Text style={styles.cardText}>{item.preco}</Text>
-        </View>
-      );
-  return(
+  const [filterRequest, SetfilterRequest] = useState("");
+  const renderItem = ({ item }) => (
+    <TouchableOpacity style={styles.cardList}>
+      <View style={{ flex: 2 }}>
+        <Text style={(styles.cardText, { fontWeight: "bold", marginLeft: 10 })}>
+          {item.restaurante}
+        </Text>
+      </View>
+      <View style={{ flex: 3 }}>
+        <Text style={styles.cardText}>{item.pedido[1]}</Text>
+      </View>
+      <View style={{ flex: 2 }}>
+        <Text style={styles.cardText}>{item.preco}</Text>
+      </View>
+    </TouchableOpacity>
+  );
+  return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Meus Pedidos</Text>
-      <Text style={styles.subtitulo}>Veja aqui todos os pedidos que você já fez usando o Cardapp.</Text>
-    <SafeAreaView style={styles.container}>
+      <Text style={styles.subtitulo}>
+        Veja aqui todos os pedidos que você já fez usando o Cardapp.
+      </Text>
+      <View style={styles.filterRequest}>
+        <Text>Ordenar por: </Text>
+        <View style={styles.containerPicker}>
+          <Picker
+            style={styles.pickerStyle}
+            selectedValue={filterRequest}
+            onValueChange={(itemValue) => SetfilterRequest(itemValue)}
+          >
+            <Picker.Item label="Menor Preço" value={"Menor Preço"} />
+            <Picker.Item label="Mais Pedidos" value={"Mais Pedidos"} />
+            <Picker.Item
+              label="Mais bem Avaliados"
+              value={"Mais bem Avaliados"}
+            />
+          </Picker>
+        </View>
+      </View>
+      <SafeAreaView style={styles.container}>
         <FlatList
-            data={DATA}
-            renderItem={renderItem}
-            keyExtractor={item => item.id}
+          data={getAllRequests}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id}
         />
-    </SafeAreaView>
+      </SafeAreaView>
+      <View style={styles.modal}>
+        <TouchableOpacity><Text style={styles.btnFooterBar}>Pedir novamente</Text></TouchableOpacity>
+        <Modal />
+      </View>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center'
-      },
-      imagem: {
-        width: 100,
-        height: 100
-      }, 
-      titulo: {
-        textAlign:'center',
-        fontSize: 38,
-        color: '#880000',
-        fontWeight: 'bold',
-        marginVertical: 10,
-      },
-      subtitulo: {
-        fontSize: 18,
-        textAlign: 'center',
-        color: '#333',
-      },
-      label: {
-        color: '#666',
-        fontWeight: 'bold',
-        marginTop: 10,
-      },
-      input: {
-        borderWidth: 2,
-        borderColor: '#aaa',
-        borderRadius: 5,
-        width: 300,
-        height: 40,
-        marginBottom: 10,
-        alignItems: 'center',
-        paddingLeft: 5,
-        flexDirection: 'row'
-      },
-      link: {
-        marginTop: 20, 
-        color: '#800', 
-        borderBottomColor: '#800a', 
-        borderBottomWidth: 1, 
-        width: 158,
-        textAlign: 'center',
-        fontSize: 18
-      },
-      cardList: {
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        height: 80,
-
-        backgroundColor: '#DFE6ED',
-        marginVertical: 10,
-        borderRadius: 7
-
-      },
-      cardText: {
-          marginHorizontal: 25
-      },
-      viewSelect: {
-        display: 'flex',
-        flexDirection: 'row',
-      },
-      select: {
-        backgroundColor: 'red'
-      }
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+  },
+  imagem: {
+    width: 100,
+    height: 100,
+  },
+  titulo: {
+    textAlign: "center",
+    fontSize: 38,
+    color: "#880000",
+    fontWeight: "bold",
+    marginVertical: 10,
+  },
+  subtitulo: {
+    fontSize: 18,
+    textAlign: "center",
+    color: "#333",
+  },
+  label: {
+    color: "#666",
+    fontWeight: "bold",
+    marginTop: 10,
+  },
+  input: {
+    borderWidth: 2,
+    borderColor: "#aaa",
+    borderRadius: 5,
+    width: 300,
+    height: 40,
+    marginBottom: 10,
+    alignItems: "center",
+    paddingLeft: 5,
+    flexDirection: "row",
+  },
+  link: {
+    marginTop: 20,
+    color: "#800",
+    borderBottomColor: "#800a",
+    borderBottomWidth: 1,
+    width: 158,
+    textAlign: "center",
+    fontSize: 18,
+  },
+  cardList: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    height: 80,
+    width: 350,
+    backgroundColor: "#e1e8ef",
+    marginVertical: 10,
+    borderRadius: 7,
+    justifyContent: "space-around",
+  },
+  cardText: {
+    marginHorizontal: 4,
+  },
+  viewSelect: {
+    display: "flex",
+    flexDirection: "row",
+  },
+  select: {
+    backgroundColor: "red",
+  },
+  containerPicker: {
+    borderWidth: 1.5,
+    borderRadius: 7,
+    borderColor: "#aaa",
+    marginLeft: 10,
+    width: 250,
+    height: 40,
+    textAlign: "center",
+  },
+  pickerStyle: {
+    marginTop: 7,
+  },
+  filterRequest: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    marginVertical: 20,
+  },
+  modal: {
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-end",
+  },
+  btnFooterBar: {
+    height: 50,
+    color: 'white',
+    borderRadius: 8,
+    color: '#fff',
+    backgroundColor: '#800',
+    textAlignVertical: 'center',
+    fontSize: 20,
+    width: 240,
+    marginRight: 20,
+    marginBottom: 15,
+    paddingHorizontal: 10,
+    textAlign: 'center',
+  }
 });
