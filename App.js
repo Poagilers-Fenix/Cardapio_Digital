@@ -12,7 +12,7 @@ import Menu from './pages/Establishment/Menu';
 import Illumination from './pages/Illumination';
 import Restaurants from './pages/Establishment/Restaurants';
 import Categories from './pages/Establishment/MenuCategory/Categories';
-
+import rateExperience from './pages/rateExperience'
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -57,6 +57,10 @@ return (
         <Stack.Screen 
           name="Categories"
           component={Categories}
+        />
+        <Stack.Screen 
+          name="rateExperience"
+          component={rateExperience}
         />
       </Stack.Navigator>
       <StatusBar barStyle="dark-content" backgroundColor="#fff"  />

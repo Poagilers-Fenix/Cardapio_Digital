@@ -5,7 +5,7 @@ import ProgressBar from 'react-native-progress/Bar';
 
 import ModalButton from "./ModalButton";
 
-export default function Modal_() {
+export default function Modal_({navigation}) {
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <View style={styles.container}>
@@ -33,8 +33,10 @@ export default function Modal_() {
             <ModalButton disabled={true} titulo="Fazer pedido" />
             <ModalButton disabled={true} titulo="Acompanhar pedido" />
             <ModalButton titulo="Que música está tocando?" />
-            <ModalButton titulo="Opções de iluminação" />
-            <ModalButton titulo="Avaliar experiência" />
+            <ModalButton titulo="Opções de iluminação" acao={"Illumination"} 
+            navigation={navigation} />
+            <ModalButton titulo="Avaliar experiência" acao={"rateExperience"} 
+            navigation={navigation} />
           </View>
         </View>
         <View style={styles.modal}>

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { View, Text, StyleSheet, StatusBar} from 'react-native';
 import Botao from '../components/Button';
 import {Picker} from '@react-native-picker/picker';
+import Modal_ from '../components/Modal';
 
 const ACOES = {
   FLORESTA : "Floresta",
@@ -27,7 +28,10 @@ export default function Illumination({navigation}) {
           </View>
         <Text style={styles.normalText}>As luzes ficam mais fortes e em tons claros para experienciar uma refeição visualizando cada detalhe.</Text>
         <Botao titulo="Selecionar" acao={"InitialScreen"} navigation={navigation}/>
-        <Botao titulo="Desligar" acao={"InitialScreen"} navigation={navigation} outlined={true}/>
+        <Botao titulo="Desligar" acao={"InitialScreen"} navigation={navigation} outlined={true} />
+        <View style={styles.modal}>
+         <Modal_ navigation={navigation}/>
+        </View>
         <StatusBar style="auto" />
     </View>
   );
@@ -37,8 +41,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    margin: 20,
-    borderColor: 'white',
     
   },
   HeaderText: {
@@ -47,16 +49,16 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     marginBottom: 100,
+    marginTop: 20,
   },
   normalText: {
     marginBottom: 20,
-  },
-  normalText: {
-    marginBottom: 20,
+    marginLeft: 20,
+    marginRight: 20
   },
   containerPicker: {
     borderWidth: 1,
-    marginLeft: 90,
+    marginLeft: 115,
     marginBottom: 100,
     width: 150,
     height: 40,
@@ -64,6 +66,11 @@ const styles = StyleSheet.create({
   },
   pickerStyle: {
     marginTop: 7,
+    marginLeft: 2,
+  },
+  modal: {
+    marginTop: 131,
+    marginLeft: 283,
   }
 
 

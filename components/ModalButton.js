@@ -6,7 +6,7 @@ export default function ModalButton({navigation, acao, titulo, disabled}) {
     <View>
       <TouchableOpacity
         style={disabled ? styles.disabled : styles.buttonContainer}
-        // onPress={() => navigation.navigate({acao})}
+        onPress={() => navigation.navigate(acao)}
       >
         <Text style={disabled ? styles.disabledButton : styles.button}>{titulo}</Text>
       </TouchableOpacity>
