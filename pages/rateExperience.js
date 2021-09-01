@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import { View, Text, StyleSheet, StatusBar} from 'react-native';
 import Modal_ from '../components/Modal';
+import { Rating, AirbnbRating } from 'react-native-ratings';
+
 
 
 export default function rateExperience({navigation}) {
@@ -9,6 +11,10 @@ export default function rateExperience({navigation}) {
     <View style={styles.container}>
         <Text style={styles.HeaderText}>Avaliar experiência</Text>
         <Text style={styles.normalText}>Avalie como foi sua experiência no geral, sinta-se a vontade para fazer qualquer tipo de comentário.</Text>
+        <Rating
+        type='custom'
+        ratingColor='#800'
+        startingValue='1'/>
 
 
         <View style={styles.modal}>
