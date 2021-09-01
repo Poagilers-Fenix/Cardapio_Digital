@@ -44,7 +44,7 @@ export default function Modal_({navigation}) {
             style={styles.button}
             onPress={() => setModalVisible(!modalVisible)}
           >
-            <MaterialCommunityIcons name="minus-circle" size={60} color="#800" />
+            <MaterialCommunityIcons name="minus-circle" size={61} color="#800"/>
           </TouchableOpacity>
         </View>
       </Modal>
@@ -62,13 +62,13 @@ const styles = StyleSheet.create({
   container:{
     alignItems: 'flex-end',
     marginRight: 20,
-    marginBottom: 20
+    marginBottom: 20,
   },
   centeredView: {
     flex: 1,
     justifyContent: "flex-end",
     alignItems: "center",
-    marginTop: 22
+    marginTop: 22,
   },
   modal:{
     alignItems: 'flex-end',

@@ -2,12 +2,12 @@ import React from 'react';
 import { TouchableOpacity, Text, StyleSheet, View } from 'react-native';
 
 
-export default function Botao({ navigation, titulo, outlined, acao }) {
+export default function Botao({ navigation, titulo, outlined, acao, row }) {
 
   return(
     <View>
       <TouchableOpacity 
-        style={styles.buttonContainer} 
+        style={row ? styles.buttonContainerForRow : styles.buttonContainer} 
         onPress={() => navigation.navigate(acao)}
       >
         <Text style={outlined ? styles.outlined : styles.full}>{titulo}</Text>
@@ -20,7 +20,13 @@ const styles = StyleSheet.create({
   buttonContainer: {
     marginTop: 15,
     alignItems: 'center', 
-    justifyContent: 'center'
+    justifyContent: 'center',
+  },
+  buttonContainerForRow: {
+    marginTop: 15,
+    alignItems: 'center', 
+    justifyContent: 'center',
+    width: 200
   },
   outlined: {
     height: 50,
