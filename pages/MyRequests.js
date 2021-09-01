@@ -11,7 +11,7 @@ import { Picker } from "@react-native-picker/picker";
 const getAllRequests = require("../API/getAllRequests.json");
 import Modal from "../components/Modal";
 
-export default function TelaCadastro() {
+export default function TelaCadastro({navigation}) {
   const [filterRequest, SetfilterRequest] = useState("");
   const renderItem = ({ item }) => (
     <TouchableOpacity style={styles.cardList}>
@@ -60,7 +60,7 @@ export default function TelaCadastro() {
       </SafeAreaView>
       <View style={styles.modal}>
         <TouchableOpacity><Text style={styles.btnFooterBar}>Pedir novamente</Text></TouchableOpacity>
-        <Modal />
+        <Modal navigation={navigation} />
       </View>
     </View>
   );

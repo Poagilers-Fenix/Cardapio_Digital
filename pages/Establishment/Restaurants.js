@@ -35,7 +35,7 @@ export default function Restaurants({ navigation }) {
         />
       </SafeAreaView>
       <View style={styles.modal}>
-        <Modal />
+        <Modal navigation={navigation} />
       </View>
     </View>
   );
