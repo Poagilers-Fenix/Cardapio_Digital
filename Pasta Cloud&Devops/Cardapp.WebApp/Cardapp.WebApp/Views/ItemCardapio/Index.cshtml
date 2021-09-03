@@ -3,5 +3,35 @@
     ViewData["Title"] = "Visualização do Cardápio";
 }
 
-<h1>Cardápio</h1>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
+<h1 style="display: flex; justify-content: center;" class="mb-5">Cardápio</h1>
+
+<div class="card mx-auto" style="width: 80%; border: 2px solid #800; height: 80vh">
+    <row style="height: 5vh">
+        <div class="btn-group w-100 h-100" role="group">
+            <button type="button" class="btn btnNav"><span class="material-icons pr-2">star</span>Destaques</button>
+            <button type="button" class="btn btnNav"><span class="material-icons pr-2">restaurant_menu</span>Pratos principais</button>
+            <button type="button" class="btn btnNav"><span class="material-icons pr-2">local_bar</span>Bebidas</button>
+            <button type="button" class="btn btnNav"><span class="material-icons pr-2">fastfood</span>Lanches</button>
+            <button type="button" class="btn btnNav"><span class="material-icons pr-2">icecream</span>Sobremesas</button>
+        </div>
+    </row>
+    <row>
+
+    </row>
+</div>
+
+<style>
+    .btnNav {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        background-color: #800;
+        color: white;
+    }
+
+
+
+</style>
