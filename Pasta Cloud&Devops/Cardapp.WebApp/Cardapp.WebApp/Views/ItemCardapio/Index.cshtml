@@ -6,12 +6,12 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 
-<h1 style="display: flex; justify-content: center;" class="mb-5">Cardápio</h1>
+<h1 style="display: flex; justify-content: center;" class="my-5">Cardápio</h1>
 
 <div class="card mx-auto" style="width: 80%; border: 2px solid #800; height: 80vh">
     <row style="height: 5vh">
         <div class="btn-group w-100 h-100" role="group">
-            <button type="button" class="btn btnNav"><span class="material-icons pr-2">star</span>Destaques</button>
+            <button type="button" class="btn btnNavAtual"><span class="material-icons pr-2">star</span>Destaques</button>
             <button type="button" class="btn btnNav"><span class="material-icons pr-2">restaurant_menu</span>Pratos principais</button>
             <button type="button" class="btn btnNav"><span class="material-icons pr-2">local_bar</span>Bebidas</button>
             <button type="button" class="btn btnNav"><span class="material-icons pr-2">fastfood</span>Lanches</button>
@@ -24,14 +24,33 @@
 </div>
 
 <style>
-    .btnNav {
+    .btnNavAtual {
         display: flex;
         justify-content: center; 
         align-items: center;
         background-color: #800;
         color: white;
+        
     }
 
+    .btnNavAtual:hover {
+        color: white;
+        background-color: #a00
+    }
+
+    .btnNavAtual:focus, .btnNav:focus {
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+        outline: 0;
+    }
+
+    .btnNav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ddd;
+        color: #666;
+    }
 
 
 </style>
