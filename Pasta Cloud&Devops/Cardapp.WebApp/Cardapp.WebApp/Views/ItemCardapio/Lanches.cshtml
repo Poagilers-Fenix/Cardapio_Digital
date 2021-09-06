@@ -1,22 +1,20 @@
 ﻿
 @{
-    ViewData["Title"] = "Visualização do Cardápio - Destaques";
+    ViewData["Title"] = "Visualização do Cardápio - Lanches";
 }
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 
 <h1 style="display: flex; justify-content: center;" class="my-5">Edite o cardápio do seu restaurante</h1>
-<a>Adicionar um novo item no cardápio</a>
-
 
 <div class="card mx-auto" style="width: 90%; border: 2px solid #800; height: 80%">
     <row style="height: 5vh">
         <div class="btn-group w-100 h-100" role="group">
-            <a class="btn btnNavAtual text-white"><span class="material-icons pr-2">star</span>Destaques</a>
+            <a class="btn btnNav" asp-action="Index"><span class="material-icons pr-2">star</span>Destaques</a>
             <a class="btn btnNav" asp-action="Pratos"><span class="material-icons pr-2">restaurant_menu</span>Pratos principais</a>
             <a class="btn btnNav" asp-action="Bebidas"><span class="material-icons pr-2">local_bar</span>Bebidas</a>
-            <a class="btn btnNav" asp-action="Lanches"><span class="material-icons pr-2">fastfood</span>Lanches</a>
+            <a class="btn btnNavAtual text-white"><span class="material-icons pr-2">fastfood</span>Lanches</a>
             <a class="btn btnNav" asp-action="Sobremesas"><span class="material-icons pr-2">icecream</span>Sobremesas</a>
         </div>
     </row>
@@ -84,27 +82,30 @@
                 </tr>
             </tbody>
         </table>
+
     </row>
 </div>
 
 <style>
     .btnNavAtual {
         display: flex;
-        justify-content: center;
+        justify-content: center; 
         align-items: center;
         background-color: #800;
+        color: white;
+        
     }
 
-        .btnNavAtual:hover {
-            color: white;
-            background-color: #a00
-        }
+    .btnNavAtual:hover {
+        color: white;
+        background-color: #a00
+    }
 
-        .btnNavAtual:focus, .btnNav:focus {
-            box-shadow: 0 0 0 0;
-            border: 0 none;
-            outline: 0;
-        }
+    .btnNavAtual:focus, .btnNav:focus {
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+        outline: 0;
+    }
 
     .btnNav {
         display: flex;
@@ -113,4 +114,6 @@
         background-color: #ddd;
         color: #666;
     }
+
+
 </style>
