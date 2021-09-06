@@ -12,6 +12,25 @@ namespace Cardapp.WebApp.Controllers
         {
             return View();
         }
+        public IActionResult Pratos()
+        {
+            return View();
+        }
+        public IActionResult Bebidas()
+        {
+            return View();
+        }
+        public IActionResult Lanches()
+        {
+            return View();
+        }
+        public IActionResult Sobremesas()
+        {
+            return View();
+        }
+
+
+
 
 
 

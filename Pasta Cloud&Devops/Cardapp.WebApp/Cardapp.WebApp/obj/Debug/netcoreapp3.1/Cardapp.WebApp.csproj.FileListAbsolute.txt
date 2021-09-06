@@ -795,3 +795,7 @@ C:\Users\CLIENTE\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.We
 C:\Users\CLIENTE\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\obj\Debug\netcoreapp3.1\Cardapp.WebApp.dll
 C:\Users\CLIENTE\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\obj\Debug\netcoreapp3.1\Cardapp.WebApp.pdb
 C:\Users\CLIENTE\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\obj\Debug\netcoreapp3.1\Cardapp.WebApp.genruntimeconfig.cache
+C:\Users\CLIENTE\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ItemCardapio\Bebidas.cshtml.g.cs
+C:\Users\CLIENTE\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ItemCardapio\Lanches.cshtml.g.cs
+C:\Users\CLIENTE\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ItemCardapio\Pratos.cshtml.g.cs
+C:\Users\CLIENTE\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ItemCardapio\Sobremesas.cshtml.g.cs
