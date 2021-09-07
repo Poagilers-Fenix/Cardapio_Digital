@@ -6,9 +6,10 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 
-<h1 style="display: flex; justify-content: center;" class="my-5">Edite o cardápio do seu restaurante</h1>
-<a>Adicionar um novo item no cardápio</a>
-
+        <h1 style="display: flex; justify-content: center;" class="my-5">Edite o cardápio do seu restaurante</h1>
+        <div class="d-flex justify-content-center mb-5">
+            <a class="btn btn-danger" asp-action="Inserir">Cadastrar um novo item</a>
+        </div>
 
 <div class="card mx-auto" style="width: 90%; border: 2px solid #800; height: 80%">
     <row style="height: 5vh">
@@ -45,7 +46,7 @@
                     <td class="align-middle">150kcal</td>
                     <td class="align-middle">
                         <div style="display: flex; flex-direction: column; margin-right: 2vw;">
-                            <button class="mb-3 btn btn-info">Editar</button>
+                            <a class="mb-3 btn btn-info" asp-action="Editar">Editar</a>
                             <button class="btn btn-danger">Excluir</button>
                         </div>
                     </td>
@@ -61,7 +62,7 @@
                     <td class="align-middle">450kcal</td>
                     <td class="align-middle">
                         <div style="display: flex; flex-direction: column; margin-right: 2vw;">
-                            <button class="mb-3 btn btn-info">Editar</button>
+                            <a class="mb-3 btn btn-info" asp-action="Editar">Editar</a>
                             <button class="btn btn-danger">Excluir</button>
                         </div>
                     </td>
