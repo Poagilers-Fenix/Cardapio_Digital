@@ -800,3 +800,4 @@ C:\Users\CLIENTE\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.We
 C:\Users\CLIENTE\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ItemCardapio\Pratos.cshtml.g.cs
 C:\Users\CLIENTE\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ItemCardapio\Sobremesas.cshtml.g.cs
 C:\Users\CLIENTE\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ItemCardapio\Editar.cshtml.g.cs
+C:\Users\CLIENTE\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ItemCardapio\Inserir.cshtml.g.cs

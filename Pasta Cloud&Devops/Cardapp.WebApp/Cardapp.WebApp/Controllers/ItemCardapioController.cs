@@ -33,6 +33,11 @@ namespace Cardapp.WebApp.Controllers
             return View();
         }
 
+        public IActionResult Inserir()
+        {
+            return View();
+        }
+
 
 
 
