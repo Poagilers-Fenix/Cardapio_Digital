@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Cardapp";
+}
+
+<div style="background-color: #4196A6; height: 950px">
+    <div class="text-center d-flex justify-content-lg-around">
+        <div class="d-flex flex-column">
+            <a class="navbar-brand d-flex justify-content-lg-start" asp-area="" asp-controller="Home" asp-action="Index">
+                <img src="~/img/logo.svg" width="210" />
+            </a>
+            <div class="d-flex justify-content-center text-white">
+                <h3 style="font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif; font-size: 50px; width: 35%" class="text-left">Uma nova forma de aproveitar as refeições</h3>
+            </div>
+        </div>
+        <div>
+            @*<h3 class="display-4">Uma nova forma de aproveitar as refeições</h3>*@
+            <img class="mt-5" src="~/img/dinner.svg" width="800" />
+            <a asp-action="Login" class="animated-button d-flex justify-content-end" style="margin-top: -16%">
+                <img src="/img/next.svg" width="80" />
+            </a>
+        </div>
+    </div>
+</div>

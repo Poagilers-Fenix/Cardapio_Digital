@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CLIENTE\\Documents\\GitHub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj": {}
+    "C:\\Users\\Henrique\\Documents\\GitHub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CLIENTE\\Documents\\GitHub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj": {
+    "C:\\Users\\Henrique\\Documents\\GitHub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CLIENTE\\Documents\\GitHub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\Henrique\\Documents\\GitHub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj",
         "projectName": "Cardapp.WebApp",
-        "projectPath": "C:\\Users\\CLIENTE\\Documents\\GitHub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj",
-        "packagesPath": "C:\\Users\\CLIENTE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CLIENTE\\Documents\\GitHub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\obj\\",
+        "projectPath": "C:\\Users\\Henrique\\Documents\\GitHub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj",
+        "packagesPath": "C:\\Users\\Henrique\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Henrique\\Documents\\GitHub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\CLIENTE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Henrique\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

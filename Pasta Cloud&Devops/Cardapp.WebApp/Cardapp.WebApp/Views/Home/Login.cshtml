@@ -2,27 +2,28 @@
 @{
     ViewData["Title"] = "Login";
 }
+<div>
+    <div style="background-color: #3c6f7a; width: 6%; float: left; height: 100vh" class="d-flex flex-column justify-content-between align-items-center">
+        <a class="mt-3" asp-area="" asp-controller="Home" asp-action="Index">
+            <img src="~/img/logo.svg" width="100" />
+        </a>
+        <a asp-action="Login" class="mb-3">
+            <img src="/img/next.svg" width="80" />
+        </a>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="text-center" style="background-color: #fffa; width: 50%; margin: 5% 0;
+                    border-radius: 15px; padding: 2%;">
+            <h2 style="color: #555; margin-bottom: 2%">Login</h2>
+            <form asp-action="Index" asp-controller="ItemCardapio" style="padding-left: 15%; padding-right: 15% ">
+                <label for="id-email">E-mail</label>
+                <input id="id-email" name="email" class="form-control" />
 
-<div class="container" style="margin: 5% auto">
-    <div class="row">
-        <div class="column">
-            <img src="~/img/restaurant.svg" />
-        </div>
-        <div class="column text-center" style="width: 50%; background-color: #93c1caaa;
-                border-radius: 0 15px 15px 0">
-            <div class="text-center" style="background-color: #fffa; width: 95%; height: 90%; margin: 5% 0;
-                    border-radius: 0 15px 15px 0; display: flex; justify-content: center; align-items: center; flex-direction: column">
-                <h2 style="color: #555; margin-bottom: 2%">Login</h2>
-                <form asp-action="Index" asp-controller="ItemCardapio">
-                    <label for="id-email">E-mail</label>
-                    <input id="id-email" name="email" class="form-control" />
+                <label for="id-senha">Senha</label>
+                <input id="id-senha" name="senha" class="form-control" />
 
-                    <label for="id-senha">Senha</label>
-                    <input id="id-senha" name="senha" class="form-control" />
-
-                    <input type="submit" value="Entrar" class="btn btn-info" style="margin-top: 5%" />
-                </form>
-            </div>
+                <input type="submit" value="Entrar" class="btn btn-info" style="margin-top: 5%" />
+            </form>
         </div>
     </div>
 </div>

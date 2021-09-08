@@ -1,13 +1,23 @@
 ﻿@{
     ViewData["Title"] = "Cardapp";
 }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap" rel="stylesheet">
 
-<div class="text-center">
-    <div>
-        @*<h3 class="display-4">Uma nova forma de aproveitar as refeições</h3>*@
-        <img src="~/img/dinner.svg" width="570" />
-        <a asp-action="Login" class="animated-button">
-            <img src="/img/next.svg" width="80" />
+<div class="text-center d-flex justify-content-around">
+    <div class="d-flex flex-column" style="width: 35%">
+        <a class="navbar-brand d-flex justify-content-lg-start mt-3" asp-area="" asp-controller="Home" asp-action="Index">
+            <img src="~/img/logo.svg" width="210" />
+        </a>
+        <div class="d-flex justify-content-end text-white" style="margin-top: 50px">
+            <h3 style="font-family: 'Wendy One', sans-serif; font-size: 70px; width: 65%;" class="text-left">Uma nova forma de aproveitar as refeições</h3>
+        </div>
+    </div>
+    <div style="margin-top: 50px;">
+        <img src="~/img/dinner.svg" width="950" style="margin-right: 140px" />
+        <a asp-action="Login" class="animated-button d-flex justify-content-end" style="margin-top: -10% ">
+            <img src="/img/next.svg" width="100" />
         </a>
     </div>
 </div>

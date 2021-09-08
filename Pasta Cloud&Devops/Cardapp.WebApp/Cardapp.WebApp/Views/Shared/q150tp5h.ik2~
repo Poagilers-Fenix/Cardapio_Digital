@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body style="background-color: #4196A6;">
+<body>
     <div>
-        <main role="main">
+        <main role="main" style="background-color: #4196A6;">
             @RenderBody()
         </main>
     </div>
