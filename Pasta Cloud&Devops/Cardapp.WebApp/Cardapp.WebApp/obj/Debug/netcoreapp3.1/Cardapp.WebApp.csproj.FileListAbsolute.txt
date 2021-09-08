@@ -1204,3 +1204,4 @@ C:\Users\Henrique\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.W
 C:\Users\Henrique\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\obj\Debug\netcoreapp3.1\Cardapp.WebApp.dll
 C:\Users\Henrique\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\obj\Debug\netcoreapp3.1\Cardapp.WebApp.pdb
 C:\Users\Henrique\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\obj\Debug\netcoreapp3.1\Cardapp.WebApp.genruntimeconfig.cache
+C:\Users\Henrique\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\About\Index.cshtml.g.cs
