@@ -29,6 +29,15 @@ export default function SignUp({ navigation }) {
   }, []);
 
   const handleRegister = () => {
+    if (
+      nome === "" ||
+      telefone === "" ||
+      senha === "" ||
+      confirmarSenha === ""
+    ) {
+      Alert.alert("Erro", "Algum campo não foi preenchido");
+      return;
+    }
     if (senha !== confirmarSenha) {
       Alert.alert("Erro", "As Senhas estão diferentes");
       return;
@@ -75,8 +84,11 @@ export default function SignUp({ navigation }) {
       />
 
       <View style={{ width: 250, marginTop: 30 }}>
-        <TouchableOpacity onPress={handleRegister}>
-          <Text>Cadastro</Text>
+        <TouchableOpacity
+          style={styles.buttonContainer}
+          onPress={handleRegister}
+        >
+          <Text style={styles.full}>Cadastro</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={{ alignItems: "center" }}>
@@ -128,5 +140,23 @@ const styles = StyleSheet.create({
     width: 200,
     textAlign: "center",
     fontSize: 18,
+  },
+  buttonContainer: {
+    marginTop: 15,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  full: {
+    height: 50,
+    width: "75%",
+    paddingBottom: 5,
+    color: "white",
+    borderRadius: 8,
+    color: "#fff",
+    backgroundColor: "#800",
+    textAlignVertical: "center",
+    textAlign: "center",
+    justifyContent: "center",
+    fontSize: 20,
   },
 });

@@ -30,6 +30,10 @@ export default function SignIn({ navigation }) {
     const usr = listUser.find((e) => {
       return e.telefone === telefone;
     });
+    if (telefone === "" || senha === "") {
+      Alert.alert("Erro", "Algum campo não foi preenchido");
+      return;
+    }
     if (!usr) {
       Alert.alert("Erro", "Usuario não encontrado!");
       return;
@@ -60,8 +64,8 @@ export default function SignIn({ navigation }) {
       <InputWithIcon title="Senha" icon="lock-outline" onChange={setSenha} />
 
       <View style={{ width: 250, marginTop: 30 }}>
-        <TouchableOpacity onPress={handleEnter}>
-          <Text>Login</Text>
+        <TouchableOpacity style={styles.buttonContainer} onPress={handleEnter}>
+          <Text style={styles.full}>Login</Text>
         </TouchableOpacity>
         <TouchableOpacity style={{ alignItems: "center" }}>
           <Text style={styles.link}>Esqueceu a senha?</Text>
@@ -117,5 +121,23 @@ const styles = StyleSheet.create({
     width: 158,
     textAlign: "center",
     fontSize: 18,
+  },
+  buttonContainer: {
+    marginTop: 15,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  full: {
+    height: 50,
+    width: "75%",
+    paddingBottom: 5,
+    color: "white",
+    borderRadius: 8,
+    color: "#fff",
+    backgroundColor: "#800",
+    textAlignVertical: "center",
+    textAlign: "center",
+    justifyContent: "center",
+    fontSize: 20,
   },
 });
