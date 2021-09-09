@@ -5,50 +5,55 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap" rel="stylesheet">
-<div>
-    <div style="background-color: #3c6f7a; width: 12%; float: left; height: 100vh" class="d-flex flex-column justify-content-between align-items-center">
+<link href="~/css/master.css" rel="stylesheet" />
+<link href="~/css/index-about.css" rel="stylesheet" />
+
+<div class="page-content">
+    <div class="d-flex flex-column justify-content-between align-items-center left-content">
         <a class="mt-3" asp-area="" asp-controller="Home" asp-action="Index">
             <img src="~/img/logo.svg" width="100" />
         </a>
-        <div class="text-white d-flex justify-content-center" style="font-family: 'Wendy One', sans-serif; width: 40%; font-size: 35px">
-            <p>Conheça nossos recursos exclusivos</p>
+        <div class="text-white d-flex justify-content-center">
+            <p class="menu-title">Conheça nossos recursos exclusivos</p>
         </div>
         <div class="d-flex flex-column">
-            <a class="btn btn-warning btn-lg mb-4" role="button" asp-action="index">Sobre o projeto </a>
-            <a class="btn btn-warning btn-lg mb-4" role="button">Sobre nós</a>
-            <a class="btn btn-warning btn-lg mb-4" role="button">Contato</a>
-            <a asp-action="Login" asp-controller="Home" class="btn btn-success btn-lg" role="button">Login</a>
+            <a class="btn btn-info btn-lg mb-4 menu-button" role="button" asp-action="index">Sobre o projeto </a>
+            <a class="btn btn-info btn-lg mb-4 menu-button" role="button" asp-action="index">Sobre nós</a>
+            <a class="btn btn-info btn-lg mb-4 menu-button" role="button" asp-action="index">Contato</a>
+            <a class="btn btn-primary btn-lg menu-button" asp-action="Login" asp-controller="Home" role="button">Login</a>
         </div>
         <a asp-action="index" asp-controller="Home" class="mb-3" style="-moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1);">
-            <img src="/img/next.svg" width="80" />
+            <img src="/img/next.svg" class="back-button" />
         </a>
     </div>
-    <div>
-        <div class="text-center mb-5">
-            <p style="font-size: 40px; color: #CD9A37; font-weight: bold;">Sobre o projeto</p>
+    <div class="right-content">
+        <div>
+            <div>
+                <p class="page-title">Sobre o projeto</p>
+            </div>
+            <div class="d-flex align-items-center justify-content-around">
+                <img src="~/img/dinnerV2.png" class="main-image" width="600" />
+                <p class="paragraph" style="width: 40%;">
+                    O Cardapp foi criado para oferecer uma melhor experiência gastronômica utilizando IoT. Pensamos em um sistema que presasse pelo bem-estar do cliente dentro e fora de um restaurante. A ideia se baseia em um aplicativo mobile que irá controlar grande parte dos serviços manuais que já são realizados no estabelecimento.
+                    Para isso acontecer, um cardápio digital será feito exclusivamente para cada restaurante, a fim de atender as necessidades de cada negócio.
+                </p>
+            </div>
+        </div>
+        <div class="d-flex flex-column align-items-center mb-5 func-disp">
+            <p class="paragraph">Funcionalidades disponíveis do nosso aplicativo</p>
+            <img src="~/img/arrowDown.png" width="100" />
         </div>
         <div class="d-flex align-items-center justify-content-around">
-            <img src="~/img/dinnerV2.png" width="600" />
-            <p class="text-white" style="width: 40%; font-family: 'Wendy One', sans-serif; font-size: 26px">
-                O Cardapp foi criado para oferecer uma melhor experiência gastronômica utilizando IoT. Pensamos em um sistema que presasse pelo bem-estar do cliente dentro e fora de um restaurante. A ideia se baseia em um aplicativo mobile que irá controlar grande parte dos serviços manuais que já são realizados no estabelecimento.
-                Para isso acontecer, um cardápio digital será feito exclusivamente para cada restaurante, a fim de atender as necessidades de cada negócio.
-            </p>
+            <div style="width: 30%">
+                <p class="paragraph">Todo nosso aplicativo foi projetado para o maior conforto possível de nossos clientes. Pensando nisso, criamos o recurso de acompanhar status de pedido para que o cliente saiba exatamente qual será o tempo de espera; Podendo tomar seus drinks tranquilamente</p>
+            </div>
+            <img src="~/img/AcompanharPedido.png" class="mobile-image" />
         </div>
-    </div>
-    <div class="text-white d-flex flex-column align-items-center mb-5" style="margin-top: 280px">
-        <p style="font-size: 34px;">Funcionalidades disponíveis do nosso aplicativo</p>
-        <img src="~/img/arrowDown.png" width="100" />
-    </div>
-    <div class="d-flex align-items-center justify-content-around">
-        <div style="width: 30%">
-            <p style="font-family: 'Wendy One', sans-serif; font-size: 35px" class="text-white">Todo nosso aplicativo foi projetado para o maior conforto possível de nossos clientes. Pensando nisso, criamos o recurso de acompanhar status de pedido para que o cliente saiba exatamente qual será o tempo de espera; Podendo tomar seus drinks tranquilamente</p>
-        </div>
-        <img src="~/img/AcompanharPedido.png" width="400" />
-    </div>
-    <div class="d-flex align-items-center justify-content-around">
-        <img src="~/img/TelaSugerirMusica.png" width="400" />
-        <div style="width: 30%">
-            <p style="font-family: 'Wendy One', sans-serif; font-size: 35px" class="text-white">CardApp conta com uma área onde é possível escolher a música a ser tocada no ambiente (como os jukebox dos anos 1950); Trata-se de um sistema que funciona como uma fila de músicas sujeridas pelas pessoas no ambiente.</p>
+        <div class="d-flex align-items-center justify-content-around mb-5">
+            <img src="~/img/TelaSugerirMusica.png" class="mobile-image" />
+            <div style="width: 30%">
+                <p class="paragraph">CardApp conta com uma área onde é possível escolher a música a ser tocada no ambiente (como os jukebox dos anos 1950); Trata-se de um sistema que funciona como uma fila de músicas sujeridas pelas pessoas no ambiente.</p>
+            </div>
         </div>
     </div>
 </div>

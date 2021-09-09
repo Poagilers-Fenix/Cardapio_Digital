@@ -6199,23 +6199,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Henrique\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\gih_m\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Henrique\\Documents\\GitHub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj",
+      "projectUniqueName": "D:\\Arquivos de Programas (x86)\\Git-Hub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj",
       "projectName": "Cardapp.WebApp",
-      "projectPath": "C:\\Users\\Henrique\\Documents\\GitHub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj",
-      "packagesPath": "C:\\Users\\Henrique\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Henrique\\Documents\\GitHub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\obj\\",
+      "projectPath": "D:\\Arquivos de Programas (x86)\\Git-Hub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj",
+      "packagesPath": "C:\\Users\\gih_m\\.nuget\\packages\\",
+      "outputPath": "D:\\Arquivos de Programas (x86)\\Git-Hub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Henrique\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gih_m\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

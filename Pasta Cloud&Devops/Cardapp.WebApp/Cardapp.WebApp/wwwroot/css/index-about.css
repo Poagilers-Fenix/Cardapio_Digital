@@ -1,0 +1,101 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body, .page-content {
+    background-color: #ccc;
+    /*display: flex;*/
+}
+
+.left-content {
+    float: left;
+    width: 18%;
+    background-color: #3c6f7a;
+    height: 100vh;
+    position: fixed;
+}
+
+.right-content {
+    width: 80%;
+    float: right;
+}
+
+@media screen and (min-width: 1366px) {
+    .menu-title {
+        font-family: 'Wendy One', sans-serif; 
+        width: 70%; 
+        margin-left: 12%;
+        font-size: 30px;
+    }
+    
+    .menu-button{
+        font-size: 16px;
+    }
+
+    .back-button {
+        width: 65px;
+    }
+
+    .main-image {
+        width: 500px;
+    }
+    
+    .page-title {
+        font-size: 30px;
+        color: #CD9A37;
+        margin: 3% 5%;
+        font-family: 'Wendy One', sans-serif;
+    }
+
+    .paragraph {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+    }
+
+    .func-disp {
+        margin-top: 120px;
+    }
+
+    .mobile-image {
+        width: 310px;
+    }
+
+}
+
+@media screen and (min-width: 1920px){
+    .menu-title {
+        font-family: 'Wendy One', sans-serif;
+        width: 40%;
+        font-size: 35px;
+    }
+
+    .menu-button {
+        font-size: 25px;
+    }
+
+    .back-button {
+        width: 80px;
+    }
+
+    .main-image {
+        width: 600px;
+    }
+
+    .page-title {
+        font-size: 40px;
+        color: #CD9A37;
+        margin: 3% 5%;
+        font-family: 'Wendy One', sans-serif;
+    }
+    .paragraph {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 32px;
+    }
+
+    .func-disp {
+        margin-top: 280px;
+    }
+
+    .mobile-image {
+        width: 400px;
+    }
+
+}
