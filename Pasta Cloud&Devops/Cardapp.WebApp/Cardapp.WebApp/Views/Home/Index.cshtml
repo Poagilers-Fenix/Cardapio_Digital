@@ -4,20 +4,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap" rel="stylesheet">
+<link href="~/css/index-home.css" rel="stylesheet" />
 
 <div class="text-center d-flex justify-content-around">
-    <div class="d-flex flex-column" style="width: 35%">
-        <a class="navbar-brand d-flex justify-content-lg-start mt-3" asp-area="" asp-controller="Home" asp-action="Index">
-            <img src="~/img/logo.svg" width="210" />
+    <div class="d-flex flex-column left-content">
+        <a class="navbar-brand d-flex justify-content-lg-start mt-3" asp-controller="Home" asp-action="Index">
+            <img src="~/img/logo.svg" class="logo" />
         </a>
         <div class="d-flex justify-content-end text-white" style="margin-top: 50px">
-            <h3 style="font-family: 'Wendy One', sans-serif; font-size: 70px; width: 65%;" class="text-left">Uma nova forma de aproveitar as refeições</h3>
+            <h3 class="text-left index-title">Uma nova forma de aproveitar as refeições</h3>
         </div>
     </div>
     <div style="margin-top: 50px;">
-        <img src="~/img/dinner.svg" width="900" style="margin-right: 140px" />
+        <img src="~/img/dinner.svg" class="index-image" />
         <a asp-action="index" asp-controller="About" class="animated-button d-flex justify-content-end" style="margin-top: -10% ">
-            <img src="/img/next.svg" width="100" />
+            <img src="/img/next.svg" class="animated-button" />
         </a>
     </div>
 </div>

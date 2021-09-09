@@ -30,8 +30,9 @@ body, .page-content {
         font-size: 16px;
     }
 
-    .back-button {
+    .animated-button {
         width: 65px;
+        margin-right: 0px;
     }
 
     .main-image {

@@ -1,0 +1,46 @@
+﻿@media screen and (min-width: 1366px) {
+    .left-content {
+        width: 35%;
+    }
+
+    .logo {
+        width: 140px;
+        margin-left: 5%;
+    }
+
+    .index-title {
+        font-family: 'Wendy One', sans-serif;
+        font-size: 45px;
+        width: 65%;
+    }
+
+    .index-image {
+        width: 680px;
+        margin-right: 140px;
+    }
+
+    .animated-button {
+        width: 80px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .logo {
+        width: 210px;
+    }
+
+    .index-title {
+        font-family: 'Wendy One', sans-serif;
+        font-size: 70px;
+        width: 65%;
+    }
+
+    .index-image {
+        width: 900px;
+        margin-right: 140px;
+    }
+
+    .animated-button {
+        width: 100px;
+    }
+}
