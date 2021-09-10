@@ -8,21 +8,24 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
-const getAllFood = require('../../../API/getAllFood.json');
+const getAllFood = require("../../../API/getAllFood.json");
 
-export default function Categories({ route }) {
+export default function Categories({ route, navigation, acao }) {
   const { items } = route.params;
   const renderItem = ({ item }) => (
     <TouchableOpacity style={styles.subContainer}>
       <View>
-        <Image
-          style={styles.imgList}
-          source={{uri: (item.img)}}
-        ></Image>
+        <Image style={styles.imgList} source={{ uri: item.img }}></Image>
       </View>
       <View style={styles.cardList}>
-        <Text style={styles.cardText, {color: '#880000', fontWeight: 'bold'}}>{item.name}</Text>
-        <Text style={styles.cardText, {fontWeight: 'bold'}}>{item.calories} Kcal</Text>
+        <Text
+          style={(styles.cardText, { color: "#880000", fontWeight: "bold" })}
+        >
+          {item.name}
+        </Text>
+        <Text style={(styles.cardText, { fontWeight: "bold" })}>
+          {item.calories} Kcal
+        </Text>
         <Text style={styles.cardText}>{item.description}</Text>
       </View>
     </TouchableOpacity>
@@ -32,7 +35,7 @@ export default function Categories({ route }) {
       <View style={styles.container}>
         <Text style={styles.titulo}>{items.restaurante}</Text>
       </View>
-      <SafeAreaView style={styles.container, {marginBottom: 140}}>
+      <SafeAreaView style={(styles.container, { marginBottom: 140 })}>
         <FlatList
           data={getAllFood}
           renderItem={renderItem}
@@ -56,15 +59,15 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   subContainer: {
-    display: 'flex',
-    flexDirection: 'row',
+    display: "flex",
+    flexDirection: "row",
     margin: 10,
   },
   imgList: {
     width: 100,
     height: 100,
     borderRadius: 7,
-    marginRight: 9
+    marginRight: 9,
   },
   cardList: {
     display: "flex",
@@ -73,11 +76,10 @@ const styles = StyleSheet.create({
 
     borderRadius: 7,
 
-    width: 250
-    
+    width: 250,
   },
   cardText: {
     marginHorizontal: 0,
-    textAlign: 'center',
+    textAlign: "center",
   },
 });

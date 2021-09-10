@@ -18,3 +18,4 @@ export const setUsers = async (users) => {
     throw new Error("ERRO");
   }
 };
+

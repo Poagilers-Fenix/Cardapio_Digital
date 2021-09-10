@@ -9,8 +9,9 @@ import {
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Modal from "../../components/Modal";
+import BotaoPedido from "../../components/pedido/BotaoPedido";
 
-const getAllMenu = require('../../API/getAllMenu.json');
+const getAllMenu = require("../../API/getAllMenu.json");
 
 export default function Restaurants({ navigation }) {
   const renderItem = ({ item }) => (
@@ -26,6 +27,7 @@ export default function Restaurants({ navigation }) {
   );
   return (
     <View style={styles.container}>
+      <BotaoPedido acao={"Comanda"} navigation={navigation} />
       <Text style={styles.titulo}>Cardápio</Text>
       <SafeAreaView style={styles.container}>
         <FlatList

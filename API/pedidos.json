@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nome": "Super Burguer",
+        "quantidade" : 2,
+        "preco" : 61.80
+    },
+    {
+        "id": 2,
+        "nome": "Suco de laranja natutal",
+        "quantidade": 1,
+        "preco": 10.60
+    },
+    {
+        "id": 3,
+        "nome": "Refrigerante 500ml",
+        "quantidade": 1,
+        "preco": 6.90
+    }
+]
