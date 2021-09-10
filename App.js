@@ -15,6 +15,7 @@ import Categories from "./pages/Establishment/MenuCategory/Categories";
 import rateExperience from "./pages/rateExperience";
 import SeeMusic from "./pages/Music/SeeMusic";
 import Playlist from "./pages/Music/Playlist";
+import SuggestMusic from "./pages/Music/SuggestMusic"
 
 const Stack = createNativeStackNavigator();
 
