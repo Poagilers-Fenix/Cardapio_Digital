@@ -7,4 +7,6 @@
     width: 8%;
     float: left;
     height: 100vh;
+
+    position: fixed;
 }

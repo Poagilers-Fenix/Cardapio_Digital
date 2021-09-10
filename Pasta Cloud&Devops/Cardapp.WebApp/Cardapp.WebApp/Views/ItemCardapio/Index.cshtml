@@ -44,61 +44,32 @@
                         <th scope="col">Nome do item</th>
                         <th scope="col">Descrição</th>
                         <th scope="col">Valor do item</th>
-                        <th scope="col">Ingredientes</th>
+                        @*<th scope="col">Ingredientes</th>*@
                         <th scope="col">Valor calórico</th>
                         <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            <img src="~/img/chocolot.jpeg" class="img-thumbnail img-fluid" alt="...">
-                        </td>
-                        <td class="align-middle">Sorvete de chocolate</td>
-                        <td class="align-middle">Um sorvete mt gostoso geladinho trincando delicia gelado mt bom barato top excelente</td>
-                        <td class="align-middle">R$ 3.00</td>
-                        <td class="align-middle">Leite, chocolate</td>
-                        <td class="align-middle">150kcal</td>
-                        <td class="align-middle">
-                            <div style="display: flex; flex-direction: column; margin-right: 2vw;">
-                                <button class="mb-3 btn btn-info">Editar</button>
-                                <button class="btn btn-danger">Excluir</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="~/img/virada.jpg" class="img-thumbnail img-fluid" alt="...">
-                        </td>
-                        <td class="align-middle">Virada à paulista</td>
-                        <td class="align-middle">Um prato mt bom suculento cheio de carne arroz feijão etc mt bom excelente coma coma tudo</td>
-                        <td class="align-middle">R$ 15.00</td>
-                        <td class="align-middle">Arroz, feijão, carne bovina, eggs</td>
-                        <td class="align-middle">450kcal</td>
-                        <td class="align-middle">
-                            <div style="display: flex; flex-direction: column; margin-right: 2vw;">
-                                <button class="mb-3 btn btn-info">Editar</button>
-                                <button class="btn btn-danger">Excluir</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="~/img/virada.jpg" class="img-thumbnail img-fluid" alt="...">
-                        </td>
-                        <td class="align-middle">Virada à paulista</td>
-                        <td class="align-middle">Um prato mt bom suculento cheio de carne arroz feijão etc mt bom excelente coma coma tudo</td>
-                        <td class="align-middle">R$ 15.00</td>
-                        <td class="align-middle">Arroz, feijão, carne bovina, eggs</td>
-                        <td class="align-middle">450kcal</td>
-                        <td class="align-middle">
-                            <div style="display: flex; flex-direction: column; margin-right: 2vw;">
-                                <a class="mb-3 btn btn-info" asp-action="Editar">Editar</a>
-                                <a class="btn btn-danger">Excluir</a>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
+                    @foreach (var item in ViewBag.itens)
+                    {
+                        <tr>
+                            <td>
+                                <img src="@item.Foto" class="img-thumbnail img-fluid" alt="...">
+                            </td>
+                            <td class="align-middle">@item.Nome</td>
+                            <td class="align-middle">@item.Descricao</td>
+                            <td class="align-middle">R$ @item.Preco</td>
+                            @*<td class="align-middle">Leite, chocolate</td>*@
+                            <td class="align-middle">@item.ValCalorico kcal</td>
+                            <td class="align-middle">
+                                <div style="display: flex; flex-direction: column; margin-right: 2vw;">
+                                    <a class="mb-3 btn btn-info">Editar</a>
+                                    <a asp-action="Index" class="btn btn-danger">Excluir</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
             </table>
         </row>
     </div>

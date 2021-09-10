@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Arquivos de Programas (x86)\\Git-Hub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj": {}
+    "C:\\Users\\Henrique\\Documents\\GitHub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj": {}
   },
   "projects": {
-    "D:\\Arquivos de Programas (x86)\\Git-Hub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj": {
+    "C:\\Users\\Henrique\\Documents\\GitHub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Arquivos de Programas (x86)\\Git-Hub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\Henrique\\Documents\\GitHub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj",
         "projectName": "Cardapp.WebApp",
-        "projectPath": "D:\\Arquivos de Programas (x86)\\Git-Hub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj",
-        "packagesPath": "C:\\Users\\gih_m\\.nuget\\packages\\",
-        "outputPath": "D:\\Arquivos de Programas (x86)\\Git-Hub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\obj\\",
+        "projectPath": "C:\\Users\\Henrique\\Documents\\GitHub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\Cardapp.WebApp.csproj",
+        "packagesPath": "C:\\Users\\Henrique\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Henrique\\Documents\\GitHub\\Cardapio_Digital\\Pasta Cloud&Devops\\Cardapp.WebApp\\Cardapp.WebApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\gih_m\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Henrique\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -47,6 +50,14 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.5, )"
+            },
+            "Oracle.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.21.3, )"
+            },
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[3.21.3, )"
             }
           },
           "imports": [
