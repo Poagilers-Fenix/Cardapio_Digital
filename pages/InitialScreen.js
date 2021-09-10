@@ -22,7 +22,7 @@ export default function InitialSreen({ navigation }) {
         <Botao
           titulo="Login com o Google"
           acao={"SignIn"}
-          navigation={navigation}
+          navigation={navigation} 
         />
         <Botao
           outlined={true}

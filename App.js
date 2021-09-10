@@ -14,6 +14,8 @@ import Restaurants from "./pages/Establishment/Restaurants";
 import Categories from "./pages/Establishment/MenuCategory/Categories";
 import rateExperience from "./pages/rateExperience";
 import SeeMusic from "./pages/Music/SeeMusic";
+import Playlist from "./pages/Music/Playlist";
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -35,6 +37,8 @@ export default function App() {
         <Stack.Screen name="Categories" component={Categories} />
         <Stack.Screen name="rateExperience" component={rateExperience} />
         <Stack.Screen name="SeeMusic" component={SeeMusic} />
+        <Stack.Screen name="Playlist" component={Playlist} />
+        <Stack.Screen name="SuggestMusic" component={SuggestMusic} />
       </Stack.Navigator>
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
     </NavigationContainer>
