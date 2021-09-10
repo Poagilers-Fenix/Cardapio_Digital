@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D236184C-3722-3B28-963E-576E79687BEC" name="T_CPP_GERENTE">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D236184C-3722-3B28-963E-576E79687BEC" name="T CPP GERENTE">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-26 19:54:01 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="cd_gerente " id="630B64F9-B65B-55F4-7293-0EEDE63530DF">
+<Attribute name="cd gerente" id="630B64F9-B65B-55F4-7293-0EEDE63530DF">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-26 19:55:13 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
@@ -28,7 +28,7 @@
 <dataTypePrecision>5</dataTypePrecision>
 <ownDataTypeParameters>,5,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nm_gerente" id="794AB0EB-43FB-B161-3B95-51D9A49CE7D1">
+<Attribute name="nm gerente" id="794AB0EB-43FB-B161-3B95-51D9A49CE7D1">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-26 19:56:41 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
@@ -41,7 +41,7 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ds_email" id="DE15F275-5D5F-A877-2E1D-FD7E370928EE">
+<Attribute name="ds email" id="DE15F275-5D5F-A877-2E1D-FD7E370928EE">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-26 19:59:32 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
@@ -54,7 +54,7 @@
 <dataTypeSize>65</dataTypeSize>
 <ownDataTypeParameters>65,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="vl_salario" id="C1343D8F-3616-0455-BA5E-D350E3B042FC">
+<Attribute name="vl salario" id="C1343D8F-3616-0455-BA5E-D350E3B042FC">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-26 20:01:20 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
@@ -69,7 +69,7 @@
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,7,2</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ds_endereco" id="20C02C89-DE58-E1F8-6BD9-1976484C5B97">
+<Attribute name="ds endereco" id="20C02C89-DE58-E1F8-6BD9-1976484C5B97">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-26 20:02:35 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
@@ -83,7 +83,7 @@
 <dataTypeSize>150</dataTypeSize>
 <ownDataTypeParameters>150,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ds_senha" id="ACCD7288-9344-55A1-1DDF-36BCB547031D">
+<Attribute name="ds senha" id="ACCD7288-9344-55A1-1DDF-36BCB547031D">
 <createdBy>CLIENTE</createdBy>
 <createdTime>2021-05-27 02:47:22 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
@@ -98,12 +98,13 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="D4462E01-186C-8F03-036F-443E35AC0BD4" name="PK_CPP_GERENTE">
+<identifier id="D4462E01-186C-8F03-036F-443E35AC0BD4" name="T_CPP_GERENTE_PK">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-26 19:55:36 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <newElementsIDs>630B64F9-B65B-55F4-7293-0EEDE63530DF</newElementsIDs>

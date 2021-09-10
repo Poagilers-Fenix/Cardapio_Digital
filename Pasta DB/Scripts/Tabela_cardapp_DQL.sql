@@ -1,5 +1,9 @@
 set serveroutput on;
 
+variable cu refcursor
+
+execute lista_restaurante(1, :cu)
+
 --As tabelas T_CPP_PEDIDO e T_CPP_PEDIDO_ITEM_CARDAPIO (associativa) não serão utilizadas no momento, mas deixamos elas como parte do script DQL para podermos usar os selects no futuro.
 --Os selects que tem as tabelas pedido e pedido
 
@@ -139,7 +143,7 @@ from t_cpp_pedido_item_cardapio pic inner join t_cpp_item_cardapio ic
 on pic.cd_item_cardapio = ic.cd_item_cardapio
 inner join t_cpp_pedido p
 on pic.cd_pedido = p.cd_pedido
-where pic.cd_pedido = 6;
+where pic.cd_pedido = 1;
 
 -- Comanda do pedido 3
 select pic.cd_pedido,
@@ -155,7 +159,7 @@ from t_cpp_pedido_item_cardapio pic
         on pic.cd_pedido = p.cd_pedido
     inner join t_cpp_estabelecimento e
         on p.cd_estabelecimento = e.cd_estabelecimento
-where pic.cd_pedido = 3;
+where pic.cd_pedido = 1;
 
 --Query que envolve todas as tabelas, buscando as informações do estabelecimento, o gerente, e todas as avaliações que os clientes fizeram dos pratos que quiseram avaliar.
 SELECT E.cd_estabelecimento

@@ -1,8 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="86E67F18-9ABA-F101-22A7-119AB96F191A" containerWithKeyObject="FA6A654D-9C7C-AD78-B099-E86F811DFE2E" localFKIndex="5A2F2476-551E-656B-2AE3-D2273FC32FA2" name="FK_CPP_PEDIDO_ESTAB">
-<createdBy>lari</createdBy>
-<createdTime>2021-05-21 15:22:16 UTC</createdTime>
-<generatorID>D733E8C9-8966-F6A0-4CC2-02AAD7C9DEFC</generatorID>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D35FA612-0EB0-9E45-8DB9-1EF6EFC8C0E9" containerWithKeyObject="4C199BC8-47E0-7798-394B-845D6486B046" localFKIndex="8F1E647F-9D54-820E-1F76-7E3AF761BC19" name="T_CPP_ESTABELECIMENTO_FKv3">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-09-10 02:51:36 UTC</createdTime>
+<generatorID>B3C7B2AB-9EC4-5F9F-71D3-BF3A591635C6</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <referredTableLongName>T_CPP_ESTABELECIMENTO</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>

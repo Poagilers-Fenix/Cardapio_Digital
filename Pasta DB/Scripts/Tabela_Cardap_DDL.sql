@@ -6,20 +6,17 @@ DROP SEQUENCE cdestabelecimento;
 DROP SEQUENCE cdavaliacao;
 DROP SEQUENCE cdgerente;
 DROP SEQUENCE cditemcardapio;
+DROP SEQUENCE cdmesa;
 
 
+DROP TABLE t_cpp_mesa CASCADE CONSTRAINTS;
 DROP TABLE t_cpp_categoria CASCADE  CONSTRAINTS;
 DROP TABLE t_cpp_avaliacao CASCADE CONSTRAINTS;
 DROP TABLE t_cpp_cliente CASCADE CONSTRAINTS;
 DROP TABLE t_cpp_estabelecimento CASCADE CONSTRAINTS;
 DROP TABLE t_cpp_gerente CASCADE CONSTRAINTS;
 DROP TABLE t_cpp_item_cardapio CASCADE CONSTRAINTS; 
-DROP TABLE t_cpp_pedido CASCADE CONSTRAINTS;
-DROP TABLE t_cpp_pedido_item_cardapio CASCADE CONSTRAINTS; 
 */
-
---Talvez colocar CEP, andar do prédio, algumas informações a mais, no futuro
-
 
 CREATE SEQUENCE cdcategoria
 INCREMENT BY 1
@@ -55,6 +52,12 @@ CREATE SEQUENCE cditemcardapio
 INCREMENT BY 1
 START WITH 1
 MAXVALUE 9999999
+NOCYCLE;
+
+CREATE SEQUENCE cdmesa
+INCREMENT BY 1
+START WITH 1
+MAXVALUE 999999999
 NOCYCLE;
 
 CREATE TABLE t_cpp_avaliacao (
@@ -122,9 +125,8 @@ CREATE TABLE t_cpp_item_cardapio (
     nm_item_cardapio    VARCHAR2(50) NOT NULL,
     ds_item_cardapio    VARCHAR2(300) NOT NULL,
     vl_item_cardapio    NUMBER(7, 2) NOT NULL,
-    ds_ingredientes     VARCHAR2(300) NOT NULL,
     vl_calorico         NUMBER(4),
-    fl_foto_ic          BLOB
+    fl_foto_ic          VARCHAR2(1000)
 );
 
 COMMENT ON COLUMN t_cpp_item_cardapio.fl_foto_ic IS
@@ -132,69 +134,49 @@ COMMENT ON COLUMN t_cpp_item_cardapio.fl_foto_ic IS
 
 ALTER TABLE t_cpp_item_cardapio ADD CONSTRAINT t_cpp_item_cardapio_pk PRIMARY KEY ( cd_item_cardapio );
 
-CREATE TABLE t_cpp_pedido (
-    cd_pedido           NUMBER(8) NOT NULL,
-    cd_cliente          NUMBER(5) NOT NULL,
-    cd_estabelecimento  NUMBER(3) NOT NULL,
-    vl_total_pedido     NUMBER(8, 2) NOT NULL,
-    st_pedido           VARCHAR2(15) NOT NULL,
-    hr_pedido           DATE NOT NULL
+CREATE TABLE t_cpp_mesa (
+    id_mesa             NUMBER(9) NOT NULL,
+    cd_estabelecimento  NUMBER(5) NOT NULL,
+    st_mesa             VARCHAR2(25)
 );
 
-ALTER TABLE t_cpp_pedido
-    ADD CONSTRAINT ck_cpp_pedido CHECK ( st_pedido IN (
-        'RECEBIDO',
-        'EM PREPARO',
-        'ENTREGUE',
-        'PAGO'
-    ) );
+COMMENT ON COLUMN t_cpp_mesa.st_mesa IS
+    'Regras a niveis de tabela. Enum.';
 
-ALTER TABLE t_cpp_pedido ADD CONSTRAINT t_cpp_pedido_pk PRIMARY KEY ( cd_pedido );
+ALTER TABLE t_cpp_mesa ADD constraint ck_cpp_mesa CHECK ( st_mesa IN (
+        'LIVRE',
+        'OCUPADA',
+        'RESERVADA') );
 
-CREATE TABLE t_cpp_pedido_item_cardapio (
-    cd_item_cardapio  NUMBER(9) NOT NULL,
-    cd_pedido         NUMBER(4) NOT NULL,
-    qt_item_cardapio  NUMBER(2) NOT NULL
-);
+ALTER TABLE t_cpp_mesa 
+    ADD CONSTRAINT t_cpp_mesa_pk PRIMARY KEY ( id_mesa ) ;
+
+ALTER TABLE t_cpp_item_cardapio
+    ADD CONSTRAINT t_cpp_categoria_fk FOREIGN KEY ( cd_categoria )
+        REFERENCES t_cpp_categoria ( cd_categoria );
 
 ALTER TABLE t_cpp_avaliacao
-    ADD CONSTRAINT fk_cpp_avaliacao_cliente FOREIGN KEY ( cd_cliente )
+    ADD CONSTRAINT t_cpp_cliente_fk FOREIGN KEY ( cd_cliente )
         REFERENCES t_cpp_cliente ( cd_cliente );
 
-ALTER TABLE t_cpp_avaliacao
-    ADD CONSTRAINT fk_cpp_avaliacao_estab FOREIGN KEY ( cd_estabelecimento )
+ALTER TABLE t_cpp_categoria
+    ADD CONSTRAINT t_cpp_estabelecimento_fk FOREIGN KEY ( cd_estabelecimento )
         REFERENCES t_cpp_estabelecimento ( cd_estabelecimento );
 
-ALTER TABLE t_cpp_categoria
-    ADD CONSTRAINT fk_cpp_categoria_estab FOREIGN KEY ( cd_estabelecimento )
+ALTER TABLE t_cpp_item_cardapio
+    ADD CONSTRAINT t_cpp_estabelecimento_fkv2 FOREIGN KEY ( cd_estabelecimento )
+        REFERENCES t_cpp_estabelecimento ( cd_estabelecimento );
+
+ALTER TABLE t_cpp_mesa
+    ADD CONSTRAINT t_cpp_estabelecimento_fkv3 FOREIGN KEY ( cd_estabelecimento )
+        REFERENCES t_cpp_estabelecimento ( cd_estabelecimento );
+
+ALTER TABLE t_cpp_avaliacao
+    ADD CONSTRAINT t_cpp_estabelecimento_fkv4 FOREIGN KEY ( cd_estabelecimento )
         REFERENCES t_cpp_estabelecimento ( cd_estabelecimento );
 
 ALTER TABLE t_cpp_estabelecimento
-    ADD CONSTRAINT fk_cpp_estab_gerente FOREIGN KEY ( cd_gerente )
+    ADD CONSTRAINT t_cpp_gerente_fk FOREIGN KEY ( cd_gerente )
         REFERENCES t_cpp_gerente ( cd_gerente );
 
-ALTER TABLE t_cpp_item_cardapio
-    ADD CONSTRAINT fk_cpp_ic_categoria FOREIGN KEY ( cd_categoria )
-        REFERENCES t_cpp_categoria ( cd_categoria );
-
-ALTER TABLE t_cpp_item_cardapio
-    ADD CONSTRAINT fk_cpp_ic_estab FOREIGN KEY ( cd_estabelecimento )
-        REFERENCES t_cpp_estabelecimento ( cd_estabelecimento );
-
-ALTER TABLE t_cpp_pedido
-    ADD CONSTRAINT fk_cpp_pedido_cliente FOREIGN KEY ( cd_cliente )
-        REFERENCES t_cpp_cliente ( cd_cliente );
-
-ALTER TABLE t_cpp_pedido
-    ADD CONSTRAINT fk_cpp_pedido_estab FOREIGN KEY ( cd_estabelecimento )
-        REFERENCES t_cpp_estabelecimento ( cd_estabelecimento );
-
-ALTER TABLE t_cpp_pedido_item_cardapio
-    ADD CONSTRAINT fk_cpp_pic_ic FOREIGN KEY ( cd_item_cardapio )
-        REFERENCES t_cpp_item_cardapio ( cd_item_cardapio );
-
-ALTER TABLE t_cpp_pedido_item_cardapio
-    ADD CONSTRAINT fk_cpp_pic_pedido FOREIGN KEY ( cd_pedido )
-        REFERENCES t_cpp_pedido ( cd_pedido );
-        
 COMMIT;

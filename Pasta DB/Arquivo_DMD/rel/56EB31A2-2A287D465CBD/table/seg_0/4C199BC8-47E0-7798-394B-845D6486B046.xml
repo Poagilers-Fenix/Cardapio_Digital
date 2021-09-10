@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4C199BC8-47E0-7798-394B-845D6486B046" name="T_CPP_MESA">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-09-10 02:37:22 UTC</createdTime>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<ordsAlias>table_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_mesa" id="62030D64-3717-D1C3-7659-0DC50A764A05">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-09-10 02:37:44 UTC</createdTime>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cd_estabelecimento" id="BD31A32F-FF2E-8E75-41AE-462AEC5A2D0F">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-09-10 02:51:36 UTC</createdTime>
+<generatorID>A5899D87-69C0-2330-73D5-6D159E086068</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D35FA612-0EB0-9E45-8DB9-1EF6EFC8C0E9" referredColumn="A089AD24-0FF2-DCAF-1D7D-EE06761F581B"/>
+</associations>
+</Column>
+<Column name="st_mesa" id="1BBD358C-B47F-6BDF-7D89-42BD720B9D0E">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-09-10 02:51:36 UTC</createdTime>
+<commentInRDBMS><![CDATA[Regras a niveis de tabela. Enum.]]></commentInRDBMS>
+<generatorID>40C91C51-FB1C-0385-E15B-EEDFA674B031</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FA1B6526-2389-21A1-35DF-7B551EDBB140" name="T_CPP_MESA_PK">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-09-10 02:37:44 UTC</createdTime>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="62030D64-3717-D1C3-7659-0DC50A764A05"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8F1E647F-9D54-820E-1F76-7E3AF761BC19" name="T_CPP_ESTABELECIMENTO_FKv3">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-09-10 02:51:36 UTC</createdTime>
+<generatorID>B3C7B2AB-9EC4-5F9F-71D3-BF3A591635C6</generatorID>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BD31A32F-FF2E-8E75-41AE-462AEC5A2D0F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="CK_CPP_MESA" directorySegmentName="seg_0" id="282353AE-32F8-1B2C-FE47-145AB3F25523">
+<createdBy>CLIENTE</createdBy>
+<createdTime>2021-09-10 13:13:45 UTC</createdTime>
+<ownerDesignName>Arquivo_DMD</ownerDesignName>
+<rule><![CDATA[CHECK IF st_mesa IN (
+        'OCUPADA',
+        'LIVRE',
+        'RESERVADA,
+    );]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

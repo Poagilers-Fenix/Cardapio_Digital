@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="723EDDCF-CAE9-21B9-CD75-F69882F062BE" name="T_CPP_AVALIACAO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="723EDDCF-CAE9-21B9-CD75-F69882F062BE" name="T CPP AVALIACAO">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-05 14:36:09 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="cd_avaliacao" id="F0A86F6E-97AF-0A47-CBC7-4F948638405F">
+<Attribute name="cd avaliacao" id="F0A86F6E-97AF-0A47-CBC7-4F948638405F">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-05 14:36:24 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
@@ -28,7 +28,7 @@
 <dataTypePrecision>8</dataTypePrecision>
 <ownDataTypeParameters>,8,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cd_cliente" id="595666D6-3112-62E7-2F5B-A567B5F776B1">
+<Attribute name="cd cliente" id="595666D6-3112-62E7-2F5B-A567B5F776B1">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-05 14:52:50 UTC</createdTime>
 <generatorID>FFA014F8-93B3-56A0-ABF5-DBFE41467CEF</generatorID>
@@ -43,7 +43,7 @@
 <dataTypePrecision>5</dataTypePrecision>
 <ownDataTypeParameters>,5,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cd_estabelecimento" id="581F24E4-2822-F4B9-1C10-CAABF3D26D86">
+<Attribute name="cd estabelecimento" id="581F24E4-2822-F4B9-1C10-CAABF3D26D86">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:14:06 UTC</createdTime>
 <generatorID>002E4E83-2CBA-4604-0C64-83C1B0CAD4A5</generatorID>
@@ -58,7 +58,7 @@
 <dataTypePrecision>3</dataTypePrecision>
 <ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nr_experiencia" id="425ECCCF-E59C-76A2-96EE-CD0B26B509E7">
+<Attribute name="nr experiencia" id="425ECCCF-E59C-76A2-96EE-CD0B26B509E7">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-05 14:44:40 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
@@ -71,7 +71,7 @@
 <dataTypePrecision>1</dataTypePrecision>
 <ownDataTypeParameters>,1,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ds_avaliacao" id="80377F7C-6306-0196-4466-11AD78F48D2A">
+<Attribute name="ds avaliacao" id="80377F7C-6306-0196-4466-11AD78F48D2A">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-05 14:36:52 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
@@ -87,12 +87,13 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="9D0DE855-546E-2483-F0E8-79E87628C423" name="PK_CPP_AVALIACAO">
+<identifier id="9D0DE855-546E-2483-F0E8-79E87628C423" name="T_CPP_AVALIACAO_PK">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-05 14:36:35 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <newElementsIDs>F0A86F6E-97AF-0A47-CBC7-4F948638405F</newElementsIDs>

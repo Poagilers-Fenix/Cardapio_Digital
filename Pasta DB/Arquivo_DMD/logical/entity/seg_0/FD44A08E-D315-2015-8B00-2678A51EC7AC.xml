@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FD44A08E-D315-2015-8B00-2678A51EC7AC" name="T_CPP_CLIENTE">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FD44A08E-D315-2015-8B00-2678A51EC7AC" name="T CPP CLIENTE">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:24:31 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="cd_cliente" id="FDC6F1CC-A6A4-4F00-F569-FC0E192E564A">
+<Attribute name="cd cliente" id="FDC6F1CC-A6A4-4F00-F569-FC0E192E564A">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:24:41 UTC</createdTime>
 <commentInRDBMS><![CDATA[até 99 milhões ]]></commentInRDBMS>
@@ -29,7 +29,7 @@
 <dataTypePrecision>8</dataTypePrecision>
 <ownDataTypeParameters>,8,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nm_cliente" id="C370E3D4-42C5-62C1-9B3F-EDF4A22A7128">
+<Attribute name="nm cliente" id="C370E3D4-42C5-62C1-9B3F-EDF4A22A7128">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:25:11 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
@@ -42,7 +42,7 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nr_celular" id="C79302EB-8A72-4FB3-2265-10B69B95E44D">
+<Attribute name="nr celular" id="C79302EB-8A72-4FB3-2265-10B69B95E44D">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:25:35 UTC</createdTime>
 <commentInRDBMS><![CDATA[(11)922332233]]></commentInRDBMS>
@@ -56,7 +56,7 @@
 <dataTypeSize>11</dataTypeSize>
 <ownDataTypeParameters>11,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ds_senha" id="C1253EB6-26A5-AF04-7DA6-1769F1AD4F84">
+<Attribute name="ds senha" id="C1253EB6-26A5-AF04-7DA6-1769F1AD4F84">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:31:05 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
@@ -71,12 +71,13 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="D809D8C2-EDD6-C249-AE1E-4FE3EB63962E" name="PK_CPP_CLIENTE">
+<identifier id="D809D8C2-EDD6-C249-AE1E-4FE3EB63962E" name="T_CPP_CLIENTE_PK">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-03-31 00:24:51 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
+<item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <newElementsIDs>FDC6F1CC-A6A4-4F00-F569-FC0E192E564A</newElementsIDs>

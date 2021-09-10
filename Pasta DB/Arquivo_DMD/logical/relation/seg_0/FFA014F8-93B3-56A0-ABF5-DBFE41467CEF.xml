@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PODEv2" directorySegmentName="seg_0" id="FFA014F8-93B3-56A0-ABF5-DBFE41467CEF">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK CPP AVALIACAO CLIENTE" directorySegmentName="seg_0" id="FFA014F8-93B3-56A0-ABF5-DBFE41467CEF">
 <createdBy>Kaue Augusto</createdBy>
 <createdTime>2021-04-05 14:52:50 UTC</createdTime>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>

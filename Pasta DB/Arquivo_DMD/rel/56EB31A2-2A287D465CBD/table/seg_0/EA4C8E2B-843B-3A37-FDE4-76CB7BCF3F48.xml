@@ -101,18 +101,6 @@
 <ownDataTypeParameters>,7,2</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ds_ingredientes" id="BCBDEB11-4796-B564-1EC2-562BA62B58A2">
-<createdBy>lari</createdBy>
-<createdTime>2021-05-21 15:22:16 UTC</createdTime>
-<generatorID>486A745A-4BA4-CC78-AC2D-78B7D26ED98B</generatorID>
-<ownerDesignName>Arquivo_DMD</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>300</dataTypeSize>
-<ownDataTypeParameters>300,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="vl_calorico" id="23DB6666-2AF6-6A10-966F-93645BDA53F4">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
@@ -134,8 +122,9 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT029</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
@@ -152,7 +141,7 @@
 <colUsage columnID="89FBC0C3-F378-DD1F-1860-70A4122BC76C"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="9B2A8FD3-ADD4-3E19-954B-8676EAD6133A" name="FK_CPP_IC_ESTAB">
+<ind_PK_UK id="9B2A8FD3-ADD4-3E19-954B-8676EAD6133A" name="T_CPP_ESTABELECIMENTO_FKv2">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>2B5BFD1C-4CFF-0EB7-06B6-5FE5A920495D</generatorID>
@@ -163,7 +152,7 @@
 <colUsage columnID="D9CEA051-E998-B620-41F5-FC17D721DE26"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="DFA894D5-3F7C-9306-EEBA-707612A6CEA4" name="FK_CPP_IC_CATEGORIA">
+<ind_PK_UK id="DFA894D5-3F7C-9306-EEBA-707612A6CEA4" name="T_CPP_CATEGORIA_FK">
 <createdBy>CLIENTE</createdBy>
 <createdTime>2021-05-27 18:18:55 UTC</createdTime>
 <generatorID>2BEF95EB-7B3D-3470-05CE-10703C292FB3</generatorID>

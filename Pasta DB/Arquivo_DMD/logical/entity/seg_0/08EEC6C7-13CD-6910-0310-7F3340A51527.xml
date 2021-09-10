@@ -1,7 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D65D44CB-FD19-EF69-CC7B-AD8DA75E42AD" name="T CPP CATEGORIA">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="08EEC6C7-13CD-6910-0310-7F3340A51527" name="T CPP MESA">
 <createdBy>CLIENTE</createdBy>
-<createdTime>2021-05-26 19:31:24 UTC</createdTime>
+<createdTime>2021-09-10 02:38:48 UTC</createdTime>
+<generatorID>4C199BC8-47E0-7798-394B-845D6486B046</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
@@ -15,9 +16,10 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="cd categoria" id="42951C61-9161-DF68-5731-D32A71367C4E">
+<Attribute name="id mesa" id="E410085E-3922-0971-1D95-3A9FDE128AD6">
 <createdBy>CLIENTE</createdBy>
-<createdTime>2021-05-26 19:31:32 UTC</createdTime>
+<createdTime>2021-09-10 02:38:48 UTC</createdTime>
+<generatorID>62030D64-3717-D1C3-7659-0DC50A764A05</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
@@ -25,13 +27,13 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cd estabelecimento" id="B8E9BC06-4E6D-705F-16AD-B9E4871B87EE">
+<Attribute name="cd estabelecimento" id="A5899D87-69C0-2330-73D5-6D159E086068">
 <createdBy>CLIENTE</createdBy>
-<createdTime>2021-05-27 20:39:39 UTC</createdTime>
-<generatorID>8CE653F2-B47D-BF7D-4DAC-575DFBC1840D</generatorID>
+<createdTime>2021-09-10 02:41:46 UTC</createdTime>
+<generatorID>B3C7B2AB-9EC4-5F9F-71D3-BF3A591635C6</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
@@ -43,24 +45,27 @@
 <dataTypePrecision>5</dataTypePrecision>
 <ownDataTypeParameters>,5,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nm categoria" id="DB0CAB30-02B6-3648-78C5-885EEE98F066">
+<Attribute name="st mesa" id="40C91C51-FB1C-0385-E15B-EEDFA674B031">
 <createdBy>CLIENTE</createdBy>
-<createdTime>2021-05-26 19:33:08 UTC</createdTime>
+<createdTime>2021-09-10 02:50:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[Regras a niveis de tabela. Enum.]]></commentInRDBMS>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <engineerTo>
 <item key="56EB31A2-C46D-9A13-4F65-2A287D465CBD" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>30 CHAR</dataTypeSize>
-<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="C2FEC103-50FE-8338-34A4-B1FA37A5D24C" name="T_CPP_CATEGORIA_PK">
+<identifier id="B87B2CD3-5B38-AF9D-F2A9-C9F343547F04" name="T CPP MESA PK">
 <createdBy>CLIENTE</createdBy>
-<createdTime>2021-05-26 19:33:55 UTC</createdTime>
+<createdTime>2021-09-10 02:38:48 UTC</createdTime>
+<generatorID>FA1B6526-2389-21A1-35DF-7B551EDBB140</generatorID>
 <ownerDesignName>Arquivo_DMD</ownerDesignName>
 <shouldEngineer>false</shouldEngineer>
 <engineerTo>
@@ -68,7 +73,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>42951C61-9161-DF68-5731-D32A71367C4E</attributeRef>
+<attributeRef>E410085E-3922-0971-1D95-3A9FDE128AD6</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

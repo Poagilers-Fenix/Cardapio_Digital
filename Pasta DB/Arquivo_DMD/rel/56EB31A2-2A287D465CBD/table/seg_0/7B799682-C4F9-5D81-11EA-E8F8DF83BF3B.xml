@@ -91,7 +91,7 @@
 <colUsage columnID="6472B780-5836-DA63-3AF5-D96ABC1C5838"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="60037B0F-78D8-5C78-5938-C44E98B11A9B" name="FK_CPP_AVALIACAO_CLIENTE">
+<ind_PK_UK id="60037B0F-78D8-5C78-5938-C44E98B11A9B" name="T_CPP_CLIENTE_FK">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>FFA014F8-93B3-56A0-ABF5-DBFE41467CEF</generatorID>
@@ -102,7 +102,7 @@
 <colUsage columnID="D110FE4A-D293-CA9D-57F9-2A98F0B76524"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="00E6AF65-7DE6-6A67-E134-703CD257CFE0" name="FK_CPP_AVALIACAO_ESTAB">
+<ind_PK_UK id="00E6AF65-7DE6-6A67-E134-703CD257CFE0" name="T_CPP_ESTABELECIMENTO_FKv4">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <generatorID>002E4E83-2CBA-4604-0C64-83C1B0CAD4A5</generatorID>

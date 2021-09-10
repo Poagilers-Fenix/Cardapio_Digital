@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="5ACC8958-5B33-C89D-DECB-94D8131A57DC" containerWithKeyObject="EA4C8E2B-843B-3A37-FDE4-76CB7BCF3F48" localFKIndex="9B2A8FD3-ADD4-3E19-954B-8676EAD6133A" name="FK_CPP_IC_ESTAB">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="5ACC8958-5B33-C89D-DECB-94D8131A57DC" containerWithKeyObject="EA4C8E2B-843B-3A37-FDE4-76CB7BCF3F48" localFKIndex="9B2A8FD3-ADD4-3E19-954B-8676EAD6133A" name="T_CPP_ESTABELECIMENTO_FKv2">
 <createdBy>lari</createdBy>
 <createdTime>2021-05-21 15:22:16 UTC</createdTime>
 <comment><![CDATA[ic = item cardapio]]></comment>

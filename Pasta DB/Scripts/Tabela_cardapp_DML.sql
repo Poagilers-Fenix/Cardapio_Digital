@@ -1,12 +1,11 @@
 alter session set nls_date_format='YYYY-MM-DD HH24:MI:SS';
 
 /*
-DELETE FROM t_cpp_categoria;
+DELETE FROM t_cpp_mesa;
 DELETE FROM t_cpp_avaliacao;
-DELETE FROM t_cpp_pedido_item_cardapio;
-DELETE FROM t_cpp_item_cardapio;
-DELETE FROM t_cpp_pedido;
 DELETE FROM t_cpp_cliente;
+DELETE FROM t_cpp_item_cardapio;
+DELETE FROM t_cpp_categoria;
 DELETE FROM t_cpp_estabelecimento;
 DELETE FROM t_cpp_gerente;
 */
@@ -56,28 +55,28 @@ insert into t_cpp_categoria values (cdcategoria.nextval, 3, 'Bebida');
  
 
 -- POPULAÇÃO DA TABELA ITEM_CARDAPIO
-INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 1, 1, '1', 'Sorvete de Chocolate', '100g de sorvete sabor chocolate', 5.00, 'Leite, chocolate em pó e açúcar', 700, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
-INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 1, 1, '0', 'Milk Shake de Menta com Chocolate', '150ml de sorvete sabor menta e chocolate', 7.00, 'Leite, menta e chocolate em pó e açúcar', 750, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
-INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 2, 3, '1', 'Churros de Chocolate', '1 unidade de churros sabor chocolate', 7.00, 'Leite, chocolate, farinha de trigo, água e açúcar', 850, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
-INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 2, 3, '0', 'Churros de Doce de Leite', '1 unidade de churros sabor doce de leite', 7.00, 'Leite, doce de leite, farinha de trigo, água e açúcar', 800, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
-INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 3, 6, '1', 'Arroz', '100g de arroz do tipo 1', 3.00, 'Arroz Tipo 1', 200, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
-INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 3, 6, '0', 'Feijão', '100g de feijão carioca', 4.00, 'Feijão Carioca', 300, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
-insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 1, 1,'1', 'Milkshake unicórnio','Com MeMs', 8.00, 'Leite, chocolate, caramelo, chantilly e MeM', 500, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
-insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 1, 1, '0', 'Milkshake ovomaltine','O preferido da casa', 12.00, 'Leite, chocolate', 300, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
-insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 2, 5, '1', 'Cerveja pilsen','A melhor cerveja do MUNDO', 10.00, 'Lúpulo, cevada', 43, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
-insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 2, 4, '0', 'Amendoim sem casca','Um bom aperitivo, talvez o melhor de todos', 2.00, 'Amendoim', 30, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
-insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 3, 8, '0', 'Vinho tinto espanhol','Quer ostentar? então toma, ano de 1930', 10000.00, 'Vinho tinto espanhol', 0, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
-insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 3, 6, '1', 'Virada à paulista','Venha comer esse clássico!', 15.00, 'Arroz, feijão, Bife, ovo frito, couve refogada e tomate.', 400, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
-insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 3, 7, '1', 'Lanche Cheddar Duplo','200g de hambúrguer artesanal e 100g de cheddar,', 20.00, 'Hambúrguer, alface, cheddar, tomate.', 500, utl_raw.cast_to_raw('D:\Área de Trabalho\Kaue\husky'));
+INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 1, 1, '1', 'Sorvete de Chocolate', '100g de sorvete sabor chocolate', 5.00, 700, 'https://github.com/Poagilers-Fenix/Cardapio_Digital/blob/main/Imagens/chocolate.jpg');
+INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 1, 1, '0', 'Milk Shake de Menta com Chocolate', '150ml de sorvete sabor menta e chocolate', 7.00, 750, 'https://github.com/Poagilers-Fenix/Cardapio_Digital/blob/main/Imagens/menta%20chocolate.jpg');
+INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 2, 3, '1', 'Churros de Chocolate', '1 unidade de churros sabor chocolate', 7.00, 850, 'https://github.com/Poagilers-Fenix/Cardapio_Digital/blob/main/Imagens/churros%20chocolate.jpg');
+INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 2, 3, '0', 'Churros de Doce de Leite', '1 unidade de churros sabor doce de leite', 7.00, 800, 'https://github.com/Poagilers-Fenix/Cardapio_Digital/blob/main/Imagens/churros%20doce%20de%20leite.jpg');
+INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 3, 6, '1', 'Arroz', '100g de arroz do tipo 1', 3.00, 200, 'https://github.com/Poagilers-Fenix/Cardapio_Digital/blob/main/Imagens/arroz.jpg');
+INSERT INTO t_cpp_item_cardapio VALUES(cditemcardapio.nextval, 3, 6, '0', 'Feijão', '100g de feijão carioca', 4.00, 300, 'https://github.com/Poagilers-Fenix/Cardapio_Digital/blob/main/Imagens/feijao.jpg');
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 1, 1, '1', 'Milkshake unicórnio','Com MeMs', 8.00, 500, 'https://github.com/Poagilers-Fenix/Cardapio_Digital/blob/main/Imagens/milkshake%20unicornio.jpg');
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 1, 1, '0', 'Milkshake ovomaltine','O preferido da casa', 12.00, 300, 'https://github.com/Poagilers-Fenix/Cardapio_Digital/blob/main/Imagens/ovomaltine.jpg');
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 2, 5, '1', 'Cerveja pilsen','A melhor cerveja do MUNDO', 10.00, 43, 'https://github.com/Poagilers-Fenix/Cardapio_Digital/blob/main/Imagens/cerveja%20pilsen.jpg');
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 2, 4, '0', 'Amendoim sem casca','Um bom aperitivo, talvez o melhor de todos', 2.00, 30, 'https://github.com/Poagilers-Fenix/Cardapio_Digital/blob/main/Imagens/amendoim.jpg');
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 3, 8, '0', 'Vinho tinto espanhol','Quer ostentar? então toma, ano de 1930', 10000.00, 0, 'https://github.com/Poagilers-Fenix/Cardapio_Digital/blob/main/Imagens/vinho%20tinto.jpg');
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 3, 6, '1', 'Virada à paulista','Venha comer esse clássico!', 15.00, 400, 'https://github.com/Poagilers-Fenix/Cardapio_Digital/blob/main/Imagens/virada%20%C3%A0%20paulista.jpg');
+insert into t_cpp_item_cardapio values(cditemcardapio.nextval, 3, 7, '1', 'Lanche Cheddar Duplo','200g de hambúrguer artesanal e 100g de cheddar,', 20.00, 500, 'https://github.com/Poagilers-Fenix/Cardapio_Digital/blob/main/Imagens/lanche%20cheddar.jpg');
 
  
 -- POPULAÇÃO DA TABELA CLIENTE
-insert into t_cpp_cliente values(1, 'Lari', '11960205342', '123');
-insert into t_cpp_cliente values(2, 'Eric', '11293847581', '1234');
-insert into t_cpp_cliente values(3, 'Kaue', '11384713947', '12345');
-insert into t_cpp_cliente values(4, 'Henrique', '1137284950', '123456');
-insert into t_cpp_cliente values(5, 'Gi', '11372816481', '1234567');
-insert into t_cpp_cliente values(6, 'Dan', '11846265749', '12345678');
+insert into t_cpp_cliente values(cdcliente.nextval, 'Lari', '11960205342', '123');
+insert into t_cpp_cliente values(cdcliente.nextval, 'Eric', '11293847581', '1234');
+insert into t_cpp_cliente values(cdcliente.nextval, 'Kaue', '11384713947', '12345');
+insert into t_cpp_cliente values(cdcliente.nextval, 'Henrique', '1137284950', '123456');
+insert into t_cpp_cliente values(cdcliente.nextval, 'Gi', '11372816481', '1234567');
+insert into t_cpp_cliente values(cdcliente.nextval, 'Dan', '11846265749', '12345678');
 
 UPDATE t_cpp_cliente
 SET ds_senha = 'asdfpoiu89'
@@ -100,13 +99,24 @@ SET ds_senha = 'henri45'
 WHERE cd_cliente = 6;
  
 -- POPULACAO DA TABELA AVALIAÇÃO
-INSERT INTO t_cpp_avaliacao values(1, 1, 1, 5, 'Melhor sorvete da região muito saboroso.');
-INSERT INTO t_cpp_avaliacao values(2, 2, 3, 5, 'A comida estava saborosa e ainda chegou quentinha.');
-INSERT INTO t_cpp_avaliacao values(3, 3, 2, 3, 'Churros estava queimado');
-INSERT INTO t_cpp_avaliacao values(4, 4, 1, 4, 'Sorvete todo derretido.');
-INSERT INTO t_cpp_avaliacao values(5, 5, 3, 5, 'Comida muito gostosa.');
-INSERT INTO t_cpp_avaliacao values(6, 6, 2, 2, 'Churros queimado e com pouco recheio.');
- 
+INSERT INTO t_cpp_avaliacao values(cdavaliacao.nextval, 1, 1, 5, 'Melhor sorvete da região muito saboroso.');
+INSERT INTO t_cpp_avaliacao values(cdavaliacao.nextval, 2, 3, 5, 'A comida estava saborosa e ainda chegou quentinha.');
+INSERT INTO t_cpp_avaliacao values(cdavaliacao.nextval, 3, 2, 3, 'Churros estava queimado');
+INSERT INTO t_cpp_avaliacao values(cdavaliacao.nextval, 4, 1, 4, 'Sorvete todo derretido.');
+INSERT INTO t_cpp_avaliacao values(cdavaliacao.nextval, 5, 3, 5, 'Comida muito gostosa.');
+INSERT INTO t_cpp_avaliacao values(cdavaliacao.nextval, 6, 2, 2, 'Churros queimado e com pouco recheio.');
+
+-- POPULACAO DA TABELA MESA
+
+INSERT INTO t_cpp_mesa values(cdmesa.nextval, 1, 'LIVRE');
+INSERT INTO t_cpp_mesa values(cdmesa.nextval, 1, 'LIVRE');
+INSERT INTO t_cpp_mesa values(cdmesa.nextval, 2, 'OCUPADA');
+INSERT INTO t_cpp_mesa values(cdmesa.nextval, 2, 'OCUPADA');
+INSERT INTO t_cpp_mesa values(cdmesa.nextval, 3, 'RESERVADA');
+INSERT INTO t_cpp_mesa values(cdmesa.nextval, 3, 'RESERVADA');
+
+
+
  
 COMMIT;
  
@@ -116,3 +126,4 @@ SELECT * FROM t_cpp_cliente;
 SELECT * FROM t_cpp_estabelecimento;
 SELECT * FROM t_cpp_gerente;
 SELECT * FROM t_cpp_item_cardapio; 
+SELECT * FROM t_cpp_mesa;
