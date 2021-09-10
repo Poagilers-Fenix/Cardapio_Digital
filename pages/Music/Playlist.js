@@ -8,57 +8,52 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const getPlaylist = require('../../API/getPlaylist.json')
 const getMusic = require('../../API/getMusic.json')
 
-export default function Playlist({navigation}){
-    return(
+export default function Playlist({ navigation }) {
+    return (
         <View style={styles.container}>
             <Text style={styles.title}>Fila de Reprodução</Text>
-            <Text style={styles.bold}>Tocando agora</Text>
-            <FlatList 
-                scrollEnabled={false}
-                data={getMusic}
-                keyExtractor={item => item.id}
-                renderItem={({item}) => (
-                    <View style={styles.container}>         
-                        
-                        <View style={{flexDirection:'row', justifyContent:'flex-end'}}>                 
-                            <Ionicons name="musical-notes" style={{fontSize: 14, marginLeft: 5, marginTop: 30}} />
-                                <View style={{flex:1}}>                                            
-                                <Text style={styles.name}>{item.name}</Text>
-                                <Text style={styles.compositor}>{item.compositor}</Text>                      
-                                </View>
-                               
-                            <Text style={{marginRight: 20, marginTop: 30, fontSize: 16 }}>{item.finalTime}</Text>        
-                        </View> 
+            <View>                
+                <Text style={styles.bold}>Tocando agora</Text>
+
+                <View>
+                    <View style={{ flexDirection: 'row', justifyContent: 'flex-end', textAlign: 'center' }} >
+                        <Ionicons name="musical-notes" style={{ fontSize: 14, marginLeft: 5, marginTop: 30 }} />
+                        <View style={{ flex: 1 }}>
+                            <Text style={styles.name}>{getPlaylist[0].name}</Text>
+                            <Text style={styles.compositor}>{getPlaylist[0].compositor}</Text>
+                        </View>
+                        <Text style={{ marginRight: 20, marginTop: 30, fontSize: 16 }}>{getPlaylist[0].finalTime}</Text>
                     </View>
-                )}    
-            
-            />
+                </View>
+            </View>
+
+
             <Text style={styles.bold}>Na fila</Text>
-            <FlatList 
-                
+            <FlatList
+
                 data={getPlaylist}
                 keyExtractor={item => item.id}
-                renderItem={({item}) => (
-                    <View style={styles.container}>  
-                         
-                        
-                        <View style={{flexDirection:'row', justifyContent:'flex-end'}}>                 
-                            <Ionicons name="musical-notes" style={{fontSize: 14, marginLeft: 5, marginTop: 30}} />
-                                <View style={{flex:1}}>                                            
+                renderItem={({ item }) => (
+                    <View style={styles.container}>
+
+
+                        <View style={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
+                            <Ionicons name="musical-notes" style={{ fontSize: 14, marginLeft: 5, marginTop: 30 }} />
+                            <View style={{ flex: 1 }}>
                                 <Text style={styles.name}>{item.name}</Text>
-                                <Text style={styles.compositor}>{item.compositor}</Text>                      
-                                </View>
-                            <Text style={{marginRight: 20, marginTop: 30, fontSize: 16 }}>{item.finalTime}</Text>
-                            
-                        </View> 
+                                <Text style={styles.compositor}>{item.compositor}</Text>
+                            </View>
+                            <Text style={{ marginRight: 20, marginTop: 30, fontSize: 16 }}>{item.finalTime}</Text>
+
+                        </View>
                     </View>
-                )}    
-            
+                )}
+
             />
 
             <View style={styles.modal}>
                 <Button navigation={navigation} acao={"SuggestMusic"} outlined={true} titulo="Sugerir Música" />
-                <Modal navigation={navigation}/>
+                <Modal navigation={navigation} />
             </View>
         </View>
     );
@@ -67,7 +62,6 @@ export default function Playlist({navigation}){
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        //flexDirection: 'column',
         backgroundColor: "#fff",
     },
     title: {
@@ -76,13 +70,13 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: '10%',
         fontWeight: 'bold',
-        
-        
+
+
     },
     modal: {
         width: "100%",
         justifyContent: "flex-end",
-      },
+    },
     name: {
         fontSize: 16,
         color: '#282C3F',
@@ -93,7 +87,7 @@ const styles = StyleSheet.create({
         fontSize: 13,
         color: '#282C3F',
         marginLeft: 30,
-        flexDirection:'column',
+        flexDirection: 'column',
     },
     bold: {
         fontWeight: 'bold',
@@ -102,6 +96,6 @@ const styles = StyleSheet.create({
         marginTop: 10,
         marginBottom: 5
     }
-    
+
 
 });

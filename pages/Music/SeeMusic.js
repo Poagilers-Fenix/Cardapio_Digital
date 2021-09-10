@@ -22,7 +22,7 @@ export default function MusicaTocando({navigation}){
                       />                      
                       <Text style={styles.name}>{item.name}</Text>
                       <Text style={styles.compositor}>{item.compositor}</Text>
-                      <ProgressBar progress={0.7} style={styles.bar} />
+                      <ProgressBar progress={1.0} style={styles.bar} />
                       <View style={{flexDirection:'row' }}>
                         <Text style={{marginRight: 240, color: '#282C3F'}}>{item.initalTime}</Text>
                         <Text style={{color: '#282C3F'}}>{item.finalTime}</Text>
@@ -79,7 +79,8 @@ const styles = StyleSheet.create({
     bar: {
         marginTop: 10,
         color: 'steelblue',
-        width: '100%'
+        width: '100%',
+        alignSelf: 'center',
     },
     
 
