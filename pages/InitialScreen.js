@@ -36,6 +36,12 @@ export default function InitialSreen({ navigation }) {
           acao={"SignUp"}
           navigation={navigation}
         />
+        <Botao
+          outlined={true}
+          titulo="See Music"
+          acao={"SeeMusic"}
+          navigation={navigation}
+        />
       </View>
     </View>
   );

@@ -13,6 +13,7 @@ import Illumination from "./pages/Illumination";
 import Restaurants from "./pages/Establishment/Restaurants";
 import Categories from "./pages/Establishment/MenuCategory/Categories";
 import rateExperience from "./pages/rateExperience";
+import SeeMusic from "./pages/Music/SeeMusic";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
         <Stack.Screen name="Illumination" component={Illumination} />
         <Stack.Screen name="Categories" component={Categories} />
         <Stack.Screen name="rateExperience" component={rateExperience} />
+        <Stack.Screen name="SeeMusic" component={SeeMusic} />
       </Stack.Navigator>
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
     </NavigationContainer>
