@@ -20,8 +20,8 @@ export default function Playlist({navigation}){
                 data={getSuggesMusic}
                 keyExtractor={item => item.id}
                 renderItem={({item}) => (
-                    <View style={{display:'flex', flexDirection:'row', flex: 2}}>
-                        <TouchableOpacity onPress={() => navigation.navigate("Playlist")}> 
+                    <View style={{display:'flex', flexWrap:'wrap', alignSelf:'center'}}>
+                        <TouchableOpacity onPress={() => navigation.navigate("Playlist")} style={{display:'flex', flexDirection:'row-reverse'}}> 
                             <Image 
                                 style={styles.img}
                                 source={{uri: (item.image)}}                                
@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
     img: {
         width: 200,
         height: 200,
+        
         
     }
 
