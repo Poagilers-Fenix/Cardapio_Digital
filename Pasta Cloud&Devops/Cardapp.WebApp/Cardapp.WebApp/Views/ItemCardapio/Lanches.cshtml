@@ -3,15 +3,14 @@
     ViewData["Title"] = "Visualização do Cardápio - Lanches";
 }
 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="~/css/master.css" rel="stylesheet" />
+
 <style>
     html {
         background-color: #4196A6;
     }
 </style>
-
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-<link href="~/css/master.css" rel="stylesheet" />
 
 <div>
     <div class="d-flex flex-column justify-content-between align-items-center small-left-content">
@@ -25,9 +24,8 @@
 </div>
 
 <div style="float: right">
-    <h1 style="display: flex; justify-content: center;" class="mt-5">Edite o cardápio do seu restaurante</h1>
-    <a asp-action="login" asp-controller="home" class="btn btn-danger ml-3">Adicionar um novo item no cardápio</a>
-    <div class="card mx-auto" style="width: 90%; border: 2px solid #800; float: right; height: 80%">
+    <h1 style="display: flex; justify-content: center;" class="my-5">Edite o cardápio do seu restaurante</h1>
+    <div class="card mx-auto" style="width: 90%; border: 2px solid #800; height: 80%">
         <row style="height: 5vh">
             <div class="btn-group w-100 h-100" role="group">
                 <a class="btn btnNav" asp-action="Index"><span class="material-icons pr-2">star</span>Destaques</a>
@@ -37,6 +35,7 @@
                 <a class="btn btnNav" asp-action="Sobremesas"><span class="material-icons pr-2">icecream</span>Sobremesas</a>
             </div>
         </row>
+        <a asp-action="login" asp-controller="home" class="btn btn-danger ml-3 my-3 py-2 px-2" style="width: 20%">Adicionar um novo item no cardápio</a>
         <row>
             <table class="table">
                 <thead>
@@ -103,34 +102,33 @@
             </table>
         </row>
     </div>
-</div>
+    </div>
 
-<style>
-    .btnNavAtual {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #800;
-        color: white;
-    }
-
-        .btnNavAtual:hover {
+    <style>
+        .btnNavAtual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #800;
             color: white;
-            background-color: #a00
         }
 
-        .btnNavAtual:focus, .btnNav:focus {
-            box-shadow: 0 0 0 0;
-            border: 0 none;
-            outline: 0;
+            .btnNavAtual:hover {
+                color: white;
+                background-color: #a00
+            }
+
+            .btnNavAtual:focus, .btnNav:focus {
+                box-shadow: 0 0 0 0;
+                border: 0 none;
+                outline: 0;
+            }
+
+        .btnNav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ddd;
+            color: #666;
         }
-
-    .btnNav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #ddd;
-        color: #666;
-    }
-
-</style>
+    </style>

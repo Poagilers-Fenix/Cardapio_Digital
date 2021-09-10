@@ -22,10 +22,8 @@
         </a>
     </div>
 </div>
-<div>
-    <h1 style="display: flex; justify-content: center;" class="">Edite o cardápio do seu restaurante</h1>
-    <a asp-action="login" asp-controller="home" class="btn btn-danger ml-3">Adicionar um novo item no cardápio</a>
-
+<div style="float: right">
+    <h1 style="display: flex; justify-content: center;" class="my-5">Edite o cardápio do seu restaurante</h1>
     <div class="card mx-auto" style="width: 90%; border: 2px solid #800; height: 80%">
         <row style="height: 5vh">
             <div class="btn-group w-100 h-100" role="group">
@@ -36,6 +34,7 @@
                 <a class="btn btnNav" asp-action="Sobremesas"><span class="material-icons pr-2">icecream</span>Sobremesas</a>
             </div>
         </row>
+        <a asp-action="login" asp-controller="home" class="btn btn-danger ml-3 my-3 py-2 px-2" style="width: 20%">Adicionar um novo item no cardápio</a>
         <row>
             <table class="table">
                 <thead>
@@ -44,9 +43,8 @@
                         <th scope="col">Nome do item</th>
                         <th scope="col">Descrição</th>
                         <th scope="col">Valor do item</th>
-                        @*<th scope="col">Ingredientes</th>*@
                         <th scope="col">Valor calórico</th>
-                        <th scope="col"></th>
+                        <th scope="col">Ação</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -54,32 +52,35 @@
                     {
                         <tr>
                             <td>
-                                <img src="@item.Foto" class="img-thumbnail img-fluid" alt="...">
+                                <img src="@item.Foto" style="width: 350px; height: 200px" class="img-thumbnail img-fluid" alt="...">
                             </td>
                             <td class="align-middle">@item.Nome</td>
-                            <td class="align-middle">@item.Descricao</td>
-                            <td class="align-middle">R$ @item.Preco</td>
-                            @*<td class="align-middle">Leite, chocolate</td>*@
-                            <td class="align-middle">@item.ValCalorico kcal</td>
+                            <td class="align-middle" width="480px">@item.Descricao</td>
+                            <td class="align-middle" width="200px">R$ @item.Preco</td>
+                            <td class="align-middle" width="200px">@item.ValCalorico kcal</td>
                             <td class="align-middle">
-                                <div style="display: flex; flex-direction: column; margin-right: 2vw;">
-                                    <a class="mb-3 btn btn-info">Editar</a>
-                                    <a asp-action="Index" class="btn btn-danger">Excluir</a>
-                                </div>
+                                <form asp-action="Index">
+                                    <div style="display: flex; flex-direction: column; margin-right: 2vw;">
+                                        <a class="mb-3 btn btn-info" asp-action="Editar" asp-route-id="@item.CodigoItem">Editar</a>
+                                        <input type="submit" asp-route-id="@item.CodigoItem" class="btn btn-danger" value="Excluir"/>
+                                    </div>
+                                </form>
                             </td>
                         </tr>
                     }
-                    </tbody>
+                </tbody>
             </table>
         </row>
     </div>
 </div>
+
 <style>
     .btnNavAtual {
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: #800;
+        color: white;
     }
 
         .btnNavAtual:hover {

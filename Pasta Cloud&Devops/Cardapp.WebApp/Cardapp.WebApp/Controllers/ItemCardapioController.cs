@@ -1,8 +1,9 @@
-﻿using DimDim.WebApp.Repository.Context;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Cardapp.WebApp.Models;
 using System.Linq;
+using System;
+using Cardapp.WebApp.Repository.Context;
 
 namespace Cardapp.WebApp.Controllers
 {
@@ -35,9 +36,11 @@ namespace Cardapp.WebApp.Controllers
         {
             return View();
         }
-        public IActionResult Editar()
+        public IActionResult Editar(int id)
         {
-            return View();
+            var item = ctx.Item.Find(id);
+            ViewBag.status = new List<string>(new string[] { "A", "D" });
+            return View(item);
         }
 
         [HttpPost]
@@ -51,6 +54,25 @@ namespace Cardapp.WebApp.Controllers
 
         }
 
+        [HttpPost]
+        public IActionResult Editar(Item item)
+        {
+            try
+            {
+                Console.WriteLine(ctx.Item);
+                var entry = ctx.Item.First(e => e.CodigoItem == item.CodigoItem);
+                ctx.Entry(entry).CurrentValues.SetValues(item);
+                ctx.SaveChanges();
+                TempData["msg"] = "Conta atualizada!";
+                return RedirectToAction("Index");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Deu erro");
+                TempData["msg"] = "Problema ao atualizar a conta, veja se as informações estão corretas.";
+                return RedirectToAction("Editar");
+            }
+        }
 
 
     }

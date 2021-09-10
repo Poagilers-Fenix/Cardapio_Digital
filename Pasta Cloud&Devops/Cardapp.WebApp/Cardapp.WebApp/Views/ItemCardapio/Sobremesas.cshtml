@@ -3,117 +3,133 @@
     ViewData["Title"] = "Visualização do Cardápio - Sobremesas";
 }
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-
-<h1 style="display: flex; justify-content: center;" class="my-5">Edite o cardápio do seu restaurante</h1>
-
-<div class="card mx-auto" style="width: 90%; border: 2px solid #800; height: 80%">
-    <row style="height: 5vh">
-        <div class="btn-group w-100 h-100" role="group">
-            <a class="btn btnNav" asp-action="Index"><span class="material-icons pr-2">star</span>Destaques</a>
-            <a class="btn btnNav" asp-action="Pratos"><span class="material-icons pr-2">restaurant_menu</span>Pratos principais</a>
-            <a class="btn btnNav" asp-action="Bebidas"><span class="material-icons pr-2">local_bar</span>Bebidas</a>
-            <a class="btn btnNav" asp-action="Lanches"><span class="material-icons pr-2">fastfood</span>Lanches</a>
-            <a class="btn btnNavAtual text-white"><span class="material-icons pr-2">icecream</span>Sobremesas</a>
-        </div>
-    </row>
-    <row>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Foto</th>
-                    <th scope="col">Nome do item</th>
-                    <th scope="col">Descrição</th>
-                    <th scope="col">Valor do item</th>
-                    <th scope="col">Ingredientes</th>
-                    <th scope="col">Valor calórico</th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <img src="~/img/chocolot.jpeg" class="img-thumbnail img-fluid" alt="...">
-                    </td>
-                    <td class="align-middle">Sorvete de chocolate</td>
-                    <td class="align-middle">Um sorvete mt gostoso geladinho trincando delicia gelado mt bom barato top excelente</td>
-                    <td class="align-middle">R$ 3.00</td>
-                    <td class="align-middle">Leite, chocolate</td>
-                    <td class="align-middle">150kcal</td>
-                    <td class="align-middle">
-                        <div style="display: flex; flex-direction: column; margin-right: 2vw;">
-                            <button class="mb-3 btn btn-info">Editar</button>
-                            <button class="btn btn-danger">Excluir</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="~/img/virada.jpg" class="img-thumbnail img-fluid" alt="...">
-                    </td>
-                    <td class="align-middle">Virada à paulista</td>
-                    <td class="align-middle">Um prato mt bom suculento cheio de carne arroz feijão etc mt bom excelente coma coma tudo</td>
-                    <td class="align-middle">R$ 15.00</td>
-                    <td class="align-middle">Arroz, feijão, carne bovina, eggs</td>
-                    <td class="align-middle">450kcal</td>
-                    <td class="align-middle">
-                        <div style="display: flex; flex-direction: column; margin-right: 2vw;">
-                            <button class="mb-3 btn btn-info">Editar</button>
-                            <button class="btn btn-danger">Excluir</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="~/img/virada.jpg" class="img-thumbnail img-fluid" alt="...">
-                    </td>
-                    <td class="align-middle">Virada à paulista</td>
-                    <td class="align-middle">Um prato mt bom suculento cheio de carne arroz feijão etc mt bom excelente coma coma tudo</td>
-                    <td class="align-middle">R$ 15.00</td>
-                    <td class="align-middle">Arroz, feijão, carne bovina, eggs</td>
-                    <td class="align-middle">450kcal</td>
-                    <td class="align-middle">
-                        <div style="display: flex; flex-direction: column; margin-right: 2vw;">
-                            <button class="mb-3 btn btn-info">Editar</button>
-                            <button class="btn btn-danger">Excluir</button>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-    </row>
-</div>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="~/css/master.css" rel="stylesheet" />
 
 <style>
-    .btnNavAtual {
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-        background-color: #800;
-        color: white;
-        
+    html {
+        background-color: #4196A6;
     }
-
-    .btnNavAtual:hover {
-        color: white;
-        background-color: #a00
-    }
-
-    .btnNavAtual:focus, .btnNav:focus {
-        box-shadow: 0 0 0 0;
-        border: 0 none;
-        outline: 0;
-    }
-
-    .btnNav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #ddd;
-        color: #666;
-    }
-
-
 </style>
+
+<div>
+    <div class="d-flex flex-column justify-content-between align-items-center small-left-content">
+        <a class="mt-3" asp-area="" asp-controller="Home" asp-action="Index">
+            <img src="~/img/logo.svg" width="100" />
+        </a>
+        <a asp-action="index" asp-controller="Home" class="mb-3" style="-moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1);">
+            <img src="/img/next.svg" width="80" />
+        </a>
+    </div>
+</div>
+
+
+<div style="float: right">
+    <h1 style="display: flex; justify-content: center;" class="my-5">Edite o cardápio do seu restaurante</h1>
+    <div class="card mx-auto" style="width: 90%; border: 2px solid #800; height: 80%">
+        <row style="height: 5vh">
+            <div class="btn-group w-100 h-100" role="group">
+                <a class="btn btnNav" asp-action="Index"><span class="material-icons pr-2">star</span>Destaques</a>
+                <a class="btn btnNav" asp-action="Pratos"><span class="material-icons pr-2">restaurant_menu</span>Pratos principais</a>
+                <a class="btn btnNav" asp-action="Bebidas"><span class="material-icons pr-2">local_bar</span>Bebidas</a>
+                <a class="btn btnNav" asp-action="Lanches"><span class="material-icons pr-2">fastfood</span>Lanches</a>
+                <a class="btn btnNavAtual text-white"><span class="material-icons pr-2">icecream</span>Sobremesas</a>
+            </div>
+        </row>
+        <a asp-action="login" asp-controller="home" class="btn btn-danger ml-3 my-3 py-2 px-2" style="width: 20%">Adicionar um novo item no cardápio</a>
+        <row>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Foto</th>
+                        <th scope="col">Nome do item</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Valor do item</th>
+                        <th scope="col">Ingredientes</th>
+                        <th scope="col">Valor calórico</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="~/img/chocolot.jpeg" class="img-thumbnail img-fluid" alt="...">
+                        </td>
+                        <td class="align-middle">Sorvete de chocolate</td>
+                        <td class="align-middle">Um sorvete mt gostoso geladinho trincando delicia gelado mt bom barato top excelente</td>
+                        <td class="align-middle">R$ 3.00</td>
+                        <td class="align-middle">Leite, chocolate</td>
+                        <td class="align-middle">150kcal</td>
+                        <td class="align-middle">
+                            <div style="display: flex; flex-direction: column; margin-right: 2vw;">
+                                <button class="mb-3 btn btn-info">Editar</button>
+                                <button class="btn btn-danger">Excluir</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="~/img/virada.jpg" class="img-thumbnail img-fluid" alt="...">
+                        </td>
+                        <td class="align-middle">Virada à paulista</td>
+                        <td class="align-middle">Um prato mt bom suculento cheio de carne arroz feijão etc mt bom excelente coma coma tudo</td>
+                        <td class="align-middle">R$ 15.00</td>
+                        <td class="align-middle">Arroz, feijão, carne bovina, eggs</td>
+                        <td class="align-middle">450kcal</td>
+                        <td class="align-middle">
+                            <div style="display: flex; flex-direction: column; margin-right: 2vw;">
+                                <button class="mb-3 btn btn-info">Editar</button>
+                                <button class="btn btn-danger">Excluir</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="~/img/virada.jpg" class="img-thumbnail img-fluid" alt="...">
+                        </td>
+                        <td class="align-middle">Virada à paulista</td>
+                        <td class="align-middle">Um prato mt bom suculento cheio de carne arroz feijão etc mt bom excelente coma coma tudo</td>
+                        <td class="align-middle">R$ 15.00</td>
+                        <td class="align-middle">Arroz, feijão, carne bovina, eggs</td>
+                        <td class="align-middle">450kcal</td>
+                        <td class="align-middle">
+                            <div style="display: flex; flex-direction: column; margin-right: 2vw;">
+                                <button class="mb-3 btn btn-info">Editar</button>
+                                <button class="btn btn-danger">Excluir</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </row>
+    </div>
+</div>
+
+    <style>
+        .btnNavAtual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #800;
+            color: white;
+        }
+
+            .btnNavAtual:hover {
+                color: white;
+                background-color: #a00
+            }
+
+            .btnNavAtual:focus, .btnNav:focus {
+                box-shadow: 0 0 0 0;
+                border: 0 none;
+                outline: 0;
+            }
+
+        .btnNav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ddd;
+            color: #666;
+        }
+    </style>

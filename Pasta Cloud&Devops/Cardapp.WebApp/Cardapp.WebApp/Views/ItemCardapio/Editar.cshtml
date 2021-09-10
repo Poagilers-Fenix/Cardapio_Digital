@@ -1,4 +1,4 @@
-﻿
+﻿@model Item
 @{
     ViewData["Title"] = "Edite o item do cardápio";
 }
@@ -10,58 +10,54 @@
 
 
 <div class="card cardStyle mx-auto">
-    <row>
-        <div class="form-row">
-            <div class="col-4">
-                <label for="name">Nome</label>
-                <input type="text" class="form-control" id="name">
-            </div>
-            <div class="input-group col-4" style="display: flex; align-items: end">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="valor">R$</span>
+    <form asp-action="Editar">
+        <row>
+            <div class="form-row">
+                <div class="col-4">
+                    <label asp-for="Nome" for="name">Nome</label>
+                    <input asp-for="Nome" type="text" class="form-control" id="name">
                 </div>
-                <input type="number" class="form-control" placeholder="Informe o valor do item no formato R$ 00.00" aria-describedby="valor">
-            </div>
-            <div class="input-group col-4" style="display: flex; align-items: end">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="valorCalorico">Kcal</span>
+                <div class="input-group col-4" style="display: flex; align-items: end">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="valor">R$</span>
+                    </div>
+                    <input asp-for="Preco" type="number" class="form-control" placeholder="Informe o valor do item no formato R$ 00.00" aria-describedby="valor">
                 </div>
-                <input type="number" class="form-control" placeholder="Informe o valor calórico do item" aria-describedby="valorCalorico">
+                <div class="input-group col-4" style="display: flex; align-items: end">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="valorCalorico">Kcal</span>
+                    </div>
+                    <input asp-for="ValCalorico" type="number" class="form-control" placeholder="Informe o valor calórico do item" aria-describedby="valorCalorico">
+                </div>
             </div>
-        </div>
-    </row>
-    <row>
-        <div class="form-group mt-3">
-            <label for="descricao">Descrição do item</label>
-            <textarea class="form-control" id="descricao" rows="4"></textarea>
-        </div>
-    </row>
-    <row>
-        <div class="form-group">
-            <label for="ingredientes">Ingredientes do item</label>
-            <textarea class="form-control" id="descricao" rows="2"></textarea>
-        </div>
-    </row>
-    <row>
-        <div class="form-row formRowStyle">
-            <div class="col-4">
-                <label for="foto">Selecione a foto do item</label>
-                <input type="file" class="form-control-file" id="foto">
+        </row>
+        <row>
+            <div class="form-group mt-3">
+                <label asp-for="Descricao" for="descricao">Descrição do item</label>
+                <textarea asp-for="Descricao" class="form-control" id="descricao" rows="4"></textarea>
             </div>
-            <div class="col-4 d-flex flex-row justify-content-end">
-                <label class="form-check-label mr-5" for="destaque">
-                    Esse item está em destaque?
-                </label>
-                <input class="form-check-input" type="checkbox" id="destaque">
+        </row>
+        <row>
+            <div class="form-row formRowStyle">
+                <div class="col-4">
+                    <label asp-for="Foto" for="foto">Selecione a foto do item</label>
+                    <input asp-for="Foto" type="text" class="form-control-file" id="foto">
+                </div>
+                <div class="col-4 d-flex flex-row justify-content-end">
+                    <label class="form-check-label mr-5" for="destaque">
+                        Esse item está em destaque?
+                    </label>
+                    <input class="form-check-input" type="checkbox" id="destaque">
+                </div>
             </div>
-        </div>
-    </row>
-    <row>
-        <div class="form-row formRowStyleButton">
-            <button class="btn btn-outline-info mr-4">Salvar</button>
-            <button class="btn btn-outline-danger">Cancelar</button>
-        </div>
-    </row>
+        </row>
+        <row>
+            <div class="form-row formRowStyleButton">
+                <input type="submit" value="Salvar" class="btn btn-info" />
+                <a asp-action="Index"  class="btn btn-outline-danger">Cancelar</a>
+            </div>
+        </row>
+    </form>
 </div>
 
 <style>

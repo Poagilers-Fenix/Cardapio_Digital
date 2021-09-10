@@ -45,7 +45,7 @@ namespace Cardapp.WebApp.Models
         [Display(Name = "Valor calórico")]
         public int ValCalorico { get; set; }
 
-        [Column("DS_FOTO")]
+        [Column("FL_FOTO_IC")]
         [Display(Name = "Foto")]
         public string Foto { get; set; }
     }

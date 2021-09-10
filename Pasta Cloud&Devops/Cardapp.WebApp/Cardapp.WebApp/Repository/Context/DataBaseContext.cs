@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Oracle.EntityFrameworkCore;
 using System.IO;
 
-namespace DimDim.WebApp.Repository.Context
+namespace Cardapp.WebApp.Repository.Context
 {
     public class DataBaseContext : DbContext
     {
