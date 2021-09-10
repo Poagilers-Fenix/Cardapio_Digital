@@ -13,6 +13,16 @@ import Illumination from "./pages/Illumination";
 import Restaurants from "./pages/Establishment/Restaurants";
 import Categories from "./pages/Establishment/MenuCategory/Categories";
 import rateExperience from "./pages/rateExperience";
+import Comanda from "./components/pedido/Comanda";
+import AcompanharPedido from "./components/pedido/AcompanharPedido";
+import BotaoPedido from "./components/pedido/BotaoPedido";
+import InfoPedido from "./components/pedido/InfoPedido";
+import EditInfoClient from "./pages/Client/EditInfoClient";
+import ValidateUser from "./pages/Client/ValidateUser";
+import SeeMusic from "./pages/Music/SeeMusic";
+import Playlist from "./pages/Music/Playlist";
+import SuggestMusic from "./pages/Music/SuggestMusic";
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -33,6 +43,14 @@ export default function App() {
         <Stack.Screen name="Illumination" component={Illumination} />
         <Stack.Screen name="Categories" component={Categories} />
         <Stack.Screen name="rateExperience" component={rateExperience} />
+        <Stack.Screen name="Comanda" component={Comanda} />
+        <Stack.Screen name="AcompanharPedido" component={AcompanharPedido} />
+        <Stack.Screen name="InfoPedido" component={InfoPedido} />
+        <Stack.Screen name="EditInfoClient" component={EditInfoClient} />
+        <Stack.Screen name="ValidateUser" component={ValidateUser} />
+        <Stack.Screen name="SeeMusic" component={SeeMusic} />
+        <Stack.Screen name="Playlist" component={Playlist} />
+        <Stack.Screen name="SuggestMusic" component={SuggestMusic} />
       </Stack.Navigator>
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
     </NavigationContainer>
