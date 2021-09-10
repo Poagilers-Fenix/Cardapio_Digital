@@ -1,0 +1,91 @@
+[
+    {
+        "id": "1",
+        "name": "Let It Be",
+        "compositor": "The Beatles",
+        "image": "https://a-static.mlcdn.com.br/1500x1500/cd-the-beatles-let-it-be-universal/amusical/7817519471/ac80d5d1287e122509d2be87f91a465b.jpg",
+        "initalTime": "00:00",
+        "finalTime": "04:03"        
+    },
+
+    {
+        "id": "2",
+        "name": "Down Below",
+        "compositor": "Roddy Ricch",
+        "image": "https://studiosol-a.akamaihd.net/uploadfile/letras/albuns/b/3/b/9/1095811623772402.jpg",
+        "initalTime": "00:00",
+        "finalTime": "03:44"  
+    },
+
+    {
+        "id": "3",
+        "name": "Trampoline",
+        "compositor": "Shaed",
+        "image": "https://studiosol-a.akamaihd.net/uploadfile/letras/albuns/3/6/d/2/1098381624377456.jpg",
+        "initalTime": "00:00",
+        "finalTime": "03:04"  
+    },
+
+    {
+        "id": "4",
+        "name": "Pontos de Exclamação",
+        "compositor": "Jovem Dionisio",
+        "image": "https://assets.papelpop.com/wp-content/uploads/2020/03/Captura-de-Tela-2020-03-06-a%CC%80s-12.46.52.png",
+        "initalTime": "00:00",
+        "finalTime": "03:01"  
+    },
+
+    {
+        "id": "5",
+        "name": "Ainda É Tempo Pra Ser Feliz",
+        "compositor": "Zeca Pagodinho, Beth Carvalho",
+        "image": "https://cdns-images.dzcdn.net/images/cover/f3535d13a5ea067bf474aec985b0b41c/500x500.jpg",
+        "initalTime": "00:00",
+        "finalTime": "05:28"  
+    },
+
+    {
+        "id": "6",
+        "name": "Tá Rocheda",
+        "compositor": "Os Barões Da Pisadinha",
+        "image": "https://i.scdn.co/image/ab67616d0000b2737565a4bf6b379cab62afd320",
+        "initalTime": "00:00",
+        "finalTime": "03:23"  
+    },
+
+    {
+        "id": "7",
+        "name": "Sorrisos (feat. Lourena)",
+        "compositor": "L7NNON, Lourena",
+        "image": "https://images.genius.com/f698722add06a840e7c36cf84cad9c76.1000x1000x1.jpg",
+        "initalTime": "00:00",
+        "finalTime": "04:00"  
+    },
+
+    {
+        "id": "8",
+        "name": "Pupila",
+        "compositor": "ANAVITÓRIA, Vitor Kley",
+        "image": "https://upload.wikimedia.org/wikipedia/pt/9/9a/Anavit%C3%B3ria_e_Vitor_Kley_-_Pupila.jpg",
+        "initalTime": "00:00",
+        "finalTime": "03:22"  
+    },
+
+    {
+        "id": "9",
+        "name": "Oi",
+        "compositor": "Lagum",
+        "image": "https://studiosol-a.akamaihd.net/uploadfile/letras/albuns/9/f/1/9/737591560541333.jpg",
+        "initalTime": "00:00",
+        "finalTime": "02:56"  
+    },
+
+    {
+        "id": "10",
+        "name": "Pra Praia",
+        "compositor": "26:15",
+        "image": "https://i.ytimg.com/vi/kpb3uN2aYlo/maxresdefault.jpg",
+        "initalTime": "00:00",
+        "finalTime": "03:42"  
+    }
+]

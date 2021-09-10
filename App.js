@@ -19,6 +19,9 @@ import BotaoPedido from "./components/pedido/BotaoPedido";
 import InfoPedido from "./components/pedido/InfoPedido";
 import EditInfoClient from "./pages/Client/EditInfoClient";
 import ValidateUser from "./pages/Client/ValidateUser";
+import SeeMusic from "./pages/Music/SeeMusic";
+import Playlist from "./pages/Music/Playlist";
+import SuggestMusic from "./pages/Music/SuggestMusic";
 
 const Stack = createNativeStackNavigator();
 
@@ -45,6 +48,9 @@ export default function App() {
         <Stack.Screen name="InfoPedido" component={InfoPedido} />
         <Stack.Screen name="EditInfoClient" component={EditInfoClient} />
         <Stack.Screen name="ValidateUser" component={ValidateUser} />
+        <Stack.Screen name="SeeMusic" component={SeeMusic} />
+        <Stack.Screen name="Playlist" component={Playlist} />
+        <Stack.Screen name="SuggestMusic" component={SuggestMusic} />
       </Stack.Navigator>
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
     </NavigationContainer>

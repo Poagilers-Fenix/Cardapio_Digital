@@ -56,7 +56,7 @@ export default function SignIn({ navigation }) {
       />
       <Text style={styles.titulo}>Login</Text>
       <Text style={styles.subtitulo}>
-        Valide sua identidade para acessar a tela
+        Valide sua identidade para editar seu perfil
       </Text>
 
       <InputWithIcon
@@ -101,6 +101,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     color: "#333",
     marginBottom: 30,
+    textAlign: "center",
   },
   label: {
     color: "#666",

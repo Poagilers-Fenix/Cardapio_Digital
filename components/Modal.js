@@ -47,7 +47,11 @@ export default function Modal_({ navigation }) {
               acao={"AcompanharPedido"}
               navigation={navigation}
             />
-            <ModalButton titulo="Que música está tocando?" />
+            <ModalButton
+              titulo="Que música está tocando?"
+              acao={"SeeMusic"}
+              navigation={navigation}
+            />
             <ModalButton
               titulo="Opções de iluminação"
               acao={"Illumination"}
