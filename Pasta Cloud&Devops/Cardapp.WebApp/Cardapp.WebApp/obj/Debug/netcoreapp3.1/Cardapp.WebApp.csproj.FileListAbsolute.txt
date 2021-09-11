@@ -1639,3 +1639,4 @@ C:\Users\Henrique\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.W
 C:\Users\Henrique\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\Henrique\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\Henrique\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Henrique\Documents\GitHub\Cardapio_Digital\Pasta Cloud&Devops\Cardapp.WebApp\Cardapp.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ItemCardapio\Cadastrar.cshtml.g.cs

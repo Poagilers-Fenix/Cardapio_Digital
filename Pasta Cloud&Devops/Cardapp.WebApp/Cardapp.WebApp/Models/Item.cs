@@ -15,17 +15,9 @@ namespace Cardapp.WebApp.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CodigoItem { get; set; }
 
-        [Column("CD_ESTABELECIMENTO")]
-        public int CodigoEstab { get; set; }
-
         [Column("ST_DESTAQUE")]
         [Display(Name = "Destaque")]
         public char Destaque { get; set; }
-
-        [Column("CD_CATEGORIA")]
-        [ForeignKey("CD_CATEGORIA")]
-        [Display(Name = "Categoria")]
-        public int CodCategoria { get; set; }
 
         [Column("NM_ITEM_CARDAPIO")]
         [Display(Name = "Nome")]

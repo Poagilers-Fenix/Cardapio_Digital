@@ -36,6 +36,23 @@ namespace Cardapp.WebApp.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public IActionResult Cadastrar()
+        {
+            ViewBag.status = new List<string>(new string[] { "S", "N" });
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Cadastrar(Item item)
+        {
+            Console.WriteLine(item.Nome);
+            Console.WriteLine(item.CodigoItem);
+            ctx.Item.Add(item);
+            ctx.SaveChanges();
+            return RedirectToAction("Cadastrar");
+        }
         public IActionResult Editar(int id)
         {
             var item = ctx.Item.Find(id);
@@ -57,26 +74,12 @@ namespace Cardapp.WebApp.Controllers
         [HttpPost]
         public IActionResult Editar(Item item)
         {
-            try
-            {
-                Console.WriteLine(item.Nome);
-                //var entry = ctx.Item.SingleOrDefault(e => e.CodigoItem == item.CodigoItem);
-                //Console.WriteLine("VAL depois: " + entry);
-                //ctx.Entry(entry).CurrentValues.SetValues(item);
-                var res = ctx.Item.Find(item.CodigoItem);
-                Console.WriteLine(item.CodigoItem);
-                Console.WriteLine(res);
-                //ctx.Item.Update();
+
+                var entry = ctx.Item.First(e => e.CodigoItem == item.CodigoItem);
+                ctx.Entry(entry).CurrentValues.SetValues(item);
                 ctx.SaveChanges();
                 TempData["msg"] = "Item atualizado!";
                 return RedirectToAction("Index");
-            }
-            catch (Exception e)
-            {
-                TempData["msg"] = "Problema ao atualizar a conta, veja se as informações estão corretas.";
-                Console.WriteLine("Deu erro: " + e);
-                return RedirectToAction("Editar");
-            }
         }
 
 
