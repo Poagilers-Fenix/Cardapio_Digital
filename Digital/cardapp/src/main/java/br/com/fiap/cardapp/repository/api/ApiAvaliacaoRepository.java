@@ -36,14 +36,14 @@ public class ApiAvaliacaoRepository {
 	@GetMapping 
 	@Cacheable("avaliacoes")
 	public Page<Avaliacao> index(
-			@RequestParam(required = false) String status,
+			@RequestParam(required = false) String descricao,
 			@PageableDefault Pageable pageable) {
 		
-		if (status == null ) 
+		if (descricao == null ) 
 			return repository.findAll(pageable);
 		
 		return repository
-				.findByDescricaoContaining(status, pageable);
+				.findByDescricaoContaining(descricao, pageable);
 	}
 	
 	@PostMapping
