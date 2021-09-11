@@ -69,7 +69,7 @@
                         @foreach (var item in ViewBag.status)
                         {
                             <div class="form-group">
-                                <input type="radio" asp-for="Destaque" value="@item" />
+                                <input type="radio" required asp-for="Destaque" value="@item" />
                                 @if (item == "S")
                                 {
                                     <label asp-for="@item">Sim</label> }

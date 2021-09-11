@@ -47,11 +47,18 @@ namespace Cardapp.WebApp.Controllers
         [HttpPost]
         public IActionResult Cadastrar(Item item)
         {
-            Console.WriteLine(item.Nome);
-            Console.WriteLine(item.CodigoItem);
-            ctx.Item.Add(item);
-            ctx.SaveChanges();
-            return RedirectToAction("Cadastrar");
+           try
+            {
+                ctx.Item.Add(item);
+                ctx.SaveChanges();
+                TempData["msg"] = "Cadastrado com sucesso";
+                return RedirectToAction("Index");
+            } catch (Exception e)
+            {
+                TempData["msg"] = "Erro ao cadastrar";
+                Console.WriteLine(e);
+                return RedirectToAction("Cadastrar");
+            }
         }
         public IActionResult Editar(int id)
         {

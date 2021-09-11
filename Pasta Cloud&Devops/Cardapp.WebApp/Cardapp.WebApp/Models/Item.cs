@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace Cardapp.WebApp.Models
 {
@@ -30,8 +27,6 @@ namespace Cardapp.WebApp.Models
         [Column("VL_ITEM_CARDAPIO")]
         [Display(Name = "Preço")]
         public decimal Preco { get; set; }
-
-        //public string Ingredientes { get; set; }
 
         [Column("VL_CALORICO")]
         [Display(Name = "Valor calórico")]
