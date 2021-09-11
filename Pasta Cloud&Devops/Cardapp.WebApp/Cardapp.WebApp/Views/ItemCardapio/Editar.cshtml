@@ -3,76 +3,131 @@
     ViewData["Title"] = "Edite o item do cardápio";
 }
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="~/css/master.css" rel="stylesheet" />
 
-<h1 style="display: flex; justify-content: center;" class="my-5">Edite o item escolhido</h1>
+<style>
+    html {
+        background-color: #4196A6;
+    }
+</style>
 
+<div>
+    <div class="d-flex flex-column justify-content-between align-items-center small-left-content">
+        <a class="mt-3" asp-area="" asp-controller="Home" asp-action="Index">
+            <img src="~/img/logo.svg" width="100" />
+        </a>
+        <a asp-action="index" asp-controller="Home" class="mb-3" style="-moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1);">
+            <img src="/img/next.svg" width="80" />
+        </a>
+    </div>
+</div>
 
-<div class="card cardStyle mx-auto">
-    <form asp-action="Editar">
-        <row>
-            <div class="form-row">
-                <div class="col-4">
-                    <label asp-for="Nome" for="name">Nome</label>
-                    <input asp-for="Nome" type="text" class="form-control" id="name">
-                </div>
-                <div class="input-group col-4" style="display: flex; align-items: end">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="valor">R$</span>
+<div style="display: flex; flex-direction: column; justify-content: center; margin-left: 8%;">
+    <h1 style="display: flex; justify-content: center;" class="my-5">Edite o item escolhido</h1>
+    <div class="card cardStyle mx-auto" style="width: 70%">
+        <form asp-action="Editar">
+            <row>
+                <div class="form-row">
+                    <div class="col-4">
+                        <label asp-for="Nome" for="name">Nome</label>
+                        <input asp-for="Nome" type="text" class="form-control" id="name">
                     </div>
-                    <input asp-for="Preco" type="number" class="form-control" placeholder="Informe o valor do item no formato R$ 00.00" aria-describedby="valor">
-                </div>
-                <div class="input-group col-4" style="display: flex; align-items: end">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="valorCalorico">Kcal</span>
+                    <div class="input-group col-4" style="display: flex; align-items: end">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="valor">R$</span>
+                        </div>
+                        <input asp-for="Preco" type="number" class="form-control" placeholder="Informe o valor do item no formato R$ 00.00" aria-describedby="valor">
                     </div>
-                    <input asp-for="ValCalorico" type="number" class="form-control" placeholder="Informe o valor calórico do item" aria-describedby="valorCalorico">
+                    <div class="input-group col-4" style="display: flex; align-items: end">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="valorCalorico">Kcal</span>
+                        </div>
+                        <input asp-for="ValCalorico" type="number" class="form-control" placeholder="Informe o valor calórico do item" aria-describedby="valorCalorico">
+                    </div>
                 </div>
-            </div>
-        </row>
-        <row>
-            <div class="form-group mt-3">
-                <label asp-for="Descricao" for="descricao">Descrição do item</label>
-                <textarea asp-for="Descricao" class="form-control" id="descricao" rows="4"></textarea>
-            </div>
-        </row>
-        <row>
-            <div class="form-row formRowStyle">
-                <div class="col-4">
-                    <label asp-for="Foto" for="foto">Selecione a foto do item</label>
-                    <input asp-for="Foto" type="text" class="form-control-file" id="foto">
+            </row>
+            <row>
+                <div class="form-group mt-3">
+                    <label asp-for="Descricao" for="descricao">Descrição do item</label>
+                    <textarea asp-for="Descricao" class="form-control" id="descricao" rows="4"></textarea>
                 </div>
-                <div class="col-4 d-flex flex-row justify-content-end">
-                    <label class="form-check-label mr-5" for="destaque">
-                        Esse item está em destaque?
-                    </label>
-                    <input class="form-check-input" type="checkbox" id="destaque">
+            </row>
+            <row>
+                <div class="form-row formRowStyle">
+                    <div class="col-4">
+                        <label asp-for="Foto" for="foto">Selecione a foto do item</label>
+                        <input asp-for="Foto" type="text" class="form-control-file" id="foto">
+                    </div>
+                    <div class="col-4">
+                        <label class="form-check-label mr-5 mb-3" for="destaque">
+                            Esse item está em destaque?
+                        </label>
+                        @foreach (var item in ViewBag.status)
+                        {
+                            <div class="form-group">
+                                <input type="radio" asp-for="Destaque" value="@item" />
+                                @if (item == "S")
+                                {
+                                    <label asp-for="@item">Sim</label> }
+                                else
+                                {
+                                    <label asp-for="@item">Não</label>}
+                            </div>}
+                    </div>
                 </div>
-            </div>
-        </row>
-        <row>
-            <div class="form-row formRowStyleButton">
-                <input type="submit" value="Salvar" class="btn btn-info" />
-                <a asp-action="Index"  class="btn btn-outline-danger">Cancelar</a>
-            </div>
-        </row>
-    </form>
+            </row>
+            <row>
+                <div class="form-row formRowStyleButton">
+                    <input type="submit" value="Salvar" class="btn btn-info mr-3 px-5" />
+                    <a asp-action="Index" class="btn btn-outline-danger px-5">Cancelar</a>
+                </div>
+            </row>
+        </form>
+    </div>
 </div>
 
 <style>
+    .btnNavAtual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #800;
+        color: white;
+    }
+
+        .btnNavAtual:hover {
+            color: white;
+            background-color: #a00
+        }
+
+        .btnNavAtual:focus, .btnNav:focus {
+            box-shadow: 0 0 0 0;
+            border: 0 none;
+            outline: 0;
+        }
+
+    .btnNav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ddd;
+        color: #666;
+    }
     .cardStyle {
-        width: 90%; 
+        width: 90%;
         border: 2px solid #800;
         height: 80%;
         padding: 2%;
     }
+
     .formRowStyle {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
+
     .formRowStyleButton {
         display: flex;
         flex-direction: row;

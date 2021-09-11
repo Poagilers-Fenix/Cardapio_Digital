@@ -39,7 +39,7 @@ namespace Cardapp.WebApp.Controllers
         public IActionResult Editar(int id)
         {
             var item = ctx.Item.Find(id);
-            ViewBag.status = new List<string>(new string[] { "A", "D" });
+            ViewBag.status = new List<string>(new string[] { "S", "N" });
             return View(item);
         }
 
@@ -59,17 +59,22 @@ namespace Cardapp.WebApp.Controllers
         {
             try
             {
-                Console.WriteLine(ctx.Item);
-                var entry = ctx.Item.First(e => e.CodigoItem == item.CodigoItem);
-                ctx.Entry(entry).CurrentValues.SetValues(item);
+                Console.WriteLine(item.Nome);
+                //var entry = ctx.Item.SingleOrDefault(e => e.CodigoItem == item.CodigoItem);
+                //Console.WriteLine("VAL depois: " + entry);
+                //ctx.Entry(entry).CurrentValues.SetValues(item);
+                var res = ctx.Item.Find(item.CodigoItem);
+                Console.WriteLine(item.CodigoItem);
+                Console.WriteLine(res);
+                //ctx.Item.Update();
                 ctx.SaveChanges();
-                TempData["msg"] = "Conta atualizada!";
+                TempData["msg"] = "Item atualizado!";
                 return RedirectToAction("Index");
             }
             catch (Exception e)
             {
-                Console.WriteLine("Deu erro");
                 TempData["msg"] = "Problema ao atualizar a conta, veja se as informações estão corretas.";
+                Console.WriteLine("Deu erro: " + e);
                 return RedirectToAction("Editar");
             }
         }
