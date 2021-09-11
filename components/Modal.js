@@ -35,38 +35,60 @@ export default function Modal_({ navigation }) {
                 />
               </View>
             </View>
-            <ModalButton
-              disabled={false}
-              titulo="Fazer pedido"
-              acao={"Comanda"}
-              navigation={navigation}
-            />
-            <ModalButton
-              disabled={false}
-              titulo="Acompanhar Pedido"
-              acao={"AcompanharPedido"}
-              navigation={navigation}
-            />
-            <ModalButton
-              titulo="Que música está tocando?"
-              acao={"SeeMusic"}
-              navigation={navigation}
-            />
-            <ModalButton
-              titulo="Opções de iluminação"
-              acao={"Illumination"}
-              navigation={navigation}
-            />
-            <ModalButton
-              titulo="Avaliar experiência"
-              acao={"rateExperience"}
-              navigation={navigation}
-            />
-            <ModalButton
-              titulo="Editar perfil"
-              acao={"ValidateUser"}
-              navigation={navigation}
-            />
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => {
+                setModalVisible(false);
+                navigation.navigate("Comanda");
+              }}
+            >
+              <Text>Fazer Pedido</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => {
+                setModalVisible(false);
+                navigation.navigate("AcompanharPedido");
+              }}
+            >
+              <Text>Acompanhar Pedido</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => {
+                setModalVisible(false);
+                navigation.navigate("SeeMusic");
+              }}
+            >
+              <Text>Que música está tocando</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => {
+                setModalVisible(false);
+                navigation.navigate("Illumination");
+              }}
+            >
+              <Text>Opções de iluminação</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => {
+                setModalVisible(false);
+                navigation.navigate("rateExperience");
+              }}
+            >
+              <Text>Avaliar experiência</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => {
+                setModalVisible(false);
+                navigation.navigate("ValidateUser");
+              }}
+            >
+              <Text>Editar perfil</Text>
+            </TouchableOpacity>
           </View>
         </View>
         <View style={styles.modal}>
@@ -154,5 +176,33 @@ const styles = StyleSheet.create({
   button: {
     borderRadius: 20,
     padding: 10,
+  },
+
+  buttonContainer: {
+    borderWidth: 1,
+    borderColor: "#999",
+    borderRadius: 5,
+    padding: 10,
+    width: 310,
+    alignItems: "center",
+    marginBottom: 20,
+  },
+  disabled: {
+    backgroundColor: "#ccca",
+    borderColor: "#aaaa",
+    borderRadius: 5,
+    borderWidth: 1,
+    padding: 10,
+    width: 310,
+    alignItems: "center",
+    marginBottom: 20,
+  },
+  disabledButton: {
+    color: "#aaaa",
+    fontSize: 18,
+  },
+  button: {
+    color: "#999",
+    fontSize: 18,
   },
 });
