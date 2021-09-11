@@ -1,103 +1,129 @@
-/*
-
-Integrantes do grupo 
+/*Integrantes do grupo 
 
 Daniel Sanchez Melero - rm85109
 Eric Luiz Campos Pessoa - rm86405
 Giovanna de Mello Leiva - rm85817
 Henrique Neves Lago - rm84549
 Kaue Augusto Miranda Santos - rm85707
-Larissa Alves da Silva - rm86351
+Larissa Alves da Silva - rm86351*/
 
-*/
-
+CL SCR
 SET SERVEROUTPUT ON
 
+/*DROP FUNCTION RETORNA_RESTAURANTE;
+DROP FUNCTION RETORNA_CATEGORIA;
+DROP PROCEDURE CADASTRA_ITEM_CARDAPIO;
+DROP SEQUENCE SEQ_ITEM_CARDAPIO;*/
 
---Procedure que deve ser utilzada com o retorno da name_to_code_category, descobre os itens do cardápio baseado no código da categoria e restaurante que foram informados, e retorna a lista de item.
+/*Procedure para descobrir o código de um restaurante a partir de e-mail e senha*/
+CREATE OR REPLACE FUNCTION RETORNA_RESTAURANTE (
+   pEmail IN t_cpp_gerente.ds_email%TYPE,
+   pSenha IN t_cpp_gerente.ds_senha%TYPE) RETURN NUMBER IS
+   
+   vCodEstabelecimento t_cpp_estabelecimento.cd_estabelecimento%TYPE;
 
-CREATE OR REPLACE PROCEDURE lista_restaurante (
-    pcodrestaurante   IN    t_cpp_estabelecimento.cd_estabelecimento%TYPE,
-    pcategoria        IN    t_cpp_categoria.cd_categoria%TYPE,
-    plistaitem        OUT   SYS_REFCURSOR
-) IS
 BEGIN
-    OPEN plistaitem FOR SELECT
-                            nm_item_cardapio   AS "NOME",
-                            ds_item_cardapio   AS "ITEM",
-                            vl_item_cardapio   AS "VALOR",
-                            vl_calorico        AS "CALORIAS",
-                            fl_foto_ic         AS "FOTOS"
-                        FROM
-                            t_cpp_estabelecimento   est,
-                            t_cpp_item_cardapio     ica,
-                            t_cpp_categoria         cat
-                        WHERE
-                            ica.cd_estabelecimento = est.cd_estabelecimento
-                            AND ica.cd_categoria = cat.cd_categoria
-                            AND est.cd_estabelecimento = pcodrestaurante
-                            AND cat.cd_categoria = pcategoria;
-EXCEPTION
-    WHEN OTHERS THEN
-        dbms_output.put_line('Erro inespecífico! - ' || sqlcode);
-        dbms_output.put_line('Código do erro: ' || sqlerrm);
-END;
+    SELECT 
+        EST.CD_ESTABELECIMENTO
+    INTO
+        vCodEstabelecimento
+    FROM 
+        T_CPP_GERENTE GER
+    INNER JOIN
+        T_CPP_ESTABELECIMENTO EST       ON      (EST.CD_GERENTE = GER.CD_GERENTE)
+    WHERE 
+        GER.DS_EMAIL = pEmail AND
+        GER.DS_SENHA = pSenha;
+    RETURN vCodEstabelecimento;
+END RETORNA_RESTAURANTE;
 /
+/**/
+---------TESTE-------RETORNARESTAURANTE-------------
+VARIABLE v_cod_restaurante NUMBER
+execute :v_cod_restaurante:= retorna_restaurante('jorge@gmail.com', 'Bananinha123')
+PRINT v_cod_restaurante
+------------------------------------------------------------------------
 
-
-
---Procedure para descobrir o código de uma categoria de itens de um determinado restaurante a partir do nome da categoria, para ser utilizado na procedure lista_restaurante
-
-CREATE OR REPLACE PROCEDURE name_to_code_category (
-    pnomecategoria IN t_cpp_categoria.nm_categoria%TYPE,
-    pcodrestaurante IN t_cpp_estabelecimento.cd_estabelecimento%TYPE,
-    pcodcategoria OUT t_cpp_categoria.cd_categoria%TYPE
-) IS
+/*Função para retornar o número do código de categoria*/
+CREATE OR REPLACE FUNCTION RETORNA_CATEGORIA(
+    pEmail IN t_cpp_gerente.ds_email%TYPE,
+    pSenha IN t_cpp_gerente.ds_senha%TYPE,
+    pNomeCategoria IN t_cpp_categoria.nm_categoria%TYPE) RETURN NUMBER IS
+    
+    vCodCategoria t_cpp_categoria.cd_categoria%TYPE;
+    
 BEGIN
-    select 
-        cd_categoria
-    into
-        pcodcategoria
-    from 
-        t_cpp_categoria cat, t_cpp_estabelecimento est
-    where 
-        cat.cd_estabelecimento = est.cd_estabelecimento
-        and est.cd_estabelecimento = pcodrestaurante
-        and cat.nm_categoria = pnomecategoria;
-EXCEPTION
-    WHEN OTHERS THEN
-        dbms_output.put_line('Erro inespecífico! - ' || sqlcode);
-        dbms_output.put_line('Código do erro: ' || sqlerrm);
-END;
+    SELECT 
+        CD_CATEGORIA
+    INTO
+        vCodCategoria
+    FROM
+        T_CPP_CATEGORIA CAT
+    INNER JOIN
+        T_CPP_ESTABELECIMENTO EST       ON      (EST.CD_ESTABELECIMENTO = CAT.CD_ESTABELECIMENTO)
+    WHERE
+        CAT.CD_ESTABELECIMENTO = RETORNA_RESTAURANTE(pEmail, pSenha) AND
+        CAT.NM_CATEGORIA = pNomeCategoria;
+    RETURN vCodCategoria;
+END RETORNA_CATEGORIA;
 /
+/**/  
+-------------TESTE---------RETORNA CATEGORIA----------------------------------------------------------------------------
 
+VARIABLE v_cod_categoria NUMBER
+execute :v_cod_categoria:= retorna_categoria('jorge@gmail.com', 'Bananinha123', 'Sobremesa')
+PRINT v_cod_categoria
+-------------------------------------------------------------------------------------------------------------------------------------------
 
+------------SEQUENCIA PARA A PROCEDURE DE CADASTRO DE ITENS-----------------------------------------------
+CREATE SEQUENCE SEQ_ITEM_CARDAPIO
+INCREMENT BY 1
+START WITH  13;
+    
+--------------------------------------------------------------------------------------------------------------------------------------------
 
-
---Procedure para pegar todos os itens de um restaurante que estão com a opção de destaque. Essa procedure não precisa passar pela name_to_code_category
-
-CREATE OR REPLACE PROCEDURE destaque_por_restaurante (
-    pcodrestaurante IN t_cpp_estabelecimento.cd_estabelecimento%TYPE,
-    plistaitem OUT SYS_REFCURSOR
-    )IS
-    BEGIN
-    OPEN plistaitem FOR SELECT DISTINCT
-                            nm_item_cardapio   AS "NOME",
-                            ds_item_cardapio   AS "ITEM",
-                            vl_item_cardapio   AS "VALOR",
-                            vl_calorico        AS "CALORIAS",
-                            fl_foto_ic         AS "FOTOS"
-                        FROM
-                            t_cpp_estabelecimento   est,
-                            t_cpp_item_cardapio     ica,
-                            t_cpp_categoria         cat
-                        WHERE
-                            ica.cd_estabelecimento = est.cd_estabelecimento
-                            AND est.cd_estabelecimento = pcodrestaurante
-                            AND ica.st_destaque = '1';
-EXCEPTION
+--Procedure para cadastrar novos itens do cardápio a partir das credenciais de e-mail e senha e do nome da categoria cadastrada para o restaurante
+CREATE OR REPLACE PROCEDURE CADASTRA_ITEM_CARDAPIO(
+    pEmail IN t_cpp_gerente.ds_email%TYPE DEFAULT '0',
+    pSenha IN t_cpp_gerente.ds_senha%TYPE DEFAULT '0',
+    pNomeCategoria IN t_cpp_categoria.nm_categoria%TYPE DEFAULT 0,
+    pDestaque IN t_cpp_item_cardapio.st_destaque%TYPE DEFAULT '0',
+    pNomeItem IN t_cpp_item_cardapio.nm_item_cardapio%TYPE DEFAULT '0',
+    pDescItem IN t_cpp_item_cardapio.ds_item_cardapio%TYPE DEFAULT '0',
+    pVItem IN t_cpp_item_cardapio.vl_item_cardapio%TYPE DEFAULT 0,
+    pVCalorico IN t_cpp_item_cardapio.vl_calorico%TYPE DEFAULT 0,
+    pFoto IN t_cpp_item_cardapio.fl_foto_ic%TYPE DEFAULT '0') IS
+    
+    e_empty exception;
+    
+BEGIN
+    IF (pEmail = '0' OR pSenha = '0' OR pNomeCategoria= '0'  OR pNomeItem= '0' OR pDescItem= '0' OR pFoto = '0' ) OR (pVItem = 0 OR pVCalorico = 0)  THEN
+        RAISE e_empty;
+    END IF;
+    INSERT INTO
+        T_CPP_ITEM_CARDAPIO
+    VALUES(
+        seq_item_cardapio.NEXTVAL,
+        retorna_restaurante(pEmail, pSenha),        
+        retorna_categoria(pEmail, pSenha, pNomeCategoria),
+        pDestaque,
+        pNomeItem,
+        pDescItem,
+        pVItem,
+        pVCalorico,
+        pFoto);
+ EXCEPTION
+    WHEN e_empty THEN
+        DBMS_OUTPUT.PUT_LINE('Não é possível inserir parâmetros vazios. Todos devem ser preenchidos.');
     WHEN OTHERS THEN
-        dbms_output.put_line('Erro inespecífico! - ' || sqlcode);
-        dbms_output.put_line('Código do erro: ' || sqlerrm);
-END;
+        DBMS_OUTPUT.PUT_LINE('Erro inespecífico! - ' || SQLCODE);
+        DBMS_OUTPUT.PUT_LINE('Código do erro: ' || SQLERRM);
+COMMIT;
+END CADASTRA_ITEM_CARDAPIO;
 /
+            
+-----------TESTE CADASTRA_ITEM_CARDAPIO-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+EXECUTE CADASTRA_ITEM_CARDAPIO('jorge@gmail.com' , 'Bananinha123' ,'Sobremesa','1', 'Panna Cotta','Típica sobremesa italiana com gelatina de baunilha e frutas vermelhas' , 15, 175,'https://raw.githubusercontent.com/Poagilers-Fenix/Cardapio_Digital/PannaCotta.jpg' );
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SET SERVEROUTPUT OFF
