@@ -8,7 +8,6 @@ import {
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-import Botao from "../Button";
 import Modal from "../Modal";
 
 export default function AcompanharPedido({ navigation }) {

@@ -60,12 +60,9 @@ export default function SignUp({ navigation, route }) {
     let contador = 0;
     listUser.forEach((val, i) => {
       if (val.telefone === userCode) {
-        console.log(i);
-        console.log("Contador: " + listUser[i].nome);
         const novo = listUser.slice(1, i);
-        console.log(novo);
         setUsers(novo);
-        // navigation.navigate("InitialScreen");
+        navigation.navigate("InitialScreen");
       }
     });
     contador++;
