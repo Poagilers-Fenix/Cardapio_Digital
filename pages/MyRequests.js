@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -6,25 +6,40 @@ import {
   FlatList,
   SafeAreaView,
   TouchableOpacity,
+  ActivityIndicator,
 } from "react-native";
 import { Picker } from "@react-native-picker/picker";
-const getAllRequests = require("../API/getAllRequests.json");
+import { getItems } from "../util/api";
 import Modal from "../components/Modal";
 
-export default function TelaCadastro({navigation}) {
+export default function TelaCadastro({ navigation }) {
+  const [isLoading, setLoading] = useState(true);
+  const [listRequests, setListRequests] = useState([]);
   const [filterRequest, SetfilterRequest] = useState("");
+  useEffect(() => {
+    async function fetchData() {
+      setLoading(true);
+      const value = await getItems();
+      if (value.content !== null && value.content.length > 0) {
+        setListRequests(value.content);
+      }
+      setLoading(false);
+    }
+    fetchData();
+  }, []);
+
   const renderItem = ({ item }) => (
     <TouchableOpacity style={styles.cardList}>
-      <View style={{ flex: 2 }}>
+      <View style={{ flex: 3 }}>
         <Text style={(styles.cardText, { fontWeight: "bold", marginLeft: 10 })}>
-          {item.restaurante}
+          {item.nome}
         </Text>
       </View>
-      <View style={{ flex: 3 }}>
-        <Text style={styles.cardText}>{item.pedido[1]}</Text>
+      <View style={{ flex: 4 }}>
+        <Text style={styles.cardText}>{item.descricao}</Text>
       </View>
       <View style={{ flex: 2 }}>
-        <Text style={styles.cardText}>{item.preco}</Text>
+        <Text style={styles.cardText}>R$ {item.valor}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -52,14 +67,30 @@ export default function TelaCadastro({navigation}) {
         </View>
       </View>
       <SafeAreaView style={styles.container}>
-        <FlatList
-          data={getAllRequests}
-          renderItem={renderItem}
-          keyExtractor={(item) => item.id}
-        />
+        {isLoading && (
+          <View style={styles.messageContainer}>
+            <ActivityIndicator size="large" color="blue" />
+          </View>
+        )}
+        {!isLoading && listRequests.length === 0 && (
+          <View style={styles.messageContainer}>
+            <Text>Nenhum Produto cadastrado.</Text>
+          </View>
+        )}
+        {!isLoading && listRequests.length > 0 && (
+          <>
+            <FlatList
+              data={listRequests}
+              renderItem={renderItem}
+              keyExtractor={(item) => item.id}
+            />
+          </>
+        )}
       </SafeAreaView>
       <View style={styles.modal}>
-        <TouchableOpacity><Text style={styles.btnFooterBar}>Pedir novamente</Text></TouchableOpacity>
+        <TouchableOpacity>
+          <Text style={styles.btnFooterBar}>Pedir novamente</Text>
+        </TouchableOpacity>
         <Modal navigation={navigation} />
       </View>
     </View>
@@ -161,16 +192,16 @@ const styles = StyleSheet.create({
   },
   btnFooterBar: {
     height: 50,
-    color: 'white',
+    color: "white",
     borderRadius: 8,
-    color: '#fff',
-    backgroundColor: '#800',
-    textAlignVertical: 'center',
+    color: "#fff",
+    backgroundColor: "#800",
+    textAlignVertical: "center",
     fontSize: 20,
     width: 240,
     marginRight: 20,
     marginBottom: 15,
     paddingHorizontal: 10,
-    textAlign: 'center',
-  }
+    textAlign: "center",
+  },
 });

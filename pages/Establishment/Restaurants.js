@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -11,9 +11,24 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Modal from "../../components/Modal";
 import BotaoPedido from "../../components/pedido/BotaoPedido";
 
-const getAllMenu = require("../../API/getAllMenu.json");
+import { getEtab } from "../../util/api";
 
 export default function Restaurants({ navigation }) {
+  const [isLoading, setLoading] = useState(true);
+  const [listRequests, setListRequests] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      setLoading(true);
+      const value = await getEtab();
+      if (value.content !== null && value.content.length > 0) {
+        setListRequests(value.content);
+      }
+      setLoading(false);
+      console.log(listRequests);
+    }
+    fetchData();
+  }, []);
+
   const renderItem = ({ item }) => (
     <TouchableOpacity
       style={styles.cardList}
@@ -21,8 +36,12 @@ export default function Restaurants({ navigation }) {
         navigation.navigate({ name: "Menu", params: { items: item } })
       }
     >
-      <Text style={styles.cardText}>{item.restaurante}</Text>
-      <MaterialCommunityIcons name={item.icon} size={22} color="#B71C1C" />
+      <Text style={styles.cardText}>{item.nome_fantasia}</Text>
+      <MaterialCommunityIcons
+        name="food-drumstick-outline"
+        size={22}
+        color="#B71C1C"
+      />
     </TouchableOpacity>
   );
   return (
@@ -31,7 +50,7 @@ export default function Restaurants({ navigation }) {
       <Text style={styles.titulo}>Cardápio</Text>
       <SafeAreaView style={styles.container}>
         <FlatList
-          data={getAllMenu}
+          data={listRequests}
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
         />

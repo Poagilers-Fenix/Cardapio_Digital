@@ -33,7 +33,7 @@ export default function Categories({ route, navigation, acao }) {
   return (
     <View>
       <View style={styles.container}>
-        <Text style={styles.titulo}>{items.restaurante}</Text>
+        <Text style={styles.titulo}>{items.nome_fantasia}</Text>
       </View>
       <SafeAreaView style={(styles.container, { marginBottom: 140 })}>
         <FlatList
