@@ -1,25 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { BarCodeScanner } from 'expo-barcode-scanner';
 
 import Botao from '../components/Button';
-import Camera from '../components/Camera';
+// import Camera from '../components/Camera';
 
 export default function TelaCadastro({ navigation }) {
-  return(
+  const [hasPermission, setHasPermission] = useState(null);
+  const [scanned, setScanned] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      const { status } = await BarCodeScanner.requestPermissionsAsync();
+      setHasPermission(status === 'granted');
+    })();
+  }, []);
+
+  if (hasPermission === null){
+    return <Text>Requisitando permissão para ter acesso à camera.</Text>
+  }
+  if(hasPermission === false){
+    return <Text>A permissão de acesso à câmera foi negada</Text>
+  }
+
+  return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Aponte a câmera do celular para o QR code do restaurante em que estiver</Text>
 
       <View style={{ width: 320, height: 450 }}>
-          <Camera />
+        {/* <Camera /> */}
+        <BarCodeScanner 
+          onBarCodeScanned={scanned ? undefined : setScanned(true)}
+        />
+        {scanned && navigation.navigate("Restaurants")}
       </View>
 
       <View style={{ width: 250, marginTop: 30 }}>
-        <Botao 
-          titulo="Ver Cardápios" acao={"Restaurants"} 
+        <Botao
+          titulo="Ver Cardápios" acao={"Restaurants"}
           navigation={navigation}
         />
-        <Botao 
-          outlined={true} titulo="Ver meus pedidos" 
+        <Botao
+          outlined={true} titulo="Ver meus pedidos"
           acao={"MyRequests"} navigation={navigation}
         />
       </View>
@@ -36,7 +58,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   titulo: {
-    textAlign:'center',
+    textAlign: 'center',
     fontSize: 21,
     color: '#480000',
     marginBottom: 60,

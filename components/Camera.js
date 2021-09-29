@@ -1,36 +1,42 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, TextInput, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, TextInput, SafeAreaView } from 'react-native';
 import { Camera } from 'expo-camera'
 
-export default function ViewCamera() {
-    const [type, setType] = useState(Camera.Constants.Type.back);
+import { BarCodeScanner } from 'expo-barcode-scanner';
+
+export default function ViewCamera({ navigation }) {
     const [hasPermission, setHasPermission] = useState(null);
+    const [scanned, setScanned] = useState(false);
 
     useEffect(() => {
         (async () => {
-           const {status} = await Camera.requestPermissionsAsync();
-           setHasPermission(status === 'granted')
+            const { status } = await BarCodeScanner.requestPermissionsAsync();
+            setHasPermission(status === 'granted');
         })();
-    }, [])
-    if(hasPermission === null) {
-        return <View />
+    }, []);
+
+    if (hasPermission === null) {
+        return <Text>Requisitando permissão para ter acesso à camera.</Text>
     }
-    if(hasPermission === false) {
-        return <Text>Acesso negado!!</Text>
+    if (hasPermission === false) {
+        return <Text>A permissão de acesso à câmera foi negada</Text>
     }
-    return(
-    <SafeAreaView style={styles.container}>
-        <Camera 
-            style={{ flex: 1}}
-            type={type}
-        />
-    </SafeAreaView>
+    return (
+        <SafeAreaView style={styles.container}>
+            <Camera>
+                <BarCodeScanner
+                    onBarCodeScanned={scanned ? undefined : setScanned(true)}
+                />
+                {scanned && navigation.navigate("Illumination")}
+
+            </Camera>
+        </SafeAreaView>
     )
-  };
-  
-  const styles = StyleSheet.create({
+};
+
+const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
     }
-  });
+});
