@@ -3,7 +3,6 @@ import { View, Text, StyleSheet } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 
 import Botao from '../components/Button';
-// import Camera from '../components/Camera';
 
 export default function TelaCadastro({ navigation }) {
   const [hasPermission, setHasPermission] = useState(null);
@@ -23,16 +22,22 @@ export default function TelaCadastro({ navigation }) {
     return <Text>A permissão de acesso à câmera foi negada</Text>
   }
 
+  const handleBarCodeScanned = ({ type, data }) => {
+    setScanned(true);
+    alert(`data ${data.idEstab}`);
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Aponte a câmera do celular para o QR code do restaurante em que estiver</Text>
 
-      <View style={{ width: 320, height: 450 }}>
-        {/* <Camera /> */}
+      <View style={{ width: 350, height: 450 }}>
         <BarCodeScanner 
-          onBarCodeScanned={scanned ? undefined : setScanned(true)}
+          style={StyleSheet.absoluteFillObject}
+          onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
         />
-        {scanned && navigation.navigate("Restaurants")}
+        {scanned && navigation.navigate("Restaurants", setScanned(false))}
+        
       </View>
 
       <View style={{ width: 250, marginTop: 30 }}>
