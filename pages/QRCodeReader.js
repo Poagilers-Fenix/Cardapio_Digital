@@ -7,6 +7,7 @@ import Botao from '../components/Button';
 export default function TelaCadastro({ navigation }) {
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
+  const [data, setData] = useState('');
 
   useEffect(() => {
     (async () => {
@@ -24,20 +25,20 @@ export default function TelaCadastro({ navigation }) {
 
   const handleBarCodeScanned = ({ type, data }) => {
     setScanned(true);
-    alert(`data ${data.idEstab}`);
+    // alert(`Bar code with type ${type} and data ${data}`);
+    setData(data);
   };
 
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Aponte a câmera do celular para o QR code do restaurante em que estiver</Text>
 
-      <View style={{ width: 350, height: 450 }}>
+      <View style={{ width: 320, height: 450 }}>
         <BarCodeScanner 
           style={StyleSheet.absoluteFillObject}
           onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
         />
-        {scanned && navigation.navigate("Restaurants", setScanned(false))}
-        
+        {scanned && navigation.navigate("Menu", setScanned(false), idEstab={data})}
       </View>
 
       <View style={{ width: 250, marginTop: 30 }}>
