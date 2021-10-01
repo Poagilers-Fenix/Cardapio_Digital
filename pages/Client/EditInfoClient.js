@@ -8,7 +8,7 @@ import {
   Alert,
 } from "react-native";
 
-import { getUsers, setUsers } from "../../Storage";
+import { getUsers, removeUser, updateUser } from "../../API/database";
 import InputWithIcon from "../../components/input/InputWithIcon";
 
 export default function SignUp({ navigation, route }) {
@@ -17,14 +17,12 @@ export default function SignUp({ navigation, route }) {
   const [telefone, setTelefone] = useState("");
   const [senha, setSenha] = useState("");
   const [confirmarSenha, setConfirmarSenha] = useState("");
-  const [listUser, setListUser] = useState([]);
   const [clientInfo, setClientInfo] = useState({});
 
   useEffect(() => {
     async function fetchData() {
       const list = await getUsers();
       if (list !== null && list.length > 0) {
-        setListUser(list);
         list.find((e) => {
           if (e.telefone === userCode) {
             setClientInfo(e);
@@ -44,28 +42,20 @@ export default function SignUp({ navigation, route }) {
       Alert.alert("Erro", "Este telefone já está cadastrado");
       return;
     }
-    listUser.forEach((val) => {
-      if (val.telefone === userCode) {
-        val.nome = nome === "" ? val.nome : nome;
-        val.telefone = telefone === "" ? val.telefone : telefone;
-        val.senha = senha === "" ? val.senha : senha;
-        val.confirmarSenha =
-          confirmarSenha === "" ? val.confirmarSenha : confirmarSenha;
-      }
-      setUsers(listUser);
-      navigation.navigate("InitialScreen");
-    });
+    let usr = {
+      nome: !!nome ? nome : clientInfo.nome,
+      telefone: !!telefone ? telefone : clientInfo.telefone,
+      senha: !!senha ? senha : clientInfo.senha,
+      confirmarSenha: !!confirmarSenha
+        ? confirmarSenha
+        : clientInfo.confirmarSenha,
+    };
+    updateUser(usr, userCode);
+    navigation.navigate("InitialScreen");
   };
   const removeClient = () => {
-    let contador = 0;
-    listUser.forEach((val, i) => {
-      if (val.telefone === userCode) {
-        const novo = listUser.slice(1, i);
-        setUsers(novo);
-        navigation.navigate("InitialScreen");
-      }
-    });
-    contador++;
+    removeUser(userCode);
+    navigation.navigate("InitialScreen");
   };
   return (
     <View style={styles.container}>

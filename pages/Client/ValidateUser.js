@@ -8,7 +8,7 @@ import {
   Alert,
 } from "react-native";
 
-import { getUsers, setUsers } from "../../Storage";
+import { getUsers } from "../../API/database";
 import InputWithIcon from "../../components/input/InputWithIcon";
 
 export default function SignIn({ navigation }) {

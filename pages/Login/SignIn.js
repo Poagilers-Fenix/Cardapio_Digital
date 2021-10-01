@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { LogBox } from "react-native";
+LogBox.ignoreLogs(["Setting a timer"]);
 import {
   View,
   Text,
@@ -8,7 +10,7 @@ import {
   Alert,
 } from "react-native";
 
-import { getUsers, setUsers } from "../../Storage";
+import { getUsers } from "../../API/database";
 import InputWithIcon from "../../components/input/InputWithIcon";
 
 export default function SignIn({ navigation }) {

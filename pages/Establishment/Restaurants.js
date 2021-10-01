@@ -11,7 +11,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Modal from "../../components/Modal";
 import BotaoPedido from "../../components/pedido/BotaoPedido";
 
-import { getEtab } from "../../util/api";
+import { getEstab } from "../../API/database";
 
 export default function Restaurants({ navigation }) {
   const [isLoading, setLoading] = useState(true);
@@ -19,12 +19,11 @@ export default function Restaurants({ navigation }) {
   useEffect(() => {
     async function fetchData() {
       setLoading(true);
-      const value = await getEtab();
-      if (value.content !== null && value.content.length > 0) {
+      const value = await getEstab();
+      if (value !== null && value.length > 0) {
         setListRequests(value.content);
       }
       setLoading(false);
-      console.log(listRequests);
     }
     fetchData();
   }, []);
@@ -47,7 +46,7 @@ export default function Restaurants({ navigation }) {
   return (
     <View style={styles.container}>
       <BotaoPedido acao={"Comanda"} navigation={navigation} />
-      <Text style={styles.titulo}>Cardápio</Text>
+      <Text style={styles.titulo}>Restaurantes</Text>
       <SafeAreaView style={styles.container}>
         <FlatList
           data={listRequests}

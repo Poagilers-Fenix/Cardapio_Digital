@@ -8,8 +8,8 @@ import {
   Alert,
 } from "react-native";
 
-import { getUsers, setUsers } from "../../Storage";
 import InputWithIcon from "../../components/input/InputWithIcon";
+import { createUser, getUsers } from "../../API/database";
 
 export default function SignUp({ navigation }) {
   const [nome, setNome] = useState("");
@@ -46,16 +46,13 @@ export default function SignUp({ navigation }) {
       Alert.alert("Erro", "Este telefone já está cadastrado");
       return;
     }
-    let users = [...listUser];
     const usr = {
       nome,
       telefone,
       senha,
       confirmarSenha,
     };
-    users.push(usr);
-    setUsers(users);
-    setListUser(users);
+    createUser(usr);
     navigation.navigate("QRCodeReader");
   };
 

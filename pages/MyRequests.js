@@ -9,8 +9,8 @@ import {
   ActivityIndicator,
 } from "react-native";
 import { Picker } from "@react-native-picker/picker";
-import { getItems } from "../util/api";
 import Modal from "../components/Modal";
+import { getRequests } from "../API/database";
 
 export default function TelaCadastro({ navigation }) {
   const [isLoading, setLoading] = useState(true);
@@ -19,9 +19,9 @@ export default function TelaCadastro({ navigation }) {
   useEffect(() => {
     async function fetchData() {
       setLoading(true);
-      const value = await getItems();
-      if (value.content !== null && value.content.length > 0) {
-        setListRequests(value.content);
+      const value = await getRequests();
+      if (value !== null && value.length > 0) {
+        setListRequests(value);
       }
       setLoading(false);
     }
