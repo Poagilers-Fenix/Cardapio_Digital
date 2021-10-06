@@ -11,7 +11,7 @@ import {
 
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-const getSuggesMusic = require("../../API/getSuggestMusic.json");
+const getSuggesMusic = require("../../API/getPlaylist.json");
 
 export default function Playlist({ navigation }) {
   return (

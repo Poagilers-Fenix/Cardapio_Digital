@@ -12,30 +12,24 @@ import Modal from "../../components/Modal";
 import Button from "../../components/Button";
 import ProgressBar from "react-native-progress/Bar";
 
-const getSeeMusic = require("../../API/getMusic.json");
+const playlist = require("../../API/getPlaylist.json");
 
 export default function MusicaTocando({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Música</Text>
-      <FlatList
-        data={getSeeMusic}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <View style={styles.container}>
-            <Image style={styles.img} source={{ uri: item.image }} />
-            <Text style={styles.name}>{item.name}</Text>
-            <Text style={styles.compositor}>{item.compositor}</Text>
-            <ProgressBar progress={1.0} style={styles.bar} />
-            <View style={{ flexDirection: "row" }}>
-              <Text style={{ marginRight: 240, color: "#282C3F" }}>
-                {item.initalTime}
-              </Text>
-              <Text style={{ color: "#282C3F" }}>{item.finalTime}</Text>
-            </View>
-          </View>
-        )}
-      />
+      <View style={styles.container}>
+        <Image style={styles.img} source={{ uri: playlist[0].image }} />
+        <Text style={styles.name}>{playlist[0].name}</Text>
+        <Text style={styles.compositor}>{playlist[0].compositor}</Text>
+        <ProgressBar progress={1.0} style={styles.bar} />
+        <View style={{ flexDirection: "row" }}>
+          <Text style={{ marginRight: 240, color: "#282C3F" }}>
+            {playlist[0].initalTime}
+          </Text>
+          <Text style={{ color: "#282C3F" }}>{playlist[0].finalTime}</Text>
+        </View>
+      </View>
 
       <View style={styles.modal}>
         <Button
@@ -87,8 +81,8 @@ const styles = StyleSheet.create({
   },
   bar: {
     marginTop: 10,
+    width: 350,
     color: "steelblue",
-    width: "100%",
     alignSelf: "center",
   },
 });
