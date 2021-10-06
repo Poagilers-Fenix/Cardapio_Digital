@@ -6,23 +6,33 @@ import {
   TouchableOpacity,
   FlatList,
   SafeAreaView,
+  ActivityIndicator,
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Modal from "../../components/Modal";
 import BotaoPedido from "../../components/pedido/BotaoPedido";
-
-import { getEstab } from "../../API/database";
+import { firebase } from "../../util/config";
 
 export default function Restaurants({ navigation }) {
   const [isLoading, setLoading] = useState(true);
   const [listRequests, setListRequests] = useState([]);
+
+  async function getEstab() {
+    var arrayItems = [];
+    var db = firebase.database().ref().child("estab/");
+    db.on("child_added", (snapshot) => {
+      arrayItems.push(snapshot.val());
+      setListRequests(
+        arrayItems.filter((val) => {
+          return val;
+        })
+      );
+    });
+  }
   useEffect(() => {
     async function fetchData() {
       setLoading(true);
-      const value = await getEstab();
-      if (value !== null && value.length > 0) {
-        setListRequests(value.content);
-      }
+      await getEstab();
       setLoading(false);
     }
     fetchData();
@@ -35,7 +45,7 @@ export default function Restaurants({ navigation }) {
         navigation.navigate({ name: "Menu", params: { items: item } })
       }
     >
-      <Text style={styles.cardText}>{item.nome_fantasia}</Text>
+      <Text style={styles.cardText}>{item.NomeFantasia}</Text>
       <MaterialCommunityIcons
         name="food-drumstick-outline"
         size={22}
@@ -48,10 +58,15 @@ export default function Restaurants({ navigation }) {
       <BotaoPedido acao={"Comanda"} navigation={navigation} />
       <Text style={styles.titulo}>Restaurantes</Text>
       <SafeAreaView style={styles.container}>
+        {isLoading && (
+          <View style={styles.messageContainer}>
+            <ActivityIndicator size="large" color="blue" />
+          </View>
+        )}
         <FlatList
           data={listRequests}
           renderItem={renderItem}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item) => item.CodigoEstabelecimento}
         />
       </SafeAreaView>
       <View style={styles.modal}>

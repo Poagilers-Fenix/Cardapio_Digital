@@ -8,7 +8,7 @@ import {
   Alert,
 } from "react-native";
 
-import { getUsers } from "../../API/database";
+import { firebase } from "../../util/config";
 import InputWithIcon from "../../components/input/InputWithIcon";
 
 export default function SignIn({ navigation }) {
@@ -16,12 +16,15 @@ export default function SignIn({ navigation }) {
   const [senha, setSenha] = useState("");
   const [listUser, setListUser] = useState([]);
 
+  async function getUsers() {
+    var db = firebase.database().ref().child("client/");
+    db.on("child_added", (snapshot) => {
+      listUser.push(snapshot.val());
+    });
+  }
   useEffect(() => {
     async function fetchData() {
-      const list = await getUsers();
-      if (list !== null && list.length > 0) {
-        setListUser(list);
-      }
+      await getUsers();
     }
     fetchData();
   }, []);

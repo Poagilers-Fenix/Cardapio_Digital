@@ -8,7 +8,8 @@ import {
   Alert,
 } from "react-native";
 
-import { getUsers, removeUser, updateUser } from "../../API/database";
+import { firebase } from "../../util/config";
+import { removeUser, updateUser } from "../../API/database";
 import InputWithIcon from "../../components/input/InputWithIcon";
 
 export default function SignUp({ navigation, route }) {
@@ -19,16 +20,21 @@ export default function SignUp({ navigation, route }) {
   const [confirmarSenha, setConfirmarSenha] = useState("");
   const [clientInfo, setClientInfo] = useState({});
 
+  async function getUsers() {
+    var arrayAllClient = [];
+    var db = firebase.database().ref().child("client/");
+    db.on("child_added", (snapshot) => {
+      arrayAllClient.push(snapshot.val());
+      arrayAllClient.find((e) => {
+        if (e.telefone === userCode) {
+          setClientInfo(e);
+        }
+      });
+    });
+  }
   useEffect(() => {
     async function fetchData() {
       const list = await getUsers();
-      if (list !== null && list.length > 0) {
-        list.find((e) => {
-          if (e.telefone === userCode) {
-            setClientInfo(e);
-          }
-        });
-      }
     }
     fetchData();
   }, []);

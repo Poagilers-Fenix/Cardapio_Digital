@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Text,
   StyleSheet,
@@ -7,39 +7,69 @@ import {
   FlatList,
   Image,
   TouchableOpacity,
+  ActivityIndicator,
 } from "react-native";
-const getAllFood = require("../../../API/getAllFood.json");
+// const getAllFood = require("../../../API/getAllFood.json");
+import { firebase } from "../../../util/config";
 
 export default function Categories({ route, navigation, acao }) {
   const { items } = route.params;
+  const [isLoading, setLoading] = useState(true);
+  const [listItems, setListItems] = useState([]);
+
+  async function getItemsById() {
+    var arrayItems = [];
+    var db = firebase.database().ref().child("itemCardapio/");
+    db.on("child_added", (snapshot) => {
+      arrayItems.push(snapshot.val());
+      setListItems(
+        arrayItems.filter((val) => {
+          return val.CodigoEstabelecimento == items.CodigoEstabelecimento;
+        })
+      );
+    });
+  }
+  useEffect(() => {
+    async function fetchData() {
+      setLoading(true);
+      await getItemsById();
+      setLoading(false);
+    }
+    fetchData();
+  }, []);
   const renderItem = ({ item }) => (
     <TouchableOpacity style={styles.subContainer}>
       <View>
-        <Image style={styles.imgList} source={{ uri: item.img }}></Image>
+        <Image style={styles.imgList} source={{ uri: item.Foto }}></Image>
       </View>
       <View style={styles.cardList}>
         <Text
           style={(styles.cardText, { color: "#880000", fontWeight: "bold" })}
         >
-          {item.name}
+          {item.Nome}
         </Text>
         <Text style={(styles.cardText, { fontWeight: "bold" })}>
-          {item.calories} Kcal
+          {item.ValCalorico} Kcal
         </Text>
-        <Text style={styles.cardText}>{item.description}</Text>
+        <Text style={styles.cardText}>{item.Descricao}</Text>
       </View>
     </TouchableOpacity>
   );
   return (
     <View>
       <View style={styles.container}>
-        <Text style={styles.titulo}>{items.nome_fantasia}</Text>
+        <Text style={styles.titulo}>{items.NomeFantasia}</Text>
       </View>
       <SafeAreaView style={(styles.container, { marginBottom: 140 })}>
+        {isLoading && (
+          <View style={styles.messageContainer}>
+            <ActivityIndicator size="large" color="blue" />
+          </View>
+        )}
         <FlatList
-          data={getAllFood}
+          data={listItems}
           renderItem={renderItem}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item) => item.CodigoItem}
         />
       </SafeAreaView>
     </View>
@@ -80,6 +110,5 @@ const styles = StyleSheet.create({
   },
   cardText: {
     marginHorizontal: 0,
-    textAlign: "center",
   },
 });

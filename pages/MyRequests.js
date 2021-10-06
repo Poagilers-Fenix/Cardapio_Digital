@@ -10,36 +10,24 @@ import {
 } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import Modal from "../components/Modal";
-import { getRequests } from "../API/database";
+const getAllRequests = require("../API/getAllRequests.json");
 
 export default function TelaCadastro({ navigation }) {
   const [isLoading, setLoading] = useState(true);
   const [listRequests, setListRequests] = useState([]);
   const [filterRequest, SetfilterRequest] = useState("");
-  useEffect(() => {
-    async function fetchData() {
-      setLoading(true);
-      const value = await getRequests();
-      if (value !== null && value.length > 0) {
-        setListRequests(value);
-      }
-      setLoading(false);
-    }
-    fetchData();
-  }, []);
-
   const renderItem = ({ item }) => (
     <TouchableOpacity style={styles.cardList}>
       <View style={{ flex: 3 }}>
         <Text style={(styles.cardText, { fontWeight: "bold", marginLeft: 10 })}>
-          {item.nome}
+          {item.restaurante}
         </Text>
       </View>
       <View style={{ flex: 4 }}>
-        <Text style={styles.cardText}>{item.descricao}</Text>
+        <Text style={styles.cardText}>{item.pedido}</Text>
       </View>
-      <View style={{ flex: 2 }}>
-        <Text style={styles.cardText}>R$ {item.valor}</Text>
+      <View style={{ flex: 3 }}>
+        <Text style={styles.cardText}>R$ {item.preco}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -67,25 +55,11 @@ export default function TelaCadastro({ navigation }) {
         </View>
       </View>
       <SafeAreaView style={styles.container}>
-        {isLoading && (
-          <View style={styles.messageContainer}>
-            <ActivityIndicator size="large" color="blue" />
-          </View>
-        )}
-        {!isLoading && listRequests.length === 0 && (
-          <View style={styles.messageContainer}>
-            <Text>Nenhum Produto cadastrado.</Text>
-          </View>
-        )}
-        {!isLoading && listRequests.length > 0 && (
-          <>
-            <FlatList
-              data={listRequests}
-              renderItem={renderItem}
-              keyExtractor={(item) => item.id}
-            />
-          </>
-        )}
+        <FlatList
+          data={getAllRequests}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id}
+        />
       </SafeAreaView>
       <View style={styles.modal}>
         <TouchableOpacity>

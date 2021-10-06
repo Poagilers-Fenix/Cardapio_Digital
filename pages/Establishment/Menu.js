@@ -12,7 +12,6 @@ export default function Menu({ route, navigation, acao }) {
   const { items } = route.params;
   return (
     <NavigationContainer independent={true}>
-      <BotaoPedido acao={"Comanda"} navigation={navigation} />
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {

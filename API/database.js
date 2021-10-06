@@ -1,4 +1,4 @@
-import { firebase } from "./config";
+import { firebase } from "../util/config";
 
 export function createUser(records) {
   const userId = firebase.database().ref().child("client/").push().key;
@@ -16,7 +16,6 @@ export async function updateUser(user, phone) {
     .ref("/client/" + userByPhone[0].userId)
     .set(user);
 }
-
 export async function getUsers() {
   var arraylistClients = [];
   var db = firebase.database().ref().child("client/");
@@ -36,27 +35,9 @@ export async function getUserByPhone(phone) {
 
 export async function removeUser(phone) {
   let user = await getUserByPhone(phone);
-  let cliente_ref = firebase.database().ref("/client/" + user[0].userId);
+  let cliente_ref = firebase.database().ref("client/" + user[0].userId);
 
   cliente_ref.remove().catch(function (error) {
     return { success: false, message: `Removed failed: ${error.message}` };
   });
-}
-
-export async function getEstab() {
-  var arraylistEstab = [];
-  var db = firebase.database().ref().child("estab/");
-  db.on("child_added", (snapshot) => {
-    arraylistEstab.push(snapshot.val());
-  });
-  return arraylistEstab;
-}
-
-export async function getRequests() {
-  var arrayUserRequest = [];
-  var db = firebase.database().ref().child("requests/");
-  db.on("child_added", (snapshot) => {
-    arrayUserRequest.push(snapshot.val());
-  });
-  return arrayUserRequest;
 }

@@ -7,9 +7,9 @@ import {
   TouchableOpacity,
   Alert,
 } from "react-native";
-
+import { firebase } from "../../util/config";
 import InputWithIcon from "../../components/input/InputWithIcon";
-import { createUser, getUsers } from "../../API/database";
+import { createUser } from "../../API/database";
 
 export default function SignUp({ navigation }) {
   const [nome, setNome] = useState("");
@@ -18,12 +18,15 @@ export default function SignUp({ navigation }) {
   const [confirmarSenha, setConfirmarSenha] = useState("");
   const [listUser, setListUser] = useState([]);
 
+  async function getUsers() {
+    var db = firebase.database().ref().child("client/");
+    db.once("child_added", (snapshot) => {
+      listUser.push(snapshot.val());
+    });
+  }
   useEffect(() => {
     async function fetchData() {
-      const list = await getUsers();
-      if (list !== null && list.length > 0) {
-        setListUser(list);
-      }
+      await getUsers();
     }
     fetchData();
   }, []);
