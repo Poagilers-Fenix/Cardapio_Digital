@@ -27,7 +27,11 @@ export default function TelaCadastro({ navigation }) {
     setScanned(true);
     // alert(`Bar code with type ${type} and data ${data}`);
     setData(data);
-    console.log(data);
+    setScanned(false);
+    navigation.navigate({
+      name: "Menu",
+      params: { items: data },
+    });
   };
 
   return (
@@ -41,7 +45,6 @@ export default function TelaCadastro({ navigation }) {
           style={StyleSheet.absoluteFillObject}
           onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
         />
-        {scanned && navigation.navigate("Restaurants")}
       </View>
 
       <View style={{ width: 250, marginTop: 30 }}>

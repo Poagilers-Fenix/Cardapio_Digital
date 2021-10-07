@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import Categories from "./MenuCategory/Categories";
-
-import BotaoPedido from "../../components/pedido/BotaoPedido";
+import { firebase } from "../../util/config";
 
 const Tab = createBottomTabNavigator();
+
 export default function Menu({ route, navigation, acao }) {
-  const { items } = route.params;
+  let { items } = route.params;
   return (
     <NavigationContainer independent={true}>
       <Tab.Navigator

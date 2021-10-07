@@ -9,13 +9,14 @@ import {
   TouchableOpacity,
   ActivityIndicator,
 } from "react-native";
-// const getAllFood = require("../../../API/getAllFood.json");
+
 import { firebase } from "../../../util/config";
 
-export default function Categories({ route, navigation, acao }) {
-  const { items } = route.params;
+export default function Categories({ route }) {
+  let { items } = route.params;
   const [isLoading, setLoading] = useState(true);
   const [listItems, setListItems] = useState([]);
+  const [estab, setEstab] = useState([]);
 
   async function getItemsById() {
     var arrayItems = [];
@@ -24,14 +25,34 @@ export default function Categories({ route, navigation, acao }) {
       arrayItems.push(snapshot.val());
       setListItems(
         arrayItems.filter((val) => {
-          return val.CodigoEstabelecimento == items.CodigoEstabelecimento;
+          return (
+            val.CodigoEstabelecimento ==
+            (typeof items == "string" ? items : items.CodigoEstabelecimento)
+          );
         })
       );
     });
   }
+
+  async function getEstabById() {
+    var arrayEstab = [];
+    var db = firebase.database().ref().child("estab/");
+    db.on("child_added", (snapshot) => {
+      arrayEstab.push(snapshot.val());
+      setEstab(
+        arrayEstab.filter((val) => {
+          return val.CodigoEstabelecimento == items;
+        })
+      );
+    });
+  }
+
   useEffect(() => {
     async function fetchData() {
       setLoading(true);
+      if (typeof items == "string") {
+        await getEstabById();
+      }
       await getItemsById();
       setLoading(false);
     }
@@ -58,7 +79,12 @@ export default function Categories({ route, navigation, acao }) {
   return (
     <View>
       <View style={styles.container}>
-        <Text style={styles.titulo}>{items.NomeFantasia}</Text>
+        {estab.length > 0 && (
+          <Text style={styles.titulo}>{estab[0].NomeFantasia}</Text>
+        )}
+        {typeof items == "object" && (
+          <Text style={styles.titulo}>{items.NomeFantasia}</Text>
+        )}
       </View>
       <SafeAreaView style={(styles.container, { marginBottom: 140 })}>
         {isLoading && (
