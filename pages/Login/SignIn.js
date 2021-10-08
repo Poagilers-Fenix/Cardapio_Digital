@@ -8,47 +8,32 @@ import {
   StyleSheet,
   TouchableOpacity,
   Alert,
+  ActivityIndicator,
 } from "react-native";
-import { firebase } from "../../util/config";
 import InputWithIcon from "../../components/input/InputWithIcon";
+import { firebase } from "../../util/config";
 
 export default function SignIn({ navigation }) {
-  const [telefone, setTelefone] = useState("");
+  const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
-  const [listUser, setListUser] = useState([]);
-
-  async function getUsers() {
-    var db = firebase.database().ref().child("client/");
-    db.on("child_added", (snapshot) => {
-      listUser.push(snapshot.val());
-    });
-  }
-  useEffect(() => {
-    async function fetchData() {
-      await getUsers();
-    }
-    fetchData();
-  }, []);
+  const [user, setUser] = useState(null);
+  const [loading, isLoading] = useState(false);
 
   const handleEnter = () => {
-    const usr = listUser.find((e) => {
-      return e.telefone === telefone;
-    });
-    if (telefone === "" || senha === "") {
-      Alert.alert("Erro", "Algum campo não foi preenchido");
-      return;
-    }
-    if (!usr) {
-      Alert.alert("Erro", "Usuario não encontrado!");
-      return;
-    }
-    if (senha !== usr.senha) {
-      Alert.alert("Erro", "Email e/ou senha inválidos");
-      return;
-    }
-    navigation.navigate("QRCodeReader");
+    isLoading(true);
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, senha)
+      .then((response) => {
+        setUser(response.user);
+        navigation.navigate("QRCodeReader");
+        isLoading(false);
+      })
+      .catch((error) => {
+        isLoading(false);
+        alert(error);
+      });
   };
-
   return (
     <View style={styles.container}>
       <Image
@@ -58,18 +43,18 @@ export default function SignIn({ navigation }) {
       <Text style={styles.titulo}>Login</Text>
       <Text style={styles.subtitulo}>Bem-vindo(a) de volta!</Text>
 
-      <InputWithIcon
-        title="Telefone"
-        icon="cellphone-android"
-        type="numeric"
-        onChange={setTelefone}
-      />
+      <InputWithIcon title="E-mail" icon="email-outline" onChange={setEmail} />
 
       <InputWithIcon title="Senha" icon="lock-outline" onChange={setSenha} />
 
       <View style={{ width: 250, marginTop: 30 }}>
         <TouchableOpacity style={styles.buttonContainer} onPress={handleEnter}>
-          <Text style={styles.full}>Login</Text>
+          {loading && (
+            <Text style={styles.full}>
+              <ActivityIndicator size="large" color="#fff" />
+            </Text>
+          )}
+          {!loading && <Text style={styles.full}>Login </Text>}
         </TouchableOpacity>
         <TouchableOpacity style={{ alignItems: "center" }}>
           <Text style={styles.link}>Esqueceu a senha?</Text>

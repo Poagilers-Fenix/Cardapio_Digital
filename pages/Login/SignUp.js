@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   Alert,
+  ActivityIndicator,
 } from "react-native";
 import { firebase } from "../../util/config";
 import InputWithIcon from "../../components/input/InputWithIcon";
@@ -13,50 +14,31 @@ import { createUser } from "../../API/database";
 
 export default function SignUp({ navigation }) {
   const [nome, setNome] = useState("");
-  const [telefone, setTelefone] = useState("");
+  const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const [loading, isLoading] = useState(false);
   const [confirmarSenha, setConfirmarSenha] = useState("");
-  const [listUser, setListUser] = useState([]);
-
-  async function getUsers() {
-    var db = firebase.database().ref().child("client/");
-    db.once("child_added", (snapshot) => {
-      listUser.push(snapshot.val());
-    });
-  }
-  useEffect(() => {
-    async function fetchData() {
-      await getUsers();
-    }
-    fetchData();
-  }, []);
 
   const handleRegister = () => {
-    if (
-      nome === "" ||
-      telefone === "" ||
-      senha === "" ||
-      confirmarSenha === ""
-    ) {
-      Alert.alert("Erro", "Algum campo não foi preenchido");
-      return;
-    }
-    if (senha !== confirmarSenha) {
-      Alert.alert("Erro", "As Senhas estão diferentes");
-      return;
-    }
-    if (listUser.filter((e) => e.telefone === telefone).length > 0) {
-      Alert.alert("Erro", "Este telefone já está cadastrado");
-      return;
-    }
-    const usr = {
-      nome,
-      telefone,
-      senha,
-      confirmarSenha,
-    };
-    createUser(usr);
-    navigation.navigate("QRCodeReader");
+    isLoading(true);
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, senha)
+      .then((response) => {
+        console.log(response.user);
+        const usr = {
+          nome,
+          email,
+          uid: response.user.uid,
+        };
+        createUser(usr);
+        navigation.navigate("QRCodeReader");
+        isLoading(false);
+      })
+      .catch((error) => {
+        isLoading(false);
+        alert(error);
+      });
   };
 
   return (
@@ -69,12 +51,7 @@ export default function SignUp({ navigation }) {
 
       <InputWithIcon title="Nome" icon="account" onChange={setNome} />
 
-      <InputWithIcon
-        title="Telefone"
-        icon="cellphone-android"
-        type="numeric"
-        onChange={setTelefone}
-      />
+      <InputWithIcon title="E-mail" icon="email-outline" onChange={setEmail} />
 
       <InputWithIcon title="Senha" icon="lock-outline" onChange={setSenha} />
       <InputWithIcon
@@ -88,7 +65,12 @@ export default function SignUp({ navigation }) {
           style={styles.buttonContainer}
           onPress={handleRegister}
         >
-          <Text style={styles.full}>Cadastro</Text>
+          {loading && (
+            <Text style={styles.full}>
+              <ActivityIndicator size="large" color="#fff" />
+            </Text>
+          )}
+          {!loading && <Text style={styles.full}>Cadastro</Text>}
         </TouchableOpacity>
 
         <TouchableOpacity style={{ alignItems: "center" }}>

@@ -6,49 +6,33 @@ import {
   StyleSheet,
   TouchableOpacity,
   Alert,
+  ActivityIndicator,
 } from "react-native";
 
 import { firebase } from "../../util/config";
 import InputWithIcon from "../../components/input/InputWithIcon";
 
 export default function SignIn({ navigation }) {
-  const [telefone, setTelefone] = useState("");
+  const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
-  const [listUser, setListUser] = useState([]);
-
-  async function getUsers() {
-    var db = firebase.database().ref().child("client/");
-    db.on("child_added", (snapshot) => {
-      listUser.push(snapshot.val());
-    });
-  }
-  useEffect(() => {
-    async function fetchData() {
-      await getUsers();
-    }
-    fetchData();
-  }, []);
+  const [loading, isLoading] = useState(false);
 
   const handleEnter = () => {
-    const usr = listUser.find((e) => {
-      return e.telefone === telefone;
-    });
-    if (telefone === "" || senha === "") {
-      Alert.alert("Erro", "Algum campo não foi preenchido");
-      return;
-    }
-    if (!usr) {
-      Alert.alert("Erro", "Usuario não encontrado!");
-      return;
-    }
-    if (senha !== usr.senha) {
-      Alert.alert("Erro", "Email e/ou senha inválidos");
-      return;
-    }
-    navigation.navigate({
-      name: "EditInfoClient",
-      params: { userCode: telefone },
-    });
+    isLoading(true);
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, senha)
+      .then((response) => {
+        navigation.navigate({
+          name: "EditInfoClient",
+          params: { userCode: email },
+        });
+        isLoading(false);
+      })
+      .catch((error) => {
+        isLoading(false);
+        alert(error);
+      });
   };
 
   return (
@@ -62,18 +46,18 @@ export default function SignIn({ navigation }) {
         Valide sua identidade para editar seu perfil
       </Text>
 
-      <InputWithIcon
-        title="Telefone"
-        icon="cellphone-android"
-        type="numeric"
-        onChange={setTelefone}
-      />
+      <InputWithIcon title="E-mail" icon="email-outline" onChange={setEmail} />
 
       <InputWithIcon title="Senha" icon="lock-outline" onChange={setSenha} />
 
       <View style={{ width: 250, marginTop: 30 }}>
         <TouchableOpacity style={styles.buttonContainer} onPress={handleEnter}>
-          <Text style={styles.full}>Login</Text>
+          {loading && (
+            <Text style={styles.full}>
+              <ActivityIndicator size="large" color="#fff" />
+            </Text>
+          )}
+          {!loading && <Text style={styles.full}>Login </Text>}
         </TouchableOpacity>
         <TouchableOpacity style={{ alignItems: "center" }}>
           <Text style={styles.link}>Esqueceu a senha?</Text>

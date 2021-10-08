@@ -15,18 +15,17 @@ import InputWithIcon from "../../components/input/InputWithIcon";
 export default function SignUp({ navigation, route }) {
   const { userCode } = route.params;
   const [nome, setNome] = useState("");
-  const [telefone, setTelefone] = useState("");
+  const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
-  const [confirmarSenha, setConfirmarSenha] = useState("");
   const [clientInfo, setClientInfo] = useState({});
-
+  // getUsers nesse contexto serve apenas para mostrar as informações
   async function getUsers() {
     var arrayAllClient = [];
     var db = firebase.database().ref().child("client/");
     db.on("child_added", (snapshot) => {
       arrayAllClient.push(snapshot.val());
       arrayAllClient.find((e) => {
-        if (e.telefone === userCode) {
+        if (e.email === userCode) {
           setClientInfo(e);
         }
       });
@@ -34,35 +33,44 @@ export default function SignUp({ navigation, route }) {
   }
   useEffect(() => {
     async function fetchData() {
-      const list = await getUsers();
+      await getUsers();
     }
     fetchData();
   }, []);
 
+  const removeClient = () => {
+    var user = firebase
+      .auth()
+      .currentUser.delete()
+      .then(() => {
+        removeUser(userCode);
+        navigation.navigate("InitialScreen");
+      })
+      .catch((error) => alert(error));
+  };
+
   const editClient = () => {
-    if (senha !== confirmarSenha) {
-      Alert.alert("Erro", "As Senhas estão diferentes");
-      return;
-    }
-    if (userCode === telefone) {
-      Alert.alert("Erro", "Este telefone já está cadastrado");
-      return;
-    }
     let usr = {
       nome: !!nome ? nome : clientInfo.nome,
-      telefone: !!telefone ? telefone : clientInfo.telefone,
-      senha: !!senha ? senha : clientInfo.senha,
-      confirmarSenha: !!confirmarSenha
-        ? confirmarSenha
-        : clientInfo.confirmarSenha,
+      email: !!email ? email : clientInfo.email,
     };
+    if (email != "") {
+      firebase.auth().currentUser.updateEmail(email);
+    }
     updateUser(usr, userCode);
     navigation.navigate("InitialScreen");
   };
-  const removeClient = () => {
-    removeUser(userCode);
-    navigation.navigate("InitialScreen");
+
+  const editPasswdClient = () => {
+    firebase
+      .auth()
+      .sendPasswordResetEmail(clientInfo.email)
+      .then(() =>
+        Alert.alert("Sucesso", "Foi enviado um email para " + clientInfo.email)
+      )
+      .catch((error) => alert(error));
   };
+
   return (
     <View style={styles.container}>
       <Image
@@ -79,27 +87,34 @@ export default function SignUp({ navigation, route }) {
       />
 
       <InputWithIcon
-        title="Telefone"
-        icon="cellphone-android"
-        type="numeric"
-        onChange={setTelefone}
-        value={clientInfo.telefone}
-      />
-
-      <InputWithIcon title="Senha" icon="lock-outline" onChange={setSenha} />
-      <InputWithIcon
-        title="Confirmar senha"
-        icon="lock-outline"
-        onChange={setConfirmarSenha}
+        title="E-mail"
+        icon="email-outline"
+        onChange={setEmail}
+        value={clientInfo.email}
       />
 
       <View style={{ width: 250, marginTop: 30 }}>
-        <TouchableOpacity style={styles.buttonContainer} onPress={removeClient}>
-          <Text style={styles.full}>Excluir conta</Text>
-        </TouchableOpacity>
         <TouchableOpacity style={styles.buttonContainer} onPress={editClient}>
-          <Text style={styles.full}>Salvar</Text>
+          <Text style={styles.outlined}>Salvar</Text>
         </TouchableOpacity>
+        <View
+          style={
+            ({ display: "flex", flexDirection: "row" }, styles.buttonContainer)
+          }
+        >
+          <TouchableOpacity
+            style={styles.buttonContainer}
+            onPress={editPasswdClient}
+          >
+            <Text style={styles.full}>Editar Senha</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.buttonContainer}
+            onPress={removeClient}
+          >
+            <Text style={styles.full}>Excluir conta</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
@@ -149,20 +164,32 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     marginTop: 15,
+    flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
   },
-  full: {
+  outlined: {
     height: 50,
     width: "75%",
     paddingBottom: 5,
     color: "white",
     borderRadius: 8,
-    color: "#fff",
-    backgroundColor: "#800",
+    borderColor: "#800",
+    borderWidth: 2,
+    color: "#800",
     textAlignVertical: "center",
     textAlign: "center",
     justifyContent: "center",
+    fontSize: 19,
+  },
+  full: {
+    marginHorizontal: 10,
+    padding: 10,
+    color: "white",
+    borderRadius: 8,
+    color: "#fff",
+    backgroundColor: "#800",
+    textAlignVertical: "center",
     fontSize: 20,
   },
 });
