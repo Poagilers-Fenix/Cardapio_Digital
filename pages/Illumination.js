@@ -16,9 +16,9 @@ export default function Illumination({ navigation }) {
   const [modoIluminacao, SetModoIluminacao] = useState("foresta");
   const [msgLog, setMsgLog] = useState("");
 
-  const createUser = async () => {
+  const createUser = () => {
     try {
-      await fetch("https://node-red---cardapp.mybluemix.net/luz", {
+      fetch("http://192.168.15.10:1880/luz", {
         method: "POST",
         headers: {
           Accept: "application/json",
