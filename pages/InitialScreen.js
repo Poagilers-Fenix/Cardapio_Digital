@@ -38,8 +38,8 @@ export default function InitialSreen({ navigation }) {
         />
         <Botao
           outlined={true}
-          titulo="Menu"
-          acao={"Restaurants"}
+          titulo="Iluminação"
+          acao={"Illumination"}
           navigation={navigation}
         />
       </View>

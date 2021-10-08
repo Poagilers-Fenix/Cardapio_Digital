@@ -30,14 +30,13 @@ export default function MusicaTocando({ navigation }) {
           <Text style={{ color: "#282C3F" }}>{playlist[0].finalTime}</Text>
         </View>
       </View>
-
       <View style={styles.modal}>
-        <Button
-          navigation={navigation}
-          acao={"Playlist"}
-          outline={false}
-          titulo="Ver Fila de Reprodução"
-        />
+        <TouchableOpacity
+          outlined={false}
+          onPress={() => navigation.navigate("Playlist")}
+        >
+          <Text style={styles.btnFooterBar}>Ver Fila de Reprodução</Text>
+        </TouchableOpacity>
         <Modal navigation={navigation} />
       </View>
     </View>
@@ -84,5 +83,28 @@ const styles = StyleSheet.create({
     width: 350,
     color: "steelblue",
     alignSelf: "center",
+  },
+  modal: {
+    position: "absolute",
+    bottom: 0,
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-end",
+  },
+  btnFooterBar: {
+    height: 50,
+    color: "white",
+    borderRadius: 8,
+    color: "#fff",
+    backgroundColor: "#800",
+    textAlignVertical: "center",
+    fontSize: 20,
+    width: 240,
+    marginRight: 20,
+    marginBottom: 15,
+    paddingHorizontal: 10,
+    textAlign: "center",
   },
 });

@@ -37,7 +37,7 @@ export default function TelaCadastro({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>
-        Aponte a câmera do celular para o QR code do restaurante em que estiver
+        Posicione a câmera sobre o QRCode localizado no estabelecimento
       </Text>
 
       <View style={{ width: 320, height: 450 }}>

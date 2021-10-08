@@ -66,14 +66,13 @@ export default function Playlist({ navigation }) {
           </View>
         )}
       />
-
       <View style={styles.modal}>
-        <Button
-          navigation={navigation}
-          acao={"SuggestMusic"}
+        <TouchableOpacity
           outlined={true}
-          titulo="Sugerir Música"
-        />
+          onPress={() => navigation.navigate("SuggestMusic")}
+        >
+          <Text style={styles.btnFooterBar}>Sugerir Música</Text>
+        </TouchableOpacity>
         <Modal navigation={navigation} />
       </View>
     </View>
@@ -114,5 +113,29 @@ const styles = StyleSheet.create({
     marginLeft: 30,
     marginTop: 10,
     marginBottom: 5,
+  },
+  modal: {
+    position: "absolute",
+    bottom: 0,
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-end",
+    backgroundColor: "#fff",
+  },
+  btnFooterBar: {
+    height: 50,
+    color: "white",
+    borderRadius: 8,
+    color: "#fff",
+    backgroundColor: "#800",
+    textAlignVertical: "center",
+    fontSize: 20,
+    width: 240,
+    marginRight: 20,
+    marginBottom: 15,
+    paddingHorizontal: 10,
+    textAlign: "center",
   },
 });
