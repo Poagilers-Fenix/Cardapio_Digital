@@ -32,7 +32,9 @@ export default function Categories({ route }) {
       });
       setListItems(
         arrayItems.filter((val) => {
-          return val.Categoria == categorieCod;
+          return typeof categorieCod == "string"
+            ? val.Destaque == "S"
+            : val.Categoria == categorieCod;
         })
       );
     });

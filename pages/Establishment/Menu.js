@@ -26,6 +26,8 @@ export default function Menu({ route, navigation, acao }) {
               iconName = "beer";
             } else if (route.name === "Sobremesas") {
               iconName = "wine";
+            } else if (route.name === "Lanches") {
+              iconName = "pizza";
             }
 
             // You can return any component that you like here!
@@ -38,25 +40,31 @@ export default function Menu({ route, navigation, acao }) {
         <Tab.Screen
           name="Destaque"
           component={Categories}
-          initialParams={{ items, categorieCod }}
+          initialParams={{ items, categorieCod: "semCategoria", Destaque: "S" }}
           options={({ title: "Destaque" }, { headerShown: false })}
         ></Tab.Screen>
         <Tab.Screen
           name="Pratos"
           component={Categories}
-          initialParams={{ items, categorieCod: 1 }}
+          initialParams={{ items, categorieCod: 2 }}
           options={({ title: "Pratos" }, { headerShown: false })}
         ></Tab.Screen>
         <Tab.Screen
           name="Bebidas"
           component={Categories}
-          initialParams={{ items, categorieCod: 2 }}
+          initialParams={{ items, categorieCod: 0 }}
           options={({ title: "Bebidas" }, { headerShown: false })}
+        ></Tab.Screen>
+        <Tab.Screen
+          name="Lanches"
+          component={Categories}
+          initialParams={{ items, categorieCod: 3 }}
+          options={({ title: "Lanches" }, { headerShown: false })}
         ></Tab.Screen>
         <Tab.Screen
           name="Sobremesas"
           component={Categories}
-          initialParams={{ items, categorieCod: 3 }}
+          initialParams={{ items, categorieCod: 1 }}
           options={({ title: "Sobremesas" }, { headerShown: false })}
         ></Tab.Screen>
       </Tab.Navigator>
