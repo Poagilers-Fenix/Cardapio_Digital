@@ -10,6 +10,7 @@ const Tab = createBottomTabNavigator();
 
 export default function Menu({ route, navigation, acao }) {
   let { items } = route.params;
+  let categorieCod = 0;
   return (
     <NavigationContainer independent={true}>
       <Tab.Navigator
@@ -37,25 +38,25 @@ export default function Menu({ route, navigation, acao }) {
         <Tab.Screen
           name="Destaque"
           component={Categories}
-          initialParams={{ items }}
+          initialParams={{ items, categorieCod }}
           options={({ title: "Destaque" }, { headerShown: false })}
         ></Tab.Screen>
         <Tab.Screen
           name="Pratos"
           component={Categories}
-          initialParams={{ items }}
+          initialParams={{ items, categorieCod: 1 }}
           options={({ title: "Pratos" }, { headerShown: false })}
         ></Tab.Screen>
         <Tab.Screen
           name="Bebidas"
           component={Categories}
-          initialParams={{ items }}
+          initialParams={{ items, categorieCod: 2 }}
           options={({ title: "Bebidas" }, { headerShown: false })}
         ></Tab.Screen>
         <Tab.Screen
           name="Sobremesas"
           component={Categories}
-          initialParams={{ items }}
+          initialParams={{ items, categorieCod: 3 }}
           options={({ title: "Sobremesas" }, { headerShown: false })}
         ></Tab.Screen>
       </Tab.Navigator>

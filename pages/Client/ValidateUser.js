@@ -30,8 +30,24 @@ export default function SignIn({ navigation }) {
         isLoading(false);
       })
       .catch((error) => {
+        text = "";
+        if (error.code === "auth/invalid-email") {
+          text = "Email inválido, tente novamente";
+        } else if (error.code === "auth/weak-password") {
+          text =
+            "Senha não está nos padrões corretos (mínimo de 6 caracteres), tente novamente";
+        } else if (error.code === "auth/wrong-password") {
+          text = "Senha inválida, tente novamente";
+        } else if (error.code === "auth/user-not-found") {
+          text =
+            "Usuário não encontrado, verifique o email e senha e tente novamente";
+        } else if (error.code === "auth/wrong-password") {
+          text = "Email ou senha invalidos, tente novamente";
+        } else {
+          text = "Erro ao cadastrar! Contate o suporte";
+        }
         isLoading(false);
-        alert(error);
+        Alert.alert("Erro", text);
       });
   };
 
@@ -41,7 +57,7 @@ export default function SignIn({ navigation }) {
         style={styles.imagem}
         source={require("../../assets/perfil-cinza.png")}
       />
-      <Text style={styles.titulo}>Login</Text>
+      <Text style={styles.titulo}>Confirmar Identidade</Text>
       <Text style={styles.subtitulo}>
         Valide sua identidade para editar seu perfil
       </Text>
@@ -57,7 +73,7 @@ export default function SignIn({ navigation }) {
               <ActivityIndicator size="large" color="#fff" />
             </Text>
           )}
-          {!loading && <Text style={styles.full}>Login </Text>}
+          {!loading && <Text style={styles.full}>Validar</Text>}
         </TouchableOpacity>
         <TouchableOpacity style={{ alignItems: "center" }}>
           <Text style={styles.link}>Esqueceu a senha?</Text>

@@ -14,6 +14,7 @@ import { firebase } from "../../../util/config";
 
 export default function Categories({ route }) {
   let { items } = route.params;
+  let { categorieCod } = route.params;
   const [isLoading, setLoading] = useState(true);
   const [listItems, setListItems] = useState([]);
   const [estab, setEstab] = useState([]);
@@ -23,12 +24,15 @@ export default function Categories({ route }) {
     var db = firebase.database().ref().child("itemCardapio/");
     db.on("child_added", (snapshot) => {
       arrayItems.push(snapshot.val());
+      arrayItems = arrayItems.filter((val) => {
+        return (
+          val.CodigoEstabelecimento ==
+          (typeof items == "string" ? items : items.CodigoEstabelecimento)
+        );
+      });
       setListItems(
         arrayItems.filter((val) => {
-          return (
-            val.CodigoEstabelecimento ==
-            (typeof items == "string" ? items : items.CodigoEstabelecimento)
-          );
+          return val.Categoria == categorieCod;
         })
       );
     });

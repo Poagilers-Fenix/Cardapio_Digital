@@ -16,7 +16,6 @@ import { firebase } from "../../util/config";
 export default function SignIn({ navigation }) {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
-  const [user, setUser] = useState(null);
   const [loading, isLoading] = useState(false);
 
   const handleEnter = () => {
@@ -25,13 +24,26 @@ export default function SignIn({ navigation }) {
       .auth()
       .signInWithEmailAndPassword(email, senha)
       .then((response) => {
-        setUser(response.user);
         navigation.navigate("QRCodeReader");
         isLoading(false);
       })
       .catch((error) => {
+        text = "";
+        if (error.code === "auth/invalid-email") {
+          text = "Email inválido, tente novamente";
+        } else if (error.code === "auth/wrong-password") {
+          text = "Senha inválida, tente novamente";
+        } else if (error.code === "auth/weak-password") {
+          text =
+            "Senha não está nos padrões corretos (mínimo de 6 caracteres), tente novamente";
+        } else if (error.code === "auth/user-not-found") {
+          text =
+            "Usuário não encontrado, verifique o email e senha e tente novamente";
+        } else {
+          text = "Erro ao cadastrar! Contate o suporte";
+        }
         isLoading(false);
-        alert(error);
+        Alert.alert("Erro", text);
       });
   };
   return (

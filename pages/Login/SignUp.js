@@ -20,6 +20,10 @@ export default function SignUp({ navigation }) {
   const [confirmarSenha, setConfirmarSenha] = useState("");
 
   const handleRegister = () => {
+    if (senha !== confirmarSenha) {
+      Alert.alert("Erro", "As Senhas não coincidem");
+      return;
+    }
     isLoading(true);
     firebase
       .auth()
@@ -36,8 +40,20 @@ export default function SignUp({ navigation }) {
         isLoading(false);
       })
       .catch((error) => {
+        text = "";
+        if (error.code === "auth/invalid-email") {
+          text = "Email inválido, tente novamente";
+        } else if (error.code === "auth/weak-password") {
+          text =
+            "Senha não está nos padrões corretos (mínimo de 6 caracteres), tente novamente";
+        } else if (error.code === "auth/email-already-in-use") {
+          text =
+            "Já existe um usuário cadastrado com esse email no nosso sistema";
+        } else {
+          text = "Erro ao cadastrar! Contate o suporte";
+        }
         isLoading(false);
-        alert(error);
+        Alert.alert("Error", text);
       });
   };
 
